@@ -4,14 +4,19 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const mongoose = require('mongoose');
+const cors = require('cors');
+
 
 // node inbuilt package imports
 const path = require('path');
 
 // filesystem imports
-
+const connectDB = require('./config/db');
 // const models = require('./models'); // import all the models
 
+
+// Connecting to Database
+connectDB();
 
 
 // Creating an express app
@@ -19,8 +24,8 @@ const app = express();
 
 global.__basedir = __dirname;
 
-// Setting up the static files
-app.use(express.static(path.join(__dirname, "public")));
+// Configuring cors
+app.use(cors());
 
 // Adding a json middleware for parsing application/json data
 app.use(express.json());
