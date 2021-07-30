@@ -63,9 +63,14 @@ app.use(async (request, response, next) => {
 });
 
 // Setting up the routes
-app.use('/', require('./routes/main'));
+app.get('/', (request, response) => {
+    response.send('Hello World');
+});
+app.use('/campus/main', require('./routes/main'));
+app.use('/campus/simulation', require('./routes/simulation'));
+app.use('/campus/masterdata', require('./routes/masterdata'));
+app.use('/campus/campussimulator', require('./routes/campus_simulator'));
 // app.use('/admin', require('./routes/admin/index'));
-
 
 
 // 404 middleware
