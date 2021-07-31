@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-const { temp } = require('../controllers/main');
+const { peopleCount, buildingOccupancy, caseStatistics, peopleLocations } = require('../controllers/campus_simulator');
 
-router.route('/visualpanel/peoplecount').get(temp);
-router.route('/visualpanel/buildingoccupancy').get(temp);
-router.route('/visualpanel/casestatistics').get(temp);
-router.route('/visualpanel/peoplelocations').get(temp);
+router.route('/visualpanel/peoplecount').get(peopleCount);
+router.route('/visualpanel/buildingoccupancy').get(buildingOccupancy);
+router.route('/visualpanel/casestatistics').get(caseStatistics);
+router.route('/visualpanel/peoplelocations').get(peopleLocations);
 
 
 // router.route('/upload').get(upload).post(uploadMiddleware.single('file'), upload);
