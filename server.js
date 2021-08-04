@@ -2,7 +2,6 @@
 require('dotenv').config({ path: './config.env' });
 const express = require('express');
 const bodyParser = require('body-parser');
-const session = require('express-session');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
@@ -33,34 +32,9 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // For parsing multipart/form-data
 // app.use(upload.array());
-// Adding express-session middleware
-
-app.use(session({
-    name: process.env.SESSION_NAME || 'sid',
-    resave: false,
-    saveUninitialized: false,
-    secret: process.env.SESSION_SECRET,
-    cookie: {
-        maxAge: 24 * 60 * 60 * 1000, // max age is in milliseconds. So, here maxAge is 24 hrs
-        sameSite: true,
-        secure: (process.env.NODE_ENV === 'production' ? false : false)
-    }
-}));
 
 // Setting port as a key 'port' to the app
 app.set('port', process.env.PORT || 5050);
-
-// Adding user to the response locals.
-// So that, it can be accessible in the other routes
-app.use(async (request, response, next) => {
-    const { userId } = request.session;
-    if (userId) {
-        await models.User.findOne({ where: { id: userId } }).then((user) => {
-            response.locals.user = user;
-        });
-    }
-    next();
-});
 
 // Setting up the routes
 app.get('/', (request, response) => {
