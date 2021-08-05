@@ -11,6 +11,7 @@ const path = require('path');
 
 // filesystem imports
 const connectDB = require('./config/db');
+const errorHandler = require('./middleware/error');
 // const models = require('./models'); // import all the models
 
 
@@ -54,6 +55,7 @@ app.use((request, response, next) => {
     next();
 });
 
+app.use(errorHandler);
 
 // Listening at the port set before
 app.listen(app.get('port'), () => {
@@ -61,4 +63,8 @@ app.listen(app.get('port'), () => {
     console.log(`Server Running at http://${(process.env.NODE_ENV === 'production') ? '172.105.49.237' : 'localhost'}:${app.get('port')}/`)
 });
 
+process.on('unhandledRejection', (error, promise) => {
+    console.log(`Logged Error: ${error}`);
+    server.close(() => { process.exit(1) });
+});
 

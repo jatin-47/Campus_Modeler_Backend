@@ -1,5 +1,5 @@
 const User = require('../models/User');
-
+const ErrorResponse = require('../utils/errorResponse');
 const fs = require("fs");
 
 exports.login = async (request, response, next) => {
@@ -8,11 +8,26 @@ exports.login = async (request, response, next) => {
     // console.log(request)
     console.log('Post request');
     if (username && password) {
-        
+        try {
+            const user = await User.findOne({ username }).select("password");
+
+            if (!user) {
+                return next(new ErrorResponse("Invalid Credentials", 401));
+            }
+
+            const isMatch = await user.matchPassword(password);
+
+            if (!isMatch) {
+                return next(new ErrorResponse("Invalid Credentials", 401));
+            }
+
+            sendToken(user, 200, response);
+
+        } catch (error) {
+            next(error);
+        }
     } else {
-        response.send({
-            'hi': 'no'
-        });
+        return next(new ErrorResponse("Please provide username and password", 400));
     }
 };
 
