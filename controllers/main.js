@@ -2,6 +2,23 @@ const User = require('../models/User');
 const ErrorResponse = require('../utils/errorResponse');
 const fs = require("fs");
 
+const { spawn } = require('child_process');
+
+// const childPython = spawn('python', ['--version']);
+const childPython = spawn('python', ['simulater/main.py']);
+
+childPython.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+});
+
+childPython.stderr.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+});
+
+childPython.on('close', (code) => {
+    console.log(`child process exited with code ${code}`);
+});
+
 exports.login = async (request, response, next) => {
 
     const { username, password, campusname } = request.body;
