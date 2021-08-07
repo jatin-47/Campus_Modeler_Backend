@@ -93,8 +93,8 @@ exports.deleteSavedSimulations = async (request, response, next) => {
 };
 
 exports.run = async (request, response, next) => {
-    runPython(['simulater/main.py', JSON.stringify(request.body), 'temp/init.csv'])
-    console.log(request.body);
+    runPython(['rakshak/run_simulation.py', JSON.stringify(request.body), 'result'])
+    // console.log(request.body);
     response.send({
         'hi': 'Hello1'
     });
