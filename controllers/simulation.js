@@ -68,15 +68,26 @@ exports.saveSimulation = async (request, response, next) => {
 
 exports.savedSimulations = async (request, response, next) => {
 
-    response.send({
-        'hi': 'Hello'
-    });
+    response.send(
+        [{
+            "SimulationName": 'simulation1',
+            "Created_Date_Time": '10 June, 2021(12:00)'
+        },
+        {
+            "SimulationName": 'simulation1',
+            "Created_Date_Time": '10 June, 2021(12:00)'
+        },
+        {
+            "SimulationName": 'simulation1',
+            "Created_Date_Time": '10 June, 2021(12:00)'
+        }]
+    );
 };
 
 exports.deleteSavedSimulations = async (request, response, next) => {
 
     response.send({
-        'hi': 'Hello'
+        'message': 'Simulation Deleted'
     });
 };
 
