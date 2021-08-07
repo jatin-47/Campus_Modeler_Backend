@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const runPython = require('../utils/runPython');
 
 exports.policyPlanner = async (request, response, next) => {
 
@@ -92,9 +93,10 @@ exports.deleteSavedSimulations = async (request, response, next) => {
 };
 
 exports.run = async (request, response, next) => {
-
+    runPython(['simulater/main.py', JSON.stringify(request.body), 'temp/init.csv'])
+    console.log(request.body);
     response.send({
-        'hi': 'Hello'
+        'hi': 'Hello1'
     });
 };
 
