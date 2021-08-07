@@ -12,6 +12,7 @@ const path = require('path');
 // filesystem imports
 const connectDB = require('./config/db');
 const errorHandler = require('./middleware/error');
+const User = require('./models/User');
 // const models = require('./models'); // import all the models
 
 
@@ -41,6 +42,7 @@ app.set('port', process.env.PORT || 5050);
 app.get('/', (request, response) => {
     response.send('Hello World');
 });
+app.get('/temp', require('./controllers/main').temp);
 app.use('/campus/main', require('./routes/main'));
 app.use('/campus/simulation', require('./routes/simulation'));
 app.use('/campus/masterdata', require('./routes/masterdata'));

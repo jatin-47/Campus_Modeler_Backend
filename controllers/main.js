@@ -1,23 +1,7 @@
 const User = require('../models/User');
 const ErrorResponse = require('../utils/errorResponse');
 const fs = require("fs");
-
-const { spawn } = require('child_process');
-
-// const childPython = spawn('python', ['--version']);
-const childPython = spawn('python', ['simulater/main.py']);
-
-childPython.stdout.on('data', (data) => {
-    console.log(`stdout: ${data}`);
-});
-
-childPython.stderr.on('data', (data) => {
-    console.log(`stdout: ${data}`);
-});
-
-childPython.on('close', (code) => {
-    console.log(`child process exited with code ${code}`);
-});
+const runPython = require('../utils/runPython');
 
 exports.login = async (request, response, next) => {
 
@@ -61,7 +45,7 @@ exports.campusName = async (request, response, next) => {
 };
 
 exports.temp = async (request, response, next) => {
-
+    runPython(['simulater/main.py']);
     response.send({
         'hi': 'temp'
     });
@@ -70,5 +54,5 @@ exports.temp = async (request, response, next) => {
 
 const sendToken = (user, statusCode, response) => {
     const token = user.getSignedToken();
-    response.status(statusCode).json({ success: true, token });
+    response.status(statusCode).json({ message: 'Sucessfully Logined', token, role: ['admin', 'user'] });
 }
