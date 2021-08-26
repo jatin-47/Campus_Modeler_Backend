@@ -13,6 +13,7 @@ exports.login = async (request, response, next) => {
             const user = await User.findOne({ username }).select("password");
 
             if (!user) {
+                console.log('Wrong')
                 return next(new ErrorResponse("Invalid Credentials", 401));
             }
 
@@ -38,7 +39,7 @@ exports.logout = async (request, response, next) => {
 }
 
 exports.campusName = async (request, response, next) => {
-
+    console.log('Campus Name');
     response.send({
         'campusname': ['madras', 'delhi']
     });

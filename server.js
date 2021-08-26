@@ -25,8 +25,16 @@ const app = express();
 
 global.__basedir = __dirname;
 
+const corsOptions = {
+    "origin": ['http://localhost:3000'],
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204,
+    "credentials": true
+}
+
 // Configuring cors
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Adding a json middleware for parsing application/json data
 app.use(express.json());
