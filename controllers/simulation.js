@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const Simulation = require('../models/Simulation');
 const runPython = require('../utils/runPython');
 
 exports.policyPlanner = async (request, response, next) => {
@@ -86,14 +87,27 @@ exports.savedSimulations = async (request, response, next) => {
 };
 
 exports.deleteSavedSimulations = async (request, response, next) => {
+    const user = request.user;
 
+    const newSim = await Simulation.create({
+        inputJSON: JSON.stringify(request.body)
+    });
+
+    user.simulations.push(newSim);
     response.send({
         'message': 'Simulation Deleted'
     });
 };
 
 exports.run = async (request, response, next) => {
-    runPython(['rakshak/run_simulation.py', JSON.stringify(request.body), 'result'])
+    const user = request.user;
+
+    const newSim = await Simulation.create({
+        inputJSON: JSON.stringify(request.body)
+    });
+
+    user.simulations.push(newSim);
+    runPython(['rakshak/run_simulation.py', JSON.stringify(request.body), `result/${user.username}_${newSim._id}`])
     // console.log(request.body);
     response.send({
         'hi': 'Hello1'

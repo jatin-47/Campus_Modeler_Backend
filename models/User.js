@@ -5,12 +5,12 @@ const jwt = require('jsonwebtoken');
 const UserSchema = new mongoose.Schema({
     username: {
         type: String,
+        unique: true,
         required: [true, "Username cannot be empty!"]
     },
     email: {
         type: String,
         required: [true, "Please provide an email"],
-        unique: true,
         match: [
             /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
             "Please provide a valid email"
@@ -21,7 +21,11 @@ const UserSchema = new mongoose.Schema({
         required: [true, "Please add a password"],
         minlength: 6,
         select: false
-    }
+    },
+    simulations: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Simulation',
+    }]
 });
 
 UserSchema.pre('save', async function (next) {
@@ -32,6 +36,11 @@ UserSchema.pre('save', async function (next) {
         this.password = await bcrypt.hash(this.password, salt);
         next();
     }
+});
+
+UserSchema.pre('remove', async function (next) {
+    console.log(this.simulations);
+    next();
 });
 
 UserSchema.methods.matchPassword = async function (password) {
