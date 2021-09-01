@@ -34,10 +34,6 @@ exports.login = async (request, response, next) => {
 };
 
 
-exports.logout = async (request, response, next) => {
-
-}
-
 exports.campusName = async (request, response, next) => {
     console.log('Campus Name');
     response.send({
