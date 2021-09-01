@@ -5,7 +5,7 @@ const SimulationSchema = new mongoose.Schema({
         type: String,
         required: [true, "Input parameters cannot be empty!"]
     },
-});
+}, { timestamps: true });
 
 const Simulation = mongoose.model("Simulation", SimulationSchema);
 

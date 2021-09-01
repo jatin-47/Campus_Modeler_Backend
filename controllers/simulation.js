@@ -62,31 +62,6 @@ exports.initialization = async (request, response, next) => {
 };
 
 exports.saveSimulation = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
-};
-
-exports.savedSimulations = async (request, response, next) => {
-
-    response.send(
-        [{
-            "SimulationName": 'simulation1',
-            "Created_Date_Time": '10 June, 2021(12:00)'
-        },
-        {
-            "SimulationName": 'simulation1',
-            "Created_Date_Time": '10 June, 2021(12:00)'
-        },
-        {
-            "SimulationName": 'simulation1',
-            "Created_Date_Time": '10 June, 2021(12:00)'
-        }]
-    );
-};
-
-exports.deleteSavedSimulations = async (request, response, next) => {
     const user = request.user;
 
     const newSim = await Simulation.create({
@@ -94,6 +69,26 @@ exports.deleteSavedSimulations = async (request, response, next) => {
     });
 
     user.simulations.push(newSim);
+    user.save();
+    response.send({
+        'hi': 'Hello'
+    });
+};
+
+exports.savedSimulations = async (request, response, next) => {
+    const user = request.user;
+    let simulations = [];
+    for (let simId of user.simulations) {
+        let sim = await Simulation.findById(simId);
+        simulations.push({ simId: sim._id, SimulationName: JSON.parse(sim.inputJSON).Simulation_Name, Created_Date_Time: 'Date_Time_Here' });
+    }
+
+    response.send(simulations);
+};
+
+exports.deleteSavedSimulations = async (request, response, next) => {
+    const { simId } = request.body;
+    await Simulation.findByIdAndDelete(simId);
     response.send({
         'message': 'Simulation Deleted'
     });
@@ -107,6 +102,7 @@ exports.run = async (request, response, next) => {
     });
 
     user.simulations.push(newSim);
+    user.save();
     runPython(['rakshak/run_simulation.py', JSON.stringify(request.body), `result/${user.username}_${newSim._id}`])
     // console.log(request.body);
     response.send({
