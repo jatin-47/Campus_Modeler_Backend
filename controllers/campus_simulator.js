@@ -1,6 +1,7 @@
 const User = require('../models/User');
-const csvParse = require('csv-parse');
-const fs = require('fs');
+const csvToJson = require('../utils/csvToJson');
+const Simulation = require('../models/Simulation');
+const ErrorResponse = require('../utils/errorResponse');
 
 exports.peopleCount = async (request, response, next) => {
 
@@ -33,30 +34,19 @@ exports.buildingOccupancy = async (request, response, next) => {
 
 */
 exports.caseStatistics = async (request, response, next) => {
-    const csvData = [];
+    const user = request.user;
+    const { simId } = request.query;
 
-    fs.createReadStream('result/results.csv').pipe(csvParse({ delimeter: ',' }))
-        .on('data', function (dataRow) {
-            csvData.push(dataRow);
-        })
-        .on('end', function () {
-            // console.log(csvData);
-            let data = {};
-            let header = csvData[0]
-            for (let param of header) {
-                data[param] = [];
-            }
-            for (let i = 1; i < csvData.length; i++) {
-                for (let col = 0; col < header.length; col++) {
-                    data[header[col]].push(csvData[i][col]);
-                }
-            }
-            console.log(data);
-            response.send(data);
-        })
-
-
-    console.log(csvData);
+    if (simId) {
+        const csvData = await csvToJson(`result/${user.username}_${simId}/results.csv`);
+        console.log(csvData);
+        if (csvData) {
+            return response.send(csvData);
+        } else {
+            return next(new ErrorResponse('Simulation Result Not Found', 404));
+        }
+    }
+    return next(new ErrorResponse('Bad Request', 400));
 };
 
 exports.peopleLocations = async (request, response, next) => {

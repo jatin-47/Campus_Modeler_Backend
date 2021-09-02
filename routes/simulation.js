@@ -3,9 +3,11 @@ const router = express.Router();
 
 const { protect } = require('../middleware/auth')
 
-const { policyPlanner, initialization, saveSimulation, savedSimulations, deleteSavedSimulations, run, save, runSavedSimulations } = require('../controllers/simulation');
+const { policyPlanner, initialization, saveSimulation, savedSimulations, deleteSavedSimulations, run, save } = require('../controllers/simulation');
+
 
 router.use(protect);
+// Protected Routes from here
 router.route('/policyplanner').get(policyPlanner);
 router.route('/initialization').get(initialization);
 router.route('/savesimulation').get(saveSimulation);

@@ -41,13 +41,6 @@ exports.campusName = async (request, response, next) => {
     });
 };
 
-exports.temp = async (request, response, next) => {
-    runPython(['simulater/main.py']);
-    response.send({
-        'hi': 'temp'
-    });
-};
-
 
 const sendToken = (user, statusCode, response) => {
     const token = user.getSignedToken();

@@ -110,14 +110,9 @@ exports.run = async (request, response, next) => {
     });
 };
 
+
+// Should be removed
 exports.save = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
-};
-
-exports.runSavedSimulations = async (request, response, next) => {
 
     response.send({
         'hi': 'Hello'
