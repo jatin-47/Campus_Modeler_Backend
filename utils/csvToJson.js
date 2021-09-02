@@ -11,6 +11,12 @@ module.exports = async function csvToJson(csvPath, delimeter = ',') {
             .on('data', function (dataRow) {
                 csvData.push(dataRow);
             })
+            .on('error', (error) => {
+                resolve({
+                    success: 'false',
+                    error: error.code
+                });
+            })
             .on('end', function () {
                 // console.log(csvData);
                 let data = {};

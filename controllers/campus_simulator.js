@@ -4,17 +4,35 @@ const Simulation = require('../models/Simulation');
 const ErrorResponse = require('../utils/errorResponse');
 
 exports.peopleCount = async (request, response, next) => {
+    const user = request.user;
+    const { simId } = request.query;
 
-    response.send({
-        'hi': 'Hello'
-    });
+    if (simId) {
+        const csvData = await csvToJson(`result/${user.username}_${simId}/Hotspots.csv`);
+        // console.log(csvData);
+        if (csvData) {
+            return response.send(csvData);
+        } else {
+            return next(new ErrorResponse('People count of this simulation not found', 404));
+        }
+    }
+    return next(new ErrorResponse('Bad Request', 400));
 };
 
 exports.buildingOccupancy = async (request, response, next) => {
+    const user = request.user;
+    const { simId } = request.query;
 
-    response.send({
-        'hi': 'Hello'
-    });
+    if (simId) {
+        const csvData = await csvToJson(`result/${user.username}_${simId}/Building_occupancy.csv`);
+        // console.log(csvData);
+        if (csvData) {
+            return response.send(csvData);
+        } else {
+            return next(new ErrorResponse('Building Occupancy of this simulation not found', 404));
+        }
+    }
+    return next(new ErrorResponse('Bad Request', 400));
 };
 
 // Access csv file and returning data
@@ -39,19 +57,28 @@ exports.caseStatistics = async (request, response, next) => {
 
     if (simId) {
         const csvData = await csvToJson(`result/${user.username}_${simId}/results.csv`);
-        console.log(csvData);
+        // console.log(csvData);
         if (csvData) {
             return response.send(csvData);
         } else {
-            return next(new ErrorResponse('Simulation Result Not Found', 404));
+            return next(new ErrorResponse('Case statistics of this simulation not found', 404));
         }
     }
     return next(new ErrorResponse('Bad Request', 400));
 };
 
 exports.peopleLocations = async (request, response, next) => {
+    const user = request.user;
+    const { simId } = request.query;
 
-    response.send({
-        'hi': 'Hello'
-    });
+    if (simId) {
+        const csvData = await csvToJson(`result/${user.username}_${simId}/locations.csv`);
+        // console.log(csvData);
+        if (csvData) {
+            return response.send(csvData);
+        } else {
+            return next(new ErrorResponse('People locations of this simulation not found', 404));
+        }
+    }
+    return next(new ErrorResponse('Bad Request', 400));
 };
