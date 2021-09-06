@@ -61,8 +61,11 @@ exports.initialization = async (request, response, next) => {
     });
 };
 
+// Create a new sim if there is no simId provided.
+// Update the existing sim if there's a simId provided and sim exists with that ID in the user
 exports.saveSimulation = async (request, response, next) => {
     const user = request.user;
+    const { simId } = request.query;
 
     const newSim = await Simulation.create({
         inputJSON: JSON.stringify(request.body)
@@ -71,7 +74,8 @@ exports.saveSimulation = async (request, response, next) => {
     user.simulations.push(newSim);
     user.save();
     response.send({
-        'hi': 'Hello'
+        success: true,
+        message: 'Simulation added to user simulations'
     });
 };
 
@@ -86,6 +90,7 @@ exports.savedSimulations = async (request, response, next) => {
     response.send(simulations);
 };
 
+// Check if the simulation belongs to loggedin user
 exports.deleteSavedSimulations = async (request, response, next) => {
     const { simId } = request.body;
     await Simulation.findByIdAndDelete(simId);
@@ -96,14 +101,24 @@ exports.deleteSavedSimulations = async (request, response, next) => {
 
 exports.run = async (request, response, next) => {
     const user = request.user;
+    const { simId } = request.query;
 
+    if (simId) {
+        // update it
+    } else {
+        runPython(['rakshak/run_simulation.py', JSON.stringify(request.body), `result/${user.username}`])
+    }
+    /*
     const newSim = await Simulation.create({
         inputJSON: JSON.stringify(request.body)
     });
+    */
 
-    user.simulations.push(newSim);
-    user.save();
-    runPython(['rakshak/run_simulation.py', JSON.stringify(request.body), `result/${user.username}_${newSim._id}`])
+    console.log('\n\n\n\n\n', request.body)
+
+    // user.simulations.push(newSim);
+    // user.save();
+
     // console.log(request.body);
     response.send({
         'hi': 'Hello1'

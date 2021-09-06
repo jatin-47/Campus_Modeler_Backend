@@ -21,12 +21,6 @@ exports.uploadCampusBuildings = async (request, response, next) => {
     });
 };
 
-exports.uploadCampusBuildings = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
-};
 
 exports.addBuildingCampusBuildings = async (request, response, next) => {
 
