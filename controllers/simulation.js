@@ -2,6 +2,8 @@ const User = require('../models/User');
 const Simulation = require('../models/Simulation');
 const runPython = require('../utils/runPython');
 
+const fs = require('fs');
+
 exports.policyPlanner = async (request, response, next) => {
 
     response.send({
@@ -106,6 +108,7 @@ exports.run = async (request, response, next) => {
     if (simId) {
         // update it
     } else {
+        await fs.rmdirSync(`result/${user.username}`, { recursive: true });
         runPython(['rakshak/run_simulation.py', JSON.stringify(request.body), `result/${user.username}`])
     }
     /*
