@@ -22,7 +22,9 @@ exports.peopleCount = async (request, response, next) => {
             return response.send(csvData);
         }
     }
-    return next(new ErrorResponse('Bad Request', 400));
+    return response.status(400).send({
+        message: 'Bad Request',
+    });
 };
 
 exports.buildingOccupancy = async (request, response, next) => {
@@ -44,7 +46,9 @@ exports.buildingOccupancy = async (request, response, next) => {
             return response.send(csvData);
         }
     }
-    return next(new ErrorResponse('Bad Request', 400));
+    return response.status(400).send({
+        message: 'Bad Request',
+    });
 };
 
 exports.caseStatistics = async (request, response, next) => {
@@ -66,7 +70,9 @@ exports.caseStatistics = async (request, response, next) => {
             return response.send(csvData);
         }
     }
-    return next(new ErrorResponse('Bad Request', 400));
+    return response.status(400).send({
+        message: 'Bad Request',
+    });
 };
 
 exports.peopleLocations = async (request, response, next) => {
@@ -88,5 +94,7 @@ exports.peopleLocations = async (request, response, next) => {
             return response.send(csvData);
         }
     }
-    return next(new ErrorResponse('Bad Request', 400));
+    return response.status(400).send({
+        message: 'Bad Request',
+    });
 };
