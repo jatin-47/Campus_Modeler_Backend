@@ -15,6 +15,7 @@ const errorHandler = require('./middleware/error');
 const User = require('./models/User');
 // const models = require('./models'); // import all the models
 
+const uploadMiddleware = require('./middleware/uploadFile');
 
 // Connecting to Database
 connectDB();
@@ -42,6 +43,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // For parsing multipart/form-data
 // app.use(upload.array());
+app.use(uploadMiddleware.any());
 
 // Setting port as a key 'port' to the app
 app.set('port', process.env.PORT || 5050);
