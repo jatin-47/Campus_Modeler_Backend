@@ -1,6 +1,9 @@
+const mongoose = require('mongoose');
 const User = require('../models/User');
 const Simulation = require('../models/Simulation');
 const runPython = require('../utils/runPython');
+
+const ErrorResponse = require('../utils/errorResponse');
 
 const fs = require('fs');
 
@@ -67,38 +70,52 @@ exports.initialization = async (request, response, next) => {
 // Update the existing sim if there's a simId provided and sim exists with that ID in the user
 exports.saveSimulation = async (request, response, next) => {
     const user = request.user;
-    const { simId } = request.query;
+    try{
+        const newSim = await Simulation.create({
+            inputJSON: JSON.stringify(request.body),
+            user : user._id
+        });
 
-    const newSim = await Simulation.create({
-        inputJSON: JSON.stringify(request.body)
-    });
+        response.send({
+            success: true,
+            message: 'Simulation added to user simulations'
+        });
 
-    user.simulations.push(newSim);
-    user.save();
-    response.send({
-        success: true,
-        message: 'Simulation added to user simulations'
-    });
+    }catch(err) { return next(new ErrorResponse(err,400)); }
 };
 
 exports.savedSimulations = async (request, response, next) => {
     const user = request.user;
-    let simulations = [];
-    for (let simId of user.simulations) {
-        let sim = await Simulation.findById(simId);
-        simulations.push({ simId: sim._id, SimulationName: JSON.parse(sim.inputJSON).Simulation_Name, Created_Date_Time: sim.createdAt });
-    }
-
-    response.send(simulations);
+    try {
+        const simulations = await Simulation.find({user: user._id});
+        let desiredformat = simulations.map((curr)=> {
+            new_sim = {};
+            new_sim.simId = curr._id;
+            new_sim.SimulationName = JSON.parse(curr.inputJSON).Simulation_Name;
+            new_sim.Created_Date_Time = curr.createdAt;
+            return new_sim
+        })
+    
+        response.send(desiredformat);
+    }catch(err) { return next(new ErrorResponse(err,400)); }
 };
 
-// Check if the simulation belongs to loggedin user
 exports.deleteSavedSimulations = async (request, response, next) => {
-    const { simId } = request.body;
-    await Simulation.findByIdAndDelete(simId);
-    response.send({
-        'message': 'Simulation Deleted'
-    });
+    const user = request.user;
+    const { simId } = request.query;
+    try {
+        let sim = await Simulation.findById(simId);
+        
+        if(sim.user.equals(user._id)){
+            sim.deleteOne();
+            response.send({
+                'message': 'Simulation Deleted'
+            });
+        }
+        else{
+            return next(new ErrorResponse("You are not the owner of this sim",401));
+        }
+    }catch(err) { return next(new ErrorResponse(err,400)); }
 };
 
 exports.run = async (request, response, next) => {

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const Simulation = require('./Simulation');
 
 const UserSchema = new mongoose.Schema({
     username: {
@@ -30,11 +31,11 @@ const UserSchema = new mongoose.Schema({
         type: String,
         enum: ['kharagpur','madras', 'delhi'],
         required: true
-    },
-    simulations: [{
+    }
+   /*  simulations: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Simulation',
-    }]
+    }] */
 });
 
 UserSchema.pre('save', async function (next) {
@@ -47,9 +48,13 @@ UserSchema.pre('save', async function (next) {
     }
 });
 
-UserSchema.pre('remove', async function (next) {
-    console.log(this.simulations);
-    next();
+UserSchema.post('remove', async function (next) {
+    try{
+        await Simulation.deleteMany({user: this._id});
+        next();
+    }catch(err){
+        return next(new ErrorResponse(err,400));
+    }
 });
 
 UserSchema.methods.matchPassword = async function (password) {

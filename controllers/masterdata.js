@@ -65,7 +65,7 @@ exports.uploadCampusBuildings = async (request, response, next) => {
     }    
 };
 
-
+//RoomID logic `${data.BuildingId}${floor.FloorNo}${i}`
 exports.addBuildingCampusBuildings = async (request, response, next) => {
     const data = request.body;
     try {
@@ -75,7 +75,7 @@ exports.addBuildingCampusBuildings = async (request, response, next) => {
         for(let floor of floors){
             for(let i =0; i<floor.NumberofRooms; i++){
                 let room = {
-                    RoomID : `${data.BuildingId}${floor.FloorNo}${i}`, //
+                    RoomID : `${data.BuildingId}${floor.FloorNo}${i}`, //RoomID LOGIC
                     RoomName : floor.Rooms[i].RoomName, 
                     Floor : floor.FloorNo, 
                     Capacity : floor.Rooms[i].Capacity, 
