@@ -26,6 +26,11 @@ const UserSchema = new mongoose.Schema({
         type: String, 
         enum: ['admin', 'user'] 
     },
+    campusname: {
+        type: String,
+        enum: ['kharagpur','madras', 'delhi'],
+        required: true
+    },
     simulations: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Simulation',
