@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const Simulation = require('./Simulation');
 
 const UserSchema = new mongoose.Schema({
     username: {
@@ -50,6 +49,7 @@ UserSchema.pre('save', async function (next) {
 
 UserSchema.post('remove', async function (next) {
     try{
+        const Simulation = require('./Simulation');
         await Simulation.deleteMany({user: this._id});
         next();
     }catch(err){

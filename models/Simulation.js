@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const User = require('./User');
+const ErrorResponse = require('../utils/errorResponse');
 
 const SimulationSchema = new mongoose.Schema({
     inputJSON: {
@@ -15,6 +15,7 @@ const SimulationSchema = new mongoose.Schema({
 
 SimulationSchema.pre('save', async function (next) {
     try{
+        const User = require('./User');
         const user = await User.findById(this.user);
         if(user){
             next();

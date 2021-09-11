@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const User = require('../models/User');
 const Simulation = require('../models/Simulation');
 const runPython = require('../utils/runPython');
-
 const ErrorResponse = require('../utils/errorResponse');
 
 const fs = require('fs');
@@ -71,14 +70,14 @@ exports.initialization = async (request, response, next) => {
 exports.saveSimulation = async (request, response, next) => {
     const user = request.user;
     try{
-        const newSim = await Simulation.create({
+        await Simulation.create({
             inputJSON: JSON.stringify(request.body),
             user : user._id
         });
 
         response.send({
             success: true,
-            message: 'Simulation added to user simulations'
+            message: 'Saved Successfully'
         });
 
     }catch(err) { return next(new ErrorResponse(err,400)); }
