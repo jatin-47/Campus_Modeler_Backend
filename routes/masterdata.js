@@ -25,32 +25,26 @@ router.route('/classschedule/addclass/editStudentComposition').patch(editStudent
 router.route('/classschedule/addclass/deleteStudentComposition').delete(deleteStudentCompositionAddClassClassSchedule);
 router.route('/users').get(users);
 router.route('/users/viewdetails').get(viewDetailsUsers);
-router.route('/users/adduser').get(addUserUsers);
-router.route('/surveyuploader').get(surveyUploader);
-router.route('/surveyuploader/delete').get(deleteSurveyUploader);
-router.route('/surveyuploader/update').get(updateSurveyUploader);
+router.route('/users/adduser').post(addUserUsers);
+router.route('/surveyuploader').post(surveyUploader);
+router.route('/surveyuploader/delete').delete(deleteSurveyUploader);
+router.route('/surveyuploader/update').patch(updateSurveyUploader);
 router.route('/surveyuploader/download').get(downloadSurveyUploader);
-router.route('/campusmapuploader/add').get(addCampusMapUploader);
-router.route('/campusmapuploader/update').get(updateCampusMapUploader);
-router.route('/studentdatauploader/add').get(addStudentDataUploader);
-router.route('/studentdatauploader/delete').get(deleteStudentDataUploader);
-router.route('/studentdatauploader/update').get(updateStudentDataUploader);
+router.route('/campusmapuploader/add').post(addCampusMapUploader);
+router.route('/campusmapuploader/update').patch(updateCampusMapUploader);
+router.route('/studentdatauploader/add').post(addStudentDataUploader);
+router.route('/studentdatauploader/delete').delete(deleteStudentDataUploader);
+router.route('/studentdatauploader/update').patch(updateStudentDataUploader);
 router.route('/batchwisestudentdetails').get(batchwiseStudentDetails);
-router.route('/batchwisestudentdetails/add').get(addBatchwiseStudentDetails);
-router.route('/batchwisestudentdetails/delete').get(deleteBatchwiseStudentDetails);
+router.route('/batchwisestudentdetails/add').post(addBatchwiseStudentDetails);
+router.route('/batchwisestudentdetails/delete').delete(deleteBatchwiseStudentDetails);
 router.route('/facultydetails').get(facultyDetails);
-router.route('/facultydetails/add').get(addFacultyDetails);
+router.route('/facultydetails/add').post(addFacultyDetails);
 router.route('/facultydetails/add/residencebuildname').get(residenceBuildNameAddFacultyDetails);
-router.route('/facultydetails/delete').get(deleteFacultyDetails);
+router.route('/facultydetails/delete').delete(deleteFacultyDetails);
 router.route('/staffdetails').get(staffDetails);
-router.route('/staffdetails/add').get(addStaffDetails);
-router.route('/staffdetails/delete').get(deleteStaffDetails);
-
-
-
-// router.route('/upload').get(upload).post(uploadMiddleware.single('file'), upload);
-// router.route('/blog').get(blog);
-// router.route('/projects').post(projects);
+router.route('/staffdetails/add').post(addStaffDetails);
+router.route('/staffdetails/delete').delete(deleteStaffDetails);
 
 
 module.exports = router;

@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 const User = require('../models/User');
 const Simulation = require('../models/Simulation');
+
 const runPython = require('../utils/runPython');
 const ErrorResponse = require('../utils/errorResponse');
 
+const moment = require('moment');
 const fs = require('fs');
 
 exports.policyPlanner = async (request, response, next) => {
@@ -65,20 +67,43 @@ exports.initialization = async (request, response, next) => {
     });
 };
 
-// Create a new sim if there is no simId provided.
-// Update the existing sim if there's a simId provided and sim exists with that ID in the user
 exports.saveSimulation = async (request, response, next) => {
     const user = request.user;
+    const data = request.body;
+    const { simId } = request.query;
+    
     try{
-        await Simulation.create({
-            inputJSON: JSON.stringify(request.body),
-            user : user._id
-        });
-
-        response.send({
-            success: true,
-            message: 'Saved Successfully'
-        });
+        if(simId){ //update
+            let sim = await Simulation.findById(simId);
+            if(sim.user.equals(user._id)){
+                sim.GeneralInput = data.GeneralInput;
+                sim.EpidemicParameterInput = data.EpidemicParameterInput;
+                sim.PolicyInput = data.PolicyInput;
+                sim.TestingStrategy = data.TestingStrategy;
+                await sim.save();
+                response.send({
+                    'message': 'Simulation Updated successfully!'
+                });
+            }
+            else{
+                return next(new ErrorResponse("You are not the owner of this sim",401));
+            }
+        }
+        else { //create_new
+            await Simulation.create({
+                Simulation_Name : data.Simulation_Name,
+                GeneralInput : data.GeneralInput,
+                EpidemicParameterInput : data.EpidemicParameterInput,
+                PolicyInput : data.PolicyInput,
+                TestingStrategy : data.TestingStrategy,
+                user : user._id
+            });
+        
+            response.send({
+                success: true,
+                message: 'Saved Successfully'
+            });
+        }
 
     }catch(err) { return next(new ErrorResponse(err,400)); }
 };
@@ -90,9 +115,10 @@ exports.savedSimulations = async (request, response, next) => {
         let desiredformat = simulations.map((curr)=> {
             new_sim = {};
             new_sim.simId = curr._id;
-            new_sim.SimulationName = JSON.parse(curr.inputJSON).Simulation_Name;
-            new_sim.Created_Date_Time = curr.createdAt;
-            return new_sim
+            new_sim.SimulationName = curr.Simulation_Name;
+            new_sim.Created_Date_Time = moment(curr.createdAt).format("D MMM, YYYY (HH:mm)");
+            new_sim.Updated_Date_Time = moment(curr.updateAt).format("D MMM, YYYY (HH:mm)");
+            return new_sim;
         })
     
         response.send(desiredformat);

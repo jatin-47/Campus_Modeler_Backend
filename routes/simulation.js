@@ -17,9 +17,6 @@ router.route('/run').post(run);
 router.route('/save').post(save);
 
 // router.route('/savedsimulations/run').get(protect, runSavedSimulations);
-// router.route('/upload').get(upload).post(uploadMiddleware.single('file'), upload);
-// router.route('/blog').get(blog);
-// router.route('/projects').post(projects);
 
 
 module.exports = router;
