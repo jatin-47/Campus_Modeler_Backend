@@ -14,8 +14,14 @@ exports.campusBuildings = async (request, response, next) => {
 exports.viewDataCampusBuildings = async (request, response, next) => {
 
     const { BuildingID } = request.query;
-    let viewdata = await CampusBuilding.findOne({ BuildingID: BuildingID });
-    response.send(viewdata);
+    try {
+        let viewdata = await CampusBuilding.findOne({ BuildingID: BuildingID });
+        if(viewdata)
+            response.send(viewdata);
+        else
+            return next(new ErrorResponse('Not Found',400));
+    }catch(err){  return next(new ErrorResponse(err,400));  }
+
 };
 
 exports.uploadCampusBuildings = async (request, response, next) => {
@@ -40,8 +46,8 @@ exports.uploadCampusBuildings = async (request, response, next) => {
                 RoomID : 1,
                 RoomName : 'Basiclab',
                 Floor : 1,
-                capacity : 40,
-                roomtype : 'lab'
+                Capacity : 40,
+                RoomType : 'lab'
             }]
         });
 
@@ -61,27 +67,58 @@ exports.uploadCampusBuildings = async (request, response, next) => {
 
 
 exports.addBuildingCampusBuildings = async (request, response, next) => {
-
+    const data = request.body;
+    try {
+        const floors = data.RoomDetails;
+        let Rooms = []
     
-    //to be done
-    //resolving data from the request body and saving that documnet to 'CampusBuilding' collection
-
-
-    response.send({
-        success: true,
-        message: 'saved successfully'
-    });
+        for(let floor of floors){
+            for(let i =0; i<floor.NumberofRooms; i++){
+                let room = {
+                    RoomID : `${data.BuildingId}${floor.FloorNo}${i}`, //
+                    RoomName : floor.Rooms[i].RoomName, 
+                    Floor : floor.FloorNo, 
+                    Capacity : floor.Rooms[i].Capacity, 
+                    RoomType : floor.Rooms[i].RoomType
+                };
+                Rooms.push(room);
+            }
+        }
+        await CampusBuilding.create({ 
+            BuildingID : data.BuildingId,
+            BuildingName : data.BuildingName,
+            BuildingType : data.BuildingType,
+            NoOfFloors : data.NoOfFloors,
+            NoOfWorkers : data.NoOfWorkers,
+            ActiveHours : {
+                start : data.ActiveHours[0],
+                end : data.ActiveHours[1] 
+            },
+            BuildingCordinaties :data.BuildingCordinaties,
+            Rooms : Rooms
+        });
+    
+        response.send({
+            success: true,
+            message: 'saved successfully'
+        });
+    }
+    catch(err){
+        return next(new ErrorResponse(err,400));
+    }
 };
 
 exports.deleteBuildingCampusBuildings = async (request, response, next) => {
+    try {
+        const { BuildingID } = request.query;
+        await CampusBuilding.deleteOne({ BuildingID : BuildingID})
+    
+        response.send({
+            success: true,
+            message: 'deleted successfully'
+        });
 
-    const { BuildingID } = request.query;
-    await CampusBuilding.deleteOne({ BuildingID : BuildingID})
-
-    response.send({
-        success: true,
-        message: 'deleted successfully'
-    });
+    } catch(err){  return next(new ErrorResponse(err,400));  }
 };
 
 exports.classSchedule = async (request, response, next) => {
@@ -115,24 +152,26 @@ exports.deleteClassClassSchedule = async (request, response, next) => {
 exports.addClassClassSchedule = async (request, response, next) => {
     const data = request.body;
 
-    await ClassSchedule.create({
-        CourseID : data.CourseID,
-        CourseName : data.CourseName,
-        RoomID : await ClassSchedule.findOne({ RoomID: data.RoomID }, '_id'),
-        Strength : data.Strength,
-        Departments : data.Departments,
-        Status : data.Status,
-        ClassDays : [{
-            Day : 'Monday',
-            Timing : {
-                start : "9am",
-                end : "10am"
-            }
-        }],
-        CourseInstructor : "staff",
-        StudentComposition :[]
-    });
-
+    try{
+        const building = await CampusBuilding.findOne({BuildingName:data.BuildingName}, '');
+        const room = building.Rooms.filter((curr)=> curr.RoomID==data.RoomID); 
+    
+        await ClassSchedule.create({
+            CourseID : data.CourseID,
+            CourseName : data.CourseName,
+            RoomID :room._id,
+            BuildingName : building._id,
+            Strength : data.Strength,
+            Departments : data.Departments,
+            Status : true,
+            ClassDays : data.ClassDays.map((curr) => { curr.Timing = {start: curr.Timing[0], end: curr.Timing[1]}; return curr} ),
+            CourseInstructor : data.CourseInstructor,
+            StudentComposition : data.StudentComposition
+        });   
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
     response.send({
         success: true,
         message: 'saved successfully'

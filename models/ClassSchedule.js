@@ -25,7 +25,8 @@ const ClassScheduleSchema = new mongoose.Schema({
         enum : ['Mech','Cse','IT']
     }],
     Status : {
-        type : Boolean
+        type : Boolean,
+        default: true
     },
     ClassDays : [{
         Day : {type : String, enum : ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']},
