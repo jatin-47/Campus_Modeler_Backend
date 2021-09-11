@@ -86,7 +86,7 @@ exports.savedSimulations = async (request, response, next) => {
     let simulations = [];
     for (let simId of user.simulations) {
         let sim = await Simulation.findById(simId);
-        simulations.push({ simId: sim._id, SimulationName: JSON.parse(sim.inputJSON).Simulation_Name, Created_Date_Time: 'Date_Time_Here' });
+        simulations.push({ simId: sim._id, SimulationName: JSON.parse(sim.inputJSON).Simulation_Name, Created_Date_Time: sim.createdAt });
     }
 
     response.send(simulations);

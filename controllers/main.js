@@ -1,11 +1,11 @@
 const User = require('../models/User');
+const Campus = require('../models/Campus');
 const ErrorResponse = require('../utils/errorResponse');
 const fs = require("fs");
-const runPython = require('../utils/runPython');
 
 exports.login = async (request, response, next) => {
 
-    const { username, password, campusname } = request.body;
+    const { username, password, role, campusname } = request.body;
     // console.log(request)
     console.log('Post request');
     if (username && password) {
@@ -35,10 +35,15 @@ exports.login = async (request, response, next) => {
 
 
 exports.campusName = async (request, response, next) => {
-    console.log('Campus Name');
-    response.send({
-        'campusname': ['madras', 'delhi']
-    });
+    try {
+        const campuses = await Campus.find({}, 'campusname');
+        response.send({
+            campusname : campuses.map((curr) => curr.campusname)
+        });
+    }
+    catch(err){
+        response.send(err);
+    }
 };
 
 

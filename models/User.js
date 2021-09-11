@@ -22,6 +22,10 @@ const UserSchema = new mongoose.Schema({
         minlength: 6,
         select: false
     },
+    role: { 
+        type: String, 
+        enum: ['admin', 'user'] 
+    },
     simulations: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Simulation',

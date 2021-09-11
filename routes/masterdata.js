@@ -1,24 +1,28 @@
 const express = require('express');
 const router = express.Router();
 
+const { protect } = require('../middleware/auth')
+
 const { campusBuildings, viewDataCampusBuildings, uploadCampusBuildings, addBuildingCampusBuildings, deleteBuildingCampusBuildings, classSchedule, viewDetailsClassSchedule, deleteClassClassSchedule, addClassClassSchedule, getBuildingAddClassClassSchedule, getRoomIdAddClassClassSchedule, getStudentStrengthAddClassClassSchedule, getCourseInstructorAddClassClassSchedule, addStudentCompositionAddClassClassSchedule, editStudentCompositionAddClassClassSchedule, deleteStudentCompositionAddClassClassSchedule, users, viewDetailsUsers, addUserUsers, surveyUploader, deleteSurveyUploader, updateSurveyUploader, downloadSurveyUploader, addCampusMapUploader, updateCampusMapUploader, addStudentDataUploader, deleteStudentDataUploader, updateStudentDataUploader, batchwiseStudentDetails, addBatchwiseStudentDetails, deleteBatchwiseStudentDetails, facultyDetails, addFacultyDetails, residenceBuildNameAddFacultyDetails, deleteFacultyDetails, staffDetails, addStaffDetails, deleteStaffDetails } = require('../controllers/masterdata');
 
+router.use(protect);
+// Protected Routes from here
 router.route('/campusbuildings').get(campusBuildings);
 router.route('/campusbuildings/viewdata').get(viewDataCampusBuildings);
-router.route('/campusbuildings/upload').get(uploadCampusBuildings);
-router.route('/campusbuildings/addbuilding').get(addBuildingCampusBuildings);
+router.route('/campusbuildings/upload').post(uploadCampusBuildings);
+router.route('/campusbuildings/addbuilding').post(addBuildingCampusBuildings);
 router.route('/campusbuildings/deletebuilding').delete(deleteBuildingCampusBuildings);
 router.route('/classschedule').get(classSchedule);
 router.route('/classschedule/viewdetails').get(viewDetailsClassSchedule);
-router.route('/classschedule/deleteclass').get(deleteClassClassSchedule);
-router.route('/classschedule/addclass').get(addClassClassSchedule);
+router.route('/classschedule/deleteclass').delete(deleteClassClassSchedule);
+router.route('/classschedule/addclass').post(addClassClassSchedule);
 router.route('/classschedule/addclass/getbuildingname').get(getBuildingAddClassClassSchedule);
 router.route('/classschedule/addclass/getroomid').get(getRoomIdAddClassClassSchedule);
 router.route('/classschedule/addclass/getStudentStrength').get(getStudentStrengthAddClassClassSchedule);
 router.route('/classschedule/addclass/getCourseInstructor').get(getCourseInstructorAddClassClassSchedule);
-router.route('/classschedule/addclass/addStudentComposition').get(addStudentCompositionAddClassClassSchedule);
-router.route('/classschedule/addclass/editStudentComposition').get(editStudentCompositionAddClassClassSchedule);
-router.route('/classschedule/addclass/deleteStudentComposition').get(deleteStudentCompositionAddClassClassSchedule);
+router.route('/classschedule/addclass/addStudentComposition').post(addStudentCompositionAddClassClassSchedule);
+router.route('/classschedule/addclass/editStudentComposition').patch(editStudentCompositionAddClassClassSchedule);
+router.route('/classschedule/addclass/deleteStudentComposition').delete(deleteStudentCompositionAddClassClassSchedule);
 router.route('/users').get(users);
 router.route('/users/viewdetails').get(viewDetailsUsers);
 router.route('/users/adduser').get(addUserUsers);
