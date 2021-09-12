@@ -3,6 +3,8 @@ const router = express.Router();
 
 const { protect } = require('../middleware/auth');
 const { adminprotect } = require('../middleware/admincheck');
+const uploadExcel = require("../middleware/uploadExcel");
+const uploadImage = require("../middleware/uploadImage");
 
 const { campusBuildings, viewDataCampusBuildings, uploadCampusBuildings, addBuildingCampusBuildings, deleteBuildingCampusBuildings, classSchedule, viewDetailsClassSchedule, deleteClassClassSchedule, addClassClassSchedule, getBuildingAddClassClassSchedule, getRoomIdAddClassClassSchedule, getStudentStrengthAddClassClassSchedule, getCourseInstructorAddClassClassSchedule, addStudentCompositionAddClassClassSchedule, editStudentCompositionAddClassClassSchedule, deleteStudentCompositionAddClassClassSchedule, users, viewDetailsUsers, addUserUsers, surveyUploader, deleteSurveyUploader, updateSurveyUploader, downloadSurveyUploader, addCampusMapUploader, updateCampusMapUploader, addStudentDataUploader, deleteStudentDataUploader, updateStudentDataUploader, batchwiseStudentDetails, addBatchwiseStudentDetails, deleteBatchwiseStudentDetails, facultyDetails, addFacultyDetails, residenceBuildNameAddFacultyDetails, deleteFacultyDetails, staffDetails, addStaffDetails, deleteStaffDetails } = require('../controllers/masterdata');
 
@@ -11,7 +13,7 @@ router.use(adminprotect);
 // Protected & admin ONLY Routes from here
 router.route('/campusbuildings').get(campusBuildings);
 router.route('/campusbuildings/viewdata').get(viewDataCampusBuildings);
-router.route('/campusbuildings/upload').post(uploadCampusBuildings);
+router.post('/campusbuildings/upload',uploadExcel.single("file"), uploadCampusBuildings);
 router.route('/campusbuildings/addbuilding').post(addBuildingCampusBuildings);
 router.route('/campusbuildings/deletebuilding').delete(deleteBuildingCampusBuildings);
 router.route('/classschedule').get(classSchedule);

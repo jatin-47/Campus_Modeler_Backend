@@ -17,7 +17,7 @@ const User = require('./models/User');
 // const createuser = require('./create_user');
 // createuser("praneeth", "pro@gmail.com", "user@123", "user", "madras" );
 
-const uploadMiddleware = require('./middleware/uploadFile');
+//const uploadMiddleware = require('./middleware/uploadFile');
 
 // Connecting to Database
 connectDB();
@@ -42,10 +42,10 @@ app.use(cors(corsOptions));
 // Adding a json middleware for parsing application/json data
 app.use(express.json());
 // For parsing application/xwww-form-urlencoded data
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 // For parsing multipart/form-data
 // app.use(upload.array());
-app.use(uploadMiddleware.any());
+//app.use(uploadMiddleware.any());
 
 // Setting port as a key 'port' to the app
 app.set('port', process.env.PORT || 5050);

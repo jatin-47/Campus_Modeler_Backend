@@ -6,6 +6,7 @@ const Faculty = require('../models/Faculty');
 const Staff = require('../models/Staff');
 
 const ErrorResponse = require('../utils/errorResponse');
+const readXlsxFile = require('read-excel-file/node');
 
 exports.campusBuildings = async (request, response, next) => {
 
@@ -27,46 +28,67 @@ exports.viewDataCampusBuildings = async (request, response, next) => {
 
 };
 
-//todo
 exports.uploadCampusBuildings = async (request, response, next) => {
-
-    const { file } = request.body;
-    if( file == '.xlsl')
-    {
-        //to be done
-        //resolving data from the xlsl sheet and saving that documnet to 'CampusBuilding' collection
-
-        //test
-        await CampusBuilding.create({ 
-            BuildingID : 1234,
-            BuildingName : 'Central Instrumentation Building',
-            BuildingType : 'Acadamic',
-            NoOfFloors : 3,
-            NoOfWorkers : 75,
-            Status : true , 
-            ActiveHours : '',
-            BuildingCordinaties : '',
-            Rooms : [{
-                RoomID : 1,
-                RoomName : 'Basiclab',
-                Floor : 1,
-                Capacity : 40,
-                RoomType : 'lab'
-            }]
+    try {
+        if (request.file == undefined) {
+            return next(new ErrorResponse("Please upload an excel file!",400));
+        }
+        let path = __basedir + process.env.EXCEL_UPLOAD_PATH + request.file.filename;
+    
+        readXlsxFile(path).then((rows) => {
+            // skip header
+            rows.shift();
+        
+            let buildings = [];
+        
+            rows.forEach((row) => {
+                let building = {
+                    BuildingID : row[0],
+                    BuildingName : row[1],
+                    BuildingType : row[2],
+                    NoOfFloors : row[3],
+                    NoOfWorkers : row[4],
+                    Status : row[5] , 
+                    ActiveHours : row[6],
+                    BuildingCordinaties : row[7],
+                    Rooms : []
+                };
+                let start_col = 8;
+                for(let i=0; i<TotalNoOfRooms; i++)
+                {
+                    let room = {
+                        RoomID : row[start_col],
+                        RoomName : row[start_col+1],
+                        Floor : row[start_col+2],
+                        Capacity : row[start_col+3],
+                        RoomType : row[start_col+4]
+                    };
+                    building.Rooms.push(room);
+                    start_col = start_col+5;
+                }
+        
+                buildings.push(building);
+            });
+    
+            CampusBuilding.insertMany(buildings)
+            .then(() => {
+                response.status(200).send({
+                    message: "Uploaded the file successfully: " + request.file.originalname,
+                });
+            })
+            .catch((error) => {
+                response.status(500).send({
+                    message: "Fail to import data into database!",
+                    error: error.message,
+                });
+            });
         });
-
-        response.send({
-            success: true,
-            message: 'uploaded successfully'
+    } catch (error) {
+        console.log(error);
+        response.status(500).send({
+            message: "Could not upload the file: " + request.file.originalname,
         });
     }
-    else
-    {
-        response.send({
-            success: false,
-            message: 'wrong file format'
-        });
-    }    
 };
 
 //RoomID logic `BuildingID + FloorNo + RoomNo`
