@@ -1,6 +1,9 @@
 const User = require('../models/User');
 const CampusBuilding = require('../models/CampusBuilding');
 const ClassSchedule = require('../models/ClassSchedule');
+const BatchStudent = require('../models/BatchStudent');
+const Faculty = require('../models/Faculty');
+const Staff = require('../models/Staff');
 
 const ErrorResponse = require('../utils/errorResponse');
 
@@ -24,6 +27,7 @@ exports.viewDataCampusBuildings = async (request, response, next) => {
 
 };
 
+//todo
 exports.uploadCampusBuildings = async (request, response, next) => {
 
     const { file } = request.body;
@@ -65,7 +69,7 @@ exports.uploadCampusBuildings = async (request, response, next) => {
     }    
 };
 
-//RoomID logic `${data.BuildingId}${floor.FloorNo}${i}`
+//RoomID logic `BuildingID + FloorNo + RoomNo`
 exports.addBuildingCampusBuildings = async (request, response, next) => {
     const data = request.body;
     try {
@@ -123,16 +127,27 @@ exports.deleteBuildingCampusBuildings = async (request, response, next) => {
 
 exports.classSchedule = async (request, response, next) => {
 
-    let ClassSchedules = await ClassSchedule.find({}, 'CourseID CourseName RoomID Strength Departments Status');
-
-    response.send(ClassSchedules);
+    try{
+        let ClassSchedules = await ClassSchedule.find({}, 'CourseID CourseName RoomID Strength Departments Status');
+        //roomid from its objectid
+    
+        response.send(ClassSchedules);
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
 };
 
 exports.viewDetailsClassSchedule = async (request, response, next) => {
 
     const { CourseID } = request.query;
-    let viewdata = await ClassSchedule.findOne({ CourseID: CourseID });
-    response.send(viewdata);
+    try{
+        let viewdata = await ClassSchedule.findOne({ CourseID: CourseID });
+        response.send(viewdata);
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
 };
 
 exports.deleteClassClassSchedule = async (request, response, next) => {
@@ -153,13 +168,15 @@ exports.addClassClassSchedule = async (request, response, next) => {
     const data = request.body;
 
     try{
-        const building = await CampusBuilding.findOne({BuildingName:data.BuildingName}, '');
+        const building = await CampusBuilding.findOne({BuildingName:data.BuildingName});
+        if(!building) throw "No such building found in which this class is scheduled!";
         const room = building.Rooms.filter((curr)=> curr.RoomID==data.RoomID); 
+        if(room.length == 0) throw "No such room found in which this class is scheduled!";
     
         await ClassSchedule.create({
             CourseID : data.CourseID,
             CourseName : data.CourseName,
-            RoomID :room._id,
+            RoomID :room[0]._id,
             BuildingName : building._id,
             Strength : data.Strength,
             Departments : data.Departments,
@@ -179,15 +196,25 @@ exports.addClassClassSchedule = async (request, response, next) => {
 };
 
 exports.getBuildingAddClassClassSchedule = async (request, response, next) => {
-    const buildingnames = await CampusBuilding.find({}, 'BuildingName');
+    try{
+        const buildingnames = await CampusBuilding.find({}, 'BuildingName');
+        response.send(buildingnames);
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
 
-    response.send(buildingnames);
 };
 
 exports.getRoomIdAddClassClassSchedule = async (request, response, next) => {
-    const roomids = await CampusBuilding.find({}, 'Rooms');
+    try{
+        const roomids = await CampusBuilding.find({}, 'Rooms');
+        response.send(roomids);
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
 
-    response.send(roomids);
 };
 
 exports.getStudentStrengthAddClassClassSchedule = async (request, response, next) => {
@@ -227,23 +254,44 @@ exports.deleteStudentCompositionAddClassClassSchedule = async (request, response
 
 exports.users = async (request, response, next) => {
 
-    response.send({
-        'hi': 'Hello'
-    });
+    try{
+        let viewdata = await User.find({}, 'username role email contact status');
+        response.send(viewdata);
+    }catch(err){ return next(new ErrorResponse(err, 400)); }   
+    
 };
 
 exports.viewDetailsUsers = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
+    const { UserID } = request.query;
+    try{
+        let viewdata = await User.findById(UserID);
+        response.send(viewdata);
+    }catch(err){ return next(new ErrorResponse(err, 400)); }   
 };
 
 exports.addUserUsers = async (request, response, next) => {
+    const user = request.user;
+    const data = request.body;
+    try{
+        await User.create({
+            username: data.username,
+            email: data.email,
+            password: data.password,
+            role: data.Role,
+            campusname: user.campusname,
+            fname : data.Fname,
+            lname :data.Lname,
+            gender :data.Gender,
+            contact : data.Contact,
+            dob : data.DOB
+        });  
 
-    response.send({
-        'hi': 'Hello'
-    });
+        response.send({
+            success: true,
+            message: 'saved successfully'
+        }); 
+
+    }catch(err){ return next(new ErrorResponse(err, 400)); }
 };
 
 exports.surveyUploader = async (request, response, next) => {
@@ -310,71 +358,144 @@ exports.updateStudentDataUploader = async (request, response, next) => {
 };
 
 exports.batchwiseStudentDetails = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
+    try{
+        let viewdata = await BatchStudent.find({});
+        response.send(viewdata);
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
 };
 
 exports.addBatchwiseStudentDetails = async (request, response, next) => {
+    const data = request.body;
+    try{
+        await BatchStudent.create({
+            BatchCode : data.BatchCode,
+            Department : data.Department,
+            ProgramCode : data.ProgramCode,
+            YearOfStudy : data.YearOfStudy,
+            Strength : data.Strength
+        });  
 
-    response.send({
-        'hi': 'Hello'
-    });
+        response.send({
+            success: true,
+            message: 'saved successfully'
+        }); 
+
+    }catch(err){ return next(new ErrorResponse(err, 400)); }
 };
 
 exports.deleteBatchwiseStudentDetails = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
+    const { BatchID } = request.query;
+    try {
+        await BatchStudent.findByIdAndDelete(BatchID);
+        response.send({
+            success: true,
+            message: 'deleted successfully'
+        });
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
+    
 };
 
 exports.facultyDetails = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
+    try{
+        let viewdata = await Faculty.find({});
+        response.send(viewdata);
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
 };
 
 exports.addFacultyDetails = async (request, response, next) => {
+    const data = request.body;
+    try{
+        await Faculty.create({
+            Courses : data.Courses,
+            Department : data.Department,
+            ResidenceBuildingName : data.ResidenceBuildingName,
+            AdultFamilyMembers : data.AdultFamilyMembers,
+            NoofChildren : data.NoofChildren
+        });  
 
-    response.send({
-        'hi': 'Hello'
-    });
+        response.send({
+            success: true,
+            message: 'saved successfully'
+        }); 
+
+    }catch(err){ return next(new ErrorResponse(err, 400)); }
 };
 
 exports.residenceBuildNameAddFacultyDetails = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
+    try{
+        let allResidenceBuildings = await Faculty.distinct('ResidenceBuildingName');
+        response.send({
+            ResidenceBuildingName: allResidenceBuildings
+        });
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
 };
 
 exports.deleteFacultyDetails = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
+    const { FacultyID } = request.query;
+    try {
+        await BatchStudent.findByIdAndDelete(FacultyID);
+        response.send({
+            success: true,
+            message: 'deleted successfully'
+        });
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
 };
 
 exports.staffDetails = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
+    try{
+        let viewdata = await Staff.find({});
+        response.send(viewdata);
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
+    
 };
 
 exports.addStaffDetails = async (request, response, next) => {
+    const data = request.body;
+    try{
+        await Staff.create({
+            StaffCategory : data.StaffCategory,
+            WorkplaceBuildingName : data.WorkplaceBuildingName,
+            ResidenceBuildingName : data.ResidenceBuildingName,
+            AdultFamilyMembers :data.AdultFamilyMembers,
+            NoofChildren : data.NoofChildren
+        });  
 
-    response.send({
-        'hi': 'Hello'
-    });
+        response.send({
+            success: true,
+            message: 'saved successfully'
+        }); 
+
+    }catch(err){ return next(new ErrorResponse(err, 400)); }
 };
 
 exports.deleteStaffDetails = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
+    const { StaffID } = request.query;
+    try {
+        await Staff.findByIdAndDelete(StaffID);
+        response.send({
+            success: true,
+            message: 'deleted successfully'
+        });
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
 };

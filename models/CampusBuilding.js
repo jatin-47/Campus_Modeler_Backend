@@ -29,7 +29,6 @@ const CampusBuildingSchema = new mongoose.Schema({
         start : {type : String},
         end : {type : String} 
     },
-    //[73.113726 26.47113, 73.11408900000001 26.47113,73.114096 26.471033, 73.11405999999999]
     BuildingCordinaties : {type : String},
     Rooms : [RoomSchema]
 });

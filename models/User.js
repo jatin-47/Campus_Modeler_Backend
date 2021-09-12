@@ -30,11 +30,13 @@ const UserSchema = new mongoose.Schema({
         type: String,
         enum: ['kharagpur','madras', 'delhi'],
         required: true
-    }
-   /*  simulations: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Simulation',
-    }] */
+    },
+    status : {type: Boolean, default:true},
+    fname : { type: String, required: true},
+    lname : { type: String, required: true},
+    gender : { type: String, required: true, enum: ["Male", "Female", "Others"]},
+    contact : { type : Number, maxlength: 10},
+    dob : { type: Date}
 });
 
 UserSchema.pre('save', async function (next) {

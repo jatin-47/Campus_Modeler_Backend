@@ -2,11 +2,6 @@ const mongoose = require('mongoose');
 const ErrorResponse = require('../utils/errorResponse');
 
 const SimulationSchema = new mongoose.Schema({
-
-    /* inputJSON: {
-        type: String,
-        required: [true, "Input parameters cannot be empty!"]
-    }, */
     Simulation_Name : {
         type: String, 
         unique : true,

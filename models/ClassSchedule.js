@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const CampusBuilding = require('../models/CampusBuilding'); 
 
 const ClassScheduleSchema = new mongoose.Schema({
     CourseID : { 
         type: String, 
+        unique:true,
         required: [true, "Input parameters cannot be empty!"] 
     },
     CourseName : {

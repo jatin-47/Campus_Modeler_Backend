@@ -14,6 +14,8 @@ const connectDB = require('./config/db');
 const errorHandler = require('./middleware/error');
 const User = require('./models/User');
 // const models = require('./models'); // import all the models
+// const createuser = require('./create_user');
+// createuser("praneeth", "pro@gmail.com", "user@123", "user", "madras" );
 
 const uploadMiddleware = require('./middleware/uploadFile');
 
