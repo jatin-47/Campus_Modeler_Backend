@@ -6,6 +6,7 @@ const Faculty = require('../models/Faculty');
 const Staff = require('../models/Staff');
 
 const ErrorResponse = require('../utils/errorResponse');
+const path = require('path');
 const readXlsxFile = require('read-excel-file/node');
 
 exports.campusBuildings = async (request, response, next) => {
@@ -317,10 +318,23 @@ exports.addUserUsers = async (request, response, next) => {
 };
 
 exports.surveyUploader = async (request, response, next) => {
+    if (request.file == undefined) {
+        return next(new ErrorResponse("Please upload an excel file!",400));
+    }
+    try {
 
-    response.send({
-        'hi': 'Hello'
-    });
+
+
+        response.status(200).send({
+            message: "Uploaded the file successfully: " + request.file.originalname,
+        });
+    }
+    catch (error) {
+        console.log(error);
+        response.status(500).send({
+            message: "Could not upload the file: " + request.file.originalname,
+        });
+    }
 };
 
 exports.deleteSurveyUploader = async (request, response, next) => {
@@ -331,10 +345,19 @@ exports.deleteSurveyUploader = async (request, response, next) => {
 };
 
 exports.updateSurveyUploader = async (request, response, next) => {
+    if (request.file == undefined) {
+        return next(new ErrorResponse("Please upload an excel file!",400));
+    }
+    try {
 
-    response.send({
-        'hi': 'Hello'
-    });
+
+    }
+    catch (error) {
+        console.log(error);
+        response.status(500).send({
+            message: "Could not upload the file: " + request.file.originalname,
+        });
+    }
 };
 
 exports.downloadSurveyUploader = async (request, response, next) => {
@@ -345,9 +368,9 @@ exports.downloadSurveyUploader = async (request, response, next) => {
 };
 
 exports.addCampusMapUploader = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
+        
+    response.status(200).send({
+        message: "Uploaded the file successfully: " + request.file.originalname,
     });
 };
 
@@ -359,10 +382,22 @@ exports.updateCampusMapUploader = async (request, response, next) => {
 };
 
 exports.addStudentDataUploader = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
+    if (request.file == undefined) {
+        return next(new ErrorResponse("Please upload an excel file!",400));
+    }
+    try {      
+        
+        
+        response.status(200).send({
+            message: "Uploaded the file successfully: " + request.file.originalname,
+        });
+    }
+    catch (error) {
+        console.log(error);
+        response.status(500).send({
+            message: "Could not upload the file: " + request.file.originalname,
+        });
+    }
 };
 
 exports.deleteStudentDataUploader = async (request, response, next) => {
@@ -373,10 +408,18 @@ exports.deleteStudentDataUploader = async (request, response, next) => {
 };
 
 exports.updateStudentDataUploader = async (request, response, next) => {
+    if (request.file == undefined) {
+        return next(new ErrorResponse("Please upload an excel file!",400));
+    }
+    try {
 
-    response.send({
-        'hi': 'Hello'
-    });
+    }
+    catch (error) {
+        console.log(error);
+        response.status(500).send({
+            message: "Could not upload the file: " + request.file.originalname,
+        });
+    }
 };
 
 exports.batchwiseStudentDetails = async (request, response, next) => {
