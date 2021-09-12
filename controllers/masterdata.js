@@ -356,9 +356,9 @@ exports.deleteSurveyUploader = async (request, response, next) => {
     try {
         const survey = await Survey.findByID(SurveyID);
         const path = survey.path;
-        const filename = survey,filename;
+        const filename = survey.filename;
 
-        fs.unlink(path.join(path,filename), function (err) {
+        fs.unlink(path.join(path.filename), function (err) {
             if (err) throw err;
             console.log('File deleted!');
         });
@@ -378,9 +378,9 @@ exports.updateSurveyUploader = async (request, response, next) => {
     try {
         const survey = await Survey.findByID(SurveyID);
         const path = survey.path;
-        const filename = survey,filename;
+        const filename = survey.filename;
 
-        fs.writeFile(path.join(path,filename), function (err) {
+        fs.writeFile(path.join(path.filename), function (err) {
             if (err) throw err;
             console.log('Replaced!');
         });
