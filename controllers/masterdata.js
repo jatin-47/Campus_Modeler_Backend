@@ -8,6 +8,9 @@ const Staff = require('../models/Staff');
 const ErrorResponse = require('../utils/errorResponse');
 const path = require('path');
 const readXlsxFile = require('read-excel-file/node');
+var fs = require('fs');
+const Survey = require('../models/Survey');
+const StudentData = require('../models/StudentData');
 
 exports.campusBuildings = async (request, response, next) => {
 
@@ -230,9 +233,16 @@ exports.getBuildingAddClassClassSchedule = async (request, response, next) => {
 };
 
 exports.getRoomIdAddClassClassSchedule = async (request, response, next) => {
+    const { BuildingId } = request.query;
     try{
-        const roomids = await CampusBuilding.find({}, 'Rooms');
-        response.send(roomids);
+        if(BuildingId) {
+            const building = await CampusBuilding.findOne({BuildingID : BuildingId}, 'Rooms');
+            response.send(building);
+        }
+        else {
+            const building = await CampusBuilding.findOne({}, 'Rooms');
+            response.send(building);
+        }
     }
     catch(err){
         return next(new ErrorResponse(err, 400));
@@ -248,10 +258,11 @@ exports.getStudentStrengthAddClassClassSchedule = async (request, response, next
 };
 
 exports.getCourseInstructorAddClassClassSchedule = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
+    try {
+        let faculties = await Faculty.find({}, 'Name');
+        response.send(faculties);
+    }
+    catch(err){  return next(new ErrorResponse(err,400));  }
 };
 
 exports.addStudentCompositionAddClassClassSchedule = async (request, response, next) => {
@@ -322,9 +333,12 @@ exports.surveyUploader = async (request, response, next) => {
         return next(new ErrorResponse("Please upload an excel file!",400));
     }
     try {
-
-
-
+        await Survey.create({
+            filename :  request.file.filename,
+            path : __basedir + process.env.EXCEL_UPLOAD_PATH,
+            filetype : request.file.filetype,
+            SurveyType : request.body.SurveyType
+        })
         response.status(200).send({
             message: "Uploaded the file successfully: " + request.file.originalname,
         });
@@ -338,10 +352,23 @@ exports.surveyUploader = async (request, response, next) => {
 };
 
 exports.deleteSurveyUploader = async (request, response, next) => {
+    const { SurveyID } = request.query;
+    try {
+        const survey = await Survey.findByID(SurveyID);
+        const path = survey.path;
+        const filename = survey,filename;
 
-    response.send({
-        'hi': 'Hello'
-    });
+        fs.unlink(path.join(path,filename), function (err) {
+            if (err) throw err;
+            console.log('File deleted!');
+        });
+
+        response.send({
+            success: true,
+            message: 'deleted successfully'
+        });
+
+    } catch(err){  return next(new ErrorResponse(err,400));  }
 };
 
 exports.updateSurveyUploader = async (request, response, next) => {
@@ -349,8 +376,19 @@ exports.updateSurveyUploader = async (request, response, next) => {
         return next(new ErrorResponse("Please upload an excel file!",400));
     }
     try {
+        const survey = await Survey.findByID(SurveyID);
+        const path = survey.path;
+        const filename = survey,filename;
 
+        fs.writeFile(path.join(path,filename), function (err) {
+            if (err) throw err;
+            console.log('Replaced!');
+        });
 
+        response.send({
+            success: true,
+            message: 'deleted successfully'
+        });
     }
     catch (error) {
         console.log(error);
@@ -361,10 +399,18 @@ exports.updateSurveyUploader = async (request, response, next) => {
 };
 
 exports.downloadSurveyUploader = async (request, response, next) => {
-
-    response.send({
-        'hi': 'Hello'
-    });
+    ////
+    
+    response.setHeader(
+        "Content-Type",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    );
+    response.setHeader(
+        "Content-Disposition",
+        "attachment; filename=" + "survey.xlsx"
+    );
+    response.attachment("survey.xlsx");
+    response.send();
 };
 
 exports.addCampusMapUploader = async (request, response, next) => {
@@ -401,10 +447,19 @@ exports.addStudentDataUploader = async (request, response, next) => {
 };
 
 exports.deleteStudentDataUploader = async (request, response, next) => {
+    const { StudentdataID } = request.query;
+    try {
+        
+        await StudentData.findByIdAndDelete(StudentdataID);
 
-    response.send({
-        'hi': 'Hello'
-    });
+        // also delete file from server
+         
+        response.send({
+            success: true,
+            message: 'deleted successfully'
+        });
+
+    } catch(err){  return next(new ErrorResponse(err,400));  }
 };
 
 exports.updateStudentDataUploader = async (request, response, next) => {
