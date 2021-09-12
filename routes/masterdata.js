@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const { protect } = require('../middleware/auth')
+const { protect } = require('../middleware/auth');
+const { adminprotect } = require('../middleware/admincheck');
 
 const { campusBuildings, viewDataCampusBuildings, uploadCampusBuildings, addBuildingCampusBuildings, deleteBuildingCampusBuildings, classSchedule, viewDetailsClassSchedule, deleteClassClassSchedule, addClassClassSchedule, getBuildingAddClassClassSchedule, getRoomIdAddClassClassSchedule, getStudentStrengthAddClassClassSchedule, getCourseInstructorAddClassClassSchedule, addStudentCompositionAddClassClassSchedule, editStudentCompositionAddClassClassSchedule, deleteStudentCompositionAddClassClassSchedule, users, viewDetailsUsers, addUserUsers, surveyUploader, deleteSurveyUploader, updateSurveyUploader, downloadSurveyUploader, addCampusMapUploader, updateCampusMapUploader, addStudentDataUploader, deleteStudentDataUploader, updateStudentDataUploader, batchwiseStudentDetails, addBatchwiseStudentDetails, deleteBatchwiseStudentDetails, facultyDetails, addFacultyDetails, residenceBuildNameAddFacultyDetails, deleteFacultyDetails, staffDetails, addStaffDetails, deleteStaffDetails } = require('../controllers/masterdata');
 
 router.use(protect);
-// Protected Routes from here
+router.use(adminprotect);
+// Protected & admin ONLY Routes from here
 router.route('/campusbuildings').get(campusBuildings);
 router.route('/campusbuildings/viewdata').get(viewDataCampusBuildings);
 router.route('/campusbuildings/upload').post(uploadCampusBuildings);
