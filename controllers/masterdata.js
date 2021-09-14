@@ -14,7 +14,7 @@ const StudentData = require('../models/StudentData');
 
 exports.campusBuildings = async (request, response, next) => {
 
-    let CampusBuildings = await CampusBuilding.find({}, 'BuildingID BuildingName BuildingType NoOfFloors NoOfWorkers Status');
+    let CampusBuildings = await CampusBuilding.find({campusname : request.user.campusname}, 'BuildingID BuildingName BuildingType NoOfFloors NoOfWorkers Status');
 
     response.send(CampusBuildings);
 };
@@ -23,7 +23,7 @@ exports.viewDataCampusBuildings = async (request, response, next) => {
 
     const { BuildingID } = request.query;
     try {
-        let viewdata = await CampusBuilding.findOne({ BuildingID: BuildingID });
+        let viewdata = await CampusBuilding.findOne({ campusname : request.user.campusname, BuildingID: BuildingID });
         if(viewdata)
             response.send(viewdata);
         else
@@ -37,7 +37,7 @@ exports.uploadCampusBuildings = async (request, response, next) => {
         if (request.file == undefined) {
             return next(new ErrorResponse("Please upload an excel file!",400));
         }
-        console.log(request.file);
+        //console.log(request.file);
         let path = request.file.path;
     
         let rows = await readXlsxFile(path);
@@ -63,6 +63,7 @@ exports.uploadCampusBuildings = async (request, response, next) => {
                 Status : row[5] , 
                 ActiveHours : row[6],
                 BuildingCordinaties : row[7],
+                campusname : request.user.campusname,
                 Rooms : []
             };
             let start_col = 8;
@@ -127,6 +128,7 @@ exports.addBuildingCampusBuildings = async (request, response, next) => {
                 end : data.ActiveHours[1] 
             },
             BuildingCordinaties :data.BuildingCordinaties,
+            campusname : request.user.campusname,
             Rooms : Rooms
         });
     
@@ -143,7 +145,7 @@ exports.addBuildingCampusBuildings = async (request, response, next) => {
 exports.deleteBuildingCampusBuildings = async (request, response, next) => {
     try {
         const { BuildingID } = request.query;
-        await CampusBuilding.deleteOne({ BuildingID : BuildingID})
+        await CampusBuilding.deleteOne({ campusname : request.user.campusname, BuildingID : BuildingID})
     
         response.send({
             success: true,
@@ -156,7 +158,7 @@ exports.deleteBuildingCampusBuildings = async (request, response, next) => {
 exports.classSchedule = async (request, response, next) => {
 
     try{
-        let ClassSchedules = await ClassSchedule.find({}, 'CourseID CourseName RoomID Strength Departments Status');
+        let ClassSchedules = await ClassSchedule.find({campusname : request.user.campusname}, 'CourseID CourseName RoomID Strength Departments Status');
         //roomid from its objectid
     
         response.send(ClassSchedules);
@@ -170,7 +172,7 @@ exports.viewDetailsClassSchedule = async (request, response, next) => {
 
     const { CourseID } = request.query;
     try{
-        let viewdata = await ClassSchedule.findOne({ CourseID: CourseID });
+        let viewdata = await ClassSchedule.findOne({ campusname : request.user.campusname, CourseID: CourseID });
         response.send(viewdata);
     }
     catch(err){
@@ -181,7 +183,7 @@ exports.viewDetailsClassSchedule = async (request, response, next) => {
 exports.deleteClassClassSchedule = async (request, response, next) => {
     const { CourseID } = request.query;
     try {
-        await ClassSchedule.deleteOne({ CourseID : CourseID})
+        await ClassSchedule.deleteOne({ campusname : request.user.campusname, CourseID : CourseID})
         response.send({
             success: true,
             message: 'deleted successfully'
@@ -196,7 +198,7 @@ exports.addClassClassSchedule = async (request, response, next) => {
     const data = request.body;
 
     try{
-        const building = await CampusBuilding.findOne({BuildingName:data.BuildingName});
+        const building = await CampusBuilding.findOne({campusname : request.user.campusname, BuildingName:data.BuildingName});
         if(!building) throw "No such building found in which this class is scheduled!";
         const room = building.Rooms.filter((curr)=> curr.RoomID==data.RoomID); 
         if(room.length == 0) throw "No such room found in which this class is scheduled!";
@@ -211,7 +213,8 @@ exports.addClassClassSchedule = async (request, response, next) => {
             Status : true,
             ClassDays : data.ClassDays.map((curr) => { curr.Timing = {start: curr.Timing[0], end: curr.Timing[1]}; return curr} ),
             CourseInstructor : data.CourseInstructor,
-            StudentComposition : data.StudentComposition
+            StudentComposition : data.StudentComposition,
+            campusname : request.user.campusname
         });   
     }
     catch(err){
@@ -225,7 +228,7 @@ exports.addClassClassSchedule = async (request, response, next) => {
 
 exports.getBuildingAddClassClassSchedule = async (request, response, next) => {
     try{
-        const buildingnames = await CampusBuilding.find({}, 'BuildingName');
+        const buildingnames = await CampusBuilding.find({campusname : request.user.campusname}, 'BuildingName');
         response.send(buildingnames);
     }
     catch(err){
@@ -238,11 +241,11 @@ exports.getRoomIdAddClassClassSchedule = async (request, response, next) => {
     const { BuildingId } = request.query;
     try{
         if(BuildingId) {
-            const building = await CampusBuilding.findOne({BuildingID : BuildingId}, 'Rooms');
+            const building = await CampusBuilding.findOne({campusname : request.user.campusname,BuildingID : BuildingId}, 'Rooms');
             response.send(building);
         }
         else {
-            const building = await CampusBuilding.findOne({}, 'Rooms');
+            const building = await CampusBuilding.findOne({campusname : request.user.campusname}, 'Rooms');
             response.send(building);
         }
     }
@@ -261,7 +264,7 @@ exports.getStudentStrengthAddClassClassSchedule = async (request, response, next
 
 exports.getCourseInstructorAddClassClassSchedule = async (request, response, next) => {
     try {
-        let faculties = await Faculty.find({}, 'Name');
+        let faculties = await Faculty.find({campusname : request.user.campusname}, 'Name');
         response.send(faculties);
     }
     catch(err){  return next(new ErrorResponse(err,400));  }
@@ -291,7 +294,7 @@ exports.deleteStudentCompositionAddClassClassSchedule = async (request, response
 exports.users = async (request, response, next) => {
 
     try{
-        let viewdata = await User.find({}, 'username role email contact status');
+        let viewdata = await User.find({campusname : request.user.campusname}, 'username role email contact status');
         response.send(viewdata);
     }catch(err){ return next(new ErrorResponse(err, 400)); }   
     
@@ -339,7 +342,8 @@ exports.surveyUploader = async (request, response, next) => {
             filename :  request.file.filename,
             path : __basedir + process.env.EXCEL_UPLOAD_PATH,
             filetype : request.file.filetype,
-            SurveyType : request.body.SurveyType
+            SurveyType : request.body.SurveyType,
+            campusname : request.user.campusname
         })
         response.status(200).send({
             message: "Uploaded the file successfully: " + request.file.originalname,
@@ -481,7 +485,7 @@ exports.updateStudentDataUploader = async (request, response, next) => {
 
 exports.batchwiseStudentDetails = async (request, response, next) => {
     try{
-        let viewdata = await BatchStudent.find({});
+        let viewdata = await BatchStudent.find({campusname : request.user.campusname});
         response.send(viewdata);
     }
     catch(err){
@@ -497,7 +501,8 @@ exports.addBatchwiseStudentDetails = async (request, response, next) => {
             Department : data.Department,
             ProgramCode : data.ProgramCode,
             YearOfStudy : data.YearOfStudy,
-            Strength : data.Strength
+            Strength : data.Strength,
+            campusname : request.user.campusname
         });  
 
         response.send({
@@ -525,7 +530,7 @@ exports.deleteBatchwiseStudentDetails = async (request, response, next) => {
 
 exports.facultyDetails = async (request, response, next) => {
     try{
-        let viewdata = await Faculty.find({});
+        let viewdata = await Faculty.find({campusname : request.user.campusname});
         response.send(viewdata);
     }
     catch(err){
@@ -541,7 +546,8 @@ exports.addFacultyDetails = async (request, response, next) => {
             Department : data.Department,
             ResidenceBuildingName : data.ResidenceBuildingName,
             AdultFamilyMembers : data.AdultFamilyMembers,
-            NoofChildren : data.NoofChildren
+            NoofChildren : data.NoofChildren,
+            campusname : request.user.campusname
         });  
 
         response.send({
@@ -580,7 +586,7 @@ exports.deleteFacultyDetails = async (request, response, next) => {
 
 exports.staffDetails = async (request, response, next) => {
     try{
-        let viewdata = await Staff.find({});
+        let viewdata = await Staff.find({campusname : request.user.campusname});
         response.send(viewdata);
     }
     catch(err){
@@ -597,7 +603,8 @@ exports.addStaffDetails = async (request, response, next) => {
             WorkplaceBuildingName : data.WorkplaceBuildingName,
             ResidenceBuildingName : data.ResidenceBuildingName,
             AdultFamilyMembers :data.AdultFamilyMembers,
-            NoofChildren : data.NoofChildren
+            NoofChildren : data.NoofChildren,
+            campusname : request.user.campusname
         });  
 
         response.send({
