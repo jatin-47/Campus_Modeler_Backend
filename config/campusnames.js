@@ -1,6 +1,6 @@
 const CampusName = {
     type: String,
-    enum: ['kharagpur','madras', 'delhi'],
+    enum: ['kharagpur','madras', 'delhi', "jodhpur"],
     required: true
 };
 

@@ -161,6 +161,8 @@ exports.run = async (request, response, next) => {
         const saved_parameters = await Simulation.findById(simId);
         fs.rmdirSync(`result/${user.username}`, { recursive: true });
         runPython(['rakshak/run_simulation.py', JSON.stringify(saved_parameters), `result/${user.username}`])
+
+        // send saved_parameters as response
     } 
     else {
         fs.rmdirSync(`result/${user.username}`, { recursive: true });

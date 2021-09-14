@@ -21,7 +21,7 @@ const CampusBuildingSchema = new mongoose.Schema({
     },
     BuildingType : {
         type : String,
-        enum : ['Academic','Administartion']
+        enum : ['Academic','Administration','Student Residence','Faculty Residence','Staff Residence','Grounds','Restaurant','Market','Healthcare','Facility','Non_Academic','Mess','Gymkhana']
     },
     NoOfFloors: {type: Number},
     NoOfWorkers: {type: Number},

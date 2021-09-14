@@ -13,6 +13,8 @@ const PATH = require('path');
 const readXlsxFile = require('read-excel-file/node');
 const excel = require("exceljs");
 
+/****************************************************************/
+
 exports.campusBuildings = async (request, response, next) => {
 
     let CampusBuildings = await CampusBuilding.find({campusname : request.user.campusname}, 'BuildingID BuildingName BuildingType NoOfFloors NoOfWorkers Status');
@@ -31,6 +33,36 @@ exports.viewDataCampusBuildings = async (request, response, next) => {
             return next(new ErrorResponse('Not Found',400));
     }catch(err){  return next(new ErrorResponse(err,400));  }
 
+};
+
+exports.templateCampusBuildings = async (request, response, next) => {
+    const workbook = new excel.Workbook();
+    const filename = "building_template";
+    const sheet = workbook.addWorksheet(filename);
+
+    sheet.columns = [
+        { header: "Building Name"},
+        { header: "Building Type"},
+        { header: "Building Status"},
+        { header: "Number of Floors"},
+        { header: "Number of Rooms in Each Floor"},
+        { header: "Number of Workers"},
+        { header: "Active Hours"},
+        { header: "Building Polygon"}
+      ];
+  
+    response.setHeader(
+    "Content-Type",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    );
+    response.setHeader(
+    "Content-Disposition",
+    "attachment; filename=" + filename + ".xlsx"
+    );
+
+    return workbook.xlsx.write(response).then(function () {
+        response.status(200).end();
+    });
 };
 
 exports.uploadCampusBuildings = async (request, response, next) => {
@@ -99,36 +131,6 @@ exports.uploadCampusBuildings = async (request, response, next) => {
     }
 };
 
-exports.templateCampusBuildings = async (request, response, next) => {
-    const workbook = new excel.Workbook();
-    const filename = "building_template";
-    const sheet = workbook.addWorksheet(filename);
-
-    sheet.columns = [
-        { header: "Building Name"},
-        { header: "Building Type"},
-        { header: "Building Status"},
-        { header: "Number of Floors"},
-        { header: "Number of Rooms in Each Floor"},
-        { header: "Number of Workers"},
-        { header: "Active Hours"},
-        { header: "Building Polygon"}
-      ];
-  
-    response.setHeader(
-    "Content-Type",
-    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    );
-    response.setHeader(
-    "Content-Disposition",
-    "attachment; filename=" + filename + ".xlsx"
-    );
-
-    return workbook.xlsx.write(response).then(function () {
-        response.status(200).end();
-    });
-};
-
 //RoomID logic `BuildingID + FloorNo + RoomNo`
 exports.addBuildingCampusBuildings = async (request, response, next) => {
     const data = request.body;
@@ -186,6 +188,8 @@ exports.deleteBuildingCampusBuildings = async (request, response, next) => {
     } catch(err){  return next(new ErrorResponse(err,400));  }
 };
 
+/****************************************************************/
+
 exports.classSchedule = async (request, response, next) => {
 
     try{
@@ -222,6 +226,99 @@ exports.deleteClassClassSchedule = async (request, response, next) => {
     }
     catch(err){
         return next(new ErrorResponse(err, 400));
+    }
+};
+
+exports.templateclassschedule = async (request, response, next) => {
+    const workbook = new excel.Workbook();
+    const filename = "ClassSchedule_template";
+    const sheet = workbook.addWorksheet(filename);
+
+    sheet.columns = [
+        { header: "Course ID"},
+        { header: "Course Name"},
+        { header: "Room ID"},
+        { header: "Scheduled Days"},
+        { header: "Scheduled Time"},
+        { header: "Total Strength"}
+      ];
+  
+    response.setHeader(
+    "Content-Type",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    );
+    response.setHeader(
+    "Content-Disposition",
+    "attachment; filename=" + filename + ".xlsx"
+    );
+
+    return workbook.xlsx.write(response).then(function () {
+        response.status(200).end();
+    });
+};
+
+exports.uploadclassschedule = async (request, response, next) => {
+    try {
+        if (request.file == undefined) {
+            return next(new ErrorResponse("Please upload an excel file!",400));
+        }
+        //console.log(request.file);
+        let path = request.file.path;
+    
+        let rows = await readXlsxFile(path);
+
+        const required_headers = [ /* headers list to be pasted from template*/];
+        let header = rows.shift();
+
+        for(let i=0; i<required_headers.length; i++){
+            if(header[i] != required_headers[i])
+                throw "Wrong headers! please match with template file!";
+        }
+    
+        /* let buildings = [];
+    
+        rows.forEach((row) => {
+            let building = {
+                BuildingID : row[0],
+                BuildingName : row[1],
+                BuildingType : row[2],
+                NoOfFloors : row[3],
+                NoOfWorkers : row[4],
+                Status : row[5] , 
+                ActiveHours : row[6],
+                BuildingCordinaties : row[7],
+                campusname : request.user.campusname,
+                Rooms : []
+            };
+            let start_col = 8;
+            for(let i=0; i<TotalNoOfRooms; i++)
+            {
+                let room = {
+                    RoomID : row[start_col],
+                    RoomName : row[start_col+1],
+                    Floor : row[start_col+2],
+                    Capacity : row[start_col+3],
+                    RoomType : row[start_col+4]
+                };
+                building.Rooms.push(room);
+                start_col = start_col+5;
+            }
+    
+            buildings.push(building);
+        });
+
+        await CampusBuilding.insertMany(buildings);
+ */
+        fs.unlinkSync(path);
+        response.status(200).send({
+            success: true,
+            message: "Uploaded the file/data successfully!"
+        });
+
+    } catch (error) {
+        fs.unlinkSync(request.file.path);
+        console.log(error);
+        return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
 };
 
@@ -322,6 +419,8 @@ exports.deleteStudentCompositionAddClassClassSchedule = async (request, response
     });
 };
 
+/****************************************************************/
+
 exports.users = async (request, response, next) => {
 
     try{
@@ -337,6 +436,103 @@ exports.viewDetailsUsers = async (request, response, next) => {
         let viewdata = await User.findById(UserID);
         response.send(viewdata);
     }catch(err){ return next(new ErrorResponse(err, 400)); }   
+};
+
+exports.templateusers = async (request, response, next) => {
+    const workbook = new excel.Workbook();
+    const filename = "User_template";
+    const sheet = workbook.addWorksheet(filename);
+
+    sheet.columns = [
+        { header: "User Name"},
+        { header: "First Name"},
+        { header: "Last Name"},
+        { header: "DOB"},
+        { header: "Gender"},
+        { header: "Email ID"},
+        { header: "Phone No"},
+        { header: "User Role"},
+        { header: "Status"},
+        { header: "Temp Password"}
+    ];
+  
+    response.setHeader(
+    "Content-Type",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    );
+    response.setHeader(
+    "Content-Disposition",
+    "attachment; filename=" + filename + ".xlsx"
+    );
+
+    return workbook.xlsx.write(response).then(function () {
+        response.status(200).end();
+    });
+};
+
+exports.uploadusers = async (request, response, next) => {
+    try {
+        if (request.file == undefined) {
+            return next(new ErrorResponse("Please upload an excel file!",400));
+        }
+        //console.log(request.file);
+        let path = request.file.path;
+    
+        let rows = await readXlsxFile(path);
+
+        const required_headers = [ /* headers list to be pasted from template*/];
+        let header = rows.shift();
+
+        for(let i=0; i<required_headers.length; i++){
+            if(header[i] != required_headers[i])
+                throw "Wrong headers! please match with template file!";
+        }
+    
+        /* let buildings = [];
+    
+        rows.forEach((row) => {
+            let building = {
+                BuildingID : row[0],
+                BuildingName : row[1],
+                BuildingType : row[2],
+                NoOfFloors : row[3],
+                NoOfWorkers : row[4],
+                Status : row[5] , 
+                ActiveHours : row[6],
+                BuildingCordinaties : row[7],
+                campusname : request.user.campusname,
+                Rooms : []
+            };
+            let start_col = 8;
+            for(let i=0; i<TotalNoOfRooms; i++)
+            {
+                let room = {
+                    RoomID : row[start_col],
+                    RoomName : row[start_col+1],
+                    Floor : row[start_col+2],
+                    Capacity : row[start_col+3],
+                    RoomType : row[start_col+4]
+                };
+                building.Rooms.push(room);
+                start_col = start_col+5;
+            }
+    
+            buildings.push(building);
+        });
+
+        await CampusBuilding.insertMany(buildings);
+ */
+        fs.unlinkSync(path);
+        response.status(200).send({
+            success: true,
+            message: "Uploaded the file/data successfully!"
+        });
+
+    } catch (error) {
+        fs.unlinkSync(request.file.path);
+        console.log(error);
+        return next(new ErrorResponse("Could not upload the file! " + error, 500));
+    }
 };
 
 exports.addUserUsers = async (request, response, next) => {
@@ -363,6 +559,8 @@ exports.addUserUsers = async (request, response, next) => {
 
     }catch(err){ return next(new ErrorResponse(err, 400)); }
 };
+
+/****************************************************************/
 
 exports.surveyUploader = async (request, response, next) => {
     if (request.file == undefined) {
@@ -450,6 +648,8 @@ exports.downloadSurveyUploader = async (request, response, next) => {
     response.send();
 };
 
+/****************************************************************/
+
 exports.addCampusMapUploader = async (request, response, next) => {
         
     response.status(200).send({
@@ -463,6 +663,8 @@ exports.updateCampusMapUploader = async (request, response, next) => {
         'hi': 'Hello'
     });
 };
+
+/****************************************************************/
 
 exports.addStudentDataUploader = async (request, response, next) => {
     if (request.file == undefined) {
@@ -514,6 +716,8 @@ exports.updateStudentDataUploader = async (request, response, next) => {
     }
 };
 
+/****************************************************************/
+
 exports.batchwiseStudentDetails = async (request, response, next) => {
     try{
         let viewdata = await BatchStudent.find({campusname : request.user.campusname});
@@ -521,6 +725,98 @@ exports.batchwiseStudentDetails = async (request, response, next) => {
     }
     catch(err){
         return next(new ErrorResponse(err, 400));
+    }
+};
+
+exports.templatebatchwisestudentdetails = async (request, response, next) => {
+    const workbook = new excel.Workbook();
+    const filename = "BatchwiseStudent_template";
+    const sheet = workbook.addWorksheet(filename);
+
+    sheet.columns = [
+        { header: "Batch_Code"},
+        { header: "YearofStudy"},
+        { header: "Department_Code"},
+        { header: "Program_Code"},
+        { header: "Strength"}
+    ];
+  
+    response.setHeader(
+    "Content-Type",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    );
+    response.setHeader(
+    "Content-Disposition",
+    "attachment; filename=" + filename + ".xlsx"
+    );
+
+    return workbook.xlsx.write(response).then(function () {
+        response.status(200).end();
+    });
+};
+
+exports.uploadbatchwisestudentdetails = async (request, response, next) => {
+    try {
+        if (request.file == undefined) {
+            return next(new ErrorResponse("Please upload an excel file!",400));
+        }
+        //console.log(request.file);
+        let path = request.file.path;
+    
+        let rows = await readXlsxFile(path);
+
+        const required_headers = [ /* headers list to be pasted from template*/];
+        let header = rows.shift();
+
+        for(let i=0; i<required_headers.length; i++){
+            if(header[i] != required_headers[i])
+                throw "Wrong headers! please match with template file!";
+        }
+    
+        /* let buildings = [];
+    
+        rows.forEach((row) => {
+            let building = {
+                BuildingID : row[0],
+                BuildingName : row[1],
+                BuildingType : row[2],
+                NoOfFloors : row[3],
+                NoOfWorkers : row[4],
+                Status : row[5] , 
+                ActiveHours : row[6],
+                BuildingCordinaties : row[7],
+                campusname : request.user.campusname,
+                Rooms : []
+            };
+            let start_col = 8;
+            for(let i=0; i<TotalNoOfRooms; i++)
+            {
+                let room = {
+                    RoomID : row[start_col],
+                    RoomName : row[start_col+1],
+                    Floor : row[start_col+2],
+                    Capacity : row[start_col+3],
+                    RoomType : row[start_col+4]
+                };
+                building.Rooms.push(room);
+                start_col = start_col+5;
+            }
+    
+            buildings.push(building);
+        });
+
+        await CampusBuilding.insertMany(buildings);
+ */
+        fs.unlinkSync(path);
+        response.status(200).send({
+            success: true,
+            message: "Uploaded the file/data successfully!"
+        });
+
+    } catch (error) {
+        fs.unlinkSync(request.file.path);
+        console.log(error);
+        return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
 };
 
@@ -559,6 +855,8 @@ exports.deleteBatchwiseStudentDetails = async (request, response, next) => {
     
 };
 
+/****************************************************************/
+
 exports.facultyDetails = async (request, response, next) => {
     try{
         let viewdata = await Faculty.find({campusname : request.user.campusname});
@@ -566,6 +864,99 @@ exports.facultyDetails = async (request, response, next) => {
     }
     catch(err){
         return next(new ErrorResponse(err, 400));
+    }
+};
+
+exports.templatefacultydetails = async (request, response, next) => {
+    const workbook = new excel.Workbook();
+    const filename = "Faculty_template";
+    const sheet = workbook.addWorksheet(filename);
+
+    sheet.columns = [
+        { header: "Name"},
+        { header: "Courses"},
+        { header: "Department_Code"},
+        { header: "ResidenceBuildingName"},
+        { header: "No_of_Adult_Family_Members"},
+        { header: "No_of_Children"}
+    ];
+  
+    response.setHeader(
+    "Content-Type",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    );
+    response.setHeader(
+    "Content-Disposition",
+    "attachment; filename=" + filename + ".xlsx"
+    );
+
+    return workbook.xlsx.write(response).then(function () {
+        response.status(200).end();
+    });
+};
+
+exports.uploadfacultydetails = async (request, response, next) => {
+    try {
+        if (request.file == undefined) {
+            return next(new ErrorResponse("Please upload an excel file!",400));
+        }
+        //console.log(request.file);
+        let path = request.file.path;
+    
+        let rows = await readXlsxFile(path);
+
+        const required_headers = [ /* headers list to be pasted from template*/];
+        let header = rows.shift();
+
+        for(let i=0; i<required_headers.length; i++){
+            if(header[i] != required_headers[i])
+                throw "Wrong headers! please match with template file!";
+        }
+    
+        /* let buildings = [];
+    
+        rows.forEach((row) => {
+            let building = {
+                BuildingID : row[0],
+                BuildingName : row[1],
+                BuildingType : row[2],
+                NoOfFloors : row[3],
+                NoOfWorkers : row[4],
+                Status : row[5] , 
+                ActiveHours : row[6],
+                BuildingCordinaties : row[7],
+                campusname : request.user.campusname,
+                Rooms : []
+            };
+            let start_col = 8;
+            for(let i=0; i<TotalNoOfRooms; i++)
+            {
+                let room = {
+                    RoomID : row[start_col],
+                    RoomName : row[start_col+1],
+                    Floor : row[start_col+2],
+                    Capacity : row[start_col+3],
+                    RoomType : row[start_col+4]
+                };
+                building.Rooms.push(room);
+                start_col = start_col+5;
+            }
+    
+            buildings.push(building);
+        });
+
+        await CampusBuilding.insertMany(buildings);
+ */
+        fs.unlinkSync(path);
+        response.status(200).send({
+            success: true,
+            message: "Uploaded the file/data successfully!"
+        });
+
+    } catch (error) {
+        fs.unlinkSync(request.file.path);
+        console.log(error);
+        return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
 };
 
@@ -615,6 +1006,8 @@ exports.deleteFacultyDetails = async (request, response, next) => {
     }
 };
 
+/****************************************************************/
+
 exports.staffDetails = async (request, response, next) => {
     try{
         let viewdata = await Staff.find({campusname : request.user.campusname});
@@ -624,6 +1017,94 @@ exports.staffDetails = async (request, response, next) => {
         return next(new ErrorResponse(err, 400));
     }
     
+};
+
+exports.templatestaffdetails = async (request, response, next) => {
+    const workbook = new excel.Workbook();
+    const filename = "Faculty_template";
+    const sheet = workbook.addWorksheet(filename);
+
+    sheet.columns = [
+        { header: "Name"}
+    ];
+  
+    response.setHeader(
+    "Content-Type",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    );
+    response.setHeader(
+    "Content-Disposition",
+    "attachment; filename=" + filename + ".xlsx"
+    );
+
+    return workbook.xlsx.write(response).then(function () {
+        response.status(200).end();
+    });
+};
+
+exports.uploadstaffdetails = async (request, response, next) => {
+    try {
+        if (request.file == undefined) {
+            return next(new ErrorResponse("Please upload an excel file!",400));
+        }
+        //console.log(request.file);
+        let path = request.file.path;
+    
+        let rows = await readXlsxFile(path);
+
+        const required_headers = [ /* headers list to be pasted from template*/];
+        let header = rows.shift();
+
+        for(let i=0; i<required_headers.length; i++){
+            if(header[i] != required_headers[i])
+                throw "Wrong headers! please match with template file!";
+        }
+    
+        /* let buildings = [];
+    
+        rows.forEach((row) => {
+            let building = {
+                BuildingID : row[0],
+                BuildingName : row[1],
+                BuildingType : row[2],
+                NoOfFloors : row[3],
+                NoOfWorkers : row[4],
+                Status : row[5] , 
+                ActiveHours : row[6],
+                BuildingCordinaties : row[7],
+                campusname : request.user.campusname,
+                Rooms : []
+            };
+            let start_col = 8;
+            for(let i=0; i<TotalNoOfRooms; i++)
+            {
+                let room = {
+                    RoomID : row[start_col],
+                    RoomName : row[start_col+1],
+                    Floor : row[start_col+2],
+                    Capacity : row[start_col+3],
+                    RoomType : row[start_col+4]
+                };
+                building.Rooms.push(room);
+                start_col = start_col+5;
+            }
+    
+            buildings.push(building);
+        });
+
+        await CampusBuilding.insertMany(buildings);
+ */
+        fs.unlinkSync(path);
+        response.status(200).send({
+            success: true,
+            message: "Uploaded the file/data successfully!"
+        });
+
+    } catch (error) {
+        fs.unlinkSync(request.file.path);
+        console.log(error);
+        return next(new ErrorResponse("Could not upload the file! " + error, 500));
+    }
 };
 
 exports.addStaffDetails = async (request, response, next) => {
@@ -659,3 +1140,5 @@ exports.deleteStaffDetails = async (request, response, next) => {
         return next(new ErrorResponse(err, 400));
     }
 };
+
+/****************************************************************/
