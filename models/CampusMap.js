@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const CampusNames = require('../config/campusnames');
 
 const CampusMapSchema = new mongoose.Schema({
     filename :  {
@@ -17,7 +18,9 @@ const CampusMapSchema = new mongoose.Schema({
     LongitudeRange : {
         start : {type : Number},
         end : {type : Number}
-    }
+    },
+    campusname : CampusNames
+
 }, { timestamps: true });
 
 const CampusMap = mongoose.model("CampusMap", CampusMapSchema);

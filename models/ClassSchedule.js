@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const CampusNames = require('../config/campusnames');
 
 const ClassScheduleSchema = new mongoose.Schema({
     CourseID : { 
@@ -39,7 +40,8 @@ const ClassScheduleSchema = new mongoose.Schema({
     StudentComposition :[{
        BatchCode : {type : String},
        Count : {type : Number}
-    }]    
+    }],
+    campusname : CampusNames
 });
 
 const ClassSchedule = mongoose.model("ClassSchedule", ClassScheduleSchema);

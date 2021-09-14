@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const CampusNames = require('../config/campusnames');
 
 const RoomSchema = new mongoose.Schema({
     RoomID : {type : Number},
@@ -29,8 +30,11 @@ const CampusBuildingSchema = new mongoose.Schema({
         start : {type : String},
         end : {type : String} 
     },
+    BuildingImage_path : {type : String},
     BuildingCordinaties : {type : String},
-    Rooms : [RoomSchema]
+    Rooms : [RoomSchema],
+    campusname : CampusNames
+
 });
 
 const CampusBuilding = mongoose.model("CampusBuilding", CampusBuildingSchema);

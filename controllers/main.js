@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const CampusNames = require('../config/campusnames')
 const ErrorResponse = require('../utils/errorResponse');
 const fs = require("fs");
 
@@ -37,7 +38,7 @@ exports.login = async (request, response, next) => {
 exports.campusName = async (request, response, next) => {
   
     response.send({
-        campusname : User.schema.path('campusname').enumValues
+        campusname : CampusNames.enum
     });
 
 };

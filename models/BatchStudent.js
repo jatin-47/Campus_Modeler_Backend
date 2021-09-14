@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const CampusNames = require('../config/campusnames');
 
 const BatchStudentSchema = new mongoose.Schema({
     BatchCode : { 
@@ -16,7 +17,9 @@ const BatchStudentSchema = new mongoose.Schema({
     Status : {
         type : Boolean,
         default: true
-    }
+    },
+    campusname : CampusNames
+
 });
 
 const BatchStudent = mongoose.model("BatchStudent", BatchStudentSchema);

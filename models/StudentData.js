@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const CampusNames = require('../config/campusnames');
 
 const StudentDataSchema = new mongoose.Schema({
     filename :  {
@@ -9,7 +10,9 @@ const StudentDataSchema = new mongoose.Schema({
     path : {
         type: String, 
         required :  [true, "Input parameters cannot be empty!"] 
-    }
+    },
+    campusname : CampusNames
+    
 }, { timestamps: true });
 
 const StudentData = mongoose.model("StudentData", StudentDataSchema);

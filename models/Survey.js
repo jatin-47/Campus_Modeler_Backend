@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const CampusNames = require('../config/campusnames');
 
 const SurveySchema = new mongoose.Schema({
     filename :  {
@@ -17,7 +18,9 @@ const SurveySchema = new mongoose.Schema({
     SurveyType : {
         type : String,
         enum : ["Student Survey", "Staff Survey"]
-    }
+    },
+    campusname : CampusNames
+
 }, { timestamps: true });
 
 const Survey = mongoose.model("Survey", SurveySchema);

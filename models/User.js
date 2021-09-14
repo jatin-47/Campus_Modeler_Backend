@@ -32,11 +32,12 @@ const UserSchema = new mongoose.Schema({
         required: true
     },
     status : {type: Boolean, default:true},
-    fname : { type: String, required: true},
-    lname : { type: String, required: true},
+    fname : { type: String, trim : true, required: true},
+    lname : { type: String, trim : true, required: true},
     gender : { type: String, required: true, enum: ["Male", "Female", "Others"]},
     contact : { type : Number, maxlength: 10},
-    dob : { type: Date}
+    dob : { type: Date},
+    photo_path : { type: String }
 });
 
 UserSchema.pre('save', async function (next) {
