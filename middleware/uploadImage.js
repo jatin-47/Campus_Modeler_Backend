@@ -1,4 +1,5 @@
 const multer = require("multer");
+const path = require('path');
 
 const imageFilter = (req, file, cb) => {
     const filetypes = /jpeg|jpg|png/;
@@ -13,7 +14,7 @@ const imageFilter = (req, file, cb) => {
 
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, __basedir + process.env.IMG_UPLOAD_PATH);
+        cb(null, process.env.IMG_UPLOAD_PATH);
     },
     filename: (req, file, cb) => {
         cb(null, `${Date.now()}-${file.originalname}`);

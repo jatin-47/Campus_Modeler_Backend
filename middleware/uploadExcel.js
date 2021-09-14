@@ -1,16 +1,24 @@
 const multer = require("multer");
+const path = require('path');
+const ErrorResponse = require('../utils/errorResponse');
+
 
 const excelFilter = (req, file, cb) => {
-    if ( file.mimetype.includes("excel") || file.mimetype.includes("spreadsheetml")) {
+    const filetypes = /xlsx/;
+    const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+    const mimetype = file.mimetype.includes("excel") || file.mimetype.includes("spreadsheetml");
+
+    if (mimetype && extname) {
         cb(null, true);
     } else {
-        cb("Please upload only excel file.", false);
+        cb(new ErrorResponse("Please upload only 'excel' file.",400), false);
     }
-};
+}
+
   
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, __basedir + process.env.EXCEL_UPLOAD_PATH);
+        cb(null, process.env.EXCEL_UPLOAD_PATH);
     },
     filename: (req, file, cb) => {
         cb(null, `${Date.now()}-${file.originalname}`);

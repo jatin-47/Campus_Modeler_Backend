@@ -13,7 +13,7 @@ router.use(adminprotect);
 // Protected & admin ONLY Routes from here
 router.route('/campusbuildings').get(campusBuildings);
 router.route('/campusbuildings/viewdata').get(viewDataCampusBuildings);
-router.post('/campusbuildings/upload',uploadImage.single("file"), uploadCampusBuildings);
+router.post('/campusbuildings/upload',uploadExcel.single("file"), uploadCampusBuildings);
 router.post('/campusbuildings/addbuilding', uploadImage.single("image"), addBuildingCampusBuildings);
 router.route('/campusbuildings/deletebuilding').delete(deleteBuildingCampusBuildings);
 router.route('/classschedule').get(classSchedule);

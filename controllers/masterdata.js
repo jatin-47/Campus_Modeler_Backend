@@ -6,7 +6,7 @@ const Faculty = require('../models/Faculty');
 const Staff = require('../models/Staff');
 
 const ErrorResponse = require('../utils/errorResponse');
-const path = require('path');
+const PATH = require('path');
 const readXlsxFile = require('read-excel-file/node');
 var fs = require('fs');
 const Survey = require('../models/Survey');
@@ -37,61 +37,63 @@ exports.uploadCampusBuildings = async (request, response, next) => {
         if (request.file == undefined) {
             return next(new ErrorResponse("Please upload an excel file!",400));
         }
-        let path = __basedir + process.env.EXCEL_UPLOAD_PATH + request.file.filename;
+        console.log(request.file);
+        let path = request.file.path;
     
-        readXlsxFile(path).then((rows) => {
-            // skip header
-            rows.shift();
-        
-            let buildings = [];
-        
-            rows.forEach((row) => {
-                let building = {
-                    BuildingID : row[0],
-                    BuildingName : row[1],
-                    BuildingType : row[2],
-                    NoOfFloors : row[3],
-                    NoOfWorkers : row[4],
-                    Status : row[5] , 
-                    ActiveHours : row[6],
-                    BuildingCordinaties : row[7],
-                    Rooms : []
+        let rows = await readXlsxFile(path);
+
+        const required_headers = ["Building Name","Building Type","Building Status","Number of Floors", 
+        "Number of Rooms in Each Floor", "Number of Workers","Active Hours","Building Polygon"];
+        let header = rows.shift();
+
+        for(let i=0; i<required_headers.length; i++){
+            if(header[i] != required_headers[i])
+                throw "Wrong headers! please match with template file!";
+        }
+    
+        let buildings = [];
+    
+        rows.forEach((row) => {
+            let building = {
+                BuildingID : row[0],
+                BuildingName : row[1],
+                BuildingType : row[2],
+                NoOfFloors : row[3],
+                NoOfWorkers : row[4],
+                Status : row[5] , 
+                ActiveHours : row[6],
+                BuildingCordinaties : row[7],
+                Rooms : []
+            };
+            let start_col = 8;
+            for(let i=0; i<TotalNoOfRooms; i++)
+            {
+                let room = {
+                    RoomID : row[start_col],
+                    RoomName : row[start_col+1],
+                    Floor : row[start_col+2],
+                    Capacity : row[start_col+3],
+                    RoomType : row[start_col+4]
                 };
-                let start_col = 8;
-                for(let i=0; i<TotalNoOfRooms; i++)
-                {
-                    let room = {
-                        RoomID : row[start_col],
-                        RoomName : row[start_col+1],
-                        Floor : row[start_col+2],
-                        Capacity : row[start_col+3],
-                        RoomType : row[start_col+4]
-                    };
-                    building.Rooms.push(room);
-                    start_col = start_col+5;
-                }
-        
-                buildings.push(building);
-            });
+                building.Rooms.push(room);
+                start_col = start_col+5;
+            }
     
-            CampusBuilding.insertMany(buildings)
-            .then(() => {
-                response.status(200).send({
-                    message: "Uploaded the file successfully: " + request.file.originalname,
-                });
-            })
-            .catch((error) => {
-                response.status(500).send({
-                    message: "Fail to import data into database!",
-                    error: error.message,
-                });
-            });
+            buildings.push(building);
         });
+
+        await CampusBuilding.insertMany(buildings);
+
+        fs.unlinkSync(path);
+        response.status(200).send({
+            success: true,
+            message: "Uploaded the file/data successfully!"
+        });
+
     } catch (error) {
+        fs.unlinkSync(request.file.path);
         console.log(error);
-        response.status(500).send({
-            message: "Could not upload the file: " + request.file.originalname,
-        });
+        return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
 };
 
