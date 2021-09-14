@@ -4,13 +4,14 @@ const ClassSchedule = require('../models/ClassSchedule');
 const BatchStudent = require('../models/BatchStudent');
 const Faculty = require('../models/Faculty');
 const Staff = require('../models/Staff');
-
-const ErrorResponse = require('../utils/errorResponse');
-const PATH = require('path');
-const readXlsxFile = require('read-excel-file/node');
-var fs = require('fs');
 const Survey = require('../models/Survey');
 const StudentData = require('../models/StudentData');
+
+const ErrorResponse = require('../utils/errorResponse');
+var fs = require('fs');
+const PATH = require('path');
+const readXlsxFile = require('read-excel-file/node');
+const excel = require("exceljs");
 
 exports.campusBuildings = async (request, response, next) => {
 
@@ -96,6 +97,36 @@ exports.uploadCampusBuildings = async (request, response, next) => {
         console.log(error);
         return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
+};
+
+exports.templateCampusBuildings = async (request, response, next) => {
+    const workbook = new excel.Workbook();
+    const filename = "building_template";
+    const sheet = workbook.addWorksheet(filename);
+
+    sheet.columns = [
+        { header: "Building Name"},
+        { header: "Building Type"},
+        { header: "Building Status"},
+        { header: "Number of Floors"},
+        { header: "Number of Rooms in Each Floor"},
+        { header: "Number of Workers"},
+        { header: "Active Hours"},
+        { header: "Building Polygon"}
+      ];
+  
+    response.setHeader(
+    "Content-Type",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    );
+    response.setHeader(
+    "Content-Disposition",
+    "attachment; filename=" + filename + ".xlsx"
+    );
+
+    return workbook.xlsx.write(response).then(function () {
+        response.status(200).end();
+    });
 };
 
 //RoomID logic `BuildingID + FloorNo + RoomNo`
