@@ -81,8 +81,12 @@ exports.saveSimulation = async (request, response, next) => {
                 sim.PolicyInput = data.PolicyInput;
                 sim.TestingStrategy = data.TestingStrategy;
                 await sim.save();
+
+                fs.renameSync(`result/${user.username}`, `result/${user.username}_${simId}`);
+                console.log("Successfully renamed the directory.")
+
                 response.send({
-                    'message': 'Simulation Updated successfully!'
+                    'message': `Simulation (${sim.Simulation_Name}) updated successfully!`
                 });
             }
             else{
@@ -90,7 +94,8 @@ exports.saveSimulation = async (request, response, next) => {
             }
         }
         else { //create_new
-            await Simulation.create({
+            //parameters saving
+            const saved_sim = await Simulation.create({
                 Simulation_Name : data.Simulation_Name,
                 GeneralInput : data.GeneralInput,
                 EpidemicParameterInput : data.EpidemicParameterInput,
@@ -98,6 +103,10 @@ exports.saveSimulation = async (request, response, next) => {
                 TestingStrategy : data.TestingStrategy,
                 user : user._id
             });
+
+            //results saving (basically renaming the latest temp run data folder)
+            fs.renameSync(`result/${user.username}`, `result/${user.username}_${saved_sim._id}`);
+            console.log("Successfully renamed the directory.")
         
             response.send({
                 success: true,
@@ -105,7 +114,8 @@ exports.saveSimulation = async (request, response, next) => {
             });
         }
 
-    }catch(err) { return next(new ErrorResponse(err,400)); }
+    }
+    catch(err) { return next(new ErrorResponse(err,400)); }
 };
 
 exports.savedSimulations = async (request, response, next) => {
@@ -132,7 +142,7 @@ exports.deleteSavedSimulations = async (request, response, next) => {
         let sim = await Simulation.findById(simId);
         
         if(sim.user.equals(user._id)){
-            sim.deleteOne();
+            await sim.deleteOne();
             response.send({
                 'message': 'Simulation Deleted'
             });
@@ -147,24 +157,18 @@ exports.run = async (request, response, next) => {
     const user = request.user;
     const { simId } = request.query;
 
-    if (simId) {
-        // update it
-    } else {
-        await fs.rmdirSync(`result/${user.username}`, { recursive: true });
+    if(simId) {
+        const saved_parameters = await Simulation.findById(simId);
+        fs.rmdirSync(`result/${user.username}`, { recursive: true });
+        runPython(['rakshak/run_simulation.py', JSON.stringify(saved_parameters), `result/${user.username}`])
+    } 
+    else {
+        fs.rmdirSync(`result/${user.username}`, { recursive: true });
         runPython(['rakshak/run_simulation.py', JSON.stringify(request.body), `result/${user.username}`])
     }
-    /*
-    const newSim = await Simulation.create({
-        inputJSON: JSON.stringify(request.body)
-    });
-    */
 
     console.log('\n\n\n\n\n', request.body)
 
-    // user.simulations.push(newSim);
-    // user.save();
-
-    // console.log(request.body);
     response.send({
         'hi': 'Hello1'
     });
