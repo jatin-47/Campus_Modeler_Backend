@@ -5,6 +5,7 @@ const { protect } = require('../middleware/auth');
 const { adminprotect } = require('../middleware/admincheck');
 const uploadExcel = require("../middleware/uploadExcel");
 const uploadImage = require("../middleware/uploadImage");
+const uploadJson = require("../middleware/uploadJson");
 
 const { campusBuildings, viewDataCampusBuildings, templateCampusBuildings, uploadCampusBuildings, addBuildingCampusBuildings, deleteBuildingCampusBuildings, classSchedule, viewDetailsClassSchedule, deleteClassClassSchedule, templateclassschedule,uploadclassschedule,addClassClassSchedule, getBuildingAddClassClassSchedule, getRoomIdAddClassClassSchedule, getStudentStrengthAddClassClassSchedule, getCourseInstructorAddClassClassSchedule, addStudentCompositionAddClassClassSchedule, editStudentCompositionAddClassClassSchedule, deleteStudentCompositionAddClassClassSchedule, users, viewDetailsUsers,templateusers,uploadusers, addUserUsers, surveyUploader, deleteSurveyUploader, updateSurveyUploader, downloadSurveyUploader, addCampusMapUploader, updateCampusMapUploader, addStudentDataUploader, deleteStudentDataUploader, updateStudentDataUploader, batchwiseStudentDetails,templatebatchwisestudentdetails,uploadbatchwisestudentdetails, addBatchwiseStudentDetails, deleteBatchwiseStudentDetails, facultyDetails,templatefacultydetails, uploadfacultydetails,addFacultyDetails, residenceBuildNameAddFacultyDetails, deleteFacultyDetails, staffDetails, templatestaffdetails,uploadstaffdetails,addStaffDetails, deleteStaffDetails } = require('../controllers/masterdata');
 
@@ -35,8 +36,8 @@ router.route('/classschedule/addclass/deleteStudentComposition').delete(deleteSt
 router.route('/users').get(users);
 router.route('/users/viewdetails').get(viewDetailsUsers);
 router.route('/users/template').get(templateusers);
-router.post('/users/upload',uploadExcel.single("file"), uploadusers);
-router.route('/users/adduser').post(addUserUsers);
+router.post('/users/upload', uploadExcel.single("file"), uploadusers);
+router.post('/users/adduser', uploadImage.single("image"),addUserUsers);
 
 router.post('/surveyuploader', uploadExcel.single("file") ,surveyUploader);
 router.route('/surveyuploader/delete').delete(deleteSurveyUploader);
