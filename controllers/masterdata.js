@@ -421,6 +421,7 @@ exports.deleteStudentCompositionAddClassClassSchedule = async (request, response
 
 /****************************************************************/
 
+//add "UserID" column also after counter work is done
 exports.users = async (request, response, next) => {
 
     try{
@@ -430,12 +431,14 @@ exports.users = async (request, response, next) => {
     
 };
 
+//ask how the UI is taking the image!!
 exports.viewDetailsUsers = async (request, response, next) => {
     const { UserID } = request.query;
     try{
-        let viewdata = await User.findById(UserID);
-        response.send(viewdata);
-    }catch(err){ return next(new ErrorResponse(err, 400)); }   
+        let userdata = await User.findOne({ _id : UserID, campusname : request.user.campusname}, '+photo_path');
+        response.send(userdata);
+    }
+    catch(err){ return next(new ErrorResponse(err, 400)); }   
 };
 
 exports.templateusers = async (request, response, next) => {
@@ -470,6 +473,8 @@ exports.templateusers = async (request, response, next) => {
     });
 };
 
+//add "UserID" column also after counter work is done 
+//uniqueness validation not available!
 exports.uploadusers = async (request, response, next) => {
     try {
         if (request.file == undefined) {
@@ -479,8 +484,8 @@ exports.uploadusers = async (request, response, next) => {
         let path = request.file.path;
     
         let rows = await readXlsxFile(path);
-
-        const required_headers = [ /* headers list to be pasted from template*/];
+        
+        const required_headers = ["User Name", "First Name", "Last Name","DOB","Gender","Email ID","Phone No","User Role","Status","Temp Password"];
         let header = rows.shift();
 
         for(let i=0; i<required_headers.length; i++){
@@ -488,40 +493,27 @@ exports.uploadusers = async (request, response, next) => {
                 throw "Wrong headers! please match with template file!";
         }
     
-        /* let buildings = [];
+        let users = [];
     
         rows.forEach((row) => {
-            let building = {
-                BuildingID : row[0],
-                BuildingName : row[1],
-                BuildingType : row[2],
-                NoOfFloors : row[3],
-                NoOfWorkers : row[4],
-                Status : row[5] , 
-                ActiveHours : row[6],
-                BuildingCordinaties : row[7],
-                campusname : request.user.campusname,
-                Rooms : []
-            };
-            let start_col = 8;
-            for(let i=0; i<TotalNoOfRooms; i++)
-            {
-                let room = {
-                    RoomID : row[start_col],
-                    RoomName : row[start_col+1],
-                    Floor : row[start_col+2],
-                    Capacity : row[start_col+3],
-                    RoomType : row[start_col+4]
-                };
-                building.Rooms.push(room);
-                start_col = start_col+5;
-            }
-    
-            buildings.push(building);
+            let user = {
+                username : row[0],
+                fname : row[1],
+                lname : row[2],
+                dob : row[3],
+                gender : row[4],
+                email : row[5] , 
+                contact : row[6],
+                role : row[7],
+                status : row[8] == "Enabled" ? true : false,
+                password : row[9],
+                campusname : request.user.campusname
+            }; 
+            users.push(user);
         });
 
-        await CampusBuilding.insertMany(buildings);
- */
+        await User.insertMany(users);
+ 
         fs.unlinkSync(path);
         response.status(200).send({
             success: true,
@@ -529,35 +521,41 @@ exports.uploadusers = async (request, response, next) => {
         });
 
     } catch (error) {
-        fs.unlinkSync(request.file.path);
+        try{
+            fs.unlinkSync(request.file.path);
+        }catch(err) {
+            return next(new ErrorResponse("Could not delete the temp file!(internal err) " + err, 500));
+        }
         console.log(error);
         return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
 };
 
+//add "UserID" column also after counter work is done 
 exports.addUserUsers = async (request, response, next) => {
-    const user = request.user;
     const data = request.body;
+    let path = request.file.path;
     try{
         await User.create({
-            username: data.username,
-            email: data.email,
-            password: data.password,
+            username: data.Username,
+            email: data.Email,
+            password: data.Password,
             role: data.Role,
-            campusname: user.campusname,
+            campusname: request.user.campusname,
             fname : data.Fname,
             lname :data.Lname,
             gender :data.Gender,
             contact : data.Contact,
-            dob : data.DOB
+            dob : data.DOB,
+            photo_path : path
         });  
 
         response.send({
             success: true,
             message: 'saved successfully'
         }); 
-
-    }catch(err){ return next(new ErrorResponse(err, 400)); }
+    }
+    catch(err){ return next(new ErrorResponse(err, 400)); }
 };
 
 /****************************************************************/
