@@ -422,11 +422,10 @@ exports.deleteStudentCompositionAddClassClassSchedule = async (request, response
 
 /****************************************************************/
 
-//add "UserID" column also after counter work is done
 exports.users = async (request, response, next) => {
 
     try{
-        let viewdata = await User.find({campusname : request.user.campusname}, 'username role email contact status');
+        let viewdata = await User.find({campusname : request.user.campusname}, 'UserID username role email contact status');
         response.send(viewdata);
     }catch(err){ return next(new ErrorResponse(err, 400)); }   
     
@@ -434,8 +433,8 @@ exports.users = async (request, response, next) => {
 
 //ask how the UI is taking the image!!
 exports.viewDetailsUsers = async (request, response, next) => {
-    const { UserID } = request.query;
     try{
+        const { UserID } = request.query;
         let userdata = await User.findOne({ _id : UserID, campusname : request.user.campusname}, '+photo_path');
         response.send(userdata);
     }
@@ -472,9 +471,7 @@ exports.templateusers = async (request, response, next) => {
         response.status(200).end();
     });
 };
-
-//add "UserID" column also after counter work is done 
-//uniqueness validation not available!
+ 
 exports.uploadusers = async (request, response, next) => {
     try {
         if (request.file == undefined) {
@@ -514,9 +511,7 @@ exports.uploadusers = async (request, response, next) => {
         const docs = await User.insertMany(users);
         if(docs){            
             for(let doc of docs){
-                const campusCounter = await Counter.findOne({campusname: doc.campusname});
-                doc.UserID = await campusCounter.increaseCount("User"); 
-                await doc.save();
+                await doc.assignUserID();
             }
         }
  
@@ -537,14 +532,15 @@ exports.uploadusers = async (request, response, next) => {
     }
 };
 
-//add "UserID" column also after counter work is done 
 exports.addUserUsers = async (request, response, next) => {
-    const data = request.body;
-    let path = request.file.path;
     try{
-        await User.create({
+        const data = request.body;
+        if (request.file !== undefined) {
+            var path = request.file.path;
+        }
+        const doc = await User.create({
             username: data.Username,
-            email: data.Email,
+            email: data.Email.trim().toLowerCase(),
             password: data.Password,
             role: data.Role,
             campusname: request.user.campusname,
@@ -555,6 +551,7 @@ exports.addUserUsers = async (request, response, next) => {
             dob : data.DOB,
             photo_path : path
         });  
+        await doc.assignUserID();
 
         response.send({
             success: true,

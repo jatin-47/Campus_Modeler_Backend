@@ -105,17 +105,22 @@ UserSchema.methods.generateUniqueUserName = async function (proposedName) {
     try {
         let user = await User.findOne({username: proposedName})
         if(user) {
-            //console.log('Already exisits: ' + proposedName);
             proposedName += Math.floor((Math.random() * 100) + 1);
             return this.generateUniqueUserName(proposedName); 
         }
-        //console.log('proposed name is unique' + proposedName);
         return proposedName;
     }   
     catch(err) {
-        //console.error(err);
         return err;
     }
+}
+
+UserSchema.methods.assignUserID = async function () {
+    const Counter = require('./Counter');
+
+    const campusCounter = await Counter.findOne({campusname: this.campusname});
+    this.UserID = await campusCounter.increaseCount("User"); 
+    await this.save();
 }
 
 UserSchema.methods.matchPassword = async function (password) {
