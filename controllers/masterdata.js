@@ -175,8 +175,8 @@ exports.addBuildingCampusBuildings = async (request, response, next) => {
                 NumberofRoomsinEachFloor : data.NumberofRoomsinEachFloor,
                 NoOfWorkers : data.NoOfWorkers,
                 ActiveHours : {
-                    start : data.ActiveHours[0],
-                    end : data.ActiveHours[1] 
+                    start : data.ActiveHours.split('"')[1],
+                    end : data.ActiveHours.split('"')[3]
                 },
                 BuildingImage_path : path,
                 BuildingCordinaties :data.BuildingCordinaties,
