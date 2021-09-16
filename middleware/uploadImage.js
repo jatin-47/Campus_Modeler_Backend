@@ -8,7 +8,7 @@ const imageFilter = (req, file, cb) => {
     if (mimetype && extname) {
         return cb(null, true);
     } else {
-        cb("Please upload only image file.", false);
+        cb("Please upload only image(.jpeg/.jpg/.png) file.", false);
     }
 };
 

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const CampusNames = require('../config/campusnames');
+const ErrorResponse = require('../utils/errorResponse');
 
 //RoomID = `BuildingID + FloorNo + RoomNo`
 //RoomName = `RoomName + RoomID`
@@ -17,13 +18,14 @@ const RoomSchema = new mongoose.Schema({
 
 const CampusBuildingSchema = new mongoose.Schema({
     BuildingID : {  type: Number },
-    BuildingName : {type : String, trim : true},
+    BuildingName : {type : String, trim : true, required : true},
     BuildingType : {
         type : String,
+        default : 'Academic',
         enum : ['Academic','Administration','Student Residence','Faculty Residence','Staff Residence','Grounds','Restaurant','Market','Healthcare','Facility','Non_Academic','Mess','Gymkhana']
     },
-    NoOfFloors: {type: Number},
-    NumberofRoomsinEachFloor : {type: Number},
+    NoOfFloors: {type: Number, required : true},
+    NumberofRoomsinEachFloor : {type: Number, required : true},
     NoOfWorkers: {type: Number},
     Status : {type : Boolean, default: true},
     ActiveHours : {
@@ -37,9 +39,34 @@ const CampusBuildingSchema = new mongoose.Schema({
 });
 
 CampusBuildingSchema.pre('insertMany', async function (next, docs) {
-    //uniqueness validations
-    next();
+    try{
+        tobeNames = [];
+        for(let doc of docs){            
+            let isUniqueNameasperCampus = await doc.isUniqueNameasperCampus();
+            if(!isUniqueNameasperCampus) {
+                throw "One or more Building Names are already used in the database for your campus!"
+            }
+            tobeNames.push(doc.BuildingName.toLowerCase());
+        }
+        if((new Set(tobeNames)).size !== tobeNames.length) {
+            throw "Your upload contains duplicate Building Names for two or more Buildings!"
+        }
+        next();
+    } 
+    catch (error) {
+        return next(new ErrorResponse(error,400));
+    }
 });
+
+CampusBuildingSchema.methods.isUniqueNameasperCampus = async function () {
+    try {
+        let building = await CampusBuilding.findOne({ campusname : this.campusname, BuildingName: this.BuildingName})
+        if(building) {return false;}
+        else {return true;}
+    } catch(err){
+        return err;
+    }
+}
 
 CampusBuildingSchema.methods.assignBuildingIDandRoomID = async function () {
     const Counter = require('./Counter');

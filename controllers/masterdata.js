@@ -91,9 +91,9 @@ exports.uploadCampusBuildings = async (request, response, next) => {
                 }
             }
             let building = new CampusBuilding({
-                BuildingName : row[0],
+                BuildingName : row[0].trim(),
                 BuildingType : row[1],
-                Status : row[2] , 
+                Status : row[2].trim() == "Enabled" ? true : false, 
                 NoOfFloors : row[3],
                 NumberofRoomsinEachFloor : row[4],
                 NoOfWorkers : row[5],
@@ -140,7 +140,9 @@ exports.addBuildingCampusBuildings = async (request, response, next) => {
         }
 
         if(BuildingID){ //update roomdetails
-            
+            if(!data.RoomDetails) {
+                throw "Please provide RoomDetails also!"
+            }
             let building = await CampusBuilding.findOne({_id: BuildingID, campusname : request.user.campusname});
             
             data.RoomDetails.forEach((room)=>{

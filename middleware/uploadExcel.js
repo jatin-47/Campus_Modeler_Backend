@@ -11,7 +11,7 @@ const excelFilter = (req, file, cb) => {
     if (mimetype && extname) {
         cb(null, true);
     } else {
-        cb(new ErrorResponse("Please upload only 'excel' file.",400), false);
+        cb(new ErrorResponse("Please upload only '.xlsx' file.",400), false);
     }
 }
 
