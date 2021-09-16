@@ -6,7 +6,6 @@ const Faculty = require('../models/Faculty');
 const Staff = require('../models/Staff');
 const Survey = require('../models/Survey');
 const StudentData = require('../models/StudentData');
-const Counter = require('../models/Counter');
 
 const ErrorResponse = require('../utils/errorResponse');
 var fs = require('fs');
@@ -17,28 +16,25 @@ const excel = require("exceljs");
 /****************************************************************/
 
 exports.campusBuildings = async (request, response, next) => {
-
-    let CampusBuildings = await CampusBuilding.find({campusname : request.user.campusname}, 'BuildingID BuildingName BuildingType NoOfFloors NoOfWorkers Status');
-
-    response.send(CampusBuildings);
+    try {
+        let CampusBuildings = await CampusBuilding.find({campusname : request.user.campusname}, 'BuildingID BuildingName BuildingType NoOfFloors NoOfWorkers Status');
+        response.send(CampusBuildings);
+    }
+    catch(err){ return next(new ErrorResponse(err, 400)); }
 };
 
 exports.viewDataCampusBuildings = async (request, response, next) => {
-
-    const { BuildingID } = request.query;
     try {
-        let viewdata = await CampusBuilding.findOne({ campusname : request.user.campusname, BuildingID: BuildingID });
-        if(viewdata)
-            response.send(viewdata);
-        else
-            return next(new ErrorResponse('Not Found',400));
-    }catch(err){  return next(new ErrorResponse(err,400));  }
-
+        const { BuildingID } = request.query;
+        let viewdata = await CampusBuilding.findOne({_id: BuildingID, campusname : request.user.campusname});
+        response.send(viewdata);
+    }
+    catch(err){  return next(new ErrorResponse(err,400));  }
 };
 
 exports.templateCampusBuildings = async (request, response, next) => {
     const workbook = new excel.Workbook();
-    const filename = "building_template";
+    const filename = "Building_template";
     const sheet = workbook.addWorksheet(filename);
 
     sheet.columns = [
@@ -48,7 +44,8 @@ exports.templateCampusBuildings = async (request, response, next) => {
         { header: "Number of Floors"},
         { header: "Number of Rooms in Each Floor"},
         { header: "Number of Workers"},
-        { header: "Active Hours"},
+        { header: "Active Hours (start)"},
+        { header: "Active Hours (end)"},
         { header: "Building Polygon"}
       ];
   
@@ -71,13 +68,11 @@ exports.uploadCampusBuildings = async (request, response, next) => {
         if (request.file == undefined) {
             return next(new ErrorResponse("Please upload an excel file!",400));
         }
-        //console.log(request.file);
         let path = request.file.path;
     
         let rows = await readXlsxFile(path);
 
-        const required_headers = ["Building Name","Building Type","Building Status","Number of Floors", 
-        "Number of Rooms in Each Floor", "Number of Workers","Active Hours","Building Polygon"];
+        const required_headers = ["Building Name","Building Type","Building Status","Number of Floors","Number of Rooms in Each Floor", "Number of Workers","Active Hours (start)","Active Hours (end)","Building Polygon"];
         let header = rows.shift();
 
         for(let i=0; i<required_headers.length; i++){
@@ -88,36 +83,37 @@ exports.uploadCampusBuildings = async (request, response, next) => {
         let buildings = [];
     
         rows.forEach((row) => {
-            let building = {
-                BuildingID : row[0],
-                BuildingName : row[1],
-                BuildingType : row[2],
-                NoOfFloors : row[3],
-                NoOfWorkers : row[4],
-                Status : row[5] , 
-                ActiveHours : row[6],
-                BuildingCordinaties : row[7],
-                campusname : request.user.campusname,
-                Rooms : []
-            };
-            let start_col = 8;
-            for(let i=0; i<TotalNoOfRooms; i++)
-            {
-                let room = {
-                    RoomID : row[start_col],
-                    RoomName : row[start_col+1],
-                    Floor : row[start_col+2],
-                    Capacity : row[start_col+3],
-                    RoomType : row[start_col+4]
-                };
-                building.Rooms.push(room);
-                start_col = start_col+5;
+            let Rooms = [];
+            for(let floor = 1; floor <= row[3]; floor++){
+                for(let room = 0; room < row[4]; room++){
+                    let Room = {Floor : floor};
+                    Rooms.push(Room);
+                }
             }
-    
+            let building = new CampusBuilding({
+                BuildingName : row[0],
+                BuildingType : row[1],
+                Status : row[2] , 
+                NoOfFloors : row[3],
+                NumberofRoomsinEachFloor : row[4],
+                NoOfWorkers : row[5],
+                ActiveHours : {
+                    start : row[6],
+                    end : row[7]
+                },
+                BuildingCordinaties : row[8],
+                Rooms : Rooms,
+                campusname : request.user.campusname
+            });    
             buildings.push(building);
         });
 
-        await CampusBuilding.insertMany(buildings);
+        const docs = await CampusBuilding.insertMany(buildings);
+        if(docs) {
+            for(let doc of docs){
+                await doc.assignBuildingIDandRoomID();
+            }
+        }
 
         fs.unlinkSync(path);
         response.status(200).send({
@@ -126,50 +122,75 @@ exports.uploadCampusBuildings = async (request, response, next) => {
         });
 
     } catch (error) {
-        fs.unlinkSync(request.file.path);
-        console.log(error);
+        try{
+            fs.unlinkSync(request.file.path);
+        }catch(err) {
+            return next(new ErrorResponse("Could not delete the temp file!(internal err) " + err, 500));
+        }
         return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
 };
 
-//RoomID logic `BuildingID + FloorNo + RoomNo`
 exports.addBuildingCampusBuildings = async (request, response, next) => {
-    const data = request.body;
     try {
-        const floors = data.RoomDetails;
-        let Rooms = []
-    
-        for(let floor of floors){
-            for(let i =0; i<floor.NumberofRooms; i++){
-                let room = {
-                    RoomID : `${data.BuildingId}${floor.FloorNo}${i}`, //RoomID LOGIC
-                    RoomName : floor.Rooms[i].RoomName, 
-                    Floor : floor.FloorNo, 
-                    Capacity : floor.Rooms[i].Capacity, 
-                    RoomType : floor.Rooms[i].RoomType
-                };
-                Rooms.push(room);
-            }
+        const data = request.body;
+        const { BuildingID } = request.query;
+        if (request.file !== undefined) {
+            var path = request.file.path;
         }
-        await CampusBuilding.create({ 
-            BuildingID : data.BuildingId,
-            BuildingName : data.BuildingName,
-            BuildingType : data.BuildingType,
-            NoOfFloors : data.NoOfFloors,
-            NoOfWorkers : data.NoOfWorkers,
-            ActiveHours : {
-                start : data.ActiveHours[0],
-                end : data.ActiveHours[1] 
-            },
-            BuildingCordinaties :data.BuildingCordinaties,
-            campusname : request.user.campusname,
-            Rooms : Rooms
-        });
+
+        if(BuildingID){ //update roomdetails
+            
+            let building = await CampusBuilding.findOne({_id: BuildingID, campusname : request.user.campusname});
+            
+            data.RoomDetails.forEach((room)=>{
+                let tobeModifiedRoom = building.Rooms.id(room._id);
+                tobeModifiedRoom.RoomName = room.RoomName.trim();
+                tobeModifiedRoom.Capacity = room.Capacity;
+                tobeModifiedRoom.RoomType = room.RoomType.trim();
+            });
+            building.markModified('Rooms'); 
+            await building.save();
+
+            response.send({
+                success: true,
+                message: 'Rooms updated successfully'
+            });
+        }
+        else { // create a new building and return roomdetails
+
+            let Rooms = [];
+            for(let floor = 1; floor <= data.NoOfFloors; floor++){
+                for(let room = 0; room < data.NumberofRoomsinEachFloor; room++){
+                    let Room = {Floor : floor};
+                    Rooms.push(Room);
+                }
+            }
+            const doc = await CampusBuilding.create({ 
+                BuildingName : data.BuildingName.trim(),
+                BuildingType : data.BuildingType.trim(),
+                NoOfFloors : data.NoOfFloors,
+                NumberofRoomsinEachFloor : data.NumberofRoomsinEachFloor,
+                NoOfWorkers : data.NoOfWorkers,
+                ActiveHours : {
+                    start : data.ActiveHours[0],
+                    end : data.ActiveHours[1] 
+                },
+                BuildingImage_path : path,
+                BuildingCordinaties :data.BuildingCordinaties,
+                Rooms : Rooms,
+                campusname : request.user.campusname,
+            });
+            
+            await doc.assignBuildingIDandRoomID();
     
-        response.send({
-            success: true,
-            message: 'saved successfully'
-        });
+            response.send({
+                success: true,
+                message: 'Saved successfully',
+                BuildingID : doc._id,
+                RoomData : doc.Rooms
+            });
+        }
     }
     catch(err){
         return next(new ErrorResponse(err,400));
@@ -179,7 +200,7 @@ exports.addBuildingCampusBuildings = async (request, response, next) => {
 exports.deleteBuildingCampusBuildings = async (request, response, next) => {
     try {
         const { BuildingID } = request.query;
-        await CampusBuilding.deleteOne({ campusname : request.user.campusname, BuildingID : BuildingID})
+        await CampusBuilding.deleteOne({ campusname : request.user.campusname, _id : BuildingID})
     
         response.send({
             success: true,
@@ -431,7 +452,6 @@ exports.users = async (request, response, next) => {
     
 };
 
-//ask how the UI is taking the image!!
 exports.viewDetailsUsers = async (request, response, next) => {
     try{
         const { UserID } = request.query;
