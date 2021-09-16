@@ -11,7 +11,7 @@ exports.login = async (request, response, next) => {
 
     if (username && password && campusname) {
         try {
-            const user = await User.findOne({ username : username, campusname : campusname}).select('-simulations +password');
+            const user = await User.findOne({ username : username, campusname : campusname}).select('+password');
 
             if (!user) {
                 console.log('Wrong')

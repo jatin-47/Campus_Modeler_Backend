@@ -6,6 +6,7 @@ const Faculty = require('../models/Faculty');
 const Staff = require('../models/Staff');
 const Survey = require('../models/Survey');
 const StudentData = require('../models/StudentData');
+const Counter = require('../models/Counter');
 
 const ErrorResponse = require('../utils/errorResponse');
 var fs = require('fs');
@@ -447,7 +448,6 @@ exports.templateusers = async (request, response, next) => {
     const sheet = workbook.addWorksheet(filename);
 
     sheet.columns = [
-        { header: "User Name"},
         { header: "First Name"},
         { header: "Last Name"},
         { header: "DOB"},
@@ -485,7 +485,7 @@ exports.uploadusers = async (request, response, next) => {
     
         let rows = await readXlsxFile(path);
         
-        const required_headers = ["User Name", "First Name", "Last Name","DOB","Gender","Email ID","Phone No","User Role","Status","Temp Password"];
+        const required_headers = ["First Name", "Last Name","DOB","Gender","Email ID","Phone No","User Role","Status","Temp Password"];
         let header = rows.shift();
 
         for(let i=0; i<required_headers.length; i++){
@@ -496,23 +496,29 @@ exports.uploadusers = async (request, response, next) => {
         let users = [];
     
         rows.forEach((row) => {
-            let user = {
-                username : row[0],
-                fname : row[1],
-                lname : row[2],
-                dob : row[3],
-                gender : row[4],
-                email : row[5] , 
-                contact : row[6],
-                role : row[7],
-                status : row[8] == "Enabled" ? true : false,
-                password : row[9],
+            let user = new User({
+                fname : row[0].trim(),
+                lname : row[1].trim(),
+                dob : row[2],
+                gender : row[3].trim(),
+                email : row[4].trim().toLowerCase(), 
+                contact : row[5],
+                role : row[6].trim(),
+                status : row[7].trim() == "Enabled" ? true : false,
+                password : row[8],
                 campusname : request.user.campusname
-            }; 
+            }); 
             users.push(user);
         });
 
-        await User.insertMany(users);
+        const docs = await User.insertMany(users);
+        if(docs){            
+            for(let doc of docs){
+                const campusCounter = await Counter.findOne({campusname: doc.campusname});
+                doc.UserID = await campusCounter.increaseCount("User"); 
+                await doc.save();
+            }
+        }
  
         fs.unlinkSync(path);
         response.status(200).send({
@@ -526,7 +532,7 @@ exports.uploadusers = async (request, response, next) => {
         }catch(err) {
             return next(new ErrorResponse("Could not delete the temp file!(internal err) " + err, 500));
         }
-        console.log(error);
+        //console.log(error);
         return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
 };
