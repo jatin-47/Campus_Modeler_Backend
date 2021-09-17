@@ -190,7 +190,7 @@ exports.addBuildingCampusBuildings = async (request, response, next) => {
                 success: true,
                 message: 'Saved successfully',
                 BuildingID : doc._id,
-                RoomData : doc.Rooms
+                RoomDetails : doc.Rooms
             });
         }
     }
