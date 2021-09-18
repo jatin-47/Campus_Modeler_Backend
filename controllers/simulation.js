@@ -25,7 +25,7 @@ exports.policyPlanner = async (request, response, next) => {
     
     response.send({
         "General Input": {
-			"No. of Days to Simulate": 10,
+			"No of Days to Simulate": 10,
 			"Result Resolution by hours": 1,
 		},
 		"Epidemic Parameter Input": {
@@ -36,7 +36,7 @@ exports.policyPlanner = async (request, response, next) => {
 		"Policy Input": {
 			// Lockdown_Capacity_of_Each_Building: { type: Number },
 			// Threshold_for_AutoLockdown: { type: Number },
-			"Expected No. of Visitors per Day (Other than Staff)": 15,
+			"Expected No of Visitors per Day (Other than Staff)": 15,
 			"Compliance Rate": 0.8,
 			"Quarantine Period": 14,
 			"Sector/Building to Lockdown": ["None","Academic","Administration","Restaurant","Market","Facility","Grounds","Gymkhana","Non_Academic",...buildingnames],
@@ -66,7 +66,7 @@ exports.initialization = async (request, response, next) => {
     response.send({
         "Random":
         {
-            "No. of Initial Infected People": 10,
+            "No of Initial Infected People": 10,
         },
         // "TimeSeries":
         // {

@@ -9,7 +9,7 @@ const SimulationSchema = new mongoose.Schema(
 			required: [true, "Input parameters cannot be empty!"],
 		},
 		"General Input": {
-			"No. of Days to Simulate": { type: Number },
+			"No of Days to Simulate": { type: Number },
 			"Result Resolution by hours": { type: Number },
 		},
 		"Epidemic Parameter Input": {
@@ -20,7 +20,7 @@ const SimulationSchema = new mongoose.Schema(
 		"Policy Input": {
 			// Lockdown_Capacity_of_Each_Building: { type: Number },
 			// Threshold_for_AutoLockdown: { type: Number },
-			"Expected No. of Visitors per Day (Other than Staff)": { type: Number },
+			"Expected No of Visitors per Day (Other than Staff)": { type: Number },
 			"Compliance Rate": { type: Number },
 			"Quarantine Period": { type: Number },
 			"Sector/Building to Lockdown": { type: String },
