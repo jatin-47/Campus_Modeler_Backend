@@ -132,6 +132,69 @@ exports.uploadCampusBuildings = async (request, response, next) => {
     }
 };
 
+exports.uploadspecialrooms = async (request, response, next) => {
+    try {
+        if (request.file == undefined) {
+            return next(new ErrorResponse("Please upload an excel file!",400));
+        }
+        let path = request.file.path;
+
+        const jsonString = fs.readFileSync(path,{encoding:'utf8'});
+        const data = JSON.parse(jsonString);
+
+        /*
+        {
+            "BuildingName": [
+                {
+                    "RoomName" : ,
+                    "Floor" : ,
+                    "Capacity" : ,
+                    "RoomType" : 
+                },
+                {
+                    "RoomName" : ,
+                    "Floor" : ,
+                    "Capacity" : ,
+                    "RoomType" : 
+                }
+            ],
+        }
+        */
+        for (let BuildingName in data) {
+            let building = await CampusBuilding.findOne({BuildingName: BuildingName, campusname : request.user.campusname});
+            let rooms = data[BuildingName];
+
+            for(let i =1; i <= building.NoOfFloors; i++){
+                let givenRooms = rooms.filter((room) => room.Floor == i);
+                let tobeModifiedRooms = building.Rooms.filter((room) => room.Floor == i);
+                if(givenRooms.length > tobeModifiedRooms.length) 
+                    throw "Rooms per floor exceeds limit!";
+                for(let j=0; j<givenRooms.length; j++){
+                    tobeModifiedRooms[j].RoomName = givenRooms[j].RoomName.trim();
+                    tobeModifiedRooms[j].Capacity = givenRooms[j].Capacity;
+                    tobeModifiedRooms[j].RoomType = givenRooms[j].RoomType.trim();
+                }
+            }
+            building.markModified('Rooms'); 
+            await building.save();
+        }
+
+        fs.unlinkSync(path);
+        response.status(200).send({
+            success: true,
+            message: "Uploaded the file/data successfully!"
+        });
+
+    } catch (error) {
+        try{
+            fs.unlinkSync(request.file.path);
+        }catch(err) {
+            return next(new ErrorResponse("Could not delete the temp file!(internal err) " + err, 500));
+        }
+        return next(new ErrorResponse("Could not upload the file! " + error, 500));
+    }
+};
+
 exports.addBuildingCampusBuildings = async (request, response, next) => {
     try {
         const data = request.body;

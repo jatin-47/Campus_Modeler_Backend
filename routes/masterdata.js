@@ -16,6 +16,7 @@ router.route('/campusbuildings').get(campusBuildings);
 router.route('/campusbuildings/viewdata').get(viewDataCampusBuildings);
 router.route('/campusbuildings/template').get(templateCampusBuildings);
 router.post('/campusbuildings/upload',uploadExcel.single("file"), uploadCampusBuildings);
+router.post('/campusbuildings/upload/specialrooms',uploadJson.single("file"), uploadspecialrooms);
 router.post('/campusbuildings/addbuilding', uploadImage.single("image"), addBuildingCampusBuildings);
 router.route('/campusbuildings/deletebuilding').delete(deleteBuildingCampusBuildings);
 
