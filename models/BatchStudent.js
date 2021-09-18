@@ -4,8 +4,8 @@ const CampusNames = require('../config/campusnames');
 const BatchStudentSchema = new mongoose.Schema({
     BatchID : {type : Number},
     BatchCode : { type: String, required: true},
-    Department : { type : String, enum : ['Mech','Cse','IT']},
-    ProgramCode : { type: String, enum : ["BE", "ME", "PHD"]},
+    Department : { type : String },
+    ProgramCode : { type: String },
     YearOfStudy : {type : Number},
     Strength : { type: Number, required : true},
     Status : { type : Boolean, default: true},

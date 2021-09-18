@@ -5,7 +5,7 @@ const FacultySchema = new mongoose.Schema({
     FacultyID : {type : Number},        
     Name: {type: String, trim : true, required : true},
     Courses : [{type: String}],
-    Department : {type : String, required: true, enum : ['Mech','Cse','IT']},
+    Department : {type : String, required: true},
     ResidenceBuildingName : {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'CampusBuilding'
