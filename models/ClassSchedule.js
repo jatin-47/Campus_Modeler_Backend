@@ -47,8 +47,8 @@ ClassScheduleSchema.pre('insertMany', async function (next, docs) {
             tobeCourseID.push(doc.CourseID.toLowerCase());
 
             let building = await campusbuildings.findOne({BuildingName : doc.BuildingName});
-            if(!building) throw `Building Name (${doc.BuildingName}) provided doesn't exists!`;
-            doc.BuildingName = building._id;
+            if(building)
+                doc.BuildingName = building._id;
         }
         if((new Set(tobeCourseID)).size !== tobeCourseID.length) {
             throw "Your upload contains duplicate CourseIDs for two or more courses!"

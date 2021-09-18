@@ -314,7 +314,8 @@ exports.uploadclassschedule = async (request, response, next) => {
                     Timing : times[i]
                 });
             }
-
+            if(row[2] == null) row[2] = undefined;
+            if(row[3] == null) row[3] = undefined;
             let course = new ClassSchedule({
                 CourseID : row[0].trim(),
                 CourseName : row[1].trim(),
