@@ -5,11 +5,11 @@ CampusNames.unique = true;
 
 const CounterSchema = new mongoose.Schema({
     campusname : CampusNames,
-    CampusBuilding : { type: Number},
-    User : {type : Number},
-    BatchStudent : {type : Number},
-    Faculty : { type: Number},
-    Staff : { type: Number}
+    CampusBuilding : { type: Number, default: 1},
+    User : {type : Number, default: 1},
+    BatchStudent : {type : Number, default: 1},
+    Faculty : { type: Number, default: 1},
+    Staff : { type: Number, default: 1}
 });
 
 CounterSchema.methods.increaseCount = async function (model) {

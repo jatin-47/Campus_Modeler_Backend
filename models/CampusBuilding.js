@@ -70,18 +70,22 @@ CampusBuildingSchema.methods.isUniqueNameasperCampus = async function () {
 
 CampusBuildingSchema.methods.assignBuildingIDandRoomID = async function () {
     const Counter = require('./Counter');
-
-    const campusCounter = await Counter.findOne({campusname: this.campusname});
-    this.BuildingID = await campusCounter.increaseCount("CampusBuilding"); 
-  
-    (RoomCountPerFloor = []).length = this.NoOfFloors;
-    RoomCountPerFloor.fill(1);
-    for(let room of this.Rooms){
-        room.RoomID = `${this.BuildingID}${room.Floor}${RoomCountPerFloor[room.Floor-1]}`;
-        room.RoomName = `RoomName${room.RoomID}`;
-        RoomCountPerFloor[room.Floor-1]++;
+    try {
+        const campusCounter = await Counter.findOne({campusname: this.campusname});
+        this.BuildingID = await campusCounter.increaseCount("CampusBuilding"); 
+      
+        (RoomCountPerFloor = []).length = this.NoOfFloors;
+        RoomCountPerFloor.fill(1);
+        for(let room of this.Rooms){
+            room.RoomID = `${this.BuildingID}${room.Floor}${RoomCountPerFloor[room.Floor-1]}`;
+            room.RoomName = `RoomName${room.RoomID}`;
+            RoomCountPerFloor[room.Floor-1]++;
+        }
+        await this.save();
     }
-    await this.save();
+    catch (error) {
+        return next(new ErrorResponse(error,400));
+    }
 }
 
 const CampusBuilding = mongoose.model("CampusBuilding", CampusBuildingSchema);

@@ -2,47 +2,73 @@ const mongoose = require('mongoose');
 const CampusNames = require('../config/campusnames');
 
 const ClassScheduleSchema = new mongoose.Schema({
-    CourseID : { 
-        type: String, 
-        unique:true,
-        required: [true, "Input parameters cannot be empty!"] 
-    },
-    CourseName : {
-        type : String,
-        trim : true
-    },
+    CourseID : { type: String, required: true},
+    CourseName : {type : String, trim : true},
     BuildingName : {
         type : mongoose.Schema.Types.ObjectId,
         ref : 'CampusBuilding'
     },
-    RoomID : {
-        type : mongoose.Schema.Types.ObjectId
-    },
-    Strength : {
-        type: Number
-    },
-    Departments : [{
-        type : String,
-        enum : ['Mech','Cse','IT']
-    }],
-    Status : {
-        type : Boolean,
-        default: true
-    },
+    RoomName : {type : String, trim : true},
+    Strength : { type: Number},
+    Departments : [{type : String, enum : ['Mech','Cse','IT']}],
+    Status : {type : Boolean, default: true},
     ClassDays : [{
-        Day : {type : String, enum : ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']},
+        Day : {type : String, enum : ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']},
         Timing : {
             start : {type : String},
             end : {type : String} 
         }
     }],
-    CourseInstructor : {type : String},
+    CourseInstructor : {
+        type : mongoose.Schema.Types.ObjectId,
+        ref : 'Faculty'
+    },
     StudentComposition :[{
-       BatchCode : {type : String},
-       Count : {type : Number}
+        BatchCode : {
+            type : mongoose.Schema.Types.ObjectId,
+            ref : 'BatchStudent'
+        },
+        Count : {type : Number}
     }],
     campusname : CampusNames
 });
+
+ClassScheduleSchema.pre('insertMany', async function (next, docs) {
+    const CampusBuilding = require("./CampusBuilding");
+    try {
+        const campusbuildings = await CampusBuilding.find({campusname : this.campusname});
+
+        tobeCourseID = [];
+        for(let doc of docs){
+            let isUniqueIDasperCampus = await doc.isUniqueIDasperCampus();
+            if(!isUniqueIDasperCampus) {
+                throw "One or more CourseIDs are already used in the database for your campus!"
+            }
+            tobeCourseID.push(doc.CourseID.toLowerCase());
+
+            let building = await campusbuildings.findOne({BuildingName : doc.BuildingName});
+            if(!building) throw `Building Name (${doc.BuildingName}) provided doesn't exists!`;
+            doc.BuildingName = building._id;
+        }
+        if((new Set(tobeCourseID)).size !== tobeCourseID.length) {
+            throw "Your upload contains duplicate CourseIDs for two or more courses!"
+        }
+        next();
+    }
+    catch (error) {
+        return next(new ErrorResponse(error,400));
+    }
+});
+
+ClassScheduleSchema.methods.isUniqueIDasperCampus = async function () {
+    try {
+        let course = await ClassSchedule.findOne({ campusname : this.campusname, CourseID: this.CourseID})
+        if(course) {return false;}
+        else {return true;}
+    } catch(err){
+        return err;
+    }
+}
 
 const ClassSchedule = mongoose.model("ClassSchedule", ClassScheduleSchema);
 
