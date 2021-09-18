@@ -19,7 +19,8 @@ for(let campus of CampusNames.enum){
         User : 1,
         BatchStudent : 1,
         Faculty : 1,
-        Staff : 1
+        Staff : 1,
+        Student : 1
     });
 } 
 */

@@ -6,10 +6,7 @@ const FacultySchema = new mongoose.Schema({
     Name: {type: String, trim : true, required : true},
     Courses : [{type: String}],
     Department : {type : String, required: true},
-    ResidenceBuildingName : {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'CampusBuilding'
-    },
+    ResidenceBuildingName : {type : String},
     AdultFamilyMembers : {type : Number, required: true},
     NoofChildren : { type: Number, required: true},
     campusname : CampusNames

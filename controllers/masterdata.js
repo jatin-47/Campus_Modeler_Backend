@@ -3,6 +3,7 @@ const CampusBuilding = require('../models/CampusBuilding');
 const ClassSchedule = require('../models/ClassSchedule');
 const BatchStudent = require('../models/BatchStudent');
 const Faculty = require('../models/Faculty');
+const Student = require('../models/Student');
 const Staff = require('../models/Staff');
 const Survey = require('../models/Survey');
 const StudentData = require('../models/StudentData');
@@ -299,14 +300,21 @@ exports.uploadclassschedule = async (request, response, next) => {
         let courses = [];
 
         rows.forEach((row) => {
-            let days = row[4].split(",").map((day)=>day.trim().toLowerCase());
-            let times = row[5].split(",").map((timing) => {
-                let time = {
-                    start : timing.split("-")[0].trim(),
-                    end : timing.split("-")[1].trim()
-                };
-                return time;
-            });
+            let days = [];
+            let times = [];
+            if (row[4] == null) {
+                row[4] = undefined;
+                row[5] = undefined;
+            } else{
+                days = row[4].split(",").map((day)=>day.trim().toLowerCase());
+                times = row[5].split(",").map((timing) => {
+                    let time = {
+                        start : timing.split("-")[0].trim(),
+                        end : timing.split("-")[1].trim()
+                    };
+                    return time;
+                });
+            }
             let classdays = [];
             for(let i=0; i < days.length; i++){
                 classdays.push({
@@ -315,12 +323,14 @@ exports.uploadclassschedule = async (request, response, next) => {
                 });
             }
             if(row[2] == null) row[2] = undefined;
+            else row[2] = row[2].trim();
             if(row[3] == null) row[3] = undefined;
+            else row[3] = row[3].trim();
             let course = new ClassSchedule({
                 CourseID : row[0].trim(),
                 CourseName : row[1].trim(),
                 BuildingName : row[2],
-                RoomName : row[3].trim(),
+                RoomName : row[3],
                 ClassDays : classdays,
                 Strength : row[6],
                 StudentComposition :[],
@@ -377,14 +387,14 @@ exports.addClassClassSchedule = async (request, response, next) => {
         await ClassSchedule.create({
             CourseID : data.CourseID,
             CourseName : data.CourseName,
-            BuildingName : building._id,
+            BuildingName : data.BuildingName,
             RoomName :room[0].RoomName,
             Strength : data.Strength,
             Departments : data.Departments.split(",").map((curr)=>curr.trim()),
             Status : true,
             ClassDays : classdays,
-            CourseInstructor : faculty._id,
-            StudentComposition : batch_id,
+            CourseInstructor : data.CourseInstructor,
+            StudentComposition : data.StudentComposition,
             campusname : request.user.campusname
         });   
         
@@ -703,21 +713,54 @@ exports.updateCampusMapUploader = async (request, response, next) => {
 /****************************************************************/
 
 exports.addStudentDataUploader = async (request, response, next) => {
-    if (request.file == undefined) {
-        return next(new ErrorResponse("Please upload an excel file!",400));
-    }
-    try {      
-        
-        
+    try {
+        if (request.file == undefined) {
+            return next(new ErrorResponse("Please upload an excel file!",400));
+        }
+        let path = request.file.path;
+    
+        let rows = await readXlsxFile(path);
+
+        const required_headers = ["Student ID","Age","Hostel Building Name","Mess Building Name","Year","Department", "Program","Batch","inCampus"];
+        let header = rows.shift();
+        for(let i=0; i<required_headers.length; i++){
+            if(header[i] != required_headers[i])
+                throw "Wrong headers! please match with template file!";
+        }
+
+        let students = [];
+        rows.forEach((row) => {
+            let student = new Student({
+                StudentID : row[0],
+                Age : row[1],
+                HostelBuildingName : row[2].trim(),
+                MessBuildingName : row[3].trim(),
+                Year : row[4],
+                Department : row[5],
+                Program :row[6].trim(),
+                Batch : row[7],
+                inCampus : row[8],
+                Courses : [],
+                campusname : request.user.campusname
+            }); 
+            students.push(student);
+        });
+
+        await Student.insertMany(students);
+ 
+        fs.unlinkSync(path);
         response.status(200).send({
-            message: "Uploaded the file successfully: " + request.file.originalname,
+            success: true,
+            message: "Uploaded the file/data successfully!"
         });
-    }
-    catch (error) {
-        console.log(error);
-        response.status(500).send({
-            message: "Could not upload the file: " + request.file.originalname,
-        });
+
+    } catch (error) {
+        try{
+            fs.unlinkSync(request.file.path);
+        }catch(err) {
+            return next(new ErrorResponse("Could not delete the temp file!(internal err) " + err, 500));
+        }
+        return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
 };
 
@@ -984,7 +1027,7 @@ exports.addFacultyDetails = async (request, response, next) => {
             Name : data.Name.trim(),
             Courses : data.Courses.split(",").map((curr) => curr.trim()),
             Department : data.Department,
-            ResidenceBuildingName : building._id,
+            ResidenceBuildingName : data.BuildingName,
             AdultFamilyMembers : data.AdultFamilyMembers,
             NoofChildren : data.NoofChildren,
             campusname : request.user.campusname
