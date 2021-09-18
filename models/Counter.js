@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 let CampusNames = require('../config/campusnames');
 
-CampusNames.unique = true;
-
 const CounterSchema = new mongoose.Schema({
     campusname : CampusNames,
     CampusBuilding : { type: Number, default: 1},
