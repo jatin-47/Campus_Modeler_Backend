@@ -326,7 +326,8 @@ exports.templateclassschedule = async (request, response, next) => {
         { header: "Room Name"},
         { header: "Scheduled Days"},
         { header: "Scheduled Time"},
-        { header: "Total Strength"}
+        { header: "Total Strength"},
+        { header: "Course Instructor(s)"}
       ];
   
     response.setHeader(
@@ -352,7 +353,7 @@ exports.uploadclassschedule = async (request, response, next) => {
     
         let rows = await readXlsxFile(path);
 
-        const required_headers = ["Course ID","Course Name","Building Name","Room Name","Scheduled Days", "Scheduled Time","Total Strength"];
+        const required_headers = ["Course ID","Course Name","Building Name","Room Name","Scheduled Days", "Scheduled Time","Total Strength","Course Instructor(s)"];
         let header = rows.shift();
 
         for(let i=0; i<required_headers.length; i++){
@@ -386,12 +387,11 @@ exports.uploadclassschedule = async (request, response, next) => {
                 });
             }
             if(row[2] == null) row[2] = undefined;
-            else row[2] = row[2].trim();
             if(row[3] == null) row[3] = undefined;
-            else row[3] = row[3].trim();
             let course = new ClassSchedule({
                 CourseID : row[0].trim(),
-                CourseName : row[1].trim(),
+                CourseName : row[1],
+                CourseInstructor : String(row[7]).split(","),
                 BuildingName : row[2],
                 RoomName : row[3],
                 ClassDays : classdays,
@@ -403,7 +403,7 @@ exports.uploadclassschedule = async (request, response, next) => {
         });
 
         await ClassSchedule.insertMany(courses);     
- 
+        await addFacultyCourseDetails(courses);
         fs.unlinkSync(path);
         response.status(200).send({
             success: true,
@@ -419,6 +419,18 @@ exports.uploadclassschedule = async (request, response, next) => {
         return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
 };
+
+async function addFacultyCourseDetails(courses){
+    for(let i=0;i<courses.length;i++){
+        for(let j=0;j<courses[i].CourseInstructor.length;j++){
+            let fac = await Faculty.findOne({Name: courses[i].CourseInstructor}).exec();
+            if(fac==null || fac==undefined)
+                continue;
+            fac.Courses.push(courses[i].CourseName);
+            fac.save();
+        }   
+    }
+}
 
 exports.addClassClassSchedule = async (request, response, next) => {
     try{
@@ -447,20 +459,24 @@ exports.addClassClassSchedule = async (request, response, next) => {
             return curr
         });
 
-        await ClassSchedule.create({
+        course = await ClassSchedule.create({
             CourseID : data.CourseID,
             CourseName : data.CourseName,
             BuildingName : data.BuildingName,
             RoomName :room[0].RoomName,
             Strength : data.Strength,
-            Departments : data.Departments.split(",").map((curr)=>curr.trim()),
+            Departments : data.Departments.split(","),
             Status : true,
             ClassDays : classdays,
-            CourseInstructor : data.CourseInstructor,
+            CourseInstructor : String(data.CourseInstructor),
             StudentComposition : data.StudentComposition,
             campusname : request.user.campusname
-        });   
-        
+        });
+        let fac = await Faculty.findOne({Name: courses[i].CourseInstructor}).exec();
+        if(fac==null || fac==undefined){
+            fac.Courses.push(courses[i].CourseName);
+            fac.save();
+        }
         response.send({
             success: true,
             message: 'saved successfully'
@@ -919,8 +935,8 @@ exports.uploadbatchwisestudentdetails = async (request, response, next) => {
         rows.forEach((row) => {
             let batchStudent = new BatchStudent({
                 BatchCode : row[0].trim(),
-                Department : row[2].trim(),
-                ProgramCode : row[3].trim(),
+                Department : row[2],
+                ProgramCode : String(row[3]),
                 YearOfStudy : row[1],
                 Strength : row[4],
                 campusname : request.user.campusname
@@ -957,7 +973,7 @@ exports.addBatchwiseStudentDetails = async (request, response, next) => {
         const doc = await BatchStudent.create({
             BatchCode : data.BatchCode,
             Department : data.Department,
-            ProgramCode : data.ProgramCode,
+            ProgramCode : String(data.ProgramCode),
             YearOfStudy : data.YearOfStudy,
             Strength : data.Strength,
             campusname : request.user.campusname
@@ -1005,7 +1021,7 @@ exports.templatefacultydetails = async (request, response, next) => {
 
     sheet.columns = [
         { header: "Name"},
-        { header: "Courses"},
+        { header: "Residence_Building_Name"},
         { header: "Department_Code"},
         { header: "No_of_Adult_Family_Members"},
         { header: "No_of_Children"}
@@ -1034,7 +1050,7 @@ exports.uploadfacultydetails = async (request, response, next) => {
     
         let rows = await readXlsxFile(path);
 
-        const required_headers = ["Name" , "Courses", "Department_Code", "No_of_Adult_Family_Members", "No_of_Children"];
+        const required_headers = ["Name" , "Residence_Building_Name", "Department_Code", "No_of_Adult_Family_Members", "No_of_Children"];
         let header = rows.shift();
 
         for(let i=0; i<required_headers.length; i++){
@@ -1046,9 +1062,10 @@ exports.uploadfacultydetails = async (request, response, next) => {
 
         rows.forEach((row) => {
             let faculty= new Faculty( {
-                Name : row[0].trim(),
-                Courses : row[1].split(",").map((curr) => curr.trim()),
-                Department : row[2].trim(),
+                Name : String(row[0]),
+                Courses : [],
+                ResidenceBuildingName: String(row[1]),
+                Department : row[2],
                 AdultFamilyMembers : row[3],
                 NoofChildren : row[4],
                 campusname : request.user.campusname
@@ -1087,7 +1104,7 @@ exports.addFacultyDetails = async (request, response, next) => {
         if(!building) throw "No such building exists in your campus!"
 
         const doc = await Faculty.create({
-            Name : data.Name.trim(),
+            Name : data.Name,
             Courses : data.Courses.split(",").map((curr) => curr.trim()),
             Department : data.Department,
             ResidenceBuildingName : data.BuildingName,
@@ -1145,10 +1162,11 @@ exports.staffDetails = async (request, response, next) => {
 
 exports.templatestaffdetails = async (request, response, next) => {
     const workbook = new excel.Workbook();
-    const filename = "Faculty_template";
+    const filename = "Staff_template";
     const sheet = workbook.addWorksheet(filename);
 
     sheet.columns = [
+        { header: "Staff ID"},
         { header: "Staff Category"},
         { header: "Workplace Building Name"},
         { header: "Residence Building Name"},
@@ -1179,7 +1197,7 @@ exports.uploadstaffdetails = async (request, response, next) => {
     
         let rows = await readXlsxFile(path);
 
-        const required_headers = ["Staff Category", "Workplace Building Name", "Residence Building Name", "Adult Family Members", "No of Children"];
+        const required_headers = ["Staff ID","Staff Category", "Workplace Building Name", "Residence Building Name", "Adult Family Members", "No of Children"];
         let header = rows.shift();
 
         for(let i=0; i<required_headers.length; i++){
@@ -1191,11 +1209,12 @@ exports.uploadstaffdetails = async (request, response, next) => {
 
         rows.forEach((row) => {
             let staff = {
-                StaffCategory : row[0],
-                WorkplaceBuildingName : row[1].trim(),
-                ResidenceBuildingName : row[2].trim(),
-                AdultFamilyMembers : row[3],
-                NoofChildren : row[4],
+                StaffID : row[0],
+                StaffCategory : row[1],
+                WorkplaceBuildingName : row[2],
+                ResidenceBuildingName : row[3],
+                AdultFamilyMembers : row[4],
+                NoofChildren : row[5],
                 campusname : request.user.campusname,
             };    
             staffs.push(staff);
@@ -1228,6 +1247,7 @@ exports.addStaffDetails = async (request, response, next) => {
     const data = request.body;
     try{
         const doc = await Staff.create({
+            StaffID : data.StaffID,
             StaffCategory : data.StaffCategory,
             WorkplaceBuildingName : data.WorkplaceBuildingName,
             ResidenceBuildingName : data.ResidenceBuildingName,

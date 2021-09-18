@@ -16,7 +16,7 @@ const ClassScheduleSchema = new mongoose.Schema({
             end : {type : String} 
         }
     }],
-    CourseInstructor : {type: String},
+    CourseInstructor : [{type: String}],
     StudentComposition :[{
         BatchCode : {type : String},
         Count : {type : Number}

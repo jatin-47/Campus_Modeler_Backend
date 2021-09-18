@@ -7,23 +7,22 @@ const errorHandler = require('./middleware/error');
 const {protect} = require('./middleware/auth');
 const {adminprotect} = require('./middleware/admincheck');
 
-//const createuser = require('./create_user');
-//createuser("jatin", "jatin@gmail.com", "jatin@123", "admin", "kharagpur", "Jatin", "Saini", "Male");
-/* 
-const Counter = require("./models/Counter");
-const CampusNames = require('./config/campusnames');
-for(let campus of CampusNames.enum){
-    Counter.create({
-        campusname : campus,
-        CampusBuilding : 1,
-        User : 1,
-        BatchStudent : 1,
-        Faculty : 1,
-        Staff : 1,
-        Student : 1
-    });
-} 
-*/
+// const createuser = require('./create_user');
+// createuser("Kartheek", "kartheek@gmail.com", "123456", "admin", "IIT Jodhpur", "Kartheek", "Vajrala", "Male");
+
+// const Counter = require("./models/Counter");
+// const CampusNames = require('./config/campusnames');
+// for(let campus of CampusNames.enum){
+//     Counter.create({
+//         campusname : campus,
+//         CampusBuilding : 1,
+//         User : 1,
+//         BatchStudent : 1,
+//         Faculty : 1,
+//         Staff : 1,
+//         Student : 1
+//     });
+// } 
 
 connectDB();
 
