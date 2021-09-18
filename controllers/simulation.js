@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const User = require('../models/User');
+const CampusBuilding = require('../models/CampusBuilding');
 const Simulation = require('../models/Simulation');
 
 const runPython = require('../utils/runPython');
@@ -10,41 +11,53 @@ const fs = require('fs');
 
 exports.policyPlanner = async (request, response, next) => {
 
+    let buildingnames = [];
+
+    try {
+			let CampusBuildings = await CampusBuilding.find({ campusname: request.user.campusname },"BuildingName");
+            CampusBuildings.forEach(element => {
+                buildingnames.push(element.BuildingName)
+            });
+            // console.log(buildingnames);
+        } catch (err) {
+			return next(new ErrorResponse(err, 400));
+		}
+    
     response.send({
-        "GeneralInput":
-        {
-            "No_of_days_to_simulate": [1, 2, 3, 4],
-            "Day_Resolution_By_Hours": [3, 6, 5, 4]
-        },
-        "EpidemicParameterInput":
-        {
-            "InfectionRate": 0.5,
-            "RecoveryRate": [0.25, 0.5, 0.75, 1],
-            "Probability_of_Showing_Symptoms": [0.25, 0.5, 0.75, 1],
-            "Pre_SymptomaticPeriod": [1, 2, 3, 4]
-        },
-        "PolicyInput":
-        {
-            "Lockdown_Capacity_of_Each_Building": [0.25, 0.5, 0.75, 1],
-            "Threshold_for_AutoLockdown": [1, 2, 3, 4],
-            "No_of_Campus_Visitors_Allowed": [50, 60, 70, 80],
-            "Daily_Testing_Capacity": [25, 50, 75, 100],
-            "Daily_Testing_Capacity_Increment Rate": [1, 2, 3],
-            "Dorfman_Pool_Size": [25, 50, 75, 100],
-            "Tapestry_Pool_Size": [50, 60, 70, 80],
-            "Tapestry_Pool_Duplication": [1, 2, 3, 4, 5],
-            "Test_Sensitivity": [50, 60, 70, 80],
-            "Test_Specificity": [50, 60, 70, 80],
-            "Vaccine_Coverage": [50, 60, 70, 80],
-            "Vaccine_Efficiency1": [50, 60, 70, 80],
-            "Vaccine_Efficiency2": [50, 60, 70, 80],
-            "Minimum_Inter-Dose_Period": [50, 60, 70, 80],
-            "Hotspot_Threshold": [50, 60, 70, 80],
-            "At-risk_Percentile_Threshold": [50, 60, 70, 80],
-        },
-        "TestingStrategy": {
-            "TestingStrategy": ["Random"]
-        }
+        "General Input": {
+			"No. of Days to Simulate": 10,
+			"Result Resolution by hours": 1,
+		},
+		"Epidemic Parameter Input": {
+			"Virus R0": 1.5,
+			"City Prevalence Rate": 0.005,
+			// "Expected Duration of Symptomatic Period": 14,
+		},
+		"Policy Input": {
+			// Lockdown_Capacity_of_Each_Building: { type: Number },
+			// Threshold_for_AutoLockdown: { type: Number },
+			"Expected No. of Visitors per Day (Other than Staff)": 15,
+			"Compliance Rate": 0.8,
+			"Quarantine Period": 14,
+			"Sector/Building to Lockdown": ["None","Academic","Administration","Restaurant","Market","Facility","Grounds","Gymkhana","Non_Academic",...buildingnames],
+			// Daily_Testing_Capacity_Increment_Rate: { type: Number },
+			// Dorfman_Pool_Size: { type: Number },
+			// Tapestry_Pool_Size: { type: Number },
+			// Tapestry_Pool_Duplication: { type: Number },
+			// Test_Sensitivity: { type: Number },
+			// Test_Specificity: { type: Number },
+			// Vaccine_Coverage: { type: Number },
+			// Vaccine_Efficiency1: { type: Number },
+			// Vaccine_Efficiency2: { type: Number },
+			// Hotspot_Threshold: { type: Number },
+		},
+		"Testing Strategy": {
+			"Testing Strategy": ['Complete Random','Symptomatic First','Symptomatic First then Hostel-wise Random','Perfect Contact Tracing','Risk-based Contact Tracing'],
+            "Testing Capacity Per Day": 30,
+            "Day(s) of Testing": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"],
+            "Test Sensitivity": 0.95,
+            "Test Specificity": 1
+		}
     });
 };
 
@@ -53,17 +66,16 @@ exports.initialization = async (request, response, next) => {
     response.send({
         "Random":
         {
-            "No_of_People_Affected": [10, 20, 30, 40],
-            "Day_Resolution_by_Hours": [1, 4, 6, 7]
+            "No. of Initial Infected People": 10,
         },
-        "TimeSeries":
-        {
-            "No_of_Daily_Cases": [10, 20, 30, 40],
-            "No_of_days_to_Simulate": [10, 20, 30, 40]
-        },
-        "Spatial_Distribution": {
-            "Spatial_Distribution": [10, 20, 30, 40]
-        }
+        // "TimeSeries":
+        // {
+        //     "No_of_Daily_Cases": [10, 20, 30, 40],
+        //     "No_of_days_to_Simulate": [10, 20, 30, 40]
+        // },
+        // "Spatial_Distribution": {
+        //     "Spatial_Distribution": [10, 20, 30, 40]
+        // }
     });
 };
 
@@ -76,10 +88,10 @@ exports.saveSimulation = async (request, response, next) => {
         if(simId){ //update
             let sim = await Simulation.findById(simId);
             if(sim.user.equals(user._id)){
-                sim.GeneralInput = data.GeneralInput;
-                sim.EpidemicParameterInput = data.EpidemicParameterInput;
-                sim.PolicyInput = data.PolicyInput;
-                sim.TestingStrategy = data.TestingStrategy;
+                sim["General Input"] = data["General Input"];
+                sim["Epidemic Parameter Input"] = data["Epidemic Parameter Input"];
+                sim["Policy Input"] = data["Policy Input"];
+                sim["Testing Strategy"] = data["Testing Strategy"];
                 await sim.save();
 
                 fs.renameSync(`result/${user.username}`, `result/${user.username}_${simId}`);
@@ -97,10 +109,10 @@ exports.saveSimulation = async (request, response, next) => {
             //parameters saving
             const saved_sim = await Simulation.create({
                 Simulation_Name : data.Simulation_Name,
-                GeneralInput : data.GeneralInput,
-                EpidemicParameterInput : data.EpidemicParameterInput,
-                PolicyInput : data.PolicyInput,
-                TestingStrategy : data.TestingStrategy,
+                "General Input" : data["General Input"],
+                "Epidemic Parameter Input" : data["Epidemic Parameter Input"],
+                "Policy Input" : data["Policy Input"],
+                "Testing Strategy" : data["Testing Strategy"],
                 user : user._id
             });
 

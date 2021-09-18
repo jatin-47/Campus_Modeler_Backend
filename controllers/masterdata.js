@@ -358,7 +358,7 @@ exports.addClassClassSchedule = async (request, response, next) => {
         let faculty = await Faculty.findOne({Name : data.CourseInstructor, campusname : request.user.campusname});
         if(!faculty) throw "No such faculty found!";
 
-        let batch_id = data.StudentComposition.map((batch) => {
+        let batch_id = data.StudentComposition.map(async (batch) => {
             let Batch = await BatchStudent.findOne({BatchCode: batch.BatchCode, campusname : request.user.campusname});
             if(!Batch) throw "No such batch found!";
             batch.BatchCode = Batch._id;
