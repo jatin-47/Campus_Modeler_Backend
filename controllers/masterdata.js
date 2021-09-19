@@ -1011,6 +1011,28 @@ exports.uploadbatchwiseDistribution = async (request, response, next) => {
                 }
              })();
         }
+
+/* 
+        let classes = {};
+        for(let BatchCode in data){
+            for(let CourseID in data[BatchCode]){
+                let student_comp = { BatchCode : BatchCode, Count : parseInt(data[BatchCode][CourseID])};
+                if(!(CourseID in classes)){
+                    classes.CourseID = [];
+                }
+                classes.CourseID.push(student_comp);
+            }
+        }
+        for(let CourseID in classes){
+            let course = await ClassSchedule.findOne({CourseID: CourseID, campusname : request.user.campusname});
+            if(course){
+                course.StudentComposition = classes[CourseID];
+                course.markModified('StudentComposition');
+                await course.save();
+            }
+        }
+ */
+        
         fs.unlinkSync(path);
         response.status(200).send({
             success: true,
