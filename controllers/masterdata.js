@@ -967,6 +967,83 @@ exports.uploadbatchwisestudentdetails = async (request, response, next) => {
     }
 };
 
+exports.uploadbatchwiseDistribution = async (request, response, next) => {
+    try {
+        if (request.file == undefined) {
+            return next(new ErrorResponse("Please upload an json file!",400));
+        }
+        let path = request.file.path;
+
+        const jsonString = fs.readFileSync(path,{encoding:'utf8'});
+        const data = JSON.parse(jsonString);
+
+        /*
+        {
+            "B15BS": {
+                "BS322": "1",
+                "BS398": "1",
+                "CS212": "1",
+                "CS312": "1",
+                "MA111": "1",
+                "MA221": "1"
+            },
+            "B15CS": {
+                "HS411": "1",
+                "HSL4010": "2",
+                "HSL4020": "1",
+                "HSL6010": "1",
+                "HSL7310": "1",
+                "MA221": "1"
+            },
+        }
+        */
+        for (let BatchName in data){
+            // (async function() {
+            //     for(let CourseName in data[BatchName]) {
+            //         console.log(CourseName);
+            //         let course = await ClassSchedule.findOne({CourseName: CourseName, campusname : request.user.campusname});
+            //         console.log(course);
+            //         if(course){
+            //             // course.StudentComposition.push({
+            //             //     BatchCode : BatchName,
+            //             //     Count : parseInt(data[BatchName][CourseName])
+            //             // });
+            //             // console.log(CourseName);
+            //             // course.save();
+            //         }
+            //     }
+            //  })();
+            for (let CourseName in data[BatchName]){
+                console.log(CourseName);
+                let course = await ClassSchedule.findOne({CourseName: CourseName, campusname : request.user.campusname})
+                console.log(course);
+                if(course){
+                    // course.StudentComposition.push({
+                    //     BatchCode : BatchName,
+                    //     Count : parseInt(data[BatchName][CourseName])
+                    // });
+                    console.log(CourseName);
+                    // course.save();
+                }
+            }
+        }
+        console.log("Done");
+        fs.unlinkSync(path);
+        response.status(200).send({
+            success: true,
+            message: "Uploaded the file/data successfully!"
+        });
+
+    } catch (error) {
+        try{
+            fs.unlinkSync(request.file.path);
+        }catch(err) {
+            return next(new ErrorResponse("Could not delete the temp file!(internal err) " + err, 500));
+        }
+        return next(new ErrorResponse("Could not upload the file! " + error, 500));
+    }
+};
+
 exports.addBatchwiseStudentDetails = async (request, response, next) => {
     try{
         const data = request.body;
