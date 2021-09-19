@@ -998,36 +998,19 @@ exports.uploadbatchwiseDistribution = async (request, response, next) => {
         }
         */
         for (let BatchName in data){
-            // (async function() {
-            //     for(let CourseName in data[BatchName]) {
-            //         console.log(CourseName);
-            //         let course = await ClassSchedule.findOne({CourseName: CourseName, campusname : request.user.campusname});
-            //         console.log(course);
-            //         if(course){
-            //             // course.StudentComposition.push({
-            //             //     BatchCode : BatchName,
-            //             //     Count : parseInt(data[BatchName][CourseName])
-            //             // });
-            //             // console.log(CourseName);
-            //             // course.save();
-            //         }
-            //     }
-            //  })();
-            for (let CourseName in data[BatchName]){
-                console.log(CourseName);
-                let course = await ClassSchedule.findOne({CourseName: CourseName, campusname : request.user.campusname})
-                console.log(course);
-                if(course){
-                    // course.StudentComposition.push({
-                    //     BatchCode : BatchName,
-                    //     Count : parseInt(data[BatchName][CourseName])
-                    // });
-                    console.log(CourseName);
-                    // course.save();
+            (async function() {
+                for(let CourseName in data[BatchName]) {
+                    let course = await ClassSchedule.findOne({CourseName: CourseName, campusname : request.user.campusname});
+                    if(course){
+                        course.StudentComposition.push({
+                            BatchCode : BatchName,
+                            Count : parseInt(data[BatchName][CourseName])
+                        });
+                        course.save();
+                    }
                 }
-            }
+             })();
         }
-        console.log("Done");
         fs.unlinkSync(path);
         response.status(200).send({
             success: true,
