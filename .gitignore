@@ -108,6 +108,5 @@ dist
 **.sqlite
 **.env
 
-rakshak/
 result/
 create_user.js
