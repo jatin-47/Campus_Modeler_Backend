@@ -3,6 +3,7 @@ const CampusBuilding = require('../models/CampusBuilding');
 const ClassSchedule = require('../models/ClassSchedule');
 const BatchStudent = require('../models/BatchStudent');
 const Faculty = require('../models/Faculty');
+const Student = require('../models/Student');
 const Staff = require('../models/Staff');
 const Survey = require('../models/Survey');
 const StudentData = require('../models/StudentData');
@@ -325,7 +326,8 @@ exports.templateclassschedule = async (request, response, next) => {
         { header: "Room Name"},
         { header: "Scheduled Days"},
         { header: "Scheduled Time"},
-        { header: "Total Strength"}
+        { header: "Total Strength"},
+        { header: "Course Instructor(s)"}
       ];
   
     response.setHeader(
@@ -351,7 +353,7 @@ exports.uploadclassschedule = async (request, response, next) => {
     
         let rows = await readXlsxFile(path);
 
-        const required_headers = ["Course ID","Course Name","Building Name","Room Name","Scheduled Days", "Scheduled Time","Total Strength"];
+        const required_headers = ["Course ID","Course Name","Building Name","Room Name","Scheduled Days", "Scheduled Time","Total Strength","Course Instructor(s)"];
         let header = rows.shift();
 
         for(let i=0; i<required_headers.length; i++){
@@ -362,14 +364,21 @@ exports.uploadclassschedule = async (request, response, next) => {
         let courses = [];
 
         rows.forEach((row) => {
-            let days = row[4].split(",").map((day)=>day.trim().toLowerCase());
-            let times = row[5].split(",").map((timing) => {
-                let time = {
-                    start : timing.split("-")[0].trim(),
-                    end : timing.split("-")[1].trim()
-                };
-                return time;
-            });
+            let days = [];
+            let times = [];
+            if (row[4] == null) {
+                row[4] = undefined;
+                row[5] = undefined;
+            } else{
+                days = row[4].split(",").map((day)=>day.trim().toLowerCase());
+                times = row[5].split(",").map((timing) => {
+                    let time = {
+                        start : timing.split("-")[0].trim(),
+                        end : timing.split("-")[1].trim()
+                    };
+                    return time;
+                });
+            }
             let classdays = [];
             for(let i=0; i < days.length; i++){
                 classdays.push({
@@ -381,9 +390,10 @@ exports.uploadclassschedule = async (request, response, next) => {
             if(row[3] == null) row[3] = undefined;
             let course = new ClassSchedule({
                 CourseID : row[0].trim(),
-                CourseName : row[1].trim(),
+                CourseName : row[1],
+                CourseInstructor : String(row[7]).split(","),
                 BuildingName : row[2],
-                RoomName : row[3].trim(),
+                RoomName : row[3],
                 ClassDays : classdays,
                 Strength : row[6],
                 StudentComposition :[],
@@ -393,7 +403,7 @@ exports.uploadclassschedule = async (request, response, next) => {
         });
 
         await ClassSchedule.insertMany(courses);     
- 
+        await addFacultyCourseDetails(courses);
         fs.unlinkSync(path);
         response.status(200).send({
             success: true,
@@ -409,6 +419,18 @@ exports.uploadclassschedule = async (request, response, next) => {
         return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
 };
+
+async function addFacultyCourseDetails(courses){
+    for(let i=0;i<courses.length;i++){
+        for(let j=0;j<courses[i].CourseInstructor.length;j++){
+            let fac = await Faculty.findOne({Name: courses[i].CourseInstructor}).exec();
+            if(fac==null || fac==undefined)
+                continue;
+            fac.Courses.push(courses[i].CourseName);
+            fac.save();
+        }   
+    }
+}
 
 exports.addClassClassSchedule = async (request, response, next) => {
     try{
@@ -437,20 +459,24 @@ exports.addClassClassSchedule = async (request, response, next) => {
             return curr
         });
 
-        await ClassSchedule.create({
+        course = await ClassSchedule.create({
             CourseID : data.CourseID,
             CourseName : data.CourseName,
-            BuildingName : building._id,
+            BuildingName : data.BuildingName,
             RoomName :room[0].RoomName,
             Strength : data.Strength,
-            Departments : data.Departments.split(",").map((curr)=>curr.trim()),
+            Departments : data.Departments.split(","),
             Status : true,
             ClassDays : classdays,
-            CourseInstructor : faculty._id,
-            StudentComposition : batch_id,
+            CourseInstructor : String(data.CourseInstructor),
+            StudentComposition : data.StudentComposition,
             campusname : request.user.campusname
-        });   
-        
+        });
+        let fac = await Faculty.findOne({Name: courses[i].CourseInstructor}).exec();
+        if(fac==null || fac==undefined){
+            fac.Courses.push(courses[i].CourseName);
+            fac.save();
+        }
         response.send({
             success: true,
             message: 'saved successfully'
@@ -766,21 +792,54 @@ exports.updateCampusMapUploader = async (request, response, next) => {
 /****************************************************************/
 
 exports.addStudentDataUploader = async (request, response, next) => {
-    if (request.file == undefined) {
-        return next(new ErrorResponse("Please upload an excel file!",400));
-    }
-    try {      
-        
-        
+    try {
+        if (request.file == undefined) {
+            return next(new ErrorResponse("Please upload an excel file!",400));
+        }
+        let path = request.file.path;
+    
+        let rows = await readXlsxFile(path);
+
+        const required_headers = ["Student ID","Age","Hostel Building Name","Mess Building Name","Year","Department", "Program","Batch","inCampus"];
+        let header = rows.shift();
+        for(let i=0; i<required_headers.length; i++){
+            if(header[i] != required_headers[i])
+                throw "Wrong headers! please match with template file!";
+        }
+
+        let students = [];
+        rows.forEach((row) => {
+            let student = new Student({
+                StudentID : row[0],
+                Age : row[1],
+                HostelBuildingName : row[2].trim(),
+                MessBuildingName : row[3].trim(),
+                Year : row[4],
+                Department : row[5],
+                Program :row[6].trim(),
+                Batch : row[7],
+                inCampus : row[8],
+                Courses : [],
+                campusname : request.user.campusname
+            }); 
+            students.push(student);
+        });
+
+        await Student.insertMany(students);
+ 
+        fs.unlinkSync(path);
         response.status(200).send({
-            message: "Uploaded the file successfully: " + request.file.originalname,
+            success: true,
+            message: "Uploaded the file/data successfully!"
         });
-    }
-    catch (error) {
-        console.log(error);
-        response.status(500).send({
-            message: "Could not upload the file: " + request.file.originalname,
-        });
+
+    } catch (error) {
+        try{
+            fs.unlinkSync(request.file.path);
+        }catch(err) {
+            return next(new ErrorResponse("Could not delete the temp file!(internal err) " + err, 500));
+        }
+        return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
 };
 
@@ -876,8 +935,8 @@ exports.uploadbatchwisestudentdetails = async (request, response, next) => {
         rows.forEach((row) => {
             let batchStudent = new BatchStudent({
                 BatchCode : row[0].trim(),
-                Department : row[2].trim(),
-                ProgramCode : row[3].trim(),
+                Department : row[2],
+                ProgramCode : String(row[3]),
                 YearOfStudy : row[1],
                 Strength : row[4],
                 campusname : request.user.campusname
@@ -908,13 +967,95 @@ exports.uploadbatchwisestudentdetails = async (request, response, next) => {
     }
 };
 
+exports.uploadbatchwiseDistribution = async (request, response, next) => {
+    try {
+        if (request.file == undefined) {
+            return next(new ErrorResponse("Please upload an json file!",400));
+        }
+        let path = request.file.path;
+
+        const jsonString = fs.readFileSync(path,{encoding:'utf8'});
+        const data = JSON.parse(jsonString);
+
+        /*
+        {
+            "B15BS": {
+                "BS322": "1",
+                "BS398": "1",
+                "CS212": "1",
+                "CS312": "1",
+                "MA111": "1",
+                "MA221": "1"
+            },
+            "B15CS": {
+                "HS411": "1",
+                "HSL4010": "2",
+                "HSL4020": "1",
+                "HSL6010": "1",
+                "HSL7310": "1",
+                "MA221": "1"
+            },
+        }
+        */
+        for (let BatchName in data){
+            (async function() {
+                for(let CourseName in data[BatchName]) {
+                    let course = await ClassSchedule.findOne({CourseName: CourseName, campusname : request.user.campusname});
+                    if(course){
+                        course.StudentComposition.push({
+                            BatchCode : BatchName,
+                            Count : parseInt(data[BatchName][CourseName])
+                        });
+                        course.save();
+                    }
+                }
+             })();
+        }
+
+/* 
+        let classes = {};
+        for(let BatchCode in data){
+            for(let CourseID in data[BatchCode]){
+                let student_comp = { BatchCode : BatchCode, Count : parseInt(data[BatchCode][CourseID])};
+                if(!(CourseID in classes)){
+                    classes.CourseID = [];
+                }
+                classes.CourseID.push(student_comp);
+            }
+        }
+        for(let CourseID in classes){
+            let course = await ClassSchedule.findOne({CourseID: CourseID, campusname : request.user.campusname});
+            if(course){
+                course.StudentComposition = classes[CourseID];
+                course.markModified('StudentComposition');
+                await course.save();
+            }
+        }
+ */
+        
+        fs.unlinkSync(path);
+        response.status(200).send({
+            success: true,
+            message: "Uploaded the file/data successfully!"
+        });
+
+    } catch (error) {
+        try{
+            fs.unlinkSync(request.file.path);
+        }catch(err) {
+            return next(new ErrorResponse("Could not delete the temp file!(internal err) " + err, 500));
+        }
+        return next(new ErrorResponse("Could not upload the file! " + error, 500));
+    }
+};
+
 exports.addBatchwiseStudentDetails = async (request, response, next) => {
     try{
         const data = request.body;
         const doc = await BatchStudent.create({
             BatchCode : data.BatchCode,
             Department : data.Department,
-            ProgramCode : data.ProgramCode,
+            ProgramCode : String(data.ProgramCode),
             YearOfStudy : data.YearOfStudy,
             Strength : data.Strength,
             campusname : request.user.campusname
@@ -962,7 +1103,7 @@ exports.templatefacultydetails = async (request, response, next) => {
 
     sheet.columns = [
         { header: "Name"},
-        { header: "Courses"},
+        { header: "Residence_Building_Name"},
         { header: "Department_Code"},
         { header: "No_of_Adult_Family_Members"},
         { header: "No_of_Children"}
@@ -991,7 +1132,7 @@ exports.uploadfacultydetails = async (request, response, next) => {
     
         let rows = await readXlsxFile(path);
 
-        const required_headers = ["Name" , "Courses", "Department_Code", "No_of_Adult_Family_Members", "No_of_Children"];
+        const required_headers = ["Name" , "Residence_Building_Name", "Department_Code", "No_of_Adult_Family_Members", "No_of_Children"];
         let header = rows.shift();
 
         for(let i=0; i<required_headers.length; i++){
@@ -1003,9 +1144,10 @@ exports.uploadfacultydetails = async (request, response, next) => {
 
         rows.forEach((row) => {
             let faculty= new Faculty( {
-                Name : row[0].trim(),
-                Courses : row[1].split(",").map((curr) => curr.trim()),
-                Department : row[2].trim(),
+                Name : String(row[0]),
+                Courses : [],
+                ResidenceBuildingName: String(row[1]),
+                Department : row[2],
                 AdultFamilyMembers : row[3],
                 NoofChildren : row[4],
                 campusname : request.user.campusname
@@ -1044,10 +1186,10 @@ exports.addFacultyDetails = async (request, response, next) => {
         if(!building) throw "No such building exists in your campus!"
 
         const doc = await Faculty.create({
-            Name : data.Name.trim(),
+            Name : data.Name,
             Courses : data.Courses.split(",").map((curr) => curr.trim()),
             Department : data.Department,
-            ResidenceBuildingName : building._id,
+            ResidenceBuildingName : data.BuildingName,
             AdultFamilyMembers : data.AdultFamilyMembers,
             NoofChildren : data.NoofChildren,
             campusname : request.user.campusname
@@ -1102,10 +1244,11 @@ exports.staffDetails = async (request, response, next) => {
 
 exports.templatestaffdetails = async (request, response, next) => {
     const workbook = new excel.Workbook();
-    const filename = "Faculty_template";
+    const filename = "Staff_template";
     const sheet = workbook.addWorksheet(filename);
 
     sheet.columns = [
+        { header: "Staff ID"},
         { header: "Staff Category"},
         { header: "Workplace Building Name"},
         { header: "Residence Building Name"},
@@ -1136,7 +1279,7 @@ exports.uploadstaffdetails = async (request, response, next) => {
     
         let rows = await readXlsxFile(path);
 
-        const required_headers = ["Staff Category", "Workplace Building Name", "Residence Building Name", "Adult Family Members", "No of Children"];
+        const required_headers = ["Staff ID","Staff Category", "Workplace Building Name", "Residence Building Name", "Adult Family Members", "No of Children"];
         let header = rows.shift();
 
         for(let i=0; i<required_headers.length; i++){
@@ -1148,11 +1291,12 @@ exports.uploadstaffdetails = async (request, response, next) => {
 
         rows.forEach((row) => {
             let staff = {
-                StaffCategory : row[0],
-                WorkplaceBuildingName : row[1].trim(),
-                ResidenceBuildingName : row[2].trim(),
-                AdultFamilyMembers : row[3],
-                NoofChildren : row[4],
+                StaffID : row[0],
+                StaffCategory : row[1],
+                WorkplaceBuildingName : row[2],
+                ResidenceBuildingName : row[3],
+                AdultFamilyMembers : row[4],
+                NoofChildren : row[5],
                 campusname : request.user.campusname,
             };    
             staffs.push(staff);
@@ -1185,6 +1329,7 @@ exports.addStaffDetails = async (request, response, next) => {
     const data = request.body;
     try{
         const doc = await Staff.create({
+            StaffID : data.StaffID,
             StaffCategory : data.StaffCategory,
             WorkplaceBuildingName : data.WorkplaceBuildingName,
             ResidenceBuildingName : data.ResidenceBuildingName,

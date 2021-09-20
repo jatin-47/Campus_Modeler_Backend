@@ -1,15 +1,14 @@
 const mongoose = require('mongoose');
 let CampusNames = require('../config/campusnames');
 
-CampusNames.unique = true;
-
 const CounterSchema = new mongoose.Schema({
     campusname : CampusNames,
     CampusBuilding : { type: Number, default: 1},
     User : {type : Number, default: 1},
     BatchStudent : {type : Number, default: 1},
     Faculty : { type: Number, default: 1},
-    Staff : { type: Number, default: 1}
+    Staff : { type: Number, default: 1},
+    Student : { type: Number, default: 1}
 });
 
 CounterSchema.methods.increaseCount = async function (model) {
@@ -36,6 +35,11 @@ CounterSchema.methods.increaseCount = async function (model) {
     }else if(model == "Staff"){
         let count = this.Staff;
         this.Staff++;
+        await this.save();
+        return count;
+    }else if(model == "Student"){
+        let count = this.Student;
+        this.Student++;
         await this.save();
         return count;
     }
