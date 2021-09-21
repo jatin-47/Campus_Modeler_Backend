@@ -102,7 +102,7 @@ exports.uploadCampusBuildings = async (request, response, next) => {
                     start : row[6],
                     end : row[7]
                 },
-                BuildingCordinaties : row[8],
+                BuildingCoordinates : row[8],
                 Rooms : Rooms,
                 campusname : request.user.campusname
             });    
@@ -243,7 +243,7 @@ exports.addBuildingCampusBuildings = async (request, response, next) => {
                     end : data.ActiveHours.split('"')[3]
                 },
                 BuildingImage_path : path,
-                BuildingCordinaties :data.BuildingCordinaties,
+                BuildingCoordinates :data.BuildingCoordinates,
                 Rooms : Rooms,
                 campusname : request.user.campusname,
             });
