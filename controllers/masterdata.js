@@ -27,7 +27,7 @@ exports.campusBuildings = async (request, response, next) => {
 exports.viewDataCampusBuildings = async (request, response, next) => {
     try {
         const { BuildingID } = request.query;
-        let viewdata = await CampusBuilding.findOne({_id: BuildingID, campusname : request.user.campusname});
+        let viewdata = await CampusBuilding.findOne({BuildingID: BuildingID, campusname : request.user.campusname});
         response.send(viewdata);
     }
     catch(err){  return next(new ErrorResponse(err,400));  }
@@ -202,12 +202,12 @@ exports.addBuildingCampusBuildings = async (request, response, next) => {
         if (request.file !== undefined) {
             var path = request.file.path;
         }
-
-        if(BuildingID){ //update roomdetails
+        let building = await CampusBuilding.findOne({BuildingID: BuildingID, campusname : request.user.campusname});
+        if(building){ //update roomdetails
             if(!data.RoomDetails) {
                 throw "Please provide RoomDetails also!"
             }
-            let building = await CampusBuilding.findOne({_id: BuildingID, campusname : request.user.campusname});
+            
             
             data.RoomDetails.forEach((room)=>{
                 let tobeModifiedRoom = building.Rooms.id(room._id);
@@ -266,7 +266,7 @@ exports.addBuildingCampusBuildings = async (request, response, next) => {
 exports.deleteBuildingCampusBuildings = async (request, response, next) => {
     try {
         const { BuildingID } = request.query;
-        await CampusBuilding.deleteOne({ campusname : request.user.campusname, _id : BuildingID})
+        await CampusBuilding.deleteOne({ campusname : request.user.campusname, BuildingID : BuildingID})
     
         response.send({
             success: true,
@@ -292,7 +292,7 @@ exports.classSchedule = async (request, response, next) => {
 exports.viewDetailsClassSchedule = async (request, response, next) => {
     try{
         const { CourseID } = request.query;
-        let viewdata = await ClassSchedule.findOne({ _id: CourseID, campusname : request.user.campusname });
+        let viewdata = await ClassSchedule.findOne({ CourseID: CourseID, campusname : request.user.campusname });
         response.send(viewdata);
     }
     catch(err){
@@ -303,7 +303,7 @@ exports.viewDetailsClassSchedule = async (request, response, next) => {
 exports.deleteClassClassSchedule = async (request, response, next) => {
     try {
         const { CourseID } = request.query;
-        await ClassSchedule.deleteOne({  _id : CourseID, campusname : request.user.campusname})
+        await ClassSchedule.deleteOne({  CourseID : CourseID, campusname : request.user.campusname})
         response.send({
             success: true,
             message: 'deleted successfully'
@@ -439,10 +439,10 @@ exports.addClassClassSchedule = async (request, response, next) => {
         if(!building) throw "No such building found in which this class is scheduled!";
 
         const room = building.Rooms.filter((room)=> room.RoomName==data.RoomName.trim()); 
-        if(room.length == 0) throw "No such room found in which this class is scheduled!";
+        // if(room.length == 0) throw "No such room found in which this class is scheduled!";
         
-        let faculty = await Faculty.findOne({Name : data.CourseInstructor, campusname : request.user.campusname});
-        if(!faculty) throw "No such faculty found!";
+        // let faculty = await Faculty.findOne({Name : data.CourseInstructor, campusname : request.user.campusname});
+        // if(!faculty) throw "No such faculty found!";
 
         let batch_id = data.StudentComposition.map(async (batch) => {
             let Batch = await BatchStudent.findOne({BatchCode: batch.BatchCode, campusname : request.user.campusname});
@@ -468,12 +468,12 @@ exports.addClassClassSchedule = async (request, response, next) => {
             Departments : data.Departments.split(","),
             Status : true,
             ClassDays : classdays,
-            CourseInstructor : String(data.CourseInstructor),
+            CourseInstructor : data.CourseInstructor,
             StudentComposition : data.StudentComposition,
             campusname : request.user.campusname
         });
         let fac = await Faculty.findOne({Name: courses[i].CourseInstructor}).exec();
-        if(fac==null || fac==undefined){
+        if(fac){
             fac.Courses.push(courses[i].CourseName);
             fac.save();
         }
@@ -500,7 +500,7 @@ exports.getBuildingAddClassClassSchedule = async (request, response, next) => {
 exports.getRoomIdAddClassClassSchedule = async (request, response, next) => {
     try{
         const { BuildingId } = request.query;
-        const building = await CampusBuilding.findOne({campusname : request.user.campusname, _id : BuildingId}, 'Rooms');
+        const building = await CampusBuilding.findOne({campusname : request.user.campusname, BuildingId : BuildingId}, 'Rooms');
         response.send(building); 
     }
     catch(err){
@@ -1073,7 +1073,7 @@ exports.addBatchwiseStudentDetails = async (request, response, next) => {
 exports.deleteBatchwiseStudentDetails = async (request, response, next) => {
     try {
         const { BatchID } = request.query;
-        await BatchStudent.findByIdAndDelete(BatchID);
+        await BatchStudent.findOneAndDelete({BatchID : BatchID,campusname : request.user.campusname});
         response.send({
             success: true,
             message: 'deleted successfully'
@@ -1219,7 +1219,7 @@ exports.residenceBuildNameAddFacultyDetails = async (request, response, next) =>
 exports.deleteFacultyDetails = async (request, response, next) => {
     try {
         const { FacultyID } = request.query;
-        await Faculty.findByIdAndDelete(FacultyID);
+        await Faculty.findOneAndDelete({FacultyID : FacultyID,campusname : request.user.campusname});
         response.send({
             success: true,
             message: 'deleted successfully'
@@ -1350,7 +1350,7 @@ exports.addStaffDetails = async (request, response, next) => {
 exports.deleteStaffDetails = async (request, response, next) => {
     try {
         const { StaffID } = request.query;
-        await Staff.findByIdAndDelete(StaffID);
+        await Staff.findOneAndDelete({StaffID : StaffID,campusname : request.user.campusname});
         response.send({
             success: true,
             message: 'deleted successfully'
