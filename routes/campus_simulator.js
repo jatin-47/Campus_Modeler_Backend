@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const { protect } = require('../middleware/auth');
-const { peopleCount, buildingOccupancy, caseStatistics, peopleLocations } = require('../controllers/campus_simulator');
+const { hotspots, buildingOccupancy, caseStatistics, peopleLocations } = require('../controllers/campus_simulator');
 
 router.use(protect);
 // Protected Routes from here
-router.route('/visualpanel/peoplecount').get(peopleCount);
+router.route('/visualpanel/hotspots').get(hotspots);
 router.route('/visualpanel/buildingoccupancy').get(buildingOccupancy);
 router.route('/visualpanel/casestatistics').get(caseStatistics);
 router.route('/visualpanel/peoplelocations').get(peopleLocations);

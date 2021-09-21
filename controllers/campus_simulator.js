@@ -3,7 +3,7 @@ const csvToJson = require('../utils/csvToJson');
 const Simulation = require('../models/Simulation');
 const ErrorResponse = require('../utils/errorResponse');
 
-exports.peopleCount = async (request, response, next) => {
+exports.hotspots = async (request, response, next) => {
     const user = request.user;
     const { simId } = request.query;
 
