@@ -11,10 +11,6 @@ const SurveySchema = new mongoose.Schema({
         type: String, 
         required :  [true, "Input parameters cannot be empty!"] 
     },
-    filetype : {
-        type : String,
-        enum : [".xlsx"]
-    },
     SurveyType : {
         type : String,
         enum : ["Student Survey", "Staff Survey"]

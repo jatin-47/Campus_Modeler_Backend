@@ -712,8 +712,7 @@ exports.surveyUploader = async (request, response, next) => {
     try {
         await Survey.create({
             filename :  request.file.filename,
-            path : __basedir + process.env.EXCEL_UPLOAD_PATH,
-            filetype : request.file.filetype,
+            path : request.file.path,
             SurveyType : request.body.SurveyType,
             campusname : request.user.campusname
         })
@@ -722,73 +721,80 @@ exports.surveyUploader = async (request, response, next) => {
         });
     }
     catch (error) {
-        console.log(error);
-        response.status(500).send({
-            message: "Could not upload the file: " + request.file.originalname,
-        });
+        try{
+            fs.unlinkSync(request.file.path);
+        }catch(err) {
+            return next(new ErrorResponse("Could not delete the file!(internal err) " + err, 500));
+        }
+        return next(new ErrorResponse("Could not upload the file! " + error, 500));
     }
 };
 
 exports.deleteSurveyUploader = async (request, response, next) => {
-    const { SurveyID } = request.query;
     try {
-        const survey = await Survey.findByID(SurveyID);
+        const { SurveyID } = request.query;
+        const survey = await Survey.findByIdAndDelete(SurveyID);
         const path = survey.path;
-        const filename = survey.filename;
 
-        fs.unlink(path.join(path.filename), function (err) {
-            if (err) throw err;
-            console.log('File deleted!');
-        });
-
-        response.send({
+        fs.unlinkSync(path);
+        response.status(200).send({
             success: true,
-            message: 'deleted successfully'
+            message: 'Deleted successfully!'
         });
-
-    } catch(err){  return next(new ErrorResponse(err,400));  }
+    } 
+    catch(err){  
+        return next(new ErrorResponse(err,400));  
+    }
 };
 
 exports.updateSurveyUploader = async (request, response, next) => {
     if (request.file == undefined) {
-        return next(new ErrorResponse("Please upload an excel file!",400));
+        return next(new ErrorResponse("Please upload an excel file to update data!",400));
     }
     try {
+        const { SurveyID } = request.query;
         const survey = await Survey.findByID(SurveyID);
-        const path = survey.path;
-        const filename = survey.filename;
 
-        fs.writeFile(path.join(path.filename), function (err) {
-            if (err) throw err;
-            console.log('Replaced!');
-        });
+        fs.unlinkSync(survey.path);
 
-        response.send({
+        survey.filename = request.file.filename;
+        survey.path = request.file.path;
+        await survey.save();
+
+        response.status(200).send({
             success: true,
-            message: 'deleted successfully'
-        });
+            message: 'Updated successfully!'
+        });;
+        
     }
     catch (error) {
-        console.log(error);
-        response.status(500).send({
-            message: "Could not upload the file: " + request.file.originalname,
-        });
+        try{
+            fs.unlinkSync(request.file.path);
+        }catch(err) {
+            return next(new ErrorResponse("Could not delete the file!(internal err) " + err, 500));
+        }
+        return next(new ErrorResponse("Could not update the file! " + error, 500));
     }
 };
 
 exports.downloadSurveyUploader = async (request, response, next) => {
-    ////
-    
-    response.setHeader(
-        "Content-Type",
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    );
-    response.setHeader(
-        "Content-Disposition",
-        "attachment; filename=" + "survey.xlsx"
-    );
-    response.attachment("survey.xlsx");
-    response.send();
+    try{
+        const { SurveyID } = request.query;
+        const survey = await Survey.findByID(SurveyID);
+
+        response.setHeader(
+            "Content-Type",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        );
+        response.setHeader(
+            "Content-Disposition",
+            "attachment; filename=" + survey.filename + '.xlsx'
+        );
+        response.sendFile(survey.path);
+    }
+    catch(err){  
+        return next(new ErrorResponse(err,400));  
+    }
 };
 
 /****************************************************************/
