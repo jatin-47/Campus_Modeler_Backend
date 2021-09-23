@@ -7,7 +7,7 @@ const uploadExcel = require("../middleware/uploadExcel");
 const uploadImage = require("../middleware/uploadImage");
 const uploadJson = require("../middleware/uploadJson");
 
-const { campusBuildings, viewDataCampusBuildings, templateCampusBuildings, uploadCampusBuildings, uploadspecialrooms, addBuildingCampusBuildings, deleteBuildingCampusBuildings, classSchedule, viewDetailsClassSchedule, deleteClassClassSchedule, templateclassschedule,uploadclassschedule,addClassClassSchedule, getBuildingAddClassClassSchedule, getRoomIdAddClassClassSchedule, getCourseInstructorAddClassClassSchedule, users, viewDetailsUsers,templateusers,uploadusers, addUserUsers, surveyUploader, deleteSurveyUploader, updateSurveyUploader, downloadSurveyUploader, addStudentDataUploader, deleteStudentDataUploader, updateStudentDataUploader, batchwiseStudentDetails,templatebatchwisestudentdetails,uploadbatchwisestudentdetails,uploadbatchwiseDistribution, addBatchwiseStudentDetails, deleteBatchwiseStudentDetails, facultyDetails,templatefacultydetails, uploadfacultydetails,addFacultyDetails, residenceBuildNameAddFacultyDetails, deleteFacultyDetails, staffDetails, templatestaffdetails,uploadstaffdetails,addStaffDetails, deleteStaffDetails } = require('../controllers/masterdata');
+const { getBatchCodesAddClassClassSchedule, buildingTypes, campusBuildings, viewDataCampusBuildings, templateCampusBuildings, uploadCampusBuildings, uploadspecialrooms, addBuildingCampusBuildings, deleteBuildingCampusBuildings, classSchedule, viewDetailsClassSchedule, deleteClassClassSchedule, templateclassschedule,uploadclassschedule,addClassClassSchedule, getBuildingAddClassClassSchedule, getRoomNameAddClassClassSchedule, getCourseInstructorAddClassClassSchedule, users, viewDetailsUsers,templateusers,uploadusers, addUserUsers, surveyUploader, deleteSurveyUploader, updateSurveyUploader, downloadSurveyUploader, addStudentDataUploader, deleteStudentDataUploader, updateStudentDataUploader, batchwiseStudentDetails,templatebatchwisestudentdetails,uploadbatchwisestudentdetails,uploadbatchwiseDistribution, addBatchwiseStudentDetails, deleteBatchwiseStudentDetails, facultyDetails,templatefacultydetails, uploadfacultydetails,addFacultyDetails, residenceBuildNameAddFacultyDetails, deleteFacultyDetails, staffDetails, templatestaffdetails,uploadstaffdetails,addStaffDetails, deleteStaffDetails } = require('../controllers/masterdata');
 
 router.use(protect);
 router.use(adminprotect);
@@ -19,6 +19,7 @@ router.post('/campusbuildings/upload',uploadExcel.single("file"), uploadCampusBu
 router.post('/campusbuildings/upload/specialrooms',uploadJson.single("file"), uploadspecialrooms);
 router.route('/campusbuildings/addbuilding').post(addBuildingCampusBuildings);
 router.route('/campusbuildings/deletebuilding').delete(deleteBuildingCampusBuildings);
+router.route('/campusbuildings/buildingTypes').get(buildingTypes);
 
 router.route('/classschedule').get(classSchedule);
 router.route('/classschedule/viewdetails').get(viewDetailsClassSchedule);
@@ -28,8 +29,9 @@ router.post('/classschedule/upload',uploadExcel.single("file"), uploadclasssched
 router.post('/classschedule/uploadbatchwisecoursedetails',uploadJson.single("file"), uploadbatchwiseDistribution)
 router.route('/classschedule/addclass').post(addClassClassSchedule);
 router.route('/classschedule/addclass/getbuildingname').get(getBuildingAddClassClassSchedule);
-router.route('/classschedule/addclass/getroomid').get(getRoomIdAddClassClassSchedule);
+router.route('/classschedule/addclass/getroomName').get(getRoomNameAddClassClassSchedule);
 router.route('/classschedule/addclass/getCourseInstructor').get(getCourseInstructorAddClassClassSchedule);
+router.route('/classschedule/addclass/getBatchCodes').get(getBatchCodesAddClassClassSchedule);
 
 router.route('/users').get(users);
 router.route('/users/viewdetails').get(viewDetailsUsers);

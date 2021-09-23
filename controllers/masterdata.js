@@ -274,6 +274,12 @@ exports.deleteBuildingCampusBuildings = async (request, response, next) => {
     } catch(err){  return next(new ErrorResponse(err,400));  }
 };
 
+exports.buildingTypes =  async (request, response, next) => {
+    response.send({
+        BuildingType : CampusBuilding.schema.path('BuildingType').enumValues
+    });
+};
+
 /****************************************************************/
 //ClassSchedule
 
@@ -546,11 +552,15 @@ exports.getBuildingAddClassClassSchedule = async (request, response, next) => {
     }
 };
 
-exports.getRoomIdAddClassClassSchedule = async (request, response, next) => {
+exports.getRoomNameAddClassClassSchedule = async (request, response, next) => {
     try{
         const { BuildingId } = request.query;
-        const building = await CampusBuilding.findOne({campusname : request.user.campusname, BuildingId : BuildingId}, 'Rooms');
-        response.send(building); 
+        const building = await CampusBuilding.findOne({campusname : request.user.campusname, BuildingID : BuildingId}, 'Rooms');
+
+        let roomNames = building.Rooms.map((room)=>{
+            return room.RoomName;
+        })
+        response.send(roomNames); 
     }
     catch(err){
         return next(new ErrorResponse(err, 400));
@@ -561,6 +571,14 @@ exports.getCourseInstructorAddClassClassSchedule = async (request, response, nex
     try {
         let faculties = await Faculty.find({campusname : request.user.campusname}, 'Name');
         response.send(faculties);
+    }
+    catch(err){  return next(new ErrorResponse(err,400));  }
+};
+
+exports.getBatchCodesAddClassClassSchedule = async (request, response, next) => {
+    try {
+        let batches = await BatchStudent.find({campusname : request.user.campusname}, 'BatchCode');
+        response.send(batches);
     }
     catch(err){  return next(new ErrorResponse(err,400));  }
 };
