@@ -13,8 +13,21 @@ const FacultySchema = new mongoose.Schema({
 });
 
 FacultySchema.pre('insertMany', async function (next, docs) {
-    //uniqueness validations
-    next();
+    const CampusBuilding = require("./CampusBuilding");
+    try{
+        const campusbuildings = await CampusBuilding.find({campusname : this.campusname});
+
+        for(let doc of docs){
+            let building = await campusbuildings.findOne({BuildingName : doc.ResidenceBuildingName});
+            if(!building){
+                throw `Building - ${doc.ResidenceBuildingName} doesn't exist in your campus Building Database! First add buildings!`
+            }
+        }
+        next();
+    }
+    catch (error) {
+        return next(new ErrorResponse(error,400));
+    }
 });
 
 FacultySchema.methods.assignFacultyID = async function () {

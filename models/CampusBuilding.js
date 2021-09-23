@@ -32,7 +32,6 @@ const CampusBuildingSchema = new mongoose.Schema({
         start : {type : String},
         end : {type : String} 
     },
-    BuildingImage_path : {type : String},
     BuildingCoordinates : {type : String},
     Rooms : [RoomSchema],
     campusname : CampusNames

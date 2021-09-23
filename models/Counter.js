@@ -37,11 +37,6 @@ CounterSchema.methods.increaseCount = async function (model) {
         this.Staff++;
         await this.save();
         return count;
-    }else if(model == "Student"){
-        let count = this.Student;
-        this.Student++;
-        await this.save();
-        return count;
     }
 }
 

@@ -41,8 +41,7 @@ const UserSchema = new mongoose.Schema({
     lname : { type: String, trim : true, required: true},
     gender : { type: String, required: true, enum: ["Male", "Female", "Others"]},
     contact : { type : Number, min : 1000000000, max : 9999999999},
-    dob : { type: String },
-    photo_path : { type: String , select: false}
+    dob : { type: String }
 });
 
 UserSchema.pre('save', async function (next) {

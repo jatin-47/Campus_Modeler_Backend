@@ -26,23 +26,36 @@ const ClassScheduleSchema = new mongoose.Schema({
 
 ClassScheduleSchema.pre('insertMany', async function (next, docs) {
     const CampusBuilding = require("./CampusBuilding");
+    const Faculty = require("./Faculty");
     try {
         const campusbuildings = await CampusBuilding.find({campusname : this.campusname});
+        const faculties = await Faculty.find({campusname : this.campusname});
 
         tobeCourseID = [];
         for(let doc of docs){
             let isUniqueIDasperCampus = await doc.isUniqueIDasperCampus();
             if(!isUniqueIDasperCampus) {
-                throw "One or more CourseIDs are already used in the database for your campus!"
+                throw "One or more CourseIDs are already used in the database for your campus!";
             }
             tobeCourseID.push(doc.CourseID.toLowerCase());
 
-            // let building = await campusbuildings.findOne({BuildingName : doc.BuildingName});
-            // if(building)
-            //     doc.BuildingName = building._id;
+            let building = await campusbuildings.findOne({BuildingName : doc.BuildingName});
+            if(!building){
+                throw `Building - ${doc.BuildingName} doesn't exist in your campus Building Database! First add buildings!`;
+            }
+
+            //adding courses to Faculty as per the CourseInstructor array
+            for(let i=0; i < doc.CourseInstructor.length; i++){
+                let fac = await faculties.findOne({Name : doc.CourseInstructor[i]});
+                if(!fac) {
+                    throw `Faculty - ${doc.CourseInstructor[i]} doesn't exist in your campus Faculty database! Add him first!`;
+                } 
+                fac.Courses.push(doc.CourseID);
+                await fac.save();
+            }
         }
         if((new Set(tobeCourseID)).size !== tobeCourseID.length) {
-            throw "Your upload contains duplicate CourseIDs for two or more courses!"
+            throw "Your upload contains duplicate CourseIDs for two or more courses!";
         }
         next();
     }
