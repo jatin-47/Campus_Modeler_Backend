@@ -1089,7 +1089,7 @@ exports.uploadfacultydetails = async (request, response, next) => {
 
         rows.forEach((row) => {
             let faculty= new Faculty( {
-                Name : row[0].trim(),
+                Name : row[0].toString().trim(),
                 Courses : [],
                 ResidenceBuildingName: row[1].trim(),
                 Department : row[2].trim(),
