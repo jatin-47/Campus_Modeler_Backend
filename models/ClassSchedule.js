@@ -29,9 +29,6 @@ ClassScheduleSchema.pre('insertMany', async function (next, docs) {
     const CampusBuilding = require("./CampusBuilding");
     const Faculty = require("./Faculty");
     try {
-        const campusbuildings = await CampusBuilding.find({campusname : this.campusname});
-        const faculties = await Faculty.find({campusname : this.campusname});
-
         tobeCourseID = [];
         for(let doc of docs){
             let isUniqueIDasperCampus = await doc.isUniqueIDasperCampus();
@@ -40,14 +37,14 @@ ClassScheduleSchema.pre('insertMany', async function (next, docs) {
             }
             tobeCourseID.push(doc.CourseID.toLowerCase());
 
-            let building = await campusbuildings.findOne({BuildingName : doc.BuildingName});
+            let building = await CampusBuilding.findOne({BuildingName : doc.BuildingName, campusname : doc.campusname});
             if(!building){
                 throw `Building - ${doc.BuildingName} doesn't exist in your campus Building Database! First add buildings!`;
             }
 
             //adding courses to Faculty as per the CourseInstructor array
             for(let i=0; i < doc.CourseInstructor.length; i++){
-                let fac = await faculties.findOne({Name : doc.CourseInstructor[i]});
+                let fac = await Faculty.findOne({Name : doc.CourseInstructor[i], campusname : doc.campusname});
                 if(!fac) {
                     throw `Faculty - ${doc.CourseInstructor[i]} doesn't exist in your campus Faculty database! Add him first!`;
                 } 

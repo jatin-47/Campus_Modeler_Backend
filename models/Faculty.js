@@ -16,10 +16,8 @@ const FacultySchema = new mongoose.Schema({
 FacultySchema.pre('insertMany', async function (next, docs) {
     const CampusBuilding = require("./CampusBuilding");
     try{
-        const campusbuildings = await CampusBuilding.find({campusname : this.campusname});
-
         for(let doc of docs){
-            let building = await campusbuildings.findOne({BuildingName : doc.ResidenceBuildingName});
+            let building = await CampusBuilding.findOne({BuildingName : doc.ResidenceBuildingName, campusname : doc.campusname});
             if(!building){
                 throw `Building - ${doc.ResidenceBuildingName} doesn't exist in your campus Building Database! First add buildings!`
             }
