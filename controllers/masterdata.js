@@ -1194,6 +1194,7 @@ exports.templatestaffdetails = async (request, response, next) => {
     const sheet = workbook.addWorksheet(filename);
 
     sheet.columns = [
+        { header: "Staff ID"},
         { header: "Staff Category"},
         { header: "Workplace Building Name"},
         { header: "Residence Building Name"},
@@ -1224,7 +1225,7 @@ exports.uploadstaffdetails = async (request, response, next) => {
     
         let rows = await readXlsxFile(path);
 
-        const required_headers = ["Staff Category", "Workplace Building Name", "Residence Building Name", "Adult Family Members", "No of Children"];
+        const required_headers = ["Staff ID", "Staff Category", "Workplace Building Name", "Residence Building Name", "Adult Family Members", "No of Children"];
         let header = rows.shift();
 
         for(let i=0; i<required_headers.length; i++){
@@ -1236,11 +1237,11 @@ exports.uploadstaffdetails = async (request, response, next) => {
 
         rows.forEach((row) => {
             let staff = {
-                StaffCategory : row[0],
-                WorkplaceBuildingName : row[1].trim(),
-                ResidenceBuildingName : row[2].trim(),
-                AdultFamilyMembers : row[3],
-                NoofChildren : row[4],
+                StaffCategory : row[1],
+                WorkplaceBuildingName : row[2].trim(),
+                ResidenceBuildingName : row[3].trim(),
+                AdultFamilyMembers : row[4],
+                NoofChildren : row[5],
                 campusname : request.user.campusname,
             };    
             staffs.push(staff);
