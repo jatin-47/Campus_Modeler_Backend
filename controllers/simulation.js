@@ -178,7 +178,7 @@ exports.run = async (request, response, next) => {
     } 
     else {
         fs.rmdirSync(`result/${user.username}`, { recursive: true });
-        runPython(['rakshak/run_simulation.py', JSON.stringify(request.body), `result/${user.username}`])
+        runPython(['rakshak/run_simulation.py', request.user.campusname, JSON.stringify(request.body), `result/${user.username}`])
     }
 
     console.log('\n\n\n\n\n', request.body)

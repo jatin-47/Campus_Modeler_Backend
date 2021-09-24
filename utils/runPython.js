@@ -5,7 +5,7 @@ const runPython = (args) => {
 
     // const childPython = spawn('python', ['--version']);
     
-    const childPython = spawn('rakshak/env/bin/python', [...args]);
+    const childPython = spawn('python', [...args]);
 
     childPython.stdout.on('data', (data) => {
         console.log(`stdout: ${data}`);
