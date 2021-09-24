@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const CampusNames = require('../config/campusnames');
+const ErrorResponse = require('../utils/errorResponse');
 
 const StudentSchema = new mongoose.Schema({
     StudentID : {type : Number, required : true},        

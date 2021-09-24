@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const CampusNames = require('../config/campusnames');
+const ErrorResponse = require('../utils/errorResponse');
 
 const BatchStudentSchema = new mongoose.Schema({
     BatchID : {type : Number},
