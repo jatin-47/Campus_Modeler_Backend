@@ -392,7 +392,7 @@ exports.uploadclassschedule = async (request, response, next) => {
             }
             if(row[2] == null) row[2] = undefined;
             if(row[3] == null) row[3] = undefined;
-            
+
             let course = new ClassSchedule({
                 CourseID : row[0].trim(),
                 CourseName : row[1],
@@ -452,9 +452,9 @@ exports.uploadbatchwiseDistribution = async (request, response, next) => {
             for(let CourseID in data[BatchCode]){
                 let student_comp = { BatchCode : BatchCode, Count : parseInt(data[BatchCode][CourseID])};
                 if(!(CourseID in classes)){
-                    classes.CourseID = [];
+                    classes[CourseID] = [];
                 }
-                classes.CourseID.push(student_comp);
+                classes[CourseID].push(student_comp);
             }
         }
         for(let CourseID in classes){
