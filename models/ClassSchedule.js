@@ -37,11 +37,13 @@ ClassScheduleSchema.pre('insertMany', async function (next, docs) {
             }
             tobeCourseID.push(doc.CourseID.toLowerCase());
 
-            let building = await CampusBuilding.findOne({BuildingName : doc.BuildingName, campusname : doc.campusname});
-            if(!building){
-                throw `Building - ${doc.BuildingName} doesn't exist in your campus Building Database! First add buildings!`;
+            if(doc.BuildingName != undefined){
+                let building = await CampusBuilding.findOne({BuildingName : doc.BuildingName, campusname : doc.campusname});
+                if(!building){
+                    throw `Building - ${doc.BuildingName} doesn't exist in your campus Building Database! First add buildings!`;
+                }   
             }
-
+            
             //adding courses to Faculty as per the CourseInstructor array
             for(let i=0; i < doc.CourseInstructor.length; i++){
                 let fac = await Faculty.findOne({Name : doc.CourseInstructor[i], campusname : doc.campusname});
