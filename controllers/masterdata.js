@@ -371,9 +371,8 @@ exports.uploadclassschedule = async (request, response, next) => {
         rows.forEach((row) => {
             let days = [];
             let times = [];
-            if (row[4] == null) {
-                row[4] = undefined;
-                row[5] = undefined;
+            if (row[4] == null || row[5] == null) {
+                console.log("ClassDays not Provided!")
             } else{
                 days = row[4].split(",").map((day)=>day.trim().toLowerCase());
                 times = row[5].split(",").map((timing) => {
@@ -393,12 +392,13 @@ exports.uploadclassschedule = async (request, response, next) => {
             }
             if(row[2] == null) row[2] = undefined;
             if(row[3] == null) row[3] = undefined;
+            
             let course = new ClassSchedule({
                 CourseID : row[0].trim(),
                 CourseName : row[1],
                 CourseInstructor : row[7].split(",").map((faculty)=>faculty.trim()),
-                BuildingName : row[2].trim(),
-                RoomName : row[3].trim(),
+                BuildingName : row[2],
+                RoomName : row[3],
                 ClassDays : classdays,
                 Strength : row[6],
                 StudentComposition :[],
