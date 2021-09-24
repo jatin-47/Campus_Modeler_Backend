@@ -14,13 +14,7 @@ const {adminprotect} = require('./middleware/admincheck');
 // const CampusNames = require('./config/campusnames');
 // for(let campus of CampusNames.enum){
 //     Counter.create({
-//         campusname : campus,
-//         CampusBuilding : 1,
-//         User : 1,
-//         BatchStudent : 1,
-//         Faculty : 1,
-//         Staff : 1,
-//         Student : 1
+//         campusname : campus
 //     });
 // } 
 

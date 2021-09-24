@@ -837,7 +837,6 @@ exports.addStudentDataUploader = async (request, response, next) => {
         let students = [];
         rows.forEach((row) => {
             let student = new Student({
-                StudentID : row[0],
                 Age : row[1],
                 HostelBuildingName : row[2].trim(),
                 MessBuildingName : row[3].trim(),
@@ -852,7 +851,12 @@ exports.addStudentDataUploader = async (request, response, next) => {
             students.push(student);
         });
 
-        await Student.insertMany(students);
+        const docs = await Student.insertMany(students);
+        if(docs){            
+            for(let doc of docs){
+                await doc.assignStudentID();
+            }
+        }
  
         fs.unlinkSync(path);
         response.status(200).send({

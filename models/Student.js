@@ -24,13 +24,13 @@ StudentSchema.pre('insertMany', async function (next, docs) {
     next();
 });
 
-/* StudentSchema.methods.assignStudentID = async function () {
+StudentSchema.methods.assignStudentID = async function () {
     const Counter = require('./Counter');
 
     const campusCounter = await Counter.findOne({campusname: this.campusname});
     this.StudentID = await campusCounter.increaseCount("Student"); 
     await this.save();
-} */
+}
 
 const Student = mongoose.model("Student", StudentSchema);
 
