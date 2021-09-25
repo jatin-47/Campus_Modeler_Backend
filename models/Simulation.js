@@ -15,6 +15,7 @@ const SimulationSchema = new mongoose.Schema(
 		"Epidemic Parameter Input": {
 			"Virus R0": { type: Number },
 			"City Prevalence Rate": { type: Number },
+			"No of Initial Infected People": { type: Number },
 			// "Expected Duration of Symptomatic Period": { type: Number },
 		},
 		"Policy Input": {

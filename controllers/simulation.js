@@ -31,6 +31,7 @@ exports.policyPlanner = async (request, response, next) => {
 		"Epidemic Parameter Input": {
 			"Virus R0": 1.5,
 			"City Prevalence Rate": 0.005,
+            "No of Initial Infected People": 10
 			// "Expected Duration of Symptomatic Period": 14,
 		},
 		"Policy Input": {
