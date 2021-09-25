@@ -40,7 +40,7 @@ exports.policyPlanner = async (request, response, next) => {
 			"Expected No of Visitors per Day (Other than Staff)": 15,
 			"Compliance Rate": 0.8,
 			"Quarantine Period": 14,
-			"Sector/Building to Lockdown": ["None","Academic","Administration","Restaurant","Market","Facility","Grounds","Gymkhana","Non_Academic",...buildingnames],
+			"Sector/Building to Lockdown": ["No Lockdown","Academic","Administration","Restaurant","Market","Facility","Grounds","Gymkhana","Non_Academic",...buildingnames],
 			// Daily_Testing_Capacity_Increment_Rate: { type: Number },
 			// Dorfman_Pool_Size: { type: Number },
 			// Tapestry_Pool_Size: { type: Number },
