@@ -32,7 +32,7 @@ const CampusBuildingSchema = new mongoose.Schema({
         start : {type : String},
         end : {type : String} 
     },
-    BuildingCoordinates : {type : String},
+    BuildingCoordinates : [],
     Rooms : [RoomSchema],
     campusname : CampusNames
 });
