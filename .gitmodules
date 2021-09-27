@@ -1,4 +1,4 @@
 [submodule "rakshak"]
 	path = rakshak
-	url = https://github.com/CEOAI-ABM/rakshak
+	url = ../rakshak.git
 	branch = mongo
