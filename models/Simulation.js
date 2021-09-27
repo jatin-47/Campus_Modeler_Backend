@@ -24,7 +24,7 @@ const SimulationSchema = new mongoose.Schema(
 			"Expected No of Visitors per Day (Other than Staff)": { type: Number },
 			"Compliance Rate": { type: Number },
 			"Quarantine Period": { type: Number },
-			"Sector/Building to Lockdown": { type: String },
+			"Sector/Building to Lockdown": { type: Array, required: true },
 			// Daily_Testing_Capacity_Increment_Rate: { type: Number },
 			// Dorfman_Pool_Size: { type: Number },
 			// Tapestry_Pool_Size: { type: Number },
@@ -38,27 +38,12 @@ const SimulationSchema = new mongoose.Schema(
 		},
 		"Testing Strategy": {
 			"Testing Strategy": {
-				type: String,
-				enum: [
-					"Complete Random",
-					"Symptomatic First",
-					"Symptomatic First then Hostel-wise Random",
-					"Perfect Contact Tracing",
-					"Risk-based Contact Tracing",
-				],
+				type: Array,
 				required: true,
 			},
 			"Testing Capacity Per Day": { type: Number },
 			"Day(s) of Testing": {
-				type: String,
-				enum: [
-					"monday",
-					"tuesday",
-					"wednesday",
-					"thursday",
-					"friday",
-					"saturday",
-				],
+				type: Array,
 				required: true,
 			},
 			"Test Sensitivity": { type: Number },
