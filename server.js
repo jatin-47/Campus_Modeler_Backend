@@ -25,7 +25,7 @@ const app = express();
 global.__basedir = __dirname;
 
 const corsOptions = {
-    "origin": ['http://localhost:3000'],
+    "origin": ['http://localhost:3000', 'http://65.0.60.100', 'http://campusmodeler.ihub-drishti.ai/', 'https://campusmodeler.ihub-drishti.ai/'],
     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
     "preflightContinue": false,
     "optionsSuccessStatus": 204,
