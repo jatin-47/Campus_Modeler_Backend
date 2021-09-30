@@ -8,7 +8,7 @@ const {protect} = require('./middleware/auth');
 const {adminprotect} = require('./middleware/admincheck');
 
 // const createuser = require('./create_user');
-// createuser("Kartheek", "kartheek@gmail.com", "123456", "admin", "IIT Jodhpur", "Kartheek", "Vajrala", "Male");
+// createuser("admin", "admin@gmail.com", "Admin@123456", "admin", "IIT Jodhpur", "Super", "User", "Male");
 
 // const Counter = require("./models/Counter");
 // const CampusNames = require('./config/campusnames');
