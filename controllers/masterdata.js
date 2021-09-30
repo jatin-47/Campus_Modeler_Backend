@@ -251,7 +251,7 @@ exports.addBuildingCampusBuildings = async (request, response, next) => {
             response.send({
                 success: true,
                 message: 'Saved successfully',
-                BuildingID : doc._id,
+                BuildingID : doc.BuildingID,
                 RoomDetails : doc.Rooms
             });
         }
@@ -501,9 +501,10 @@ exports.addClassClassSchedule = async (request, response, next) => {
         */
 
         let classdays = data.ClassDays.map((curr) => { 
+            curr.Day = curr.Day.toLowerCase()
             curr.Timing = {
-                start: curr.split("-")[0].trim(), 
-                end: curr.split("-")[0].trim()
+                start: curr.Timing.split("-")[0].trim(), 
+                end: curr.Timing.split("-")[1].trim()
             };
             return curr
         });
