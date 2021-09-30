@@ -286,7 +286,7 @@ exports.buildingTypes =  async (request, response, next) => {
 exports.classSchedule = async (request, response, next) => {
 
     try{
-        let ClassSchedules = await ClassSchedule.find({campusname : request.user.campusname}, 'CourseID CourseName BuildingName RoomName Strength Departments Status');
+        let ClassSchedules = await ClassSchedule.find({campusname : request.user.campusname}, 'CourseID CourseName BuildingName RoomName Strength Status');
         response.send(ClassSchedules);
     }
     catch(err){
@@ -492,13 +492,12 @@ exports.addClassClassSchedule = async (request, response, next) => {
         const room = building.Rooms.filter((room)=> room.RoomName==data.RoomName.trim()); 
         if(room.length == 0) throw "No such room found in which this class is scheduled!";
 
-        /*  
-        data.StudentComposition.forEach(async (batch) => {
-            let Batch = await BatchStudent.findOne({BatchCode: batch.BatchCode, campusname : request.user.campusname});
+         
+        for(let i =0; i< data.StudentComposition.length; i++){
+
+            let Batch = await BatchStudent.findOne({BatchCode: data.StudentComposition[i].BatchCode, campusname : request.user.campusname});
             if(!Batch) throw "No such batch found!";
-            return batch;
-        }); 
-        */
+        }      
 
         let classdays = data.ClassDays.map((curr) => { 
             curr.Day = curr.Day.toLowerCase()
@@ -525,7 +524,6 @@ exports.addClassClassSchedule = async (request, response, next) => {
             BuildingName : data.BuildingName.trim(),
             RoomName :data.RoomName.trim(),
             Strength : data.Strength,
-            Departments : data.Departments.split(",").map((curr)=>curr.trim()),
             Status : true,
             ClassDays : classdays,
             CourseInstructor : data.CourseInstructor,

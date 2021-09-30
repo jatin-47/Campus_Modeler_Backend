@@ -8,7 +8,6 @@ const ClassScheduleSchema = new mongoose.Schema({
     BuildingName : {type : String},
     RoomName : {type : String, trim : true},
     Strength : { type: Number},
-    Departments : [{type : String}],
     Status : {type : Boolean, default: true},
     ClassDays : [{
         Day : {type : String, enum : ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']},
