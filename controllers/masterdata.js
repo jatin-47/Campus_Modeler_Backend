@@ -553,9 +553,8 @@ exports.getBuildingAddClassClassSchedule = async (request, response, next) => {
 
 exports.getRoomNameAddClassClassSchedule = async (request, response, next) => {
     try{
-        const { BuildingId } = request.query;
-        const building = await CampusBuilding.findOne({campusname : request.user.campusname, BuildingID : BuildingId}, 'Rooms');
-
+        const { buildingname } = request.query;
+        const building = await CampusBuilding.findOne({campusname : request.user.campusname, BuildingName : buildingname});
         let roomNames = building.Rooms.map((room)=>{
             return room.RoomName;
         })
