@@ -23,6 +23,16 @@ exports.policyPlanner = async (request, response, next) => {
             "Testing Strategy": sim["Testing Strategy"]
         })
     } else {
+        let buildingnames = [];
+        try {
+			let CampusBuildings = await CampusBuilding.find({ campusname: request.user.campusname },"BuildingName");
+            CampusBuildings.forEach(element => {
+                buildingnames.push(element.BuildingName)
+            });
+            // console.log(buildingnames);
+        } catch (err) {
+			return next(new ErrorResponse(err, 400));
+		}
         response.send({
             "General Input": {
                 "No of Days to Simulate": 10,
