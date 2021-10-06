@@ -1133,7 +1133,7 @@ exports.addFacultyDetails = async (request, response, next) => {
         if(!building) throw "No such building exists in your campus!"
 
         const doc = await Faculty.create({
-            Name : data.Name.trim(),
+            Name : data.Name.toString().trim(),
             Courses : data.Courses,
             Department : data.Department,
             ResidenceBuildingName : data.ResidenceBuildingName,
