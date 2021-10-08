@@ -499,14 +499,16 @@ exports.addClassClassSchedule = async (request, response, next) => {
             if(!Batch) throw "No such batch found!";
         }      
 
-        let classdays = data.ClassDays.map((curr) => { 
-            curr.Day = curr.Day.toLowerCase()
-            curr.Timing = {
-                start: curr.Timing.split("-")[0].trim(), 
-                end: curr.Timing.split("-")[1].trim()
+        let classdays = [];
+        for(let day in data.ClassDays){
+            let obj = {};
+            obj['Day'] = day.toLowerCase();
+            obj['Timing'] = {
+                start: data.ClassDays[day].split("-")[0].trim(), 
+                end: data.ClassDays[day].split("-")[1].trim()
             };
-            return curr
-        });
+            classdays.push(obj);
+        }
 
         for(let faculty of data.CourseInstructor){
             let fac = await Faculty.findOne({Name: faculty});
