@@ -2,12 +2,22 @@ const mongoose = require('mongoose');
 const User = require('../models/User');
 const CampusBuilding = require('../models/CampusBuilding');
 const Simulation = require('../models/Simulation');
+const Campus = require('../models/Campus');
 
 const runPython = require('../utils/runPython');
 const ErrorResponse = require('../utils/errorResponse');
 
 const moment = require('moment');
 const fs = require('fs');
+
+
+exports.campusCoordinates = async (request, response, next) => {
+    try {
+        let campus = await Campus.findOne({campusname : request.user.campusname});
+        response.send(campus);
+    }
+    catch(err){  return next(new ErrorResponse(err,400));  }
+};
 
 exports.policyPlanner = async (request, response, next) => {
     const user = request.user;

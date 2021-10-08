@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const CampusNames = require('../config/campusnames');
 const ErrorResponse = require('../utils/errorResponse');
 
 const ClassScheduleSchema = new mongoose.Schema({
@@ -21,7 +20,7 @@ const ClassScheduleSchema = new mongoose.Schema({
         BatchCode : {type : String},
         Count : {type : Number}
     }],
-    campusname : CampusNames
+    campusname : { type: String, required: true, select: false }
 });
 
 ClassScheduleSchema.pre('insertMany', async function (next, docs) {

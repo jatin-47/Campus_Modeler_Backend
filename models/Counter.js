@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
-let CampusNames = require('../config/campusnames');
 
 const CounterSchema = new mongoose.Schema({
-    campusname : CampusNames,
+    campusname : { type: String, required: true, select: false },
     CampusBuilding : { type: Number, default: 1},
     User : {type : Number, default: 1},
     BatchStudent : {type : Number, default: 1},

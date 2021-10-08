@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const CampusNames = require('../config/campusnames');
 const ErrorResponse = require('../utils/errorResponse');
 
 const StaffSchema = new mongoose.Schema({
@@ -9,7 +8,7 @@ const StaffSchema = new mongoose.Schema({
     ResidenceBuildingName : {type : String},
     AdultFamilyMembers : {type : Number, required : true},
     NoofChildren : { type: Number, required: true},
-    campusname : CampusNames
+    campusname : { type: String, required: true, select: false }
 });
 
 StaffSchema.methods.assignStaffID = async function () {

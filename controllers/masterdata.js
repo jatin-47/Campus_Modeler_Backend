@@ -1136,7 +1136,7 @@ exports.addFacultyDetails = async (request, response, next) => {
 
         const doc = await Faculty.create({
             Name : data.Name.toString().trim(),
-            Courses : data.Courses,
+            Courses : [],
             Department : data.Department,
             ResidenceBuildingName : data.ResidenceBuildingName,
             AdultFamilyMembers : data.AdultFamilyMembers,

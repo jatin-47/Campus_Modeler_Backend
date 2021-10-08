@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const CampusNames = require('../config/campusnames');
 const ErrorResponse = require('../utils/errorResponse');
 
 //RoomID = `BuildingID + FloorNo + RoomNo`
@@ -34,7 +33,7 @@ const CampusBuildingSchema = new mongoose.Schema({
     },
     BuildingCoordinates : [],
     Rooms : [RoomSchema],
-    campusname : CampusNames
+    campusname : { type: String, required: true, select: false }
 });
 
 CampusBuildingSchema.pre('insertMany', async function (next, docs) {

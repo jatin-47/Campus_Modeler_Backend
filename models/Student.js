@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const CampusNames = require('../config/campusnames');
 const ErrorResponse = require('../utils/errorResponse');
 
 const StudentSchema = new mongoose.Schema({
@@ -16,7 +15,7 @@ const StudentSchema = new mongoose.Schema({
         enum : [0,1]
     },
     Courses : [{type : String}],
-    campusname : CampusNames
+    campusname : { type: String, required: true, select: false }
 });
 
 StudentSchema.pre('insertMany', async function (next, docs) {

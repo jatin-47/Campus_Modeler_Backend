@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const CampusNames = require('../config/campusnames');
 const ErrorResponse = require('../utils/errorResponse');
 
 const BatchStudentSchema = new mongoose.Schema({
@@ -10,7 +9,7 @@ const BatchStudentSchema = new mongoose.Schema({
     YearOfStudy : {type : Number},
     Strength : { type: Number, required : true},
     Status : { type : Boolean, default: true},
-    campusname : CampusNames
+    campusname : { type: String, required: true, select: false }
 });
 
 BatchStudentSchema.pre('insertMany', async function (next, docs) {

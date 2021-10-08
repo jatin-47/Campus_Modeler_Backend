@@ -1,7 +1,6 @@
 const User = require('../models/User');
-const CampusNames = require('../config/campusnames')
+const Campus = require('../models/Campus');
 const ErrorResponse = require('../utils/errorResponse');
-const fs = require("fs");
 
 exports.login = async (request, response, next) => {
 
@@ -34,16 +33,6 @@ exports.login = async (request, response, next) => {
     }
 };
 
-
-exports.campusName = async (request, response, next) => {
-  
-    response.send({
-        campusname : CampusNames.enum
-    });
-
-};
-
-
 const sendToken = (user, statusCode, response) => {
     const token = user.getSignedToken();
     response.status(statusCode).json({ 
@@ -52,3 +41,16 @@ const sendToken = (user, statusCode, response) => {
         role: user.role
     });
 }
+
+exports.campusName = async (request, response, next) => {
+    try {
+        let campuses = await Campus.find({});
+        campuses = campuses.map((campus)=>campus.campusname);
+        response.send({
+            campusname : campuses
+        });
+    }
+    catch(err){  return next(new ErrorResponse(err,400));  }
+};
+
+

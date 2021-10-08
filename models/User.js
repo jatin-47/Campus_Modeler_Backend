@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-const CampusNames = require('../config/campusnames');
-
 const ErrorResponse = require('../utils/errorResponse');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -35,7 +33,7 @@ const UserSchema = new mongoose.Schema({
         enum: ['admin', 'user'],
         default: 'user'
     },
-    campusname: CampusNames,
+    campusname: { type: String, required: true, select: false },
     status : {type: Boolean, default:true},
     fname : { type: String, trim : true, required: true},
     lname : { type: String, trim : true, required: true},
