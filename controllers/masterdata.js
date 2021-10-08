@@ -101,7 +101,7 @@ exports.uploadCampusBuildings = async (request, response, next) => {
                     start : row[6],
                     end : row[7]
                 },
-                BuildingCoordinates : row[8],
+                BuildingCoordinates : row[8].split(',').map((curr)=> curr.trim().split(" ")).map((curr)=> curr.map((a)=>parseFloat(a))),
                 Rooms : Rooms,
                 campusname : request.user.campusname
             });    
