@@ -832,6 +832,37 @@ exports.downloadSurveyUploader = async (request, response, next) => {
 /****************************************************************/
 //Student
 
+exports.templatestudentdetails = async (request, response, next) => {
+    const workbook = new excel.Workbook();
+    const filename = "Student_template";
+    const sheet = workbook.addWorksheet(filename);
+
+    sheet.columns = [
+        { header: "Student ID"},
+        { header: "Age"},
+        { header: "Hostel Building Name"},
+        { header: "Mess Building Name"},
+        { header: "Year"},
+        { header: "Department"},
+        { header: "Program"},
+        { header: "Batch"},
+        { header: "inCampus"}
+    ];
+  
+    response.setHeader(
+    "Content-Type",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    );
+    response.setHeader(
+    "Content-Disposition",
+    "attachment; filename=" + filename + ".xlsx"
+    );
+
+    return workbook.xlsx.write(response).then(function () {
+        response.status(200).end();
+    });
+};
+
 exports.addStudentDataUploader = async (request, response, next) => {
     try {
         if (request.file == undefined) {
@@ -890,16 +921,16 @@ exports.addStudentDataUploader = async (request, response, next) => {
 
 exports.deleteStudentDataUploader = async (request, response, next) => {
     try {
-        const { StudentdataID } = request.query;
-        await StudentData.findByIdAndDelete(StudentdataID);
-
-        // also delete file from server
+        const { StudentID } = request.query;
+        await Student.findOneAndDelete({StudentID : StudentID,campusname : request.user.campusname});
         response.send({
             success: true,
             message: 'deleted successfully'
         });
-
-    } catch(err){  return next(new ErrorResponse(err,400));  }
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
 };
 
 exports.updateStudentDataUploader = async (request, response, next) => {
