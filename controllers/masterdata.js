@@ -720,6 +720,20 @@ exports.addUserUsers = async (request, response, next) => {
     catch(err){ return next(new ErrorResponse(err, 400)); }
 };
 
+exports.deleteUser = async (request, response, next) => {
+    try {
+        const { UserID } = request.query;
+        await User.findOneAndDelete({UserID : UserID, campusname : request.user.campusname});
+        response.send({
+            success: true,
+            message: 'deleted successfully'
+        });
+    }
+    catch(err){
+        return next(new ErrorResponse(err, 400));
+    }
+};
+
 /****************************************************************/
 //Survey
 
