@@ -722,8 +722,8 @@ exports.addUserUsers = async (request, response, next) => {
 
 exports.deleteUser = async (request, response, next) => {
     try {
-        const { UserID } = request.query;
-        await User.findOneAndDelete({UserID : UserID, campusname : request.user.campusname});
+        const { _id } = request.query;
+        await User.findOneAndDelete({_id: _id});
         response.send({
             success: true,
             message: 'deleted successfully'
