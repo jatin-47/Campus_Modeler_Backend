@@ -75,7 +75,7 @@ exports.policyPlanner = async (request, response, next) => {
             "Testing Strategy": {
                 "Testing Strategy": ['Complete Random', 'Symptomatic First', 'Symptomatic First then Hostel-wise Random', 'Perfect Contact Tracing', 'Risk-based Contact Tracing'],
                 "Testing Capacity Per Day": 30,
-                "Day(s) of Testing": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"],
+                "Day(s) of Testing": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
                 "Test Sensitivity": 0.95,
                 "Test Specificity": 1
             }
