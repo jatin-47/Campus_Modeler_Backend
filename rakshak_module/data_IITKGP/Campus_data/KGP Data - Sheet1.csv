@@ -1,0 +1,113 @@
+Building_ID,Name,Description,No_of_Rooms_Floor_0,No_of_Floors,Abbreviation,Capacity
+0,BR Ambedkar Hall,Student Residence,1390,1,,1390
+1,Meghnad Saha Hall,Student Residence,397,1,,397
+2,Central Library,Academic,,1,,
+3,Vinod Gupta School of Management,Academic,,1,BM,
+4,Electronics and Electrical Communication Engg.,Academic,,1,"EC,IE",
+5,Main Building,Academic,,1,"S-,EE,MA,GG,HS,PH,CY,EX",
+6,Civil Engineering,Academic,,1,CE,
+7,Mechanical Engineering,Academic,,1,"ME,MF",
+8,Nalanda,Academic,96,1,"NR,NC,RX",
+9,Aerospace Engineering,Academic,,1,AE,
+10,Materials Science Centre,Academic,,1,MS,
+11,Science Block,Academic,,1,ID,
+12,Steel Technology Centre,Academic,,1,,
+13,Mining Engineering,Academic,,1,MI,
+14,Water Works Section,Non_Academic,,1,,
+15,Telecom Centre,Academic,,1,,
+16,Advanced Technology Development Centre,Academic,,1,"AI,AT",
+17,Agricultural and Food Engineering,Academic,,1,AG,
+18,Architecture and Regional Planning,Academic,,1,"AR,WM",
+19,Biotechnology,Academic,,1,BT,
+20,Chemical Engineering,Academic,,1,CH,
+21,Computer Science and Engineering,Academic,,1,CS,
+22,Tagore Open Air Theatre,Grounds,1,1,,
+23,Indian Railways Booking Counter,Non_Academic,,1,,
+24,Azad Hall,Student Residence,424,1,,731
+25,Industrial and Systems Engineering,Academic,,1,"IM,QE,QM",
+26,Cryogenic Engineering Centre,Academic,,1,CR,
+27,Nehru Hall,Student Residence,331,1,,448
+28,Metallurgical and Materials Engineering,Academic,,1,MT,
+29,Patel Hall,Student Residence,328,1,,443
+30,Ocean Engg and Naval Architecture,Academic,,1,NA,
+31,HJB Hall,Student Residence,163,1,,163
+32,LBS Hall,Student Residence,650,1,,1950
+33,MMM Hall,Student Residence,789,1,,1578
+34,LLR Hall,Student Residence,334,1,,334
+35,RK Hall,Student Residence,421,1,,636
+36,RP Hall,Student Residence,489,1,,831
+37,JCB Hall,Student Residence,262,1,,262
+38,Theoretical Studies and Nehru Museum,Academic,,1,"TS,RE",
+39,VS Hall,Student Residence,335,1,,335
+40,ERP,Academic,,1,,
+41,RLB Hall,Student Residence,250,1,,250
+42,Central Research Facility,Academic,,1,,
+43,P.K. Sinha Centre for Bioenergy and Renewables,Academic,,1,,
+44,Workshops,Academic,,1,,
+45,Rubber Technology,Academic,,1,RT,
+46,MT Hall,Student Residence,164,1,,492
+47,Gokhale Hall,Student Residence,54,1,,142
+48,SAM Hall,Student Residence,92,1,,184
+49,BCR Hall,Student Residence,162,1,,162
+50,Sir J C Bose Laboratory Complex,Academic,,1,"BS,ES",
+51,Center for Rural Development and Innovative Sustainable Technology,Academic,,1,RD,
+52,Centre for Railway Research,Academic,,1,,
+53,SN/IG Hall,Student Residence,249,1,,305
+54,Vegies restaurant,Restaurant,1,1,,
+55,Smart Pind,Restaurant,1,1,,
+56,Baskin Robins,Restaurant,1,1,,
+57,Cafe Coffee Day,Restaurant,1,1,,
+58,Heritage,Restaurant,1,1,,
+59,CORAL,Academic,,1,CL,
+60,Amul,Restaurant,1,1,,
+61,Tennis Court,Grounds,1,1,,
+62,PAN Loop Food Centre,Restaurant,1,1,,
+63,Hot and Spick,Restaurant,1,1,,
+64,Billoos,Restaurant,1,1,,
+65,Food City,Restaurant,1,1,,
+66,State Bank of India,Non_Academic,,1,,
+67,Post Office Kharagpur,Non_Academic,,1,,
+68,IIT Kharagpur Helipad,Non_Academic,,1,,
+69,Rabi Shop,Market,1,1,,
+70,Children's Park,Grounds,5,1,,
+71,Bikash Da's Canteen,Restaurant,,1,,
+72,Lake Park,Grounds,10,1,,
+73,Kendriya Vidyalaya,Academic,,1,,
+74,Technology Students Gymkhana,Gymkhana,,1,,
+75,IIT KGP Swimming Pool,Grounds,2,1,,
+76,Gymkhana Lake/Park,Gymkhana,5,1,,
+77,Jnan Ghosh Stadium,Grounds,10,1,,
+78,Hall Management Centre,Non_Academic,,1,,
+79,Police Station,Non_Academic,1,1,,
+80,Kalidas Auditorium,Academic,,1,,
+81,Mechanical Training Workshop,Academic,,1,,
+82,Super Duper,Restaurant,1,1,,
+83,Vikramshila,Academic,20,1,"V,MM",
+84,Radhakanta Sweets,Restaurant,1,1,,
+85,Cold Roll Ice Cream,Restaurant,1,1,,
+86,Takshashila,Academic,,1,"ET,IT",
+87,Tech Market,Market,,1,,
+88,Peep Kitchen,Restaurant,1,1,,
+89,Dreamland,Restaurant,1,1,,
+90,Sahara Restaurant,Restaurant,1,1,,
+91,Centre of Excellence in Advanced Manufacturing Technology,Academic,,1,,
+92,BC Roy Hospital,Healthcare,,1,,
+93,DAV Model School,Academic,,1,,
+94,Saint Agnes School,Academic,,1,,
+95,Hijili High School,Academic,,1,,
+96,Technology Guest House,Guest House,,1,,
+97,Rajendra Mishra School of Engg Entrepreneurship,Academic,,1,EP,
+98,Innovation Lab of Mining Engineering,Academic,,1,,
+99,Sister Nivedita Hall,Student Residence,81,1,,132
+100,Tata Sports Complex,Grounds,10,1,,
+101,Rajiv Gandhi School of Intellectual Property Law,Academic,,1,IP,
+102,V Guest House,Guest House,,1,,
+103,VSRC,Student Residence,,1,,0
+104,Volleyball and Basketball court,Grounds,2,1,,
+105,Faculty Quarters,Faculty Residence,1500,1,,
+106,Staff Residence,Staff Residence,2000,1,,
+107,Rooster Delight,Restaurant,1,1,,
+108,Shiru Cafe,Restaurant,1,1,,
+109,Subway,Restaurant,1,1,,
+110,MFS Canteen,Restaurant,1,1,,
+111,Tikka,Restaurant,1,1,,

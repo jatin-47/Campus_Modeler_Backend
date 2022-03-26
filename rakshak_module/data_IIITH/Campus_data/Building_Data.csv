@@ -1,0 +1,21 @@
+Building_ID,Name,Description,Capacity,No_of_Floors,No_of_Rooms_Floor_0,Special_Rooms
+1,Yuktahaar Mess,Mess,,1,1,
+2,Kadamba Nivas,Student Residence,,4,60,
+3,Parijat Nivas,Student Residence,,4,65,
+4,Palash Nivas,Student Residence,,4,60,
+5,South Mess,Mess,,1,1,
+6,Bakul Nivas,Student Residence,480,4,150,
+7,Football Ground,Grounds,,1,1,
+8,Himalaya Block,Academic,,3,10,
+9,Kohli Research Centre,Academic,,3,10,"BSRC,CBS,CCNSB,CDE,CEH,CSG,CSL,CSTAR,CVEST,CVIT,DSAC,EERC,LSI,LTRC,MLL"
+10,Vindhya Block,Academic,,3,10,"Power,RRC,SERC,SPCRC,Systems Group"
+11,IIIT Guest House,Guest House,,3,10,
+12,Juice Canteen,Restaurant,,1,1,
+13,Buddh Nivas,Faculty Residence,,2,10,
+14,Buddh Nivas 2,Faculty Residence,,2,10,
+15,Nilgiri Block,Academic,,3,10,
+16,Aarogya,Healthcare,,2,2,
+17,Mini Canteen,Restaurant,,1,1,
+18,felicity ground,Grounds,,1,1,
+19,Library,Academic,,3,2,
+20,Kadamba Mess,Mess,,1,1,

@@ -1,0 +1,806 @@
+{
+   "#CS121": {
+      "room": "LH105",
+      "slot": "Thu, 12-12:50"
+   },
+   "#EE211": {
+      "room": "LH105,LH304-307",
+      "slot": "WED, 11-11:50"
+   },
+   "#EE213": {
+      "room": "LH105, EE 104, 105, 114",
+      "slot": "A#"
+   },
+   "#MAL1010": {
+      "room": "LH204-205-206-207-304-305-306",
+      "slot": "A#"
+   },
+   "#ME211": {
+      "room": "LH105",
+      "slot": "Tue, 12-12:50"
+   },
+   "#MEL1010": {
+      "room": "LH 304 -305-307",
+      "slot": "E"
+   },
+   "BB211": {
+      "room": "LH307",
+      "slot": "B"
+   },
+   "BB498": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "BB619": {
+      "room": "CY101",
+      "slot": "X"
+   },
+   "BB620": {
+      "room": "CY102",
+      "slot": "U"
+   },
+   "BB621": {
+      "room": "LH204",
+      "slot": "Y"
+   },
+   "BB622": {
+      "room": "CY101",
+      "slot": "W"
+   },
+   "BB799": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "BBL1010": {
+      "room": "LH110",
+      "slot": "D"
+   },
+   "BBL7010": {
+      "room": "CY101",
+      "slot": "E"
+   },
+   "BBL7020": {
+      "room": "CY107",
+      "slot": "X"
+   },
+   "BBL7040": {
+      "room": "LH206",
+      "slot": "Y"
+   },
+   "BBL7330": {
+      "room": "LH204",
+      "slot": "V"
+   },
+   "BBL7340": {
+      "room": "CY108",
+      "slot": "V"
+   },
+   "BBL7350": {
+      "room": "CY101",
+      "slot": "V"
+   },
+   "BS322": {
+      "room": "CY102",
+      "slot": "E"
+   },
+   "BS799": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "CS121": {
+      "room": "LH106",
+      "slot": "D"
+   },
+   "CS211": {
+      "room": "LH106",
+      "slot": "C"
+   },
+   "CS212": {
+      "room": "LH204",
+      "slot": "B"
+   },
+   "CS311": {
+      "room": "LH207",
+      "slot": "E"
+   },
+   "CS312": {
+      "room": "LH207",
+      "slot": "C"
+   },
+   "CS313": {
+      "room": "LH207",
+      "slot": "D"
+   },
+   "CS314": {
+      "room": "LH207",
+      "slot": "B"
+   },
+   "CS398": {
+      "room": "nan",
+      "slot": "Z"
+   },
+   "CS497": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "CS799": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "CSL1010": {
+      "room": "LH110",
+      "slot": "C"
+   },
+   "CSL7010": {
+      "room": "LH105",
+      "slot": "F"
+   },
+   "CSL7020": {
+      "room": "LH110",
+      "slot": "V"
+   },
+   "CSL7021": {
+      "room": "LH110",
+      "slot": "V1"
+   },
+   "CSL7022": {
+      "room": "LH110",
+      "slot": "V2"
+   },
+   "CSL7023": {
+      "room": "LH110",
+      "slot": "V3"
+   },
+   "CSL7030": {
+      "room": "LH307",
+      "slot": "C"
+   },
+   "CSL7310": {
+      "room": "LH105",
+      "slot": "U"
+   },
+   "CSL7320": {
+      "room": "LH105",
+      "slot": "X"
+   },
+   "CSP7010": {
+      "room": "nan",
+      "slot": "W*"
+   },
+   "CY211": {
+      "room": "LH105",
+      "slot": "C"
+   },
+   "CY515": {
+      "room": "CY102",
+      "slot": "C"
+   },
+   "CY613": {
+      "room": "CY107",
+      "slot": "V"
+   },
+   "CY698": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "CY699": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "CY799": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "CYL0010": {
+      "room": "LH206",
+      "slot": "C"
+   },
+   "CYL1010": {
+      "room": "LH308",
+      "slot": "B"
+   },
+   "CYL6010": {
+      "room": "CY107",
+      "slot": "U"
+   },
+   "CYL6020": {
+      "room": "CY107",
+      "slot": "D"
+   },
+   "CYL6030": {
+      "room": "CY107",
+      "slot": "F"
+   },
+   "CYL6040": {
+      "room": "CY107",
+      "slot": "E"
+   },
+   "CYL6050": {
+      "room": "CY107",
+      "slot": "B"
+   },
+   "CYL7310": {
+      "room": "CY108",
+      "slot": "Y"
+   },
+   "CYL7320": {
+      "room": "CY102",
+      "slot": "X"
+   },
+   "CYL7330": {
+      "room": "CY101",
+      "slot": "U"
+   },
+   "CYL7340": {
+      "room": "CY107",
+      "slot": "Y"
+   },
+   "CYL7350": {
+      "room": "CY108",
+      "slot": "X"
+   },
+   "CYP1010": {
+      "room": "Basic Lab",
+      "slot": "L"
+   },
+   "CYP6010": {
+      "room": "nan",
+      "slot": "X*"
+   },
+   "CYP6020": {
+      "room": "nan",
+      "slot": "U*"
+   },
+   "CYP6030": {
+      "room": "nan",
+      "slot": "Y*"
+   },
+   "DHL7010": {
+      "room": "LH207",
+      "slot": "F"
+   },
+   "DHL7011": {
+      "room": "LH207",
+      "slot": "F1"
+   },
+   "DHL7012": {
+      "room": "LH207",
+      "slot": "F2"
+   },
+   "DHL7013": {
+      "room": "LH207",
+      "slot": "F3"
+   },
+   "EE211": {
+      "room": "LH110",
+      "slot": "E"
+   },
+   "EE212": {
+      "room": "LH305",
+      "slot": "D"
+   },
+   "EE213": {
+      "room": "LH308",
+      "slot": "A"
+   },
+   "EE311": {
+      "room": "LH306",
+      "slot": "B"
+   },
+   "EE312": {
+      "room": "LH306",
+      "slot": "E"
+   },
+   "EE313": {
+      "room": "LH306",
+      "slot": "D"
+   },
+   "EE314": {
+      "room": "LH306",
+      "slot": "C"
+   },
+   "EE497": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "EE698": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "EE799": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "EEL1010": {
+      "room": "LH110",
+      "slot": "B"
+   },
+   "EEL7010": {
+      "room": "LH305",
+      "slot": "F"
+   },
+   "EEL7011": {
+      "room": "LH305",
+      "slot": "F1"
+   },
+   "EEL7012": {
+      "room": "LH305",
+      "slot": "F2"
+   },
+   "EEL7013": {
+      "room": "LH305",
+      "slot": "F3"
+   },
+   "EEL7020": {
+      "room": "LH305",
+      "slot": "W"
+   },
+   "EEL7030": {
+      "room": "LH304",
+      "slot": "U"
+   },
+   "EEL7040": {
+      "room": "LH205",
+      "slot": "Y"
+   },
+   "EEL7041": {
+      "room": "LH205",
+      "slot": "Y1"
+   },
+   "EEL7042": {
+      "room": "LH205",
+      "slot": "Y2"
+   },
+   "EEL7043": {
+      "room": "LH205",
+      "slot": "Y3"
+   },
+   "EEL7050": {
+      "room": "EE108",
+      "slot": "V"
+   },
+   "EEL7060": {
+      "room": "EE114",
+      "slot": "B"
+   },
+   "EEL7061": {
+      "room": "EE114",
+      "slot": "B1"
+   },
+   "EEL7062": {
+      "room": "EE114",
+      "slot": "B2"
+   },
+   "EEL7063": {
+      "room": "EE114",
+      "slot": "B3"
+   },
+   "EEL7070": {
+      "room": "LH105",
+      "slot": "A"
+   },
+   "EEL7080": {
+      "room": "EE108",
+      "slot": "B"
+   },
+   "EEL7090": {
+      "room": "EE108",
+      "slot": "Y"
+   },
+   "EEL7310": {
+      "room": "EE109",
+      "slot": "D"
+   },
+   "EEL7320": {
+      "room": "EE108",
+      "slot": "D"
+   },
+   "EEL7330": {
+      "room": "EE108",
+      "slot": "U"
+   },
+   "EEL7340": {
+      "room": "EE114",
+      "slot": "X"
+   },
+   "EEP7010": {
+      "room": "EE",
+      "slot": "X*"
+   },
+   "EEP7020": {
+      "room": "EE",
+      "slot": "Y*"
+   },
+   "EEP7030": {
+      "room": "EE",
+      "slot": "U*"
+   },
+   "EEP7040": {
+      "room": "EE",
+      "slot": "Y*"
+   },
+   "HS211": {
+      "room": "LH110, LH106",
+      "slot": "F"
+   },
+   "HS311": {
+      "room": "LH308, LH304",
+      "slot": "F"
+   },
+   "HS411": {
+      "room": "LH106",
+      "slot": "E"
+   },
+   "HS421": {
+      "room": "LH207",
+      "slot": "Y"
+   },
+   "HS799": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "HSL0010": {
+      "room": "LH206",
+      "slot": "B"
+   },
+   "HSL4010": {
+      "room": "LH308",
+      "slot": "U"
+   },
+   "HSL4020": {
+      "room": "LH308",
+      "slot": "V"
+   },
+   "HSL6010": {
+      "room": "LH204",
+      "slot": "G"
+   },
+   "HSL6020": {
+      "room": "LH205",
+      "slot": "H"
+   },
+   "HSL7310": {
+      "room": "LH304",
+      "slot": "D"
+   },
+   "HSL7320": {
+      "room": "CS101",
+      "slot": "U"
+   },
+   "HSN1010": {
+      "room": "Language Lab",
+      "slot": "L"
+   },
+   "HSN7010": {
+      "room": "LH110",
+      "slot": "H"
+   },
+   "MA111": {
+      "room": "LH307",
+      "slot": "U"
+   },
+   "MA221": {
+      "room": "LH307",
+      "slot": "V"
+   },
+   "MA698": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "MA799": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "MAL0010": {
+      "room": "LH206",
+      "slot": "F"
+   },
+   "MAL1010": {
+      "room": "LH110",
+      "slot": "A"
+   },
+   "MAL5010": {
+      "room": "CS102",
+      "slot": "A"
+   },
+   "MAL5020": {
+      "room": "CS101",
+      "slot": "F"
+   },
+   "MAL6010": {
+      "room": "CS102",
+      "slot": "D"
+   },
+   "MAL6020": {
+      "room": "CS102",
+      "slot": "U"
+   },
+   "MAL6030": {
+      "room": "CS102",
+      "slot": "V"
+   },
+   "MAL7011": {
+      "room": "CS101",
+      "slot": "X1"
+   },
+   "MAL7012": {
+      "room": "CS101",
+      "slot": "X2"
+   },
+   "MAL7020": {
+      "room": "LH105",
+      "slot": "G"
+   },
+   "MAL7021": {
+      "room": "LH105",
+      "slot": "G1"
+   },
+   "MAL7022": {
+      "room": "LH105",
+      "slot": "G2"
+   },
+   "MAL7023": {
+      "room": "LH105",
+      "slot": "G3"
+   },
+   "MAL7030": {
+      "room": "CS102",
+      "slot": "W"
+   },
+   "MAL7310": {
+      "room": "CS102",
+      "slot": "Y"
+   },
+   "MAL7320": {
+      "room": "CS102",
+      "slot": "B"
+   },
+   "ME211": {
+      "room": "LH105",
+      "slot": "B"
+   },
+   "ME213": {
+      "room": "LH204",
+      "slot": "A"
+   },
+   "ME214": {
+      "room": "LH204",
+      "slot": "C"
+   },
+   "ME311": {
+      "room": "LH205",
+      "slot": "D"
+   },
+   "ME312": {
+      "room": "LH205",
+      "slot": "B"
+   },
+   "ME314": {
+      "room": "LH205",
+      "slot": "E"
+   },
+   "ME315": {
+      "room": "LH205",
+      "slot": "C"
+   },
+   "ME497": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "ME698": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "ME799": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "MEL1010": {
+      "room": "LH308",
+      "slot": "D"
+   },
+   "MEL7010": {
+      "room": "LH204",
+      "slot": "F"
+   },
+   "MEL7020": {
+      "room": "LH305",
+      "slot": "C"
+   },
+   "MEL7030": {
+      "room": "LH204",
+      "slot": "U12"
+   },
+   "MEL7040": {
+      "room": "LH205",
+      "slot": "F"
+   },
+   "MEL7050": {
+      "room": "LH206",
+      "slot": "W"
+   },
+   "MEL7051": {
+      "room": "LH206",
+      "slot": "W1"
+   },
+   "MEL7052": {
+      "room": "LH206",
+      "slot": "W2"
+   },
+   "MEL7053": {
+      "room": "LH206",
+      "slot": "W3"
+   },
+   "MEL7060": {
+      "room": "LH204",
+      "slot": "X"
+   },
+   "MEL7070": {
+      "room": "LH205",
+      "slot": "V"
+   },
+   "MEL7310": {
+      "room": "LH105",
+      "slot": "D"
+   },
+   "MEL7320": {
+      "room": "LH304",
+      "slot": "W"
+   },
+   "MEP1010": {
+      "room": "Basic Lab",
+      "slot": "L"
+   },
+   "MEP7010": {
+      "room": "nan",
+      "slot": "U*"
+   },
+   "MT698": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "MT799": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "MTL7010": {
+      "room": "LH205",
+      "slot": "U"
+   },
+   "MTL7020": {
+      "room": "LH304",
+      "slot": "C"
+   },
+   "MTL7310": {
+      "room": "LH307",
+      "slot": "D"
+   },
+   "MTL7320": {
+      "room": "LH204",
+      "slot": "W"
+   },
+   "OA401": {
+      "room": "nan",
+      "slot": "H"
+   },
+   "OAE1010": {
+      "room": "LH308",
+      "slot": "L"
+   },
+   "OSN1010": {
+      "room": "LH304-307",
+      "slot": "L"
+   },
+   "OSN1020": {
+      "room": "LH204-207",
+      "slot": "L"
+   },
+   "OSN1030": {
+      "room": "nan",
+      "slot": "L"
+   },
+   "PH111": {
+      "room": "LH204",
+      "slot": "D"
+   },
+   "PH698": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "PH799": {
+      "room": "nan",
+      "slot": "T"
+   },
+   "PHL0010": {
+      "room": "LH206",
+      "slot": "D"
+   },
+   "PHL1010": {
+      "room": "LH308",
+      "slot": "C"
+   },
+   "PHL6010": {
+      "room": "LH207",
+      "slot": "V"
+   },
+   "PHL6020": {
+      "room": "EE115",
+      "slot": "D"
+   },
+   "PHL6030": {
+      "room": "LH207",
+      "slot": "U"
+   },
+   "PHL6040": {
+      "room": "EE115",
+      "slot": "E"
+   },
+   "PHL6050": {
+      "room": "EE115",
+      "slot": "F"
+   },
+   "PHL7310": {
+      "room": "EE109",
+      "slot": "U"
+   },
+   "PHL7311": {
+      "room": "EE109",
+      "slot": "U1"
+   },
+   "PHL7312": {
+      "room": "EE109",
+      "slot": "U2"
+   },
+   "PHL7313": {
+      "room": "EE109",
+      "slot": "U3"
+   },
+   "PHL7320": {
+      "room": "EE109",
+      "slot": "V"
+   },
+   "PHL7330": {
+      "room": "EE109",
+      "slot": "W"
+   },
+   "PHL7340": {
+      "room": "EE108",
+      "slot": "W"
+   },
+   "PHL7350": {
+      "room": "EE109",
+      "slot": "Y"
+   },
+   "PHL7360": {
+      "room": "EE108",
+      "slot": "X"
+   },
+   "PHL7370": {
+      "room": "EE109",
+      "slot": "F"
+   },
+   "PHL7380": {
+      "room": "EE114",
+      "slot": "Y"
+   },
+   "PHP1010": {
+      "room": "Basic Lab",
+      "slot": "L"
+   },
+   "PHP6010": {
+      "room": "nan",
+      "slot": "U*"
+   },
+   "PHP6020": {
+      "room": "nan",
+      "slot": "X*"
+   },
+   "PHP6030": {
+      "room": "nan",
+      "slot": "W*"
+   },
+   "QCL6010": {
+      "room": "CY108",
+      "slot": "U"
+   }
+}

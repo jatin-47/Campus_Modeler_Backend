@@ -1,0 +1,29 @@
+Subject,Name,Faculty Name,Ltp,Credits,Slot,Room
+CY00002,PREPARATORY CHEMISTRY,"Ahindra Nag,Pradip Kumar Chakraborty,Sabyashachi Mishra",4-1-0,5,--,
+CY09002,PREPARATORY CHEMISTRY LABORATORY,Srabani Taraphder,0-0-3,2,J,Phys Chem Lab
+CY11001,CHEMISTRY,"Amita (Pathak) Mahanty,Amit Basak,Debashis Ray,Dibakar Dhara,Ganesh Venkataraman,Joykrishna Dey,Kumar Biradha,Manish Bhattacharjee,Narayan Dhuleep Pradeep Singh,Partha Pratim Jana,Rajakumar Ananthakrishnan,Sanjib Kumar Patra,Santanu Panda,Srabani Taraphder,Suneel Kumar Srivastava",3-1-0,4,--,
+CY19001,CHEMISTRY LAB.,"Amita (Pathak) Mahanty,Anoop Ayyappan,Debashis Ray,Ganesan Mani,Ganesh Venkataraman,Kiran Ramakant Gore,Kumar Biradha,Madhab Chandra Das,Manish Bhattacharjee,Mintu Halder,Modhu Sudan Maji,Narayan Dhuleep Pradeep Singh,Nilmoni Sarkar,Partha Pratim Jana,Pradip Kumar Chakraborty,Rajakumar Ananthakrishnan,Rajarshi Samanta,Sabyashachi Mishra,Samik Nanda,Sanjib Kumar Patra,Sanjoy Bandyopadhyay,Santanu Panda,Srabani Taraphder,Sukanta Mandal,Suneel Kumar Srivastava,Swagata Dasgupta,Tanmaya Pathak",0-0-3,2,--,
+CY20102,PHYSICAL CHEMISTRY II,Swagata Dasgupta,3-0-0,3,V3,C205
+CY20106,INORGANIC CHEMISTRY II,Sukanta Mandal,3-0-0,3,C3,C205
+CY21006,ORGANIC CHEMISTRY II,Suman Kalyan Samanta,2-1-0,3,A3,C205
+CY29002,INORGANIC CHEMISTRY LABORATORY I,Partha Pratim Jana,0-0-3,2,L,Org Chem Lab
+CY29004,ORGANIC CHEMISTRY LABORATORY I,"Ahindra Nag,Manish Bhattacharjee",0-0-3,2,J,Org Chem Lab
+CY31010,STRATEGIES & METHODS IN ORGANIC SYNTHESIS,Tanmaya Pathak,3-1-0,4,X4,C205
+CY38002,VIVA,"Amita (Pathak) Mahanty,Amit Basak,Manish Bhattacharjee,Mintu Halder,Rajarshi Samanta",0-0-0,2,--,
+CY39004,INORGANIC CHEMISTRY LABORATORY II,C Retna Raj,0-0-6,4,"P, O",Org Chem Lab
+CY41012,MOLECULAR THERMODYNAMICS & KINETICS,"Mintu Halder,Nilmoni Sarkar",3-0-0,3,A3,"NC234,NC234"
+CY41014,PRINCIPLES OF ORGANOMETALLICS & BIOINORGNIC CHEMISTRY,"Debashis Ray,Ganesan Mani",4-0-0,4,D4,"NC234,NC234"
+CY41016,ANALYTICAL & ENVIRONMENTAL CHEMISTRY,"C Retna Raj,Rajakumar Ananthakrishnan",3-0-0,3,C3,"NC132,NC132"
+CY41018,STRUCTURES & FUNCTION OF BIOMOLECULES,Kiran Ramakant Gore,3-0-0,3,B3,NC234
+CY49006,BIOCHEMICAL TECHNIQUES LABORATORY,"Dibakar Dhara,Suman Kalyan Samanta",0-0-6,4,"M, N",Phys Chem Lab
+CY49008,ADVANCED PHYSICAL CHEMISTRY LAB.,"Amita (Pathak) Mahanty,Joykrishna Dey",0-0-6,4,"P, O",Phys Chem Lab
+CY50033,SOLID STATE CHEMISTRY,Pradip Kumar Chakraborty,3-0-0,3,H3,NC234
+CY57006,PROJECT & VIVA,"Anoop Ayyappan,Joykrishna Dey,Narayan Dhuleep Pradeep Singh,Partha Pratim Jana,Pradip Kumar Chakraborty,Samik Nanda,Sukanta Mandal,Suneel Kumar Srivastava,Tanmaya Pathak",0-0-15,10,--,
+CY58006,COMPREHENSIVE VIVA VOCE,"Dibakar Dhara,Ganesan Mani,Ganesh Venkataraman,Kumar Biradha,Modhu Sudan Maji,Nilmoni Sarkar,Rajakumar Ananthakrishnan,Sanjib Kumar Patra,Swagata Dasgupta",0-0-0,2,--,
+CY58010,VIVA VOCE,"C Retna Raj,Debashis Ray,Kiran Ramakant Gore,Madhab Chandra Das,Sabyashachi Mishra,Santanu Panda,Srabani Taraphder,Suneel Kumar Srivastava",0-0-0,2,--,
+CY60020,ADVANCED HETEROCYCLIC CHEMISTRY,"Modhu Sudan Maji,Rajarshi Samanta",3-0-0,3,D3,C306
+CY61006,APPLICATIONS OF FLUOR.SPECTROSCOPY CHEM.& BIOLOGY,"Mintu Halder,Nilmoni Sarkar",3-0-0,3,B3,"NC232,NC232"
+CY61032,NEWER ASYMMETRIC REACTIONS,"Modhu Sudan Maji,Samik Nanda",3-0-0,3,F3,"NC141,NC141"
+CY61044,MOLECULAR SPECTROSCOPY & MOLECULAR STRUCTURE,Pratim Kumar Chattaraj,4-0-0,4,U4,NC142
+CY61050,METAL COMPLEXES IN CATALYSIS & MATERIAL SCIENCE,Sanjib Kumar Patra,3-0-0,3,C3,NR423
+CY71006,SINGLE CRYSTAL X-RAY STRUCTURE ANALYSIS,Madhab Chandra Das,3-1-0,4,V4,NC234

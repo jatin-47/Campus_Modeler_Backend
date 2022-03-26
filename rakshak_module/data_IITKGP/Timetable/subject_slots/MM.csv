@@ -1,0 +1,47 @@
+Subject,Name,Faculty Name,Ltp,Credits,Slot,Room
+MM40002,CLINICAL RESEARCH METHODS,"Budhaditya Mukherjee,Sanjay Bhattacharya",4-0-0,4,C4,0
+MM40004,CLINICAL MICROBIOLOGY,"Mahitosh Mandal,Sanjay Bhattacharya",4-0-0,4,D4,0
+MM40006,HOSPITAL SKILL DEVELOPMENT,"Praphulla Chandra Shukla,Sanjoy Chatterjee",4-0-0,4,E4,0
+MM40008,ANTIMICROBIAL AGENT AND THERAPY,"Nishant Chakravorty,Sanjay Bhattacharya",4-0-0,4,F4,0
+MM40011,FUNDAMENTALS OF BIOCHEMISTRY AND CELL BIOLOGY,"Budhaditya Mukherjee,Praphulla Chandra Shukla",3-0-0,3,V3,0
+MM41002,GLOBAL HEALTH AND EPIDEMIOLOGY,"Gayatri Mukherjee,Sanjay Bhattacharya",3-1-0,4,V4,0
+MM48002,VIVA VOCE,"Budhaditya Mukherjee,Debashree Guha Adhya,Gayatri Mukherjee,Gorachand Dutta,Jyotirmoy Chatterjee,Koel Chaudhury,Mahitosh Mandal,Manjunatha Mahadevappa,Nishant Chakravorty,Praphulla Chandra Shukla,Sangeeta Das Bhattacharya,Santanu Dhara,Soumen Das",0-0-0,2,--,
+MM49002,CLINICAL MICROBIOLOGY LABORATORY,"Gayatri Mukherjee,Sanjay Bhattacharya",0-0-3,2,J,0
+MM49004,MOLECULAR DIAGNOSTIC LABORATORY,"Praphulla Chandra Shukla,Sanjay Bhattacharya",0-0-3,2,L,0
+MM50002,APPLICATIONS OF MASS SPECTROMETRY,"Koel Chaudhury,Sanjay Bhattacharya",4-0-0,4,--,
+MM50004,INFECTION CONTROL AND INFECTION MANAGEMENT IN STEM CELL AND ORGAN TRANSPLANTATION,Sanjay Bhattacharya,4-0-0,4,--,
+MM50006,LABORATORY ORGANIZATION AND MANAGEMENT,"Sanjay Bhattacharya,S Sriram Prasath",4-0-0,4,--,
+MM50008,MOLECULAR TYPING IN MEDICAL MICROBIOLOGY,"Samar Mandal,Sanjay Bhattacharya",4-0-0,4,--,
+MM50010,ONCOGENIC VIRUSES AND OTHER MICROBES ASSOCIATED WITH CANCER,"Nishant Chakravorty,Sanjay Bhattacharya",4-0-0,4,--,
+MM50018,QUALITY ASSURANCE,"Satadal Saha,Soumen Das",3-0-0,3,G3,0
+MM50020,PHYSICS OF NUCLEAR MEDICINE AND INTERNAL DOSIMETRY,"Anurupa Mahata,Indranil Mallick,Soumen Das",3-0-0,3,B3,0
+MM50026,CLINICAL NUCLEAR IMAGING-II,"Jayanta Das,Jyotirmoy Chatterjee,Soumendranath Ray",3-0-0,3,A3,0
+MM57002,PROJECT,"Budhaditya Mukherjee,Debashree Guha Adhya,Gayatri Mukherjee,Gorachand Dutta,Jyotirmoy Chatterjee,Koel Chaudhury,Mahitosh Mandal,Manjunatha Mahadevappa,Nishant Chakravorty,Praphulla Chandra Shukla,Sangeeta Das Bhattacharya,Santanu Dhara,Soumen Das",0-0-15,12,J,0
+MM57004,PROJECT II,"Budhaditya Mukherjee,Debashree Guha Adhya,Gayatri Mukherjee,Gorachand Dutta,Jyotirmoy Chatterjee,Koel Chaudhury,Mahitosh Mandal,Manjunatha Mahadevappa,Nishant Chakravorty,Praphulla Chandra Shukla,Sangeeta Das Bhattacharya,Santanu Dhara,Soumen Das",0-0-15,10,--,
+MM58002,SEMINAR,"Budhaditya Mukherjee,Debashree Guha Adhya,Gayatri Mukherjee,Gorachand Dutta,Jyotirmoy Chatterjee,Koel Chaudhury,Mahitosh Mandal,Manjunatha Mahadevappa,Nishant Chakravorty,Praphulla Chandra Shukla,Sangeeta Das Bhattacharya,Santanu Dhara,Soumen Das",0-0-0,2,O,0
+MM58004,COMPREHENSIVE VIVA,"Budhaditya Mukherjee,Debashree Guha Adhya,Gayatri Mukherjee,Gorachand Dutta,Jyotirmoy Chatterjee,Koel Chaudhury,Mahitosh Mandal,Manjunatha Mahadevappa,Nishant Chakravorty,Praphulla Chandra Shukla,Sangeeta Das Bhattacharya,Santanu Dhara,Soumen Das",0-0-0,2,"X, L",0
+MM58006,COMPREHENSIVE VIVA VOCE,"Budhaditya Mukherjee,Debashree Guha Adhya,Gayatri Mukherjee,Gorachand Dutta,Jyotirmoy Chatterjee,Koel Chaudhury,Mahitosh Mandal,Manjunatha Mahadevappa,Nishant Chakravorty,Praphulla Chandra Shukla,Sangeeta Das Bhattacharya,Santanu Dhara,Soumen Das",0-0-0,4,--,
+MM59002,RADIATION ONCOLOGY LAB - ADVANCED TREATMENT PLANNING,"Rimpa Basu Achari,Sanjoy Chatterjee,Soumen Das",0-0-3,2,N,0
+MM59004,DNA AND RNA EXTRACTION FROM CLINICAL SAMPLES,Sanjay Bhattacharya,0-0-6,4,J,0
+MM59006,PROBING FOR MICROBIAL TARGETS,"Mahitosh Mandal,Sanjay Bhattacharya",0-0-6,4,K,0
+MM59008,GENOTYPING OF MICROBIAL PATHOGENS,Sanjay Bhattacharya,0-0-6,4,L,0
+MM59010,CLINICAL NUCLEAR MEDICINE DIAGNOSTIC TECHNIQUES LABORATORY,"Gorachand Dutta,Jayanta Das",0-0-6,4,N,0
+MM59012,CLINICAL NUCLEAR MEDICINE THERAPY TECHNIQUES LABORATORY,"Jayanta Das,Santanu Dhara",0-0-6,4,P,0
+MM59018,QUALITY ASSURANCE LAB,"Anurupa Mahata,Indranil Mallick,Soumen Das",0-0-3,2,K,0
+MM60024,BIOMEDICAL IMAGING INFORMATICS,"Debashree Guha Adhya,Manjunatha Mahadevappa",3-0-0,3,S3,0
+MM61212,ETHICS IN BIOMEDICAL RESEARCH,"Sangeeta Das Bhattacharya,Satadal Saha",3-1-0,4,--,
+MM61214,STEM CELL BIOLOGY AND THERAPY,"Nishant Chakravorty,Praphulla Chandra Shukla",4-0-0,4,U4,0
+MM61216,ADVANCED IMMUNOLOGY AND IMMUNOTHERAPEUTICS,"Budhaditya Mukherjee,Gayatri Mukherjee",3-1-0,4,B3,0
+MM61228,NANOBIO TECHNOLOGY ENABLED POINT-OF-CARE,Gorachand Dutta,3-1-0,4,X4,NC132
+MM61312,MEDICAL IMAGING,"Jyotirmoy Chatterjee,Koel Chaudhury",3-1-0,4,C4,0
+MM61314,TRANSLATIONAL HEALTH RESEARCH,"Nishant Chakravorty,Praphulla Chandra Shukla",3-0-0,3,D3,0
+MM61316,BIOMATERIALS,Santanu Dhara,3-1-0,4,U4,0
+MM61318,MEDICAL ELECTRONICS,Soumen Das,3-0-0,3,A3,0
+MM61524,BIOMEDICAL INSTRUMENTATION,Manjunatha Mahadevappa,3-1-0,4,H3,0
+MM69320,MEDICAL ELECTRONICS LAB,Soumen Das,0-0-3,2,R,0
+MM69322,BIOMATERIALS LAB,Santanu Dhara,0-0-3,2,P,0
+MM69324,SEMINAR I,"Budhaditya Mukherjee,Debashree Guha Adhya,Gayatri Mukherjee,Gorachand Dutta,Jyotirmoy Chatterjee,Koel Chaudhury,Mahitosh Mandal,Manjunatha Mahadevappa,Nishant Chakravorty,Praphulla Chandra Shukla,Sangeeta Das Bhattacharya,Santanu Dhara,Soumen Das",0-0-3,2,--,
+MM71326,HEALTHCARE MANAGEMENT,"Sangeeta Das Bhattacharya,Satadal Saha",3-1-0,4,F4,0
+MM71514,MOLECULAR IMAGING,"Gorachand Dutta,Jyotirmoy Chatterjee,Soumen Das",3-1-0,4,D4,0
+MM72335,CANCER BIOLOGY,Mahitosh Mandal,3-1-0,4,G3,0
+MM77320,MINOR PROJECT-II,"Budhaditya Mukherjee,Debashree Guha Adhya,Gayatri Mukherjee,Gorachand Dutta,Jyotirmoy Chatterjee,Koel Chaudhury,Mahitosh Mandal,Manjunatha Mahadevappa,Nishant Chakravorty,Praphulla Chandra Shukla,Sangeeta Das Bhattacharya,Santanu Dhara,Soumen Das",0-0-6,4,--,

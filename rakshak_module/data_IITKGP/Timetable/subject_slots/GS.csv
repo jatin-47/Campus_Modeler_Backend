@@ -1,0 +1,12 @@
+Subject,Name,Faculty Name,Ltp,Credits,Slot,Room
+TE30002,INTRODUCTION TO WIRELESS COMMUNICATIONS,"Asoknath Chatterjee,Saswat Chakrabarti",2-0-0,2,--,
+TE60004,TELECOMMUNICATIONS NETWORK SECURITY,Sant Sharan Pathak,3-0-0,3,B3,0
+TE60006,COMMUNICATION SERVICES AND APPLICATIONS,Saswat Chakrabarti,3-0-0,3,B3,GSCLA1
+TE61001,TELECOMMUNICATION NETWORKS AND OPTIMIZATIONS,"Aneek Adhya,Goutam Das",3-1-0,4,--,
+TE61002,MIMO COMMUNICATIONS,Suvra Sekhar Das,3-1-0,4,--,
+TE61004,TELECOMMUNICATIONS NETWORK PLANNING AND MANAGEMENT,Debarati Sen,3-1-0,4,--,
+TE67001,PROJECT ON EMBEDDED WIRELESS SYSTEMS,"Amit Kumar Dutta,Aneek Adhya,Asoknath Chatterjee,Debarati Sen,Goutam Das,Saswat Chakrabarti,Suvra Sekhar Das",0-0-6,4,--,
+TE67102,PROJECT,"Amit Kumar Dutta,Aneek Adhya,Asoknath Chatterjee,Debarati Sen,Goutam Das,Saswat Chakrabarti,Suvra Sekhar Das",0-0-0,20,--,
+TE68102,COMPREHENSIVE VIVA-VOCE,"Amit Kumar Dutta,Aneek Adhya,Asoknath Chatterjee,Debarati Sen,Goutam Das,Saswat Chakrabarti,Suvra Sekhar Das",0-0-3,2,--,
+TE69002,EMBEDDED COMMUNICATIONS LABORATORY,"Amit Kumar Dutta,Debarati Sen",0-0-3,2,L,GSMSPL
+TE69102,SEMINAR - II,"Aneek Adhya,Saswat Chakrabarti,Suvra Sekhar Das",0-0-3,2,X,GSCLA1

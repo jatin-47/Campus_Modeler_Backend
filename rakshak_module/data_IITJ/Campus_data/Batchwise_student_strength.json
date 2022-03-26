@@ -1,0 +1,710 @@
+{
+   "B15BS": {
+      "year": 5,
+      "department": "BS",
+      "program": "B",
+      "strength": 1
+   },
+   "B15CS": {
+      "year": 5,
+      "department": "CS",
+      "program": "B",
+      "strength": 2
+   },
+   "B15ME": {
+      "year": 5,
+      "department": "ME",
+      "program": "B",
+      "strength": 2
+   },
+   "B16CS": {
+      "year": 4,
+      "department": "CS",
+      "program": "B",
+      "strength": 41
+   },
+   "B16EE": {
+      "year": 4,
+      "department": "EE",
+      "program": "B",
+      "strength": 40
+   },
+   "B16ME": {
+      "year": 4,
+      "department": "ME",
+      "program": "B",
+      "strength": 39
+   },
+   "B17CS": {
+      "year": 3,
+      "department": "CS",
+      "program": "B",
+      "strength": 63
+   },
+   "B17EE": {
+      "year": 3,
+      "department": "EE",
+      "program": "B",
+      "strength": 59
+   },
+   "B17ME": {
+      "year": 3,
+      "department": "ME",
+      "program": "B",
+      "strength": 54
+   },
+   "B18BB": {
+      "year": 2,
+      "department": "BB",
+      "program": "B",
+      "strength": 35
+   },
+   "B18CSE": {
+      "year": 2,
+      "department": "CSE",
+      "program": "B",
+      "strength": 67
+   },
+   "B18EE": {
+      "year": 2,
+      "department": "EE",
+      "program": "B",
+      "strength": 60
+   },
+   "B18ME": {
+      "year": 2,
+      "department": "ME",
+      "program": "B",
+      "strength": 54
+   },
+   "B19BB": {
+      "year": 1,
+      "department": "BB",
+      "program": "B",
+      "strength": 46
+   },
+   "B19BB0": {
+      "year": 1,
+      "department": "BB",
+      "program": "B",
+      "strength": 4
+   },
+   "B19CSE": {
+      "year": 1,
+      "department": "CSE",
+      "program": "B",
+      "strength": 115
+   },
+   "B19CSE0": {
+      "year": 1,
+      "department": "CSE",
+      "program": "B",
+      "strength": 8
+   },
+   "B19EE": {
+      "year": 1,
+      "department": "EE",
+      "program": "B",
+      "strength": 93
+   },
+   "B19EE0": {
+      "year": 1,
+      "department": "EE",
+      "program": "B",
+      "strength": 4
+   },
+   "B19ME": {
+      "year": 1,
+      "department": "ME",
+      "program": "B",
+      "strength": 76
+   },
+   "B19ME0": {
+      "year": 1,
+      "department": "ME",
+      "program": "B",
+      "strength": 4
+   },
+   "IDRPCS": {
+      "year": null,
+      "department": null,
+      "program": null,
+      "strength": 1
+   },
+   "IDRPDH": {
+      "year": null,
+      "department": null,
+      "program": null,
+      "strength": 2
+   },
+   "IDRPIOT": {
+      "year": null,
+      "department": null,
+      "program": null,
+      "strength": 2
+   },
+   "IDRPQIC": {
+      "year": null,
+      "department": null,
+      "program": null,
+      "strength": 1
+   },
+   "IDRPSHC": {
+      "year": null,
+      "department": null,
+      "program": null,
+      "strength": 5
+   },
+   "IDRPSST": {
+      "year": null,
+      "department": null,
+      "program": null,
+      "strength": 2
+   },
+   "J19PP": {
+      "year": 1,
+      "department": "PP",
+      "program": "J",
+      "strength": 35
+   },
+   "M17CY": {
+      "year": 3,
+      "department": "CY",
+      "program": "M",
+      "strength": 3
+   },
+   "M18BB": {
+      "year": 2,
+      "department": "BB",
+      "program": "M",
+      "strength": 2
+   },
+   "M18CSE": {
+      "year": 2,
+      "department": "CSE",
+      "program": "M",
+      "strength": 4
+   },
+   "M18CY": {
+      "year": 2,
+      "department": "CY",
+      "program": "M",
+      "strength": 15
+   },
+   "M18EE": {
+      "year": 2,
+      "department": "EE",
+      "program": "M",
+      "strength": 6
+   },
+   "M18MA": {
+      "year": 2,
+      "department": "MA",
+      "program": "M",
+      "strength": 17
+   },
+   "M18ME": {
+      "year": 2,
+      "department": "ME",
+      "program": "M",
+      "strength": 16
+   },
+   "M18MT": {
+      "year": 2,
+      "department": "MT",
+      "program": "M",
+      "strength": 10
+   },
+   "M18PH": {
+      "year": 2,
+      "department": "PH",
+      "program": "M",
+      "strength": 19
+   },
+   "M19CY": {
+      "year": 1,
+      "department": "CY",
+      "program": "M",
+      "strength": 24
+   },
+   "M19DCS": {
+      "year": 1,
+      "department": "DCS",
+      "program": "M",
+      "strength": 4
+   },
+   "M19MA": {
+      "year": 1,
+      "department": "MA",
+      "program": "M",
+      "strength": 17
+   },
+   "M19PH": {
+      "year": 1,
+      "department": "PH",
+      "program": "M",
+      "strength": 25
+   },
+   "MP19AI": {
+      "year": 1,
+      "department": "AI",
+      "program": "MP",
+      "strength": 5
+   },
+   "MP19BB": {
+      "year": 1,
+      "department": "BB",
+      "program": "MP",
+      "strength": 4
+   },
+   "MP19COE": {
+      "year": 1,
+      "department": "COE",
+      "program": "MP",
+      "strength": 1
+   },
+   "MP19CPS": {
+      "year": 1,
+      "department": "CPS",
+      "program": "MP",
+      "strength": 1
+   },
+   "MP19CS": {
+      "year": 1,
+      "department": "CS",
+      "program": "MP",
+      "strength": 4
+   },
+   "MP19DCS": {
+      "year": 1,
+      "department": "DCS",
+      "program": "MP",
+      "strength": 2
+   },
+   "MP19DE": {
+      "year": 1,
+      "department": "DE",
+      "program": "MP",
+      "strength": 1
+   },
+   "MP19MFE": {
+      "year": 1,
+      "department": "MFE",
+      "program": "MP",
+      "strength": 1
+   },
+   "MP19MT": {
+      "year": 1,
+      "department": "MT",
+      "program": "MP",
+      "strength": 2
+   },
+   "MP19SIOT": {
+      "year": 1,
+      "department": "SIOT",
+      "program": "MP",
+      "strength": 2
+   },
+   "MP19TFE": {
+      "year": 1,
+      "department": "TFE",
+      "program": "MP",
+      "strength": 2
+   },
+   "MT19AI": {
+      "year": 1,
+      "department": "AI",
+      "program": "MT",
+      "strength": 22
+   },
+   "MT19AMD": {
+      "year": 1,
+      "department": "AMD",
+      "program": "MT",
+      "strength": 16
+   },
+   "MT19BB": {
+      "year": 1,
+      "department": "BB",
+      "program": "MT",
+      "strength": 14
+   },
+   "MT19CPS": {
+      "year": 1,
+      "department": "CPS",
+      "program": "MT",
+      "strength": 16
+   },
+   "MT19CS": {
+      "year": 1,
+      "department": "CS",
+      "program": "MT",
+      "strength": 17
+   },
+   "MT19DCS": {
+      "year": 1,
+      "department": "DCS",
+      "program": "MT",
+      "strength": 14
+   },
+   "MT19MT": {
+      "year": 1,
+      "department": "MT",
+      "program": "MT",
+      "strength": 15
+   },
+   "MT19SIOT": {
+      "year": 1,
+      "department": "SIOT",
+      "program": "MT",
+      "strength": 17
+   },
+   "MT19TFE": {
+      "year": 1,
+      "department": "TFE",
+      "program": "MT",
+      "strength": 17
+   },
+   "P14BL": {
+      "year": 6,
+      "department": "BL",
+      "program": "P",
+      "strength": 2
+   },
+   "P14BS": {
+      "year": 6,
+      "department": "BS",
+      "program": "P",
+      "strength": 3
+   },
+   "P14CHM": {
+      "year": 6,
+      "department": "CHM",
+      "program": "P",
+      "strength": 2
+   },
+   "P14CS": {
+      "year": 6,
+      "department": "CS",
+      "program": "P",
+      "strength": 2
+   },
+   "P14EE": {
+      "year": 6,
+      "department": "EE",
+      "program": "P",
+      "strength": 1
+   },
+   "P14EN": {
+      "year": 6,
+      "department": "EN",
+      "program": "P",
+      "strength": 1
+   },
+   "P14ME": {
+      "year": 6,
+      "department": "ME",
+      "program": "P",
+      "strength": 2
+   },
+   "P14PH": {
+      "year": 6,
+      "department": "PH",
+      "program": "P",
+      "strength": 4
+   },
+   "P14SS": {
+      "year": 6,
+      "department": "SS",
+      "program": "P",
+      "strength": 1
+   },
+   "P14VSS": {
+      "year": 6,
+      "department": "VSS",
+      "program": "P",
+      "strength": 4
+   },
+   "P15BL": {
+      "year": 5,
+      "department": "BL",
+      "program": "P",
+      "strength": 1
+   },
+   "P15CS": {
+      "year": 5,
+      "department": "CS",
+      "program": "P",
+      "strength": 1
+   },
+   "P15CY": {
+      "year": 5,
+      "department": "CY",
+      "program": "P",
+      "strength": 7
+   },
+   "P15EE": {
+      "year": 5,
+      "department": "EE",
+      "program": "P",
+      "strength": 6
+   },
+   "P15EE2": {
+      "year": 5,
+      "department": "EE",
+      "program": "P",
+      "strength": 1
+   },
+   "P15HS": {
+      "year": 5,
+      "department": "HS",
+      "program": "P",
+      "strength": 1
+   },
+   "P15MA": {
+      "year": 5,
+      "department": "MA",
+      "program": "P",
+      "strength": 2
+   },
+   "P15ME": {
+      "year": 5,
+      "department": "ME",
+      "program": "P",
+      "strength": 5
+   },
+   "P15PH": {
+      "year": 5,
+      "department": "PH",
+      "program": "P",
+      "strength": 2
+   },
+   "P15VSS": {
+      "year": 5,
+      "department": "VSS",
+      "program": "P",
+      "strength": 6
+   },
+   "P15VSS2": {
+      "year": 5,
+      "department": "VSS",
+      "program": "P",
+      "strength": 1
+   },
+   "P16CS": {
+      "year": 4,
+      "department": "CS",
+      "program": "P",
+      "strength": 2
+   },
+   "P16CY": {
+      "year": 4,
+      "department": "CY",
+      "program": "P",
+      "strength": 2
+   },
+   "P16EE": {
+      "year": 4,
+      "department": "EE",
+      "program": "P",
+      "strength": 2
+   },
+   "P16MA": {
+      "year": 4,
+      "department": "MA",
+      "program": "P",
+      "strength": 1
+   },
+   "P16ME": {
+      "year": 4,
+      "department": "ME",
+      "program": "P",
+      "strength": 5
+   },
+   "P16PH": {
+      "year": 4,
+      "department": "PH",
+      "program": "P",
+      "strength": 2
+   },
+   "P16VSS": {
+      "year": 4,
+      "department": "VSS",
+      "program": "P",
+      "strength": 3
+   },
+   "P17BS": {
+      "year": 3,
+      "department": "BS",
+      "program": "P",
+      "strength": 1
+   },
+   "P17CS": {
+      "year": 3,
+      "department": "CS",
+      "program": "P",
+      "strength": 1
+   },
+   "P17CY": {
+      "year": 3,
+      "department": "CY",
+      "program": "P",
+      "strength": 2
+   },
+   "P17EE": {
+      "year": 3,
+      "department": "EE",
+      "program": "P",
+      "strength": 5
+   },
+   "P17HS": {
+      "year": 3,
+      "department": "HS",
+      "program": "P",
+      "strength": 4
+   },
+   "P17PH": {
+      "year": 3,
+      "department": "PH",
+      "program": "P",
+      "strength": 3
+   },
+   "P18BB": {
+      "year": 2,
+      "department": "BB",
+      "program": "P",
+      "strength": 3
+   },
+   "P18CY": {
+      "year": 2,
+      "department": "CY",
+      "program": "P",
+      "strength": 7
+   },
+   "P18EE": {
+      "year": 2,
+      "department": "EE",
+      "program": "P",
+      "strength": 6
+   },
+   "P18HSS": {
+      "year": 2,
+      "department": "HSS",
+      "program": "P",
+      "strength": 1
+   },
+   "P18MA": {
+      "year": 2,
+      "department": "MA",
+      "program": "P",
+      "strength": 5
+   },
+   "P18ME": {
+      "year": 2,
+      "department": "ME",
+      "program": "P",
+      "strength": 4
+   },
+   "P18MT": {
+      "year": 2,
+      "department": "MT",
+      "program": "P",
+      "strength": 2
+   },
+   "P18PH": {
+      "year": 2,
+      "department": "PH",
+      "program": "P",
+      "strength": 7
+   },
+   "P19BB": {
+      "year": 1,
+      "department": "BB",
+      "program": "P",
+      "strength": 14
+   },
+   "P19CSE": {
+      "year": 1,
+      "department": "CSE",
+      "program": "P",
+      "strength": 12
+   },
+   "P19CY": {
+      "year": 1,
+      "department": "CY",
+      "program": "P",
+      "strength": 12
+   },
+   "P19EE": {
+      "year": 1,
+      "department": "EE",
+      "program": "P",
+      "strength": 18
+   },
+   "P19HSS": {
+      "year": 1,
+      "department": "HSS",
+      "program": "P",
+      "strength": 4
+   },
+   "P19MA": {
+      "year": 1,
+      "department": "MA",
+      "program": "P",
+      "strength": 1
+   },
+   "P19ME": {
+      "year": 1,
+      "department": "ME",
+      "program": "P",
+      "strength": 16
+   },
+   "P19MT": {
+      "year": 1,
+      "department": "MT",
+      "program": "P",
+      "strength": 3
+   },
+   "P19PH": {
+      "year": 1,
+      "department": "PH",
+      "program": "P",
+      "strength": 19
+   },
+   "PG201081": {
+      "year": 1,
+      "department": null,
+      "program": "PG",
+      "strength": 1
+   },
+   "PG201182": {
+      "year": 1,
+      "department": null,
+      "program": "PG",
+      "strength": 1
+   },
+   "PG201282": {
+      "year": 1,
+      "department": null,
+      "program": "PG",
+      "strength": 1
+   },
+   "PG201283": {
+      "year": 1,
+      "department": null,
+      "program": "PG",
+      "strength": 2
+   },
+   "PG201383": {
+      "year": 1,
+      "department": null,
+      "program": "PG",
+      "strength": 3
+   },
+   "PG201384": {
+      "year": 1,
+      "department": null,
+      "program": "PG",
+      "strength": 2
+   }
+}

@@ -1,0 +1,15 @@
+Subject,Name,Faculty Name,Ltp,Credits,Slot,Room
+RE20001,INTRODUCTION TO RELIABILITY ENGINEERING,Monalisa Sarma,2-0-0,2,C2,Classroom 1
+RE30003,INTRODUCTION TO QUALITY,V N Achutha Naikan,2-0-0,2,B2,Classroom 1
+RE60002,RELIABILITY DESIGN,Neeraj Kumar Goyal,3-1-0,4,D4,Classroom 1
+RE60006,MAINTENANCE ENGINEERING,Sanjay Kumar Chaturvedi,3-1-0,4,E4,Classroom 1
+RE60018,FAULT DIAGNOSIS & PREDICTIVE MAINTENANCE,"Rajiv Nandan Rai,V N Achutha Naikan",3-0-0,3,H3,Classroom 1
+RE60024,SOFTWARE RELIABILITY,Neeraj Kumar Goyal,3-0-0,3,A3,Classroom 1
+RE61004,ADVANCED RELIABILITY ENGINEERING,Monalisa Sarma,3-1-0,4,U4,Classroom 1
+RE61008,ROBUST DESIGN FOR QUALITY,Rajiv Nandan Rai,3-1-0,4,F4,Classroom 1
+RE67006,PROJECT ON SYSTEM RELIABILITY/RISK ANALYSIS,Neeraj Kumar Goyal,0-0-6,4,--,
+RE67102,THESIS PART-II,"Monalisa Sarma,Neeraj Kumar Goyal,Rajiv Nandan Rai,Sanjay Kumar Chaturvedi,V N Achutha Naikan",0-0-0,20,--,
+RE68002,COMPREHENSIVE VIVA VOCE,"Monalisa Sarma,Neeraj Kumar Goyal,Rajiv Nandan Rai,Sanjay Kumar Chaturvedi,V N Achutha Naikan",0-0-0,3,--,
+RE69002,SEMINAR-II,V N Achutha Naikan,0-0-3,2,N,Classroom 1
+RE69004,RELIABILITY SIMULATION LABORATORY,Sanjay Kumar Chaturvedi,0-0-3,2,P,Testing Laboratory
+RE69006,RELIABILITY DEMONSTRATION LAB,Neeraj Kumar Goyal,0-0-3,2,X,Testing Laboratory

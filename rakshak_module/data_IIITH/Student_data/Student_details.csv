@@ -1,0 +1,333 @@
+Student index,age,hostel,Mess,year,department,program,batch,inCampus
+0,28,Kadamba Nivas,Kadamba Mess,7,201422649,Ph.D,201422649,1
+1,23,Kadamba Nivas,Kadamba Mess,7,201432634,MS by Research,201432634,1
+2,25,Kadamba Nivas,Yuktahaar Mess,6,201507602,MS by Research,201507602,1
+3,24,Kadamba Nivas,Kadamba Mess,4,20172067,MS by Research,20172067,1
+4,21,Kadamba Nivas,Kadamba Mess,7,201403009,B.Tech,201403009,1
+5,28,Kadamba Nivas,Kadamba Mess,3,2018802005,Ph.D,2018802005,1
+6,24,Kadamba Nivas,Yuktahaar Mess,2,2019710005,MS by Research,2019710005,1
+7,20,Kadamba Nivas,Yuktahaar Mess,7,201431202,B.Tech,201431202,1
+8,23,Kadamba Nivas,Yuktahaar Mess,2,2019900052,PGSSP,2019900052,1
+9,19,Kadamba Nivas,Kadamba Mess,8,201356193,B.Tech,201356193,1
+10,24,Kadamba Nivas,Kadamba Mess,0,I-100748,Intern,I-100748,1
+11,23,Kadamba Nivas,Yuktahaar Mess,0,I-100690,Intern,I-100690,1
+12,24,Kadamba Nivas,Kadamba Mess,3,2018900050,MS by Research,2018900050,1
+13,18,Kadamba Nivas,Yuktahaar Mess,2,2019102053,B.Tech,2019102053,1
+14,19,Kadamba Nivas,Kadamba Mess,2,2019102052,B.Tech,2019102052,1
+15,19,Kadamba Nivas,Yuktahaar Mess,6,201502168,B.Tech,201502168,1
+16,23,Kadamba Nivas,Kadamba Mess,3,2018701024,MS by Research,2018701024,1
+17,21,Kadamba Nivas,Yuktahaar Mess,3,2018102032,B.Tech,2018102032,1
+18,21,Kadamba Nivas,Kadamba Mess,3,2018122001,B.Tech,2018122001,1
+19,21,Kadamba Nivas,Kadamba Mess,3,2018111018,B.Tech,2018111018,1
+20,25,Kadamba Nivas,Kadamba Mess,3,2018702005,MS by Research,2018702005,1
+21,26,Kadamba Nivas,Yuktahaar Mess,4,20172088,MS by Research,20172088,1
+22,18,Kadamba Nivas,Kadamba Mess,3,2018101101,B.Tech,2018101101,1
+23,26,Kadamba Nivas,Kadamba Mess,2,2019701001,MS by Research,2019701001,1
+24,21,Kadamba Nivas,Yuktahaar Mess,3,2018101099,B.Tech,2018101099,1
+25,22,Kadamba Nivas,Kadamba Mess,3,2018101069,B.Tech,2018101069,1
+26,21,Kadamba Nivas,Kadamba Mess,3,2018112001,B.Tech,2018112001,1
+27,21,Kadamba Nivas,Yuktahaar Mess,7,201456113,B.Tech,201456113,1
+28,26,Kadamba Nivas,Kadamba Mess,1,2020701022,MS by Research,2020701022,1
+29,20,Kadamba Nivas,Kadamba Mess,7,201402078,B.Tech,201402078,1
+30,25,Kadamba Nivas,Kadamba Mess,1,2020702006,MS by Research,2020702006,1
+31,24,Kadamba Nivas,Kadamba Mess,1,2020701006,MS by Research,2020701006,1
+32,27,Kadamba Nivas,Kadamba Mess,1,2020701025,MS by Research,2020701025,1
+33,20,Kadamba Nivas,Yuktahaar Mess,4,20171103,B.Tech,20171103,1
+34,26,Kadamba Nivas,Yuktahaar Mess,2,2019702006,MS by Research,2019702006,1
+35,28,Kadamba Nivas,Kadamba Mess,2,2019801003,Ph.D,2019801003,1
+36,25,Kadamba Nivas,Yuktahaar Mess,1,2020900010,PGSSP,2020900010,1
+37,29,Kadamba Nivas,Kadamba Mess,2,2019802001,Ph.D,2019802001,1
+38,20,Kadamba Nivas,Yuktahaar Mess,4,20171151,B.Tech,20171151,1
+39,25,Kadamba Nivas,Kadamba Mess,3,2018701023,MS by Research,2018701023,1
+40,21,Kadamba Nivas,Yuktahaar Mess,2,2019102037,B.Tech,2019102037,1
+41,19,Kadamba Nivas,Kadamba Mess,10,201125172,B.Tech,201125172,1
+42,26,Kadamba Nivas,Kadamba Mess,2,2019702007,MS by Research,2019702007,1
+43,22,Kadamba Nivas,Kadamba Mess,3,2018122010,B.Tech,2018122010,1
+44,21,Kadamba Nivas,Kadamba Mess,5,20161202,B.Tech,20161202,1
+45,26,Kadamba Nivas,Yuktahaar Mess,1,2020701035,MS by Research,2020701035,1
+46,20,Kadamba Nivas,Kadamba Mess,5,20161031,B.Tech,20161031,1
+47,23,Kadamba Nivas,Yuktahaar Mess,2,2019701011,MS by Research,2019701011,1
+48,26,Kadamba Nivas,Yuktahaar Mess,1,2020702009,MS by Research,2020702009,1
+49,18,Kadamba Nivas,Kadamba Mess,9,201202022,B.Tech,201202022,1
+50,25,Kadamba Nivas,Yuktahaar Mess,2,2019702004,MS by Research,2019702004,1
+51,24,Kadamba Nivas,Kadamba Mess,3,2018701010,MS by Research,2018701010,1
+52,25,Kadamba Nivas,Kadamba Mess,3,2018702010,MS by Research,2018702010,1
+53,27,Kadamba Nivas,Kadamba Mess,2,2019810001,Ph.D,2019810001,1
+54,25,Kadamba Nivas,Yuktahaar Mess,2,2019900018,MS by Research,2019900018,1
+55,25,Kadamba Nivas,Yuktahaar Mess,1,2020701019,MS by Research,2020701019,1
+56,24,Kadamba Nivas,Yuktahaar Mess,1,2020701001,MS by Research,2020701001,1
+57,26,Kadamba Nivas,Kadamba Mess,1,2020702013,MS by Research,2020702013,1
+58,26,Kadamba Nivas,Kadamba Mess,1,2020702011,MS by Research,2020702011,1
+59,26,Kadamba Nivas,Yuktahaar Mess,1,2020702010,MS by Research,2020702010,1
+60,26,Kadamba Nivas,Yuktahaar Mess,2,2019701025,MS by Research,2019701025,1
+61,25,Kadamba Nivas,Yuktahaar Mess,1,2020702007,MS by Research,2020702007,1
+62,26,Kadamba Nivas,Kadamba Mess,1,2020900015,PGSSP,2020900015,1
+63,26,Kadamba Nivas,Yuktahaar Mess,2,2019701015,MS by Research,2019701015,1
+64,25,Kadamba Nivas,Kadamba Mess,2,2019201089,MS by Research,2019201089,1
+65,30,Kadamba Nivas,Yuktahaar Mess,4,20172147,Ph.D,20172147,1
+66,25,Kadamba Nivas,Yuktahaar Mess,2,2019701008,MS by Research,2019701008,1
+67,27,Kadamba Nivas,Kadamba Mess,1,2020702018,MS by Research,2020702018,1
+68,27,Kadamba Nivas,Kadamba Mess,1,2020701017,MS by Research,2020701017,1
+69,26,Kadamba Nivas,Kadamba Mess,3,2018702004,MS by Research,2018702004,1
+70,28,Kadamba Nivas,Kadamba Mess,3,2018702008,MS by Research,2018702008,1
+71,25,Kadamba Nivas,Yuktahaar Mess,1,2020701010,MS by Research,2020701010,1
+72,25,Kadamba Nivas,Yuktahaar Mess,2,2019702018,MS by Research,2019702018,1
+73,20,Kadamba Nivas,Kadamba Mess,8,201302029,B.Tech,201302029,1
+74,28,Kadamba Nivas,Yuktahaar Mess,2,2019811001,Ph.D,2019811001,1
+75,26,Kadamba Nivas,Kadamba Mess,1,2020701005,MS by Research,2020701005,1
+76,26,Kadamba Nivas,Kadamba Mess,2,2019702005,MS by Research,2019702005,1
+77,26,Kadamba Nivas,Yuktahaar Mess,3,2018900069,MS by Research,2018900069,1
+78,26,Kadamba Nivas,Kadamba Mess,1,2020701024,MS by Research,2020701024,1
+79,26,Kadamba Nivas,Kadamba Mess,2,2019701006,MS by Research,2019701006,1
+80,20,Kadamba Nivas,Kadamba Mess,12,200902041,B.Tech,200902041,1
+81,26,Kadamba Nivas,Yuktahaar Mess,2,2019701014,MS by Research,2019701014,1
+82,26,Kadamba Nivas,Kadamba Mess,3,2018702006,MS by Research,2018702006,1
+83,26,Kadamba Nivas,Kadamba Mess,1,2020702023,MS by Research,2020702023,1
+84,26,Kadamba Nivas,Kadamba Mess,3,2018701019,MS by Research,2018701019,1
+85,25,Kadamba Nivas,Yuktahaar Mess,3,2018701015,MS by Research,2018701015,1
+86,24,Kadamba Nivas,Yuktahaar Mess,1,2020710001,MS by Research,2020710001,1
+87,26,Kadamba Nivas,Kadamba Mess,1,2020702004,MS by Research,2020702004,1
+88,27,Kadamba Nivas,Yuktahaar Mess,1,2020702001,MS by Research,2020702001,1
+89,28,Kadamba Nivas,Kadamba Mess,1,2020702017,MS by Research,2020702017,1
+90,30,Kadamba Nivas,Kadamba Mess,3,2018701012,MS by Research,2018701012,1
+91,25,Kadamba Nivas,Kadamba Mess,2,2019702016,MS by Research,2019702016,1
+92,19,Kadamba Nivas,Kadamba Mess,1,2020101058,B.Tech,2020101058,1
+93,19,Kadamba Nivas,Kadamba Mess,1,2020102063,B.Tech,2020102063,1
+94,20,Kadamba Nivas,Kadamba Mess,1,2020101104,B.Tech,2020101104,1
+95,18,Kadamba Nivas,Kadamba Mess,1,2020102062,B.Tech,2020102062,1
+96,24,Kadamba Nivas,Yuktahaar Mess,0,I-100759,Intern,I-100759,1
+97,20,Kadamba Nivas,Kadamba Mess,4,20171087,B.Tech,20171087,1
+98,21,Kadamba Nivas,Kadamba Mess,4,20171038,B.Tech,20171038,1
+99,25,Kadamba Nivas,Yuktahaar Mess,1,2020701027,MS by Research,2020701027,1
+100,24,Kadamba Nivas,Kadamba Mess,2,2019701010,MS by Research,2019701010,1
+101,21,Kadamba Nivas,Kadamba Mess,4,20171116,B.Tech,20171116,1
+102,23,Kadamba Nivas,Kadamba Mess,5,20162049,MS by Research,20162049,1
+103,26,Kadamba Nivas,Yuktahaar Mess,5,20162311,Ph.D,20162311,1
+104,25,Kadamba Nivas,Kadamba Mess,2,2019701003,MS by Research,2019701003,1
+105,29,Kadamba Nivas,Kadamba Mess,4,20172153,Ph.D,20172153,1
+106,23,Kadamba Nivas,Kadamba Mess,0,I-100769,Intern,I-100769,1
+107,20,Kadamba Nivas,Yuktahaar Mess,1,2020101106,B.Tech,2020101106,1
+108,19,Kadamba Nivas,Yuktahaar Mess,6,201502059,B.Tech,201502059,1
+109,30,Kadamba Nivas,Kadamba Mess,4,20172148,Ph.D,20172148,1
+110,21,Kadamba Nivas,Kadamba Mess,1,2020111022,B.Tech,2020111022,1
+111,24,Kadamba Nivas,Kadamba Mess,2,2019702017,MS by Research,2019702017,1
+112,25,Kadamba Nivas,Yuktahaar Mess,3,2018701007,MS by Research,2018701007,1
+113,28,Parijat Nivas,Yuktahaar Mess,12,200999003,Ph.D,200999003,1
+114,29,Parijat Nivas,Kadamba Mess,4,20172078,Ph.D,20172078,1
+115,23,Parijat Nivas,Yuktahaar Mess,4,20172157,MS by Research,20172157,1
+116,25,Parijat Nivas,Kadamba Mess,2,2019702008,MS by Research,2019702008,1
+117,20,Parijat Nivas,Kadamba Mess,3,2018113004,B.Tech,2018113004,1
+118,19,Parijat Nivas,Kadamba Mess,3,2018101118,B.Tech,2018101118,1
+119,19,Parijat Nivas,Kadamba Mess,3,2018122007,B.Tech,2018122007,1
+120,25,Parijat Nivas,Kadamba Mess,1,2020702021,MS by Research,2020702021,1
+121,25,Parijat Nivas,Kadamba Mess,3,2018701020,MS by Research,2018701020,1
+122,21,Parijat Nivas,Kadamba Mess,9,201256138,B.Tech,201256138,1
+123,21,Parijat Nivas,Yuktahaar Mess,1,2020101098,B.Tech,2020101098,1
+124,18,Parijat Nivas,Kadamba Mess,1,2020101101,B.Tech,2020101101,1
+125,17,Parijat Nivas,Kadamba Mess,4,20171027,B.Tech,20171027,1
+126,21,Parijat Nivas,Kadamba Mess,3,2018101116,B.Tech,2018101116,1
+127,20,Parijat Nivas,Kadamba Mess,5,20161167,B.Tech,20161167,1
+128,20,Parijat Nivas,Kadamba Mess,5,20161224,B.Tech,20161224,1
+129,20,Parijat Nivas,Yuktahaar Mess,2,2019101100,B.Tech,2019101100,1
+130,19,Parijat Nivas,Kadamba Mess,2,2019101102,B.Tech,2019101102,1
+131,20,Parijat Nivas,Yuktahaar Mess,2,2019101098,B.Tech,2019101098,1
+132,25,Parijat Nivas,Yuktahaar Mess,2,2019702001,MS by Research,2019702001,1
+133,26,Parijat Nivas,Kadamba Mess,2,2019701020,MS by Research,2019701020,1
+134,24,Parijat Nivas,Yuktahaar Mess,3,2018701008,MS by Research,2018701008,1
+135,24,Parijat Nivas,Kadamba Mess,1,2020702005,MS by Research,2020702005,1
+136,28,Parijat Nivas,Kadamba Mess,1,2020702020,MS by Research,2020702020,1
+137,30,Parijat Nivas,Kadamba Mess,2,2019801006,Ph.D,2019801006,1
+138,20,Parijat Nivas,Yuktahaar Mess,6,201556206,B.Tech,201556206,1
+139,26,Parijat Nivas,Yuktahaar Mess,2,2019900003,MS by Research,2019900003,1
+140,26,Parijat Nivas,Yuktahaar Mess,2,2019701005,MS by Research,2019701005,1
+141,26,Parijat Nivas,Yuktahaar Mess,1,2020810001,Ph.D,2020810001,1
+142,25,Parijat Nivas,Kadamba Mess,2,2019701024,MS by Research,2019701024,1
+143,21,Parijat Nivas,Kadamba Mess,3,2018102048,B.Tech,2018102048,1
+144,20,Parijat Nivas,Yuktahaar Mess,5,20161048,B.Tech,20161048,1
+145,29,Parijat Nivas,Kadamba Mess,1,2020801007,Ph.D,2020801007,1
+146,25,Parijat Nivas,Yuktahaar Mess,1,2020701013,MS by Research,2020701013,1
+147,25,Parijat Nivas,Kadamba Mess,2,2019702002,MS by Research,2019702002,1
+148,23,Parijat Nivas,Yuktahaar Mess,0,I-100757,Project Interns,I-100757,1
+149,20,Parijat Nivas,Kadamba Mess,5,20161231,B.Tech,20161231,1
+150,20,Parijat Nivas,Yuktahaar Mess,2,2019101055,B.Tech,2019101055,1
+151,21,Parijat Nivas,Kadamba Mess,7,201402222,B.Tech,201402222,1
+152,20,Parijat Nivas,Kadamba Mess,5,20161004,B.Tech,20161004,1
+153,26,Parijat Nivas,Kadamba Mess,2,2019702014,MS by Research,2019702014,1
+154,29,Parijat Nivas,Kadamba Mess,3,2018802008,Ph.D,2018802008,1
+155,20,Parijat Nivas,Kadamba Mess,5,20161160,B.Tech,20161160,1
+156,25,Parijat Nivas,Kadamba Mess,2,2019701007,MS by Research,2019701007,1
+157,21,Parijat Nivas,Yuktahaar Mess,6,201556003,B.Tech,201556003,1
+158,26,Parijat Nivas,Kadamba Mess,2,2019710004,MS by Research,2019710004,1
+159,25,Parijat Nivas,Kadamba Mess,1,2020702015,MS by Research,2020702015,1
+160,29,Parijat Nivas,Kadamba Mess,1,2020812001,Ph.D,2020812001,1
+161,20,Parijat Nivas,Kadamba Mess,2,2019121004,B.Tech,2019121004,1
+162,21,Parijat Nivas,Kadamba Mess,2,2019101104,B.Tech,2019101104,1
+163,19,Parijat Nivas,Yuktahaar Mess,1,2020102061,B.Tech,2020102061,1
+164,20,Parijat Nivas,Kadamba Mess,1,2020101103,B.Tech,2020101103,1
+165,23,Parijat Nivas,Yuktahaar Mess,0,I-100760,Intern,I-100760,1
+166,22,Parijat Nivas,Kadamba Mess,1,2020101107,B.Tech,2020101107,1
+167,28,Parijat Nivas,Kadamba Mess,3,2018701002,MS by Research,2018701002,1
+168,20,Parijat Nivas,Kadamba Mess,6,201556143,B.Tech,201556143,1
+169,19,Parijat Nivas,Yuktahaar Mess,2,2019111035,B.Tech,2019111035,1
+170,23,Parijat Nivas,Yuktahaar Mess,0,I-100763,intern,I-100763,1
+171,23,Parijat Nivas,Kadamba Mess,0,I-100764,Intern,I-100764,1
+172,25,Parijat Nivas,Kadamba Mess,0,I-100768,Intern,I-100768,1
+173,24,Parijat Nivas,Kadamba Mess,1,2020702012,MS by Research,2020702012,1
+174,26,Parijat Nivas,Yuktahaar Mess,1,2020201056,M.Tech,2020201056,1
+175,20,Parijat Nivas,Yuktahaar Mess,6,201516045,B.Tech,201516045,1
+176,20,Parijat Nivas,Kadamba Mess,4,20171095,B.Tech,20171095,1
+177,26,Parijat Nivas,Yuktahaar Mess,1,2020201063,M.Tech,2020201063,1
+178,21,Parijat Nivas,Kadamba Mess,2,2019113006,B.Tech,2019113006,1
+179,31,Parijat Nivas,Kadamba Mess,4,20172145,Ph.D,20172145,1
+180,20,Parijat Nivas,Kadamba Mess,1,2020102012,B.Tech,2020102012,1
+181,18,Parijat Nivas,Kadamba Mess,4,20171165,B.Tech,20171165,1
+182,20,Parijat Nivas,Kadamba Mess,4,20171006,B.Tech,20171006,1
+183,20,Parijat Nivas,Kadamba Mess,2,2019122001,B.Tech,2019122001,1
+184,20,Parijat Nivas,Kadamba Mess,4,20171137,B.Tech,20171137,1
+185,19,Parijat Nivas,Yuktahaar Mess,4,20171175,B.Tech,20171175,1
+186,19,Parijat Nivas,Kadamba Mess,4,20171111,B.Tech,20171111,1
+187,19,Parijat Nivas,Kadamba Mess,3,2018101112,B.Tech,2018101112,1
+188,20,Parijat Nivas,Kadamba Mess,3,2018101115,B.Tech,2018101115,1
+189,26,Parijat Nivas,Kadamba Mess,3,2018711001,MS by Research,2018711001,1
+190,21,Parijat Nivas,Kadamba Mess,3,2018101093,B.Tech,2018101093,1
+191,28,Parijat Nivas,Yuktahaar Mess,3,2018802001,Ph.D,2018802001,1
+192,26,Parijat Nivas,Kadamba Mess,1,2020201048,M.Tech,2020201048,1
+193,20,Parijat Nivas,Yuktahaar Mess,3,2018101050,B.Tech,2018101050,1
+194,20,Parijat Nivas,Yuktahaar Mess,4,20171135,B.Tech,20171135,1
+195,22,Parijat Nivas,Kadamba Mess,7,201402182,Dual Degree,201402182,1
+196,26,Parijat Nivas,Yuktahaar Mess,0,Project Staff,TSIC,Project Staff,1
+197,20,Palash Nivas,South Mess,3,2018101090,B.Tech,2018101090,1
+198,21,Palash Nivas,South Mess,3,2018111025,B.Tech,2018111025,1
+199,26,Palash Nivas,South Mess,2,2019201011,M.Tech,2019201011,1
+200,20,Palash Nivas,South Mess,1,2020102058,B.Tech,2020102058,1
+201,19,Palash Nivas,South Mess,3,2018121004,B.Tech,2018121004,1
+202,21,Palash Nivas,South Mess,6,201502183,B.Tech,201502183,1
+203,21,Palash Nivas,South Mess,2,2019102026,B.Tech,2019102026,1
+204,21,Palash Nivas,South Mess,3,2018114012,B.Tech,2018114012,1
+205,26,Palash Nivas,South Mess,2,2019201049,M.Tech,2019201049,1
+206,21,Palash Nivas,South Mess,4,20171130,B.Tech,20171130,1
+207,20,Palash Nivas,South Mess,5,20161081,B.Tech,20161081,1
+208,19,Palash Nivas,South Mess,3,2018102003,B.Tech,2018102003,1
+209,20,Palash Nivas,South Mess,3,2018102001,B.Tech,2018102001,1
+210,20,Palash Nivas,South Mess,3,2018111017,B.Tech,2018111017,1
+211,19,Palash Nivas,South Mess,5,20161122,B.Tech,20161122,1
+212,19,Palash Nivas,South Mess,9,201256067,B.Tech,201256067,1
+213,20,Palash Nivas,South Mess,5,20161220,B.Tech,20161220,1
+214,21,Palash Nivas,South Mess,5,20161020,B.Tech,20161020,1
+215,18,Palash Nivas,South Mess,5,20161192,B.Tech,20161192,1
+216,20,Palash Nivas,South Mess,5,20161211,B.Tech,20161211,1
+217,21,Palash Nivas,South Mess,3,2018102047,B.Tech,2018102047,1
+218,22,Palash Nivas,South Mess,4,20171013,B.Tech,20171013,1
+219,21,Palash Nivas,South Mess,2,2019102039,B.Tech,2019102039,1
+220,21,Palash Nivas,South Mess,5,20161163,B.Tech,20161163,1
+221,21,Palash Nivas,South Mess,2,2019102033,B.Tech,2019102033,1
+222,21,Palash Nivas,South Mess,2,2019102038,B.Tech,2019102038,1
+223,22,Palash Nivas,South Mess,2,2019112025,B.Tech,2019112025,1
+224,20,Palash Nivas,South Mess,2,2019112011,B.Tech,2019112011,1
+225,21,Palash Nivas,South Mess,4,20171402,B.Tech,20171402,1
+226,21,Palash Nivas,South Mess,3,2018114008,B.Tech,2018114008,1
+227,21,Palash Nivas,South Mess,5,20161028,B.Tech,20161028,1
+228,19,Palash Nivas,South Mess,4,20171405,B.Tech,20171405,1
+229,20,Palash Nivas,South Mess,3,2018114014,B.Tech,2018114014,1
+230,20,Palash Nivas,South Mess,3,2018112005,B.Tech,2018112005,1
+231,21,Palash Nivas,South Mess,5,20161063,B.Tech,20161063,1
+232,22,Palash Nivas,South Mess,4,20171311,ECD,20171311,1
+233,25,Palash Nivas,South Mess,6,201516174,BSL,201516174,1
+234,25,Palash Nivas,South Mess,4,20171035,CVIT,20171035,1
+235,21,Palash Nivas,South Mess,3,2018111028,B.Tech,2018111028,1
+236,22,Palash Nivas,South Mess,5,20161237,CED,20161237,1
+237,23,Palash Nivas,South Mess,3,2018111001,CSD,2018111001,1
+238,22,Palash Nivas,South Mess,-150,2171157,ECD,2171157,1
+239,23,Palash Nivas,South Mess,5,20161088,CSD,20161088,1
+240,21,Palash Nivas,South Mess,3,2018114017,CLD,2018114017,1
+241,22,Palash Nivas,South Mess,3,2018111024,CSD,2018111024,1
+242,20,Palash Nivas,South Mess,4,20171132,CSE,20171132,1
+243,21,Palash Nivas,South Mess,6,201531085,ECD,201531085,1
+244,21,Palash Nivas,South Mess,6,201564223,CND,201564223,1
+245,21,Palash Nivas,South Mess,4,20171060,CND,20171060,1
+246,21,Palash Nivas,South Mess,4,20171148,CND,20171148,1
+247,22,Palash Nivas,South Mess,4,20171177,CND,20171177,1
+248,23,Palash Nivas,South Mess,3,2018113007,CND,2018113007,1
+249,22,Palash Nivas,South Mess,2,2019121011,LCD,2019121011,1
+250,21,Palash Nivas,South Mess,4,20171007,CSD,20171007,1
+251,21,Palash Nivas,South Mess,4,20171144,CSE,20171144,1
+252,22,Palash Nivas,South Mess,4,20171194,CND,20171194,1
+253,21,Palash Nivas,South Mess,3,201814026,CSD,201814026,1
+254,22,Palash Nivas,South Mess,1,2020102025,ECE,2020102025,1
+255,21,Palash Nivas,South Mess,3,2018101108,CSE,2018101108,1
+256,21,Palash Nivas,South Mess,3,2018111003,CSD,2018111003,1
+257,22,Palash Nivas,South Mess,3,2018114005,CLD,2018114005,1
+258,20,Palash Nivas,South Mess,3,2018101077,CSE,2018101077,1
+259,21,Palash Nivas,South Mess,3,2018101073,CSE,2018101073,1
+260,20,Palash Nivas,South Mess,3,2018101075,CSE,2018101075,1
+261,21,Palash Nivas,South Mess,3,2018101025,CSE,2018101025,1
+262,22,Palash Nivas,South Mess,3,2018111027,CSD,2018111027,1
+263,21,Palash Nivas,South Mess,4,20171129,CSD,20171129,1
+264,25,Palash Nivas,South Mess,1,202020100,M.Tech,202020100,1
+265,23,Palash Nivas,South Mess,3,2018111007,CSD,2018111007,1
+266,21,Palash Nivas,South Mess,1,202012014,ECE,202012014,1
+267,22,Palash Nivas,South Mess,1,2020201038,CSE,2020201038,1
+268,21,Palash Nivas,South Mess,3,2018102029,ECE,2018102029,1
+269,25,Palash Nivas,South Mess,1,2020202001,M.Tech,2020202001,1
+270,21,Palash Nivas,South Mess,2,201912020,ECE,201912020,1
+271,20,Palash Nivas,South Mess,3,2018102034,ECE,2018102034,1
+272,21,Palash Nivas,South Mess,4,20171052,CSE,20171052,1
+273,20,Palash Nivas,South Mess,4,20171042,ECE,20171042,1
+274,22,Palash Nivas,South Mess,4,20171211,ECD,20171211,1
+275,21,Palash Nivas,South Mess,4,20171084,CSE,20171084,1
+276,21,Palash Nivas,South Mess,4,20171172,ECE,20171172,1
+277,21,Palash Nivas,South Mess,4,20171067,CSE,20171067,1
+278,21,Palash Nivas,South Mess,4,20171138,CSE,20171138,1
+279,21,Palash Nivas,South Mess,4,20171136,ECE,20171136,1
+280,20,Palash Nivas,South Mess,4,20171049,ECE,20171049,1
+281,20,Palash Nivas,South Mess,4,20171213,CSE,20171213,1
+282,20,Palash Nivas,South Mess,4,20171185,CSE,20171185,1
+283,21,Palash Nivas,South Mess,4,20171020,CND,20171020,1
+284,21,Palash Nivas,South Mess,4,20171205,ECE,20171205,1
+285,21,Palash Nivas,South Mess,3,2018101088,CSE,2018101088,1
+286,23,Palash Nivas,South Mess,3,2018111011,CSD,2018111011,1
+287,24,Palash Nivas,South Mess,3,2018114009,CLD,2018114009,1
+288,21,Palash Nivas,South Mess,3,2018102022,Project Interns,2018102022,1
+289,23,Palash Nivas,South Mess,3,2018111008,Project Interns,2018111008,1
+290,22,Palash Nivas,South Mess,6,201525177,CLD,201525177,1
+291,21,Palash Nivas,South Mess,3,2018101078,CSE,2018101078,1
+292,20,Palash Nivas,South Mess,3,2018101100,CSE,2018101100,1
+293,22,Palash Nivas,South Mess,3,2018111006,CSD,2018111006,1
+294,21,Palash Nivas,South Mess,4,20171048,CSE,20171048,1
+295,21,Palash Nivas,South Mess,3,2018101085,CSE,2018101085,1
+296,23,Palash Nivas,South Mess,0,Project Staff,Project Interns,Project Staff,1
+297,25,Palash Nivas,South Mess,0,Project Staff,Project Interns,Project Staff,1
+298,24,Palash Nivas,South Mess,0,Project Staff,Project Interns,Project Staff,1
+299,23,Palash Nivas,South Mess,0,Project Staff,Project Interns,Project Staff,1
+300,31,Palash Nivas,South Mess,0,CIvil Staff,civil staff,CIvil Staff,1
+301,22,Palash Nivas,South Mess,0,Project Staff,Project Interns,Project Staff,1
+302,21,Palash Nivas,South Mess,0,Project Staff,Project Interns,Project Staff,1
+303,22,Palash Nivas,South Mess,0,Project Staff,Project Interns,Project Staff,1
+304,23,Palash Nivas,South Mess,0,Project Staff,Project Interns,Project Staff,1
+305,24,Palash Nivas,South Mess,0,Project Staff,intern,Project Staff,1
+306,21,Palash Nivas,South Mess,0,Project Staff,B.Tec EcE,Project Staff,1
+307,22,Palash Nivas,South Mess,0,Project Staff,B tech,Project Staff,1
+308,23,Palash Nivas,South Mess,0,Project Staff,ECD,Project Staff,1
+309,24,Palash Nivas,South Mess,0,Project Staff,Project Intern,Project Staff,1
+310,25,Palash Nivas,South Mess,0,Project Staff,Project Intern,Project Staff,1
+311,22,Palash Nivas,South Mess,0,Project Staff,CSD,Project Staff,1
+312,21,Palash Nivas,South Mess,0,Project Staff,CSE,Project Staff,1
+313,25,Palash Nivas,South Mess,2,2019201036,M-Tech,2019201036,1
+314,26,Palash Nivas,South Mess,2,2019201067,M-Tech,2019201067,1
+315,26,Palash Nivas,South Mess,2,2019201014,M-Tech,2019201014,1
+316,25,Palash Nivas,South Mess,3,2018122002,MS ECO,2018122002,1
+317,21,Palash Nivas,South Mess,4,20171182,B-Tech,20171182,1
+318,20,Palash Nivas,South Mess,4,20171105,B-Tech,20171105,1
+319,25,Palash Nivas,South Mess,2,201921029,M-Tech,201921029,1
+320,26,Palash Nivas,South Mess,2,2019201080,M-Tech,2019201080,1
+321,25,Palash Nivas,South Mess,2,2019201007,M-Tech,2019201007,1
+322,28,Palash Nivas,South Mess,2,2019201060,M-Tech,2019201060,1
+323,24,Palash Nivas,South Mess,2,2019210016,M-Tech,2019210016,1
+324,20,Palash Nivas,South Mess,4,20171110,B-Tech,20171110,1
+325,21,Palash Nivas,South Mess,4,20171125,B-Tech,20171125,1
+326,21,Palash Nivas,South Mess,4,20171160,B-Tech,20171160,1
+327,21,Palash Nivas,South Mess,4,20171039,B-Tech,20171039,1
+328,20,Palash Nivas,South Mess,4,20171178,B-Tech,20171178,1
+329,26,Kadamba Nivas,Kadamba Mess,2,2019702013,MS by Research,2019702013,0
+330,21,Kadamba Nivas,Kadamba Mess,2,2020801008,B.Tech,2020801008,0
+331,26,Kadamba Nivas,Kadamba Mess,3,2019202009,M.Tech,2019202009,0

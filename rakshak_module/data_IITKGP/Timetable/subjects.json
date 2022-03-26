@@ -1,0 +1,9358 @@
+{
+   "AE21002": {
+      "room": "NA",
+      "slots": [
+         "E4"
+      ],
+      "strength": 55
+   },
+   "AE21004": {
+      "room": "NA",
+      "slots": [
+         "C4"
+      ],
+      "strength": 55
+   },
+   "AE21008": {
+      "room": "NA",
+      "slots": [
+         "F3"
+      ],
+      "strength": 62
+   },
+   "AE29002": {
+      "room": "NA",
+      "slots": [
+         "J"
+      ],
+      "strength": 53
+   },
+   "AE29004": {
+      "room": "NA",
+      "slots": [
+         "L"
+      ],
+      "strength": 53
+   },
+   "AE31002": {
+      "room": "NA",
+      "slots": [
+         "E4"
+      ],
+      "strength": 46
+   },
+   "AE31004": {
+      "room": "NA",
+      "slots": [
+         "D4"
+      ],
+      "strength": 40
+   },
+   "AE31006": {
+      "room": "NA",
+      "slots": [
+         "V3"
+      ],
+      "strength": 42
+   },
+   "AE31008": {
+      "room": "NA",
+      "slots": [
+         "C4"
+      ],
+      "strength": 42
+   },
+   "AE31010": {
+      "room": "NA",
+      "slots": [
+         "F4"
+      ],
+      "strength": 45
+   },
+   "AE39002": {
+      "room": "NA",
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "AE39004": {
+      "room": "NA",
+      "slots": [
+         "L"
+      ],
+      "strength": 42
+   },
+   "AE40006": {
+      "room": "NA",
+      "slots": [
+         "H3"
+      ],
+      "strength": 13
+   },
+   "AE40008": {
+      "room": "NA",
+      "slots": [
+         "C3"
+      ],
+      "strength": 6
+   },
+   "AE40010": {
+      "room": "NA",
+      "slots": [
+         "B3"
+      ],
+      "strength": 6
+   },
+   "AE40018": {
+      "room": "NA",
+      "slots": [
+         "D3"
+      ],
+      "strength": 22
+   },
+   "AE40030": {
+      "room": "NA",
+      "slots": [
+         "V3"
+      ],
+      "strength": 24
+   },
+   "AE40033": {
+      "room": "NA",
+      "slots": [
+         "D3"
+      ],
+      "strength": 31
+   },
+   "AE40034": {
+      "room": "NA",
+      "slots": [
+         "B3"
+      ],
+      "strength": 12
+   },
+   "AE47005": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AE47006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AE47007": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AE48002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AE49012": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 46
+   },
+   "AE51002": {
+      "room": "NA",
+      "slots": [
+         "V3"
+      ],
+      "strength": "NA"
+   },
+   "AE51007": {
+      "room": "NA",
+      "slots": [
+         "U3"
+      ],
+      "strength": 30
+   },
+   "AE51016": {
+      "room": "NA",
+      "slots": [
+         "S3"
+      ],
+      "strength": 0
+   },
+   "AE51018": {
+      "room": "NA",
+      "slots": [
+         "G3"
+      ],
+      "strength": 0
+   },
+   "AE51019": {
+      "room": "NA",
+      "slots": [
+         "F3"
+      ],
+      "strength": 12
+   },
+   "AE51024": {
+      "room": "NA",
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "AE51026": {
+      "room": "NA",
+      "slots": [
+         "A3"
+      ],
+      "strength": 19
+   },
+   "AE57003": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AE57004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AE58001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AE58002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AE60006": {
+      "room": "NA",
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "AE60022": {
+      "room": "NA",
+      "slots": [
+         "V3"
+      ],
+      "strength": "NA"
+   },
+   "AE60024": {
+      "room": "NA",
+      "slots": [
+         "U3"
+      ],
+      "strength": 0
+   },
+   "AE60036": {
+      "room": "NA",
+      "slots": [
+         "S3"
+      ],
+      "strength": 0
+   },
+   "AG29004": {
+      "room": "NA",
+      "slots": [
+         "S3",
+         " J",
+         " L"
+      ],
+      "strength": 48
+   },
+   "AG31002": {
+      "room": "NA",
+      "slots": [
+         "A3"
+      ],
+      "strength": 53
+   },
+   "AG31004": {
+      "room": "NA",
+      "slots": [
+         "C4"
+      ],
+      "strength": 50
+   },
+   "AG31006": {
+      "room": "NA",
+      "slots": [
+         "E4"
+      ],
+      "strength": 49
+   },
+   "AG31008": {
+      "room": "NA",
+      "slots": [
+         "D4"
+      ],
+      "strength": 52
+   },
+   "AG31026": {
+      "room": "NA",
+      "slots": [
+         "G3"
+      ],
+      "strength": 30
+   },
+   "AG39002": {
+      "room": "NA",
+      "slots": [
+         "P",
+         " N"
+      ],
+      "strength": 51
+   },
+   "AG39004": {
+      "room": "NA",
+      "slots": [
+         "P",
+         " N"
+      ],
+      "strength": 51
+   },
+   "AG39006": {
+      "room": "NA",
+      "slots": [
+         "J",
+         " L"
+      ],
+      "strength": 46
+   },
+   "AG40018": {
+      "room": "NA",
+      "slots": [
+         "G3"
+      ],
+      "strength": 0
+   },
+   "AG40032": {
+      "room": "NA",
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "AG60002": {
+      "room": "NA",
+      "slots": [
+         "S3",
+         " A3"
+      ],
+      "strength": 4
+   },
+   "AG60004": {
+      "room": "NA",
+      "slots": [
+         "D4"
+      ],
+      "strength": 4
+   },
+   "AG60008": {
+      "room": "NA",
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "AG60010": {
+      "room": "NA",
+      "slots": [
+         "C4"
+      ],
+      "strength": "NA"
+   },
+   "AG60032": {
+      "room": "NA",
+      "slots": [
+         "E4"
+      ],
+      "strength": 14
+   },
+   "AG60042": {
+      "room": "NA",
+      "slots": [
+         "C4"
+      ],
+      "strength": 1
+   },
+   "AG60046": {
+      "room": "NA",
+      "slots": [
+         "A3"
+      ],
+      "strength": 0
+   },
+   "AG60062": {
+      "room": "NA",
+      "slots": [
+         "E4"
+      ],
+      "strength": 0
+   },
+   "AG60064": {
+      "room": "NA",
+      "slots": [
+         "D4"
+      ],
+      "strength": 25
+   },
+   "AG60080": {
+      "room": "NA",
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "AG60082": {
+      "room": "NA",
+      "slots": [
+         "S3",
+         " B3"
+      ],
+      "strength": 3
+   },
+   "AG60092": {
+      "room": "NA",
+      "slots": [
+         "C4"
+      ],
+      "strength": 0
+   },
+   "AG60094": {
+      "room": "NA",
+      "slots": [
+         "E4"
+      ],
+      "strength": 0
+   },
+   "AG60096": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 30
+   },
+   "AG60100": {
+      "room": "NA",
+      "slots": [
+         "F4"
+      ],
+      "strength": 13
+   },
+   "AG60104": {
+      "room": "NA",
+      "slots": [
+         "S3",
+         " A3"
+      ],
+      "strength": 0
+   },
+   "AG60124": {
+      "room": "NA",
+      "slots": [
+         "A3"
+      ],
+      "strength": 12
+   },
+   "AG60132": {
+      "room": "NA",
+      "slots": [
+         "C4"
+      ],
+      "strength": 0
+   },
+   "AG60164": {
+      "room": "NA",
+      "slots": [
+         "D4"
+      ],
+      "strength": 40
+   },
+   "AG60170": {
+      "room": "NA",
+      "slots": [
+         "D4"
+      ],
+      "strength": 0
+   },
+   "AG60302": {
+      "room": "NA",
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "AG61654": {
+      "room": "NA",
+      "slots": [
+         "S3",
+         " G3"
+      ],
+      "strength": "NA"
+   },
+   "AG69004": {
+      "room": "NA",
+      "slots": [
+         "J"
+      ],
+      "strength": 4
+   },
+   "AG69008": {
+      "room": "NA",
+      "slots": [
+         "J",
+         " L"
+      ],
+      "strength": 17
+   },
+   "AG69010": {
+      "room": "NA",
+      "slots": [
+         "J",
+         " L"
+      ],
+      "strength": 0
+   },
+   "AG69014": {
+      "room": "NA",
+      "slots": [
+         "N"
+      ],
+      "strength": 0
+   },
+   "AG69020": {
+      "room": "NA",
+      "slots": [
+         "L"
+      ],
+      "strength": 0
+   },
+   "AG69024": {
+      "room": "NA",
+      "slots": [
+         "J"
+      ],
+      "strength": 1
+   },
+   "AG69102": {
+      "room": "NA",
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "AG69202": {
+      "room": "NA",
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "AG69302": {
+      "room": "NA",
+      "slots": [
+         "P",
+         " N"
+      ],
+      "strength": "NA"
+   },
+   "AG69402": {
+      "room": "NA",
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "AG69602": {
+      "room": "NA",
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "AI60002": {
+      "room": [
+         "NC233"
+      ],
+      "slots": [
+         "H3"
+      ],
+      "strength": "NA"
+   },
+   "AI61002": {
+      "room": [
+         "NR222"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": "NA"
+   },
+   "AI61005": {
+      "room": [
+         "NR123"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "AR12002": {
+      "room": "NA",
+      "slots": [
+         "C3"
+      ],
+      "strength": "NA"
+   },
+   "AR13202": {
+      "room": "NA",
+      "slots": [
+         "P",
+         " N"
+      ],
+      "strength": "NA"
+   },
+   "AR13204": {
+      "room": "NA",
+      "slots": [
+         "O"
+      ],
+      "strength": "NA"
+   },
+   "AR22004": {
+      "room": "NA",
+      "slots": [
+         "E3"
+      ],
+      "strength": 36
+   },
+   "AR22006": {
+      "room": "NA",
+      "slots": [
+         "S3"
+      ],
+      "strength": 36
+   },
+   "AR23202": {
+      "room": "NA",
+      "slots": [
+         "O"
+      ],
+      "strength": 40
+   },
+   "AR23204": {
+      "room": "NA",
+      "slots": [
+         "N"
+      ],
+      "strength": 37
+   },
+   "AR23206": {
+      "room": "NA",
+      "slots": [
+         "Q"
+      ],
+      "strength": 36
+   },
+   "AR32002": {
+      "room": "NA",
+      "slots": [
+         "C3"
+      ],
+      "strength": 42
+   },
+   "AR32004": {
+      "room": "NA",
+      "slots": [
+         "F3"
+      ],
+      "strength": 38
+   },
+   "AR32008": {
+      "room": "NA",
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "AR33202": {
+      "room": "NA",
+      "slots": [
+         "N"
+      ],
+      "strength": 38
+   },
+   "AR33204": {
+      "room": "NA",
+      "slots": [
+         "P"
+      ],
+      "strength": 35
+   },
+   "AR33206": {
+      "room": "NA",
+      "slots": [
+         "X"
+      ],
+      "strength": 35
+   },
+   "AR48008": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 41
+   },
+   "AR48012": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 41
+   },
+   "AR48014": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 41
+   },
+   "AR48016": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 41
+   },
+   "AR48018": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 41
+   },
+   "AR51004": {
+      "room": "NA",
+      "slots": [
+         "F3"
+      ],
+      "strength": 33
+   },
+   "AR52002": {
+      "room": "NA",
+      "slots": [
+         "G3"
+      ],
+      "strength": 33
+   },
+   "AR52010": {
+      "room": "NA",
+      "slots": [
+         "B3"
+      ],
+      "strength": 23
+   },
+   "AR57002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AR57102": {
+      "room": "NA",
+      "slots": [
+         "J"
+      ],
+      "strength": 33
+   },
+   "AR58004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 33
+   },
+   "AR58102": {
+      "room": "NA",
+      "slots": [
+         "X"
+      ],
+      "strength": 33
+   },
+   "AR60002": {
+      "room": "NA",
+      "slots": [
+         "B3"
+      ],
+      "strength": 0
+   },
+   "AR60004": {
+      "room": "NA",
+      "slots": [
+         "E3"
+      ],
+      "strength": 0
+   },
+   "AR60006": {
+      "room": "NA",
+      "slots": [
+         "U3"
+      ],
+      "strength": 0
+   },
+   "AR60038": {
+      "room": "NA",
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "AR60040": {
+      "room": "NA",
+      "slots": [
+         "U3"
+      ],
+      "strength": "NA"
+   },
+   "AR60044": {
+      "room": "NA",
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "AR60046": {
+      "room": "NA",
+      "slots": [
+         "U3"
+      ],
+      "strength": "NA"
+   },
+   "AR60048": {
+      "room": "NA",
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "AR60050": {
+      "room": "NA",
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "AR60052": {
+      "room": "NA",
+      "slots": [
+         "U3"
+      ],
+      "strength": "NA"
+   },
+   "AR60054": {
+      "room": "NA",
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "AR67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AR68101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AR69002": {
+      "room": "NA",
+      "slots": [
+         "O"
+      ],
+      "strength": "NA"
+   },
+   "AR69004": {
+      "room": "NA",
+      "slots": [
+         "P",
+         " X4",
+         " N"
+      ],
+      "strength": 0
+   },
+   "AT60002": {
+      "room": "NA",
+      "slots": [
+         "U3"
+      ],
+      "strength": "NA"
+   },
+   "AT60004": {
+      "room": "NA",
+      "slots": [
+         "H3"
+      ],
+      "strength": "NA"
+   },
+   "AT60006": {
+      "room": "NA",
+      "slots": [
+         "S3",
+         " G3"
+      ],
+      "strength": "NA"
+   },
+   "AT60008": {
+      "room": "NA",
+      "slots": [
+         "V3"
+      ],
+      "strength": "NA"
+   },
+   "AT67002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AT68001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "AT69002": {
+      "room": "NA",
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "AT69006": {
+      "room": "NA",
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "BM40002": {
+      "room": [
+         "NC334"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 77
+   },
+   "BM40004": {
+      "room": [
+         "NC132"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 27
+   },
+   "BM40006": {
+      "room": [
+         "NC332"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "BM40012": {
+      "room": [
+         "NC333"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "BM49002": {
+      "room": [
+         "NC331"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "BM50010": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "BM51002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60008": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60014": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60022": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60056": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60066": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60088": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60100": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60112": {
+      "room": [
+         "NC331"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "BM60114": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60116": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60122": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60130": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60134": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM60136": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM61036": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM61070": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM61101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM61102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM61104": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM61110": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM61112": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM61134": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM61168": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM61178": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM62004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM63002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM63004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM63006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM63008": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM63010": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM63012": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM63014": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM63018": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM63020": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM63024": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM63026": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM63030": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM67006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM68002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM69006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM69008": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM69014": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BM69028": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BS20001": {
+      "room": [
+         " NR421",
+         "NR422",
+         " NR321",
+         " NR322"
+      ],
+      "slots": [
+         "X4"
+      ],
+      "strength": 1138
+   },
+   "BS40002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "BS40004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": "NA"
+   },
+   "BS41002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "BS41004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "BS49002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "BS50004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "BS57002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "BS58004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "BT21002": {
+      "room": "NA",
+      "slots": [
+         "F4"
+      ],
+      "strength": 41
+   },
+   "BT29002": {
+      "room": "NA",
+      "slots": [
+         "N"
+      ],
+      "strength": 40
+   },
+   "BT31006": {
+      "room": "NA",
+      "slots": [
+         "G3"
+      ],
+      "strength": 34
+   },
+   "BT31010": {
+      "room": "NA",
+      "slots": [
+         "S3",
+         " H3"
+      ],
+      "strength": 36
+   },
+   "BT31014": {
+      "room": "NA",
+      "slots": [
+         "E4"
+      ],
+      "strength": 35
+   },
+   "BT39006": {
+      "room": "NA",
+      "slots": [
+         "X"
+      ],
+      "strength": 36
+   },
+   "BT39008": {
+      "room": "NA",
+      "slots": [
+         "K"
+      ],
+      "strength": 34
+   },
+   "BT41012": {
+      "room": "NA",
+      "slots": [
+         "H3"
+      ],
+      "strength": 6
+   },
+   "BT41014": {
+      "room": "NA",
+      "slots": [
+         "D3"
+      ],
+      "strength": 26
+   },
+   "BT41022": {
+      "room": "NA",
+      "slots": [
+         "C4"
+      ],
+      "strength": 42
+   },
+   "BT47005": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BT47006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BT48026": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BT57002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BT57004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BT58002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "BT60002": {
+      "room": "NA",
+      "slots": [
+         "S3",
+         " B3"
+      ],
+      "strength": 24
+   },
+   "BT60004": {
+      "room": "NA",
+      "slots": [
+         "A3"
+      ],
+      "strength": 21
+   },
+   "BT60006": {
+      "room": "NA",
+      "slots": [
+         "V3"
+      ],
+      "strength": "NA"
+   },
+   "BT60012": {
+      "room": "NA",
+      "slots": [
+         "D4"
+      ],
+      "strength": 2
+   },
+   "BT60016": {
+      "room": "NA",
+      "slots": [
+         "E3"
+      ],
+      "strength": 34
+   },
+   "BT61030": {
+      "room": "NA",
+      "slots": [
+         "F3"
+      ],
+      "strength": 34
+   },
+   "BT69002": {
+      "room": "NA",
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "BT69012": {
+      "room": "NA",
+      "slots": [
+         "X"
+      ],
+      "strength": 0
+   },
+   "BT69016": {
+      "room": "NA",
+      "slots": [
+         "L"
+      ],
+      "strength": 24
+   },
+   "CE13001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 1241
+   },
+   "CE21003": {
+      "room": [
+         "NC333"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 75
+   },
+   "CE21004": {
+      "room": [
+         "NC343",
+         "NC241"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": 114
+   },
+   "CE29002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P",
+         " X4"
+      ],
+      "strength": 112
+   },
+   "CE29006": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P",
+         " X4"
+      ],
+      "strength": 75
+   },
+   "CE31002": {
+      "room": [
+         "NC241"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": 70
+   },
+   "CE31004": {
+      "room": [
+         "NR223"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 104
+   },
+   "CE31104": {
+      "room": [
+         "NR223"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": 68
+   },
+   "CE31111": {
+      "room": [
+         "NC243"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": 0
+   },
+   "CE31302": {
+      "room": [
+         "NC431"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 49
+   },
+   "CE31306": {
+      "room": [
+         "NC243"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 15
+   },
+   "CE31404": {
+      "room": [
+         "NC241"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 3
+   },
+   "CE31408": {
+      "room": [
+         "NC243"
+      ],
+      "slots": [
+         "U3"
+      ],
+      "strength": 9
+   },
+   "CE31510": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 30
+   },
+   "CE39004": {
+      "room": [
+         "NR421"
+      ],
+      "slots": [
+         "P",
+         " J"
+      ],
+      "strength": 68
+   },
+   "CE39006": {
+      "room": [
+         "S301"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": 108
+   },
+   "CE39008": {
+      "room": [
+         "NC243"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": 66
+   },
+   "CE41028": {
+      "room": [
+         "NC241"
+      ],
+      "slots": [
+         "V3"
+      ],
+      "strength": 0
+   },
+   "CE41603": {
+      "room": [
+         "NC331"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": 8
+   },
+   "CE42002": {
+      "room": [
+         "NR422"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 18
+   },
+   "CE42006": {
+      "room": [
+         "NC342"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 19
+   },
+   "CE47006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE48004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE57004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE58002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE58003": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "CE58004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE60002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "S3",
+         " G3"
+      ],
+      "strength": 0
+   },
+   "CE60006": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": 0
+   },
+   "CE60012": {
+      "room": [
+         "NR322"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 8
+   },
+   "CE60014": {
+      "room": [
+         "NC242"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": 10
+   },
+   "CE60016": {
+      "room": [
+         "NC332"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "CE60022": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 1
+   },
+   "CE60028": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": "NA"
+   },
+   "CE60036": {
+      "room": [
+         "NC241"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "CE60042": {
+      "room": [
+         "NC342"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 0
+   },
+   "CE60044": {
+      "room": [
+         "NR422"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 0
+   },
+   "CE60046": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 0
+   },
+   "CE60048": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 0
+   },
+   "CE60078": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "CE60105": {
+      "room": [
+         "NC233"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 0
+   },
+   "CE60112": {
+      "room": [
+         "NC242"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": 5
+   },
+   "CE60114": {
+      "room": [
+         "NC241"
+      ],
+      "slots": [
+         "V3"
+      ],
+      "strength": 0
+   },
+   "CE60124": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 0
+   },
+   "CE60126": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": 0
+   },
+   "CE60128": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 0
+   },
+   "CE60132": {
+      "room": [
+         "NC241"
+      ],
+      "slots": [
+         "H3"
+      ],
+      "strength": 10
+   },
+   "CE60134": {
+      "room": [
+         "NC241"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 12
+   },
+   "CE60136": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 0
+   },
+   "CE60140": {
+      "room": [
+         "NC243"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 5
+   },
+   "CE60142": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": 0
+   },
+   "CE60144": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 3
+   },
+   "CE60148": {
+      "room": [
+         "NC331"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": 5
+   },
+   "CE60150": {
+      "room": [
+         "NC243"
+      ],
+      "slots": [
+         "U3"
+      ],
+      "strength": "NA"
+   },
+   "CE60154": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": 15
+   },
+   "CE60160": {
+      "room": [
+         "NC242"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 16
+   },
+   "CE60162": {
+      "room": [
+         "NC242"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "CE61004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": 0
+   },
+   "CE67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE67202": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE67302": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE67402": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE67502": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE68101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE68201": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE68301": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE68401": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE68501": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE69004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": 0
+   },
+   "CE69006": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": 5
+   },
+   "CE69008": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": 1
+   },
+   "CE69009": {
+      "room": [
+         "NC342"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": 0
+   },
+   "CE69010": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": 0
+   },
+   "CE69012": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": 0
+   },
+   "CE69102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE69202": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "CE69302": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE69402": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CE69502": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CH21004": {
+      "room": [
+         "NC431"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 82
+   },
+   "CH21008": {
+      "room": [
+         "NC241"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 81
+   },
+   "CH29006": {
+      "room": [
+         "NC344"
+      ],
+      "slots": [
+         "P",
+         " L"
+      ],
+      "strength": 81
+   },
+   "CH29008": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J",
+         " N"
+      ],
+      "strength": 81
+   },
+   "CH30012": {
+      "room": [
+         "NC141"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 72
+   },
+   "CH30014": {
+      "room": [
+         "NR122"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": 77
+   },
+   "CH30016": {
+      "room": [
+         "NC433"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 75
+   },
+   "CH31010": {
+      "room": [
+         "NC141"
+      ],
+      "slots": [
+         "S3",
+         " A3"
+      ],
+      "strength": 76
+   },
+   "CH39006": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P",
+         " J",
+         " L",
+         " N"
+      ],
+      "strength": 141
+   },
+   "CH39020": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P",
+         " N"
+      ],
+      "strength": 74
+   },
+   "CH39022": {
+      "room": [
+         " NC442",
+         " NC441",
+         "NC441",
+         "NC442"
+      ],
+      "slots": [
+         "J",
+         " L"
+      ],
+      "strength": 73
+   },
+   "CH42006": {
+      "room": [
+         "NC341"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 42
+   },
+   "CH42012": {
+      "room": [
+         "NC332"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 0
+   },
+   "CH42014": {
+      "room": [
+         "NC342"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 26
+   },
+   "CH47024": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CH48014": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CH57004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CH58002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CH60016": {
+      "room": [
+         "NC343"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 0
+   },
+   "CH61012": {
+      "room": [
+         "NC431"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 40
+   },
+   "CH61014": {
+      "room": [
+         "NC341"
+      ],
+      "slots": [
+         "S3",
+         " A3"
+      ],
+      "strength": 33
+   },
+   "CH61016": {
+      "room": [
+         "NC234"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 67
+   },
+   "CH62008": {
+      "room": [
+         "NC343"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 34
+   },
+   "CH62010": {
+      "room": [
+         "NC333"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 0
+   },
+   "CH62016": {
+      "room": [
+         "NC432"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 28
+   },
+   "CH62028": {
+      "room": [
+         "NC244"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 6
+   },
+   "CH62046": {
+      "room": [
+         "NC343"
+      ],
+      "slots": [
+         "S3",
+         " B3"
+      ],
+      "strength": 10
+   },
+   "CH62050": {
+      "room": [
+         "NC341"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 6
+   },
+   "CH62052": {
+      "room": [
+         "NC342"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 11
+   },
+   "CH67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CH68101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CH69002": {
+      "room": [
+         "NC441"
+      ],
+      "slots": [
+         "P",
+         " N"
+      ],
+      "strength": "NA"
+   },
+   "CH69004": {
+      "room": [
+         "CAPE Lab"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "CH70002": {
+      "room": [
+         "NC334"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 1
+   },
+   "CH71002": {
+      "room": [
+         "NC434"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 5
+   },
+   "CL60002": {
+      "room": [
+         "Class Room-1"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": "NA"
+   },
+   "CL60004": {
+      "room": [
+         "Class Room-1"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": "NA"
+   },
+   "CL60006": {
+      "room": [
+         "Class Room-2"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "CL60008": {
+      "room": [
+         "Class Room-2"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "CL60020": {
+      "room": [
+         "Class Room-1"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "CL60028": {
+      "room": [
+         "Class Room-1"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "CL60030": {
+      "room": [
+         "Class Room-1"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "CL61012": {
+      "room": [
+         "Class Room-2"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "CL61018": {
+      "room": [
+         "Class Room-1"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "CL61024": {
+      "room": [
+         "Class Room-2"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": "NA"
+   },
+   "CL67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CL68101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CL69002": {
+      "room": [
+         "Class Room-1"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "CL69004": {
+      "room": [
+         "M. Tech. Lab-1"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "CR30002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CR30008": {
+      "room": "NA",
+      "slots": [
+         "C3"
+      ],
+      "strength": "NA"
+   },
+   "CR60006": {
+      "room": "NA",
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "CR61012": {
+      "room": "NA",
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "CR61014": {
+      "room": "NA",
+      "slots": [
+         "U2"
+      ],
+      "strength": "NA"
+   },
+   "CR61016": {
+      "room": "NA",
+      "slots": [
+         "D2"
+      ],
+      "strength": "NA"
+   },
+   "CR61018": {
+      "room": "NA",
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "CR61020": {
+      "room": "NA",
+      "slots": [
+         "F2"
+      ],
+      "strength": "NA"
+   },
+   "CR61022": {
+      "room": "NA",
+      "slots": [
+         "C2"
+      ],
+      "strength": "NA"
+   },
+   "CR61024": {
+      "room": "NA",
+      "slots": [
+         "E3"
+      ],
+      "strength": "NA"
+   },
+   "CR61026": {
+      "room": "NA",
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "CR61032": {
+      "room": "NA",
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "CR61034": {
+      "room": "NA",
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "CR61036": {
+      "room": "NA",
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "CR61038": {
+      "room": "NA",
+      "slots": [
+         "B2"
+      ],
+      "strength": "NA"
+   },
+   "CR67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CR68002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CR69002": {
+      "room": "NA",
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "CR69006": {
+      "room": "NA",
+      "slots": [
+         "L"
+      ],
+      "strength": 0
+   },
+   "CR69008": {
+      "room": "NA",
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "CS10001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CS19101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CS20006": {
+      "room": [
+         " NC233",
+         "NC234"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 125
+   },
+   "CS21002": {
+      "room": [
+         "NC231",
+         " NC234"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 111
+   },
+   "CS21003": {
+      "room": [
+         "NR321"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 145
+   },
+   "CS21004": {
+      "room": [
+         " NR223",
+         "NR224"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 108
+   },
+   "CS29002": {
+      "room": [
+         "HWLab(Annex)"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": 111
+   },
+   "CS29003": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": 156
+   },
+   "CS29006": {
+      "room": [
+         "SWLab(Annex)",
+         " CSE-Software-Lab"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": 118
+   },
+   "CS30002": {
+      "room": [
+         " NC233",
+         "NC132"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 108
+   },
+   "CS31006": {
+      "room": [
+         "NC241",
+         " NC242"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 95
+   },
+   "CS31702": {
+      "room": [
+         " NR223",
+         "NR224"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 123
+   },
+   "CS39002": {
+      "room": [
+         "SWLab(Annex)"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": 101
+   },
+   "CS39006": {
+      "room": [
+         "SWLab(Annex)"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": 94
+   },
+   "CS39008": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CS40032": {
+      "room": [
+         "NC233"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": 0
+   },
+   "CS43002": {
+      "room": [
+         "NC242"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 111
+   },
+   "CS43004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "F4",
+         " N"
+      ],
+      "strength": 32
+   },
+   "CS47006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CS60003": {
+      "room": [
+         " NC344",
+         "NC141"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 50
+   },
+   "CS60004": {
+      "room": [
+         "CSE-119"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "CS60010": {
+      "room": [
+         "NR421"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "CS60012": {
+      "room": [
+         "CSE-107"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 0
+   },
+   "CS60016": {
+      "room": [
+         "CSE-120"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "CS60020": {
+      "room": [
+         "CSE-119"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": "NA"
+   },
+   "CS60023": {
+      "room": [
+         "CSE-108"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "CS60029": {
+      "room": [
+         "CSE-108"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "CS60030": {
+      "room": [
+         "CSE-107"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 4
+   },
+   "CS60050": {
+      "room": [
+         "NR422"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 111
+   },
+   "CS60052": {
+      "room": [
+         "CSE-119"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 13
+   },
+   "CS60064": {
+      "room": [
+         "CSE-107"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": 41
+   },
+   "CS60075": {
+      "room": [
+         "NC231"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "CS60078": {
+      "room": [
+         "CSE-119"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 13
+   },
+   "CS60092": {
+      "room": [
+         "NC132"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": 102
+   },
+   "CS60094": {
+      "room": [
+         "CSE-107"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 31
+   },
+   "CS60118": {
+      "room": [
+         "NC433"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "CS61064": {
+      "room": [
+         "CSE-107"
+      ],
+      "slots": [
+         "X4"
+      ],
+      "strength": "NA"
+   },
+   "CS69002": {
+      "room": [
+         " CSE-107",
+         "CSE-108"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "CS69012": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P",
+         " L"
+      ],
+      "strength": 0
+   },
+   "CY00002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CY09002": {
+      "room": [
+         "Phys Chem Lab"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "CY11001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 1244
+   },
+   "CY19001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CY20102": {
+      "room": [
+         "C205"
+      ],
+      "slots": [
+         "V3"
+      ],
+      "strength": 15
+   },
+   "CY20106": {
+      "room": [
+         "C205"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": 15
+   },
+   "CY21006": {
+      "room": [
+         "C205"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 15
+   },
+   "CY29002": {
+      "room": [
+         "Org Chem Lab"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": 15
+   },
+   "CY29004": {
+      "room": [
+         "Org Chem Lab"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": 15
+   },
+   "CY31010": {
+      "room": [
+         "C205"
+      ],
+      "slots": [
+         "X4"
+      ],
+      "strength": 18
+   },
+   "CY38002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CY39004": {
+      "room": [
+         "Org Chem Lab"
+      ],
+      "slots": [
+         "P",
+         " O"
+      ],
+      "strength": 17
+   },
+   "CY41012": {
+      "room": [
+         "NC234"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 61
+   },
+   "CY41014": {
+      "room": [
+         "NC234"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 63
+   },
+   "CY41016": {
+      "room": [
+         "NC132"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": 0
+   },
+   "CY41018": {
+      "room": [
+         "NC234"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "CY49006": {
+      "room": [
+         "Phys Chem Lab"
+      ],
+      "slots": [
+         "M",
+         " N"
+      ],
+      "strength": 64
+   },
+   "CY49008": {
+      "room": [
+         "Phys Chem Lab"
+      ],
+      "slots": [
+         "P",
+         " O"
+      ],
+      "strength": 42
+   },
+   "CY50033": {
+      "room": [
+         "NC234"
+      ],
+      "slots": [
+         "H3"
+      ],
+      "strength": 64
+   },
+   "CY57006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CY58006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CY58010": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "CY60020": {
+      "room": [
+         "C306"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": 0
+   },
+   "CY61006": {
+      "room": [
+         "NC232"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 12
+   },
+   "CY61032": {
+      "room": [
+         "NC141"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": 16
+   },
+   "CY61044": {
+      "room": [
+         "NC142"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": 24
+   },
+   "CY61050": {
+      "room": [
+         "NR423"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": 6
+   },
+   "CY71006": {
+      "room": [
+         "NC234"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": 42
+   },
+   "EC21004": {
+      "room": [
+         "NC343"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 109
+   },
+   "EC21006": {
+      "room": [
+         "NC244"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 113
+   },
+   "EC21008": {
+      "room": [
+         " NR121",
+         "NR221"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 237
+   },
+   "EC21101": {
+      "room": [
+         " NR321",
+         " NR322",
+         " NR121",
+         "NR221"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 828
+   },
+   "EC29001": {
+      "room": [
+         "In Deptt."
+      ],
+      "slots": [
+         "P",
+         " X",
+         " J",
+         " L",
+         " N"
+      ],
+      "strength": 811
+   },
+   "EC29004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P",
+         " N"
+      ],
+      "strength": 109
+   },
+   "EC29008": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P",
+         " J",
+         " L",
+         " N"
+      ],
+      "strength": 229
+   },
+   "EC31002": {
+      "room": [
+         "NC343"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 124
+   },
+   "EC31004": {
+      "room": [
+         "NC244"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": 124
+   },
+   "EC31006": {
+      "room": [
+         "NC244"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 121
+   },
+   "EC31008": {
+      "room": [
+         "NC244"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 126
+   },
+   "EC39002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J",
+         " N"
+      ],
+      "strength": 115
+   },
+   "EC39004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J",
+         " L"
+      ],
+      "strength": 112
+   },
+   "EC39006": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "L",
+         " N"
+      ],
+      "strength": "NA"
+   },
+   "EC60004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EC60006": {
+      "room": [
+         "F101"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "EC60012": {
+      "room": [
+         "F300"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 31
+   },
+   "EC60042": {
+      "room": [
+         "F101"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 5
+   },
+   "EC60052": {
+      "room": [
+         "F104"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 32
+   },
+   "EC60054": {
+      "room": [
+         "F104"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 6
+   },
+   "EC60064": {
+      "room": [
+         "F300"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 8
+   },
+   "EC60068": {
+      "room": [
+         "A102"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": "NA"
+   },
+   "EC60074": {
+      "room": [
+         "F102"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 61
+   },
+   "EC60082": {
+      "room": [
+         "F104"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 3
+   },
+   "EC60088": {
+      "room": [
+         "F101"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 0
+   },
+   "EC60090": {
+      "room": [
+         "F101"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 0
+   },
+   "EC60094": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "EC60104": {
+      "room": [
+         "F300"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "EC60110": {
+      "room": [
+         "A102"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 9
+   },
+   "EC60128": {
+      "room": [
+         "F104"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 0
+   },
+   "EC60132": {
+      "room": [
+         "A102"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 18
+   },
+   "EC60202": {
+      "room": [
+         "F102"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 9
+   },
+   "EC60204": {
+      "room": [
+         "F102"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 15
+   },
+   "EC60294": {
+      "room": [
+         "F102"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "EC60296": {
+      "room": [
+         "A102"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": 8
+   },
+   "EC60324": {
+      "room": [
+         "F101"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "EC60502": {
+      "room": [
+         "F102"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 45
+   },
+   "EC60504": {
+      "room": [
+         "F104"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 59
+   },
+   "EC61032": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EC61036": {
+      "room": [
+         "F104"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "EC61066": {
+      "room": [
+         "A102"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "EC69012": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "EC69014": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "EC69202": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "EC69208": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "EC69308": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "EC69402": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "EC69408": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "EC69502": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "EC69504": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "EC69508": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "EE11001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 1244
+   },
+   "EE19001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE21002": {
+      "room": [
+         "NC334"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 92
+   },
+   "EE21004": {
+      "room": [
+         "NR221"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 147
+   },
+   "EE29002": {
+      "room": [
+         "Machines Lab.#NEX201"
+      ],
+      "slots": [
+         "P",
+         " N"
+      ],
+      "strength": 85
+   },
+   "EE29004": {
+      "room": [
+         "Measurement Lab"
+      ],
+      "slots": [
+         "P",
+         " J",
+         " L",
+         " N"
+      ],
+      "strength": 147
+   },
+   "EE30004": {
+      "room": [
+         "NC331"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 118
+   },
+   "EE30012": {
+      "room": [
+         "NC344"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 18
+   },
+   "EE31002": {
+      "room": [
+         "NC142"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 83
+   },
+   "EE39002": {
+      "room": [
+         "HV Lab.#Machines Lab.#Protection Lab(Relay)"
+      ],
+      "slots": [
+         "J",
+         " L",
+         " X4"
+      ],
+      "strength": 82
+   },
+   "EE39004": {
+      "room": [
+         "Embedded Systems Lab"
+      ],
+      "slots": [
+         "P",
+         " J",
+         " X4",
+         " N"
+      ],
+      "strength": 119
+   },
+   "EE40002": {
+      "room": [
+         "NC443"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": 78
+   },
+   "EE40016": {
+      "room": [
+         "N232"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "EE47006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE47007": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE47008": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE47009": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE48002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE49004": {
+      "room": [
+         "NC231",
+         "NC232"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": 80
+   },
+   "EE57201": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE57202": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE57301": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE57302": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE57401": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE57402": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE57501": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE57502": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE58004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE60002": {
+      "room": [
+         "N232"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 3
+   },
+   "EE60004": {
+      "room": [
+         "NEX201"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 2
+   },
+   "EE60006": {
+      "room": [
+         "N227"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "EE60012": {
+      "room": [
+         "N227"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 5
+   },
+   "EE60014": {
+      "room": [
+         "NEX201"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 4
+   },
+   "EE60016": {
+      "room": [
+         "NEX201"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "EE60024": {
+      "room": [
+         "N232"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 11
+   },
+   "EE60027": {
+      "room": [
+         "NEX201"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 0
+   },
+   "EE60028": {
+      "room": [
+         "N227"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "EE60034": {
+      "room": [
+         "N232"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 29
+   },
+   "EE60050": {
+      "room": [
+         "NEX201"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 0
+   },
+   "EE60052": {
+      "room": [
+         "N227"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "EE60059": {
+      "room": [
+         "N227"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 0
+   },
+   "EE60082": {
+      "room": [
+         "NC331"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": 0
+   },
+   "EE60096": {
+      "room": [
+         "NEX201"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 3
+   },
+   "EE60100": {
+      "room": [
+         "NC233"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 23
+   },
+   "EE60101": {
+      "room": [
+         "NC232"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 24
+   },
+   "EE60102": {
+      "room": [
+         "NC331"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 22
+   },
+   "EE61008": {
+      "room": [
+         "NEX201"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": "NA"
+   },
+   "EE61012": {
+      "room": [
+         "N227"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "EE67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE67202": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE67302": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE67402": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE68101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE68201": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE68301": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE68401": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EE69004": {
+      "room": [
+         "Machines Lab."
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": 3
+   },
+   "EE69010": {
+      "room": [
+         "Instrumentaion lab"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "EE69014": {
+      "room": [
+         " 214#Old CORAL Building",
+         "0"
+      ],
+      "slots": [
+         "L",
+         " X4"
+      ],
+      "strength": 19
+   },
+   "EE69018": {
+      "room": [
+         "Computer Lab"
+      ],
+      "slots": [
+         "P",
+         " L"
+      ],
+      "strength": "NA"
+   },
+   "EE69022": {
+      "room": [
+         "Control Lab (PG)"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "EE69102": {
+      "room": [
+         "N227"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "EE69202": {
+      "room": [
+         "N227"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "EE69302": {
+      "room": [
+         "N232"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "EE69402": {
+      "room": [
+         "N232"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "EE87001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EG30002": {
+      "room": [
+         "NC231"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "EP60002": {
+      "room": [
+         "NR123"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 15
+   },
+   "EP60004": {
+      "room": [
+         "NR323"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 8
+   },
+   "EP60006": {
+      "room": [
+         "NR224"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 75
+   },
+   "EP60008": {
+      "room": [
+         "NR223"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 117
+   },
+   "EP60010": {
+      "room": [
+         "NR223"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 70
+   },
+   "EP60018": {
+      "room": [
+         "NR224"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 63
+   },
+   "EP60020": {
+      "room": [
+         "NR121"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": 432
+   },
+   "EP60040": {
+      "room": [
+         "NR324"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "EP60042": {
+      "room": [
+         "NR121"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 113
+   },
+   "EP60046": {
+      "room": [
+         "NR324"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": "NA"
+   },
+   "EP67002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EP67004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EP67006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 14
+   },
+   "ES60002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": 0
+   },
+   "ES60008": {
+      "room": [
+         "NC442"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "ES61002": {
+      "room": [
+         "NC442"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 1
+   },
+   "ES61008": {
+      "room": [
+         "NC442"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 0
+   },
+   "ES67004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ES68002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ES69008": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": 0
+   },
+   "ES69010": {
+      "room": [
+         "NC442"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "ET60002": {
+      "room": [
+         "NC444"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": 88
+   },
+   "ET60004": {
+      "room": [
+         "CET Studio-1"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 13
+   },
+   "ET60006": {
+      "room": [
+         "NC132"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 81
+   },
+   "ET60010": {
+      "room": [
+         "CET Studio-1"
+      ],
+      "slots": [
+         "V3"
+      ],
+      "strength": 20
+   },
+   "ET60012": {
+      "room": [
+         "CET Studio-1"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "ET60029": {
+      "room": [
+         "NR124"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "ET61002": {
+      "room": [
+         "CET Studio-1"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 10
+   },
+   "EV20001": {
+      "room": [
+         " NR121",
+         "NR422",
+         " NR322",
+         " NR421",
+         " NR321"
+      ],
+      "slots": [
+         "X4"
+      ],
+      "strength": "NA"
+   },
+   "EX28002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX30008": {
+      "room": [
+         "S-126"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "EX31006": {
+      "room": [
+         "NC334"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": "NA"
+   },
+   "EX38002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX39006": {
+      "room": [
+         "S-123"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "EX40006": {
+      "room": [
+         "S-126"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "EX40008": {
+      "room": [
+         "S-123"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "EX40010": {
+      "room": [
+         "NC333"
+      ],
+      "slots": [
+         "V3"
+      ],
+      "strength": "NA"
+   },
+   "EX41002": {
+      "room": [
+         "S-125"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "EX41004": {
+      "room": [
+         "S-123"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "EX48014": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX48016": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX48018": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX49002": {
+      "room": [
+         "Electrical & EM Lab"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "EX49004": {
+      "room": [
+         "Nuclear Lab"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "EX49008": {
+      "room": [
+         "Electrical & EM Lab"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "EX49010": {
+      "room": [
+         "S-123"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "EX50002": {
+      "room": [
+         "NC332"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": "NA"
+   },
+   "EX50012": {
+      "room": [
+         "S-127"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "EX50017": {
+      "room": [
+         "S-126"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "EX51001": {
+      "room": [
+         "S-136"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "EX52020": {
+      "room": [
+         "S-127"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "EX57006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX57008": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX58004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX58008": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX58010": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX58012": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX58014": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX58016": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX58018": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EX60004": {
+      "room": [
+         "S-127"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": "NA"
+   },
+   "EX60030": {
+      "room": [
+         "S-127"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "EX60032": {
+      "room": [
+         "S-127"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": "NA"
+   },
+   "EX60036": {
+      "room": [
+         "S-127"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": "NA"
+   },
+   "EXT1002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1005": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1008": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1011": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1043": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1045": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1046": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1047": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1054": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1057": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1084": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1085": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1086": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "EXT1087": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG20002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG20003": {
+      "room": [
+         "S-123"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "GG20004": {
+      "room": [
+         "S-216"
+      ],
+      "slots": [
+         "V3"
+      ],
+      "strength": "NA"
+   },
+   "GG20107": {
+      "room": [
+         "NC441"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "GG28002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG29002": {
+      "room": [
+         "Microscopy Lab."
+      ],
+      "slots": [
+         "X",
+         " N"
+      ],
+      "strength": "NA"
+   },
+   "GG29007": {
+      "room": [
+         "S302"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "GG30002": {
+      "room": [
+         "S-125"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "GG31004": {
+      "room": [
+         "S-125"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": "NA"
+   },
+   "GG31006": {
+      "room": [
+         "S-125"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "GG38002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG39001": {
+      "room": [
+         "Microscopy Lab."
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "GG39008": {
+      "room": [
+         "Microscopy Lab."
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "GG40004": {
+      "room": [
+         "NC441"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": "NA"
+   },
+   "GG40006": {
+      "room": [
+         "S-126"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": "NA"
+   },
+   "GG40008": {
+      "room": [
+         "S-136"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "GG40010": {
+      "room": [
+         "NC441"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "GG40012": {
+      "room": [
+         "S-123"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": "NA"
+   },
+   "GG40014": {
+      "room": [
+         "S-126"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "GG48012": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG48014": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG48016": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG49008": {
+      "room": [
+         "Microscopy Lab."
+      ],
+      "slots": [
+         "F3",
+         " F4",
+         " E4"
+      ],
+      "strength": "NA"
+   },
+   "GG49010": {
+      "room": [
+         "S122A"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "GG49012": {
+      "room": [
+         "Paleontology Lab."
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "GG49014": {
+      "room": [
+         "Microscopy Lab."
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "GG50010": {
+      "room": [
+         "S-125"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "GG50022": {
+      "room": [
+         "S-126"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "GG50026": {
+      "room": [
+         "S-126"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": "NA"
+   },
+   "GG52012": {
+      "room": [
+         "S-136"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "GG52015": {
+      "room": [
+         "S-123"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "GG52022": {
+      "room": [
+         "S-216"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "GG57008": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG57020": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG58006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG58016": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG59010": {
+      "room": [
+         "Paleontology Lab."
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "GG59022": {
+      "room": [
+         "S-123"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "GG60015": {
+      "room": [
+         "S-127"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "GG60016": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG60025": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG60026": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG60028": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "GG69006": {
+      "room": [
+         "S-123"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "GG69008": {
+      "room": [
+         "S122A"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "HS00002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "HS13001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 1279
+   },
+   "HS20001": {
+      "room": [
+         "NR324",
+         "NR322",
+         "NR323"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 741
+   },
+   "HS20002": {
+      "room": [
+         "NC441"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 130
+   },
+   "HS20006": {
+      "room": [
+         "LANGUAGE LAB (Department of HSS)"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": 42
+   },
+   "HS20008": {
+      "room": [
+         "LANGUAGE LAB (Department of HSS)"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": 41
+   },
+   "HS20009": {
+      "room": [
+         "LANGUAGE LAB (Department of HSS)"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 47
+   },
+   "HS20014": {
+      "room": [
+         "LANGUAGE LAB (Department of HSS)"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 56
+   },
+   "HS20016": {
+      "room": [
+         "NC232"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": 141
+   },
+   "HS20018": {
+      "room": [
+         "NC243"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 116
+   },
+   "HS30001": {
+      "room": [
+         "NC132"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "HS30002": {
+      "room": [
+         "LANGUAGE LAB (Department of HSS)"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 38
+   },
+   "HS30040": {
+      "room": [
+         "LANGUAGE LAB"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "HS30047": {
+      "room": [
+         "NC233"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": 60
+   },
+   "HS30048": {
+      "room": [
+         "LANGUAGE LAB - III (JCB LAB COMPLEX)"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": 32
+   },
+   "HS30051": {
+      "room": [
+         "NC344"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "HS30054": {
+      "room": [
+         "NR423"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "HS30057": {
+      "room": [
+         "NC243"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": 0
+   },
+   "HS30070": {
+      "room": [
+         "NC142"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": 25
+   },
+   "HS30074": {
+      "room": [
+         "NR324"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 161
+   },
+   "HS30096": {
+      "room": [
+         "LANGUAGE LAB - III (JCB LAB COMPLEX)"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 83
+   },
+   "HS31082": {
+      "room": [
+         "NC142"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 37
+   },
+   "HS38002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "HS40078": {
+      "room": [
+         "NC442"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 51
+   },
+   "HS40085": {
+      "room": [
+         "LANGUAGE LAB - I (JCB LAB COMPLEX)"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": 30
+   },
+   "HS41002": {
+      "room": [
+         "NC243"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 66
+   },
+   "HS41004": {
+      "room": [
+         "LANGUAGE LAB (Department of HSS)"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "HS49002": {
+      "room": [
+         "PC_Lab-IV"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": 51
+   },
+   "HS50012": {
+      "room": [
+         "LANGUAGE LAB - III (JCB LAB COMPLEX)"
+      ],
+      "slots": [
+         "U3"
+      ],
+      "strength": 0
+   },
+   "HS50017": {
+      "room": [
+         "LANGUAGE LAB (Department of HSS)"
+      ],
+      "slots": [
+         "H3"
+      ],
+      "strength": 45
+   },
+   "HS50018": {
+      "room": [
+         "LANGUAGE LAB - III (JCB LAB COMPLEX)"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 35
+   },
+   "HS50019": {
+      "room": [
+         "0",
+         " LANGUAGE LAB (Department of HSS)"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 0
+   },
+   "HS50026": {
+      "room": [
+         "LANGUAGE LAB (Department of HSS)"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 0
+   },
+   "HS50030": {
+      "room": [
+         "LANGUAGE LAB - III (JCB LAB COMPLEX)"
+      ],
+      "slots": [
+         "S3",
+         " H3"
+      ],
+      "strength": 34
+   },
+   "HS51001": {
+      "room": [
+         "LANGUAGE LAB - III (JCB LAB COMPLEX)"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "HS51637": {
+      "room": [
+         "NC442"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "HS57004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "HS58001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "HS59001": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "HS60002": {
+      "room": [
+         "LANGUAGE LAB - III (JCB LAB COMPLEX)"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": 0
+   },
+   "HS60008": {
+      "room": [
+         "PSYCHOLOGY LAB"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 0
+   },
+   "HS60010": {
+      "room": [
+         "PSYCHOLOGY LAB"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 0
+   },
+   "HS60012": {
+      "room": [
+         "NR321"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 0
+   },
+   "HS60014": {
+      "room": [
+         "PSYCHOLOGY LAB"
+      ],
+      "slots": [
+         "E2"
+      ],
+      "strength": 1
+   },
+   "HS60016": {
+      "room": [
+         "PSYCHOLOGY LAB"
+      ],
+      "slots": [
+         "C2"
+      ],
+      "strength": 0
+   },
+   "HS60020": {
+      "room": [
+         "LANGUAGE LAB (Department of HSS)"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "HS60022": {
+      "room": [
+         "PSYCHOLOGY LAB"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "HS60024": {
+      "room": [
+         "PSYCHOLOGY LAB"
+      ],
+      "slots": [
+         "I2"
+      ],
+      "strength": 0
+   },
+   "HS60042": {
+      "room": [
+         "NC242"
+      ],
+      "slots": [
+         "V3"
+      ],
+      "strength": 36
+   },
+   "HS60044": {
+      "room": [
+         "NC234"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": 49
+   },
+   "HS60065": {
+      "room": [
+         "ECONOMICS LAB"
+      ],
+      "slots": [
+         "U2"
+      ],
+      "strength": 0
+   },
+   "HS60066": {
+      "room": [
+         "LANGUAGE LAB - III (JCB LAB COMPLEX)"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 0
+   },
+   "HS60070": {
+      "room": [
+         "LANGUAGE LAB (Department of HSS)"
+      ],
+      "slots": [
+         "I2"
+      ],
+      "strength": 0
+   },
+   "HS60072": {
+      "room": [
+         "PSYCHOLOGY LAB"
+      ],
+      "slots": [
+         "V2"
+      ],
+      "strength": 0
+   },
+   "HS60074": {
+      "room": [
+         "PSYCHOLOGY LAB"
+      ],
+      "slots": [
+         "H2"
+      ],
+      "strength": 0
+   },
+   "HS60076": {
+      "room": [
+         "PSYCHOLOGY LAB"
+      ],
+      "slots": [
+         "U2"
+      ],
+      "strength": 0
+   },
+   "HS60080": {
+      "room": [
+         "LANGUAGE LAB - III (JCB LAB COMPLEX)"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": "NA"
+   },
+   "HS62002": {
+      "room": [
+         "NC234"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": 129
+   },
+   "HS63002": {
+      "room": [
+         "V2",
+         "V3"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": "NA"
+   },
+   "HS67202": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "HS68004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "HS70001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "HS70002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "HS70005": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "HS70007": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ID60002": {
+      "room": "NA",
+      "slots": [
+         "V4"
+      ],
+      "strength": 0
+   },
+   "ID60004": {
+      "room": "NA",
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "ID60011": {
+      "room": "NA",
+      "slots": [
+         "E3"
+      ],
+      "strength": "NA"
+   },
+   "ID60016": {
+      "room": "NA",
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "ID67102": {
+      "room": "NA",
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "ID68101": {
+      "room": "NA",
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "ID69002": {
+      "room": "NA",
+      "slots": [
+         "L"
+      ],
+      "strength": 0
+   },
+   "ID69004": {
+      "room": "NA",
+      "slots": [
+         "J"
+      ],
+      "strength": 0
+   },
+   "ID69006": {
+      "room": "NA",
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "IE30002": {
+      "room": [
+         "N232"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 31
+   },
+   "IE30006": {
+      "room": [
+         "NEX201"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": 82
+   },
+   "IE39002": {
+      "room": [
+         "Instrumentaion lab"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": 32
+   },
+   "IE47005": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IE47006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IE47007": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IE48002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IE57001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IE57002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IE57102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IE57202": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IE58102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IM21002": {
+      "room": [
+         "208 (E1)"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 50
+   },
+   "IM21006": {
+      "room": [
+         "208 (E1)"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 49
+   },
+   "IM21008": {
+      "room": [
+         "208 (E1)"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 81
+   },
+   "IM29006": {
+      "room": [
+         "101 (ORDS Lab)"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": 49
+   },
+   "IM29008": {
+      "room": [
+         "302 (WSD Lab)"
+      ],
+      "slots": [
+         "X4",
+         " N"
+      ],
+      "strength": 50
+   },
+   "IM31002": {
+      "room": [
+         "310 (QEDM-Seminar Room)"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 52
+   },
+   "IM31006": {
+      "room": [
+         "208 (E1)"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 58
+   },
+   "IM31010": {
+      "room": [
+         "208 (E1)"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 40
+   },
+   "IM31012": {
+      "room": [
+         "208 (E1)"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 42
+   },
+   "IM31014": {
+      "room": [
+         "205 (C1))"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "IM37004": {
+      "room": [
+         "306 (Design for Manufacturing and Assembly Lab)"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "IM39003": {
+      "room": [
+         "101 (ORDS Lab)"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": 37
+   },
+   "IM39006": {
+      "room": [
+         "101 (ORDS Lab)"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": 38
+   },
+   "IM40001": {
+      "room": [
+         "208 (E1)"
+      ],
+      "slots": [
+         "U2"
+      ],
+      "strength": "NA"
+   },
+   "IM41082": {
+      "room": [
+         "NC243"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 104
+   },
+   "IM47003": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IM47004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IM48002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IM57003": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IM57004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IM58004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IM60002": {
+      "room": [
+         "310 (QEDM-Seminar Room)"
+      ],
+      "slots": [
+         "S3",
+         " A3"
+      ],
+      "strength": 12
+   },
+   "IM60004": {
+      "room": [
+         "215 (C3)"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 4
+   },
+   "IM60006": {
+      "room": [
+         "215 (C3)"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 8
+   },
+   "IM60014": {
+      "room": [
+         "215 (C3)"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 14
+   },
+   "IM60016": {
+      "room": [
+         "208 (E1)"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 39
+   },
+   "IM60056": {
+      "room": [
+         "310 (QEDM-Seminar Room)"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 46
+   },
+   "IM60068": {
+      "room": [
+         "205 (C1))"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "IM61004": {
+      "room": [
+         "310 (QEDM-Seminar Room)"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 0
+   },
+   "IM61020": {
+      "room": [
+         "208 (E1)"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 34
+   },
+   "IM61026": {
+      "room": [
+         "215 (C3)"
+      ],
+      "slots": [
+         "S3",
+         " B3"
+      ],
+      "strength": 9
+   },
+   "IM67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IM68101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "IM69002": {
+      "room": [
+         "215 (C3)"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "IM69004": {
+      "room": [
+         "306 (Design for Manufacturing and Assembly Lab)"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": 0
+   },
+   "IM70001": {
+      "room": [
+         "310 (QEDM-Seminar Room)"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "MA00002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MA10002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 1274
+   },
+   "MA20013": {
+      "room": [
+         "NC432"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 66
+   },
+   "MA20102": {
+      "room": [
+         " NR322",
+         "NR121"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 234
+   },
+   "MA20104": {
+      "room": [
+         " NR421",
+         " NR321",
+         " NR322",
+         "NR221"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 601
+   },
+   "MA20106": {
+      "room": [
+         " NR321",
+         "NR221"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 283
+   },
+   "MA30002": {
+      "room": [
+         "NC141"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 69
+   },
+   "MA30006": {
+      "room": [
+         "NC244"
+      ],
+      "slots": [
+         "S3",
+         " B3"
+      ],
+      "strength": 59
+   },
+   "MA30014": {
+      "room": [
+         "NC242"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 106
+   },
+   "MA30110": {
+      "room": [
+         "NC331"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": 68
+   },
+   "MA38002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MA39014": {
+      "room": [
+         "PC_Lab-V"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "MA39110": {
+      "room": [
+         "PC_Lab-III"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": 60
+   },
+   "MA40002": {
+      "room": [
+         "NC434"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 53
+   },
+   "MA40004": {
+      "room": [
+         "NC132"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 105
+   },
+   "MA41002": {
+      "room": [
+         "NC141"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 27
+   },
+   "MA41004": {
+      "room": [
+         "NC433"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 27
+   },
+   "MA41006": {
+      "room": [
+         "NC344"
+      ],
+      "slots": [
+         "S3",
+         " A3"
+      ],
+      "strength": 29
+   },
+   "MA41008": {
+      "room": [
+         "NC344"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "MA41010": {
+      "room": [
+         "NC232"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": 61
+   },
+   "MA41011": {
+      "room": [
+         "NC333"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 52
+   },
+   "MA41017": {
+      "room": [
+         "NC343"
+      ],
+      "slots": [
+         "S3",
+         " A3"
+      ],
+      "strength": 53
+   },
+   "MA41022": {
+      "room": [
+         "NC344"
+      ],
+      "slots": [
+         "S3",
+         " G3"
+      ],
+      "strength": 30
+   },
+   "MA41024": {
+      "room": [
+         "N325 Dept of Mathematics"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": "NA"
+   },
+   "MA41108": {
+      "room": [
+         "NC331"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": 11
+   },
+   "MA49011": {
+      "room": [
+         "PC_Lab-II"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "MA49012": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MA50004": {
+      "room": [
+         "N325 Dept of Mathematics"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "MA51002": {
+      "room": [
+         "NC334"
+      ],
+      "slots": [
+         "S3",
+         " G3"
+      ],
+      "strength": 81
+   },
+   "MA51004": {
+      "room": [
+         "NC434"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 31
+   },
+   "MA51014": {
+      "room": [
+         "NC433"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 48
+   },
+   "MA51108": {
+      "room": [
+         "NC344"
+      ],
+      "slots": [
+         "S3",
+         " A3"
+      ],
+      "strength": 0
+   },
+   "MA53028": {
+      "room": [
+         "NC342"
+      ],
+      "slots": [
+         "S3",
+         " A3"
+      ],
+      "strength": "NA"
+   },
+   "MA57012": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MA58001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MA58006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MA59004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MA60002": {
+      "room": [
+         "NC331"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 46
+   },
+   "MA60004": {
+      "room": [
+         "NC333"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 0
+   },
+   "MA60020": {
+      "room": [
+         "N325 Dept of Mathematics"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 21
+   },
+   "MA60024": {
+      "room": [
+         "NC342"
+      ],
+      "slots": [
+         "S3",
+         " A3"
+      ],
+      "strength": "NA"
+   },
+   "MA60036": {
+      "room": [
+         "N325 Dept of Mathematics"
+      ],
+      "slots": [
+         "S3",
+         " B3"
+      ],
+      "strength": "NA"
+   },
+   "MA60038": {
+      "room": [
+         "NC244"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": 4
+   },
+   "MA60044": {
+      "room": [
+         "NC233"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": 1
+   },
+   "MA60050": {
+      "room": [
+         "NC132"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 0
+   },
+   "MA60053": {
+      "room": [
+         "NC332"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": 3
+   },
+   "MA60056": {
+      "room": [
+         "NC242"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 10
+   },
+   "MA60067": {
+      "room": [
+         "NC343"
+      ],
+      "slots": [
+         "S3",
+         " A3"
+      ],
+      "strength": 8
+   },
+   "MA61002": {
+      "room": [
+         "NC244"
+      ],
+      "slots": [
+         "S3",
+         " B3"
+      ],
+      "strength": 9
+   },
+   "MA61008": {
+      "room": [
+         "NC244"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": 79
+   },
+   "MA61010": {
+      "room": [
+         "NC342"
+      ],
+      "slots": [
+         "S3",
+         " A3"
+      ],
+      "strength": 48
+   },
+   "MA61018": {
+      "room": [
+         "NC132"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 0
+   },
+   "MA61028": {
+      "room": [
+         "NC434"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 14
+   },
+   "MA61032": {
+      "room": [
+         "N325 Dept of Mathematics"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 6
+   },
+   "MA61046": {
+      "room": [
+         "NC233"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": 0
+   },
+   "MA61052": {
+      "room": [
+         "NC434"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "MA67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MA68101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MA69002": {
+      "room": [
+         "B.R. Seth Seminar Room"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "MA69004": {
+      "room": [
+         "PC_Lab-V"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": 14
+   },
+   "MA69006": {
+      "room": [
+         "PC_Lab-IV"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": 0
+   },
+   "MA71002": {
+      "room": [
+         "NC233"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": "NA"
+   },
+   "ME10001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 1276
+   },
+   "ME11003": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME19001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 1279
+   },
+   "ME21004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 48
+   },
+   "ME21008": {
+      "room": "NA",
+      "slots": [
+         "E3"
+      ],
+      "strength": 180
+   },
+   "ME21010": {
+      "room": "NA",
+      "slots": [
+         "D4"
+      ],
+      "strength": 50
+   },
+   "ME22002": {
+      "room": "NA",
+      "slots": [
+         "F4"
+      ],
+      "strength": 282
+   },
+   "ME22004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 128
+   },
+   "ME29002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 174
+   },
+   "ME30602": {
+      "room": "NA",
+      "slots": [
+         "C4"
+      ],
+      "strength": 159
+   },
+   "ME30604": {
+      "room": "NA",
+      "slots": [
+         "F4"
+      ],
+      "strength": 207
+   },
+   "ME30606": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME39602": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 160
+   },
+   "ME39604": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 199
+   },
+   "ME39606": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 118
+   },
+   "ME41001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 124
+   },
+   "ME47601": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME47602": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME47603": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME48002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME48601": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME48602": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME48701": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME57001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME57002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME57003": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME57004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME58002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME58003": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME58004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME60006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME60012": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 25
+   },
+   "ME60014": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 54
+   },
+   "ME60032": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 2
+   },
+   "ME60088": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "ME60096": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 5
+   },
+   "ME60098": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 1
+   },
+   "ME60134": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 2
+   },
+   "ME60136": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 9
+   },
+   "ME60216": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME60232": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "ME60234": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 20
+   },
+   "ME60302": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 25
+   },
+   "ME60306": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 20
+   },
+   "ME60310": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 5
+   },
+   "ME60350": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "ME60352": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 12
+   },
+   "ME60402": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "ME60404": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 31
+   },
+   "ME60408": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 15
+   },
+   "ME60414": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "ME60422": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 15
+   },
+   "ME60424": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 11
+   },
+   "ME60428": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "ME60430": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 43
+   },
+   "ME60432": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 6
+   },
+   "ME61004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME61006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "ME67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME67202": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME67302": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME68101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME68201": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME68301": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME69006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME69008": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME69016": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME69036": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "ME69102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "ME69106": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME69206": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "ME69306": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MF30003": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MF30604": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MF40604": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MF47601": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MF47602": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MF69002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MI21002": {
+      "room": [
+         "NC232"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 68
+   },
+   "MI29002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "MI31002": {
+      "room": [
+         "NC232"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 71
+   },
+   "MI31004": {
+      "room": [
+         "NC232"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 66
+   },
+   "MI31008": {
+      "room": [
+         "NC131"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 66
+   },
+   "MI38002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MI39002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "MI40004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": 66
+   },
+   "MI40005": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 17
+   },
+   "MI40021": {
+      "room": [
+         "NC232"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 66
+   },
+   "MI40036": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": 37
+   },
+   "MI40042": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 6
+   },
+   "MI45008": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 16
+   },
+   "MI47004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MI48002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MI49001": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "MI50004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": 34
+   },
+   "MI50009": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 56
+   },
+   "MI57002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MI58002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MI59002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "MI59006": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "MI60012": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "MI60020": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MI60035": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 45
+   },
+   "MI60036": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 5
+   },
+   "MI60042": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": "NA"
+   },
+   "MI60045": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 42
+   },
+   "MI60052": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 20
+   },
+   "MI60058": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 17
+   },
+   "MI60060": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "MI60064": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "MI60072": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": "NA"
+   },
+   "MI60078": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "MI60080": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "MI62002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 9
+   },
+   "MI62004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 4
+   },
+   "MI67106": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MI68002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MI69002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MI69004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "MI69006": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "MI69007": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MI69008": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "MI69010": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "MM40002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": "NA"
+   },
+   "MM40004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": "NA"
+   },
+   "MM40006": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "MM40008": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "MM40011": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "V3"
+      ],
+      "strength": "NA"
+   },
+   "MM41002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": "NA"
+   },
+   "MM48002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MM49002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "MM49004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "MM50002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MM50004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MM50006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MM50008": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MM50010": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MM50018": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "MM50020": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "MM50026": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "MM57002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "MM57004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MM58002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "O"
+      ],
+      "strength": "NA"
+   },
+   "MM58004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "X",
+         " L"
+      ],
+      "strength": "NA"
+   },
+   "MM58006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MM59002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "MM59004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "MM59006": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "K"
+      ],
+      "strength": "NA"
+   },
+   "MM59008": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "MM59010": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "MM59012": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "MM59018": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "K"
+      ],
+      "strength": "NA"
+   },
+   "MM60024": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": "NA"
+   },
+   "MM61212": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MM61214": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": "NA"
+   },
+   "MM61216": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "MM61228": {
+      "room": [
+         "NC132"
+      ],
+      "slots": [
+         "X4"
+      ],
+      "strength": "NA"
+   },
+   "MM61312": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": "NA"
+   },
+   "MM61314": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "MM61316": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": "NA"
+   },
+   "MM61318": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "MM61524": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "H3"
+      ],
+      "strength": "NA"
+   },
+   "MM69320": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "R"
+      ],
+      "strength": "NA"
+   },
+   "MM69322": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "MM69324": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MM71326": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "MM71514": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": "NA"
+   },
+   "MM72335": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "MM77320": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MS31007": {
+      "room": "NA",
+      "slots": [
+         "U3"
+      ],
+      "strength": 51
+   },
+   "MS41004": {
+      "room": "NA",
+      "slots": [
+         "A3"
+      ],
+      "strength": 6
+   },
+   "MS60006": {
+      "room": "NA",
+      "slots": [
+         "F3"
+      ],
+      "strength": "NA"
+   },
+   "MS60008": {
+      "room": "NA",
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "MS60009": {
+      "room": "NA",
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "MS60028": {
+      "room": "NA",
+      "slots": [
+         "C4"
+      ],
+      "strength": 0
+   },
+   "MS60030": {
+      "room": "NA",
+      "slots": [
+         "C4"
+      ],
+      "strength": 13
+   },
+   "MS60032": {
+      "room": "NA",
+      "slots": [
+         "U4"
+      ],
+      "strength": 1
+   },
+   "MS60052": {
+      "room": "NA",
+      "slots": [
+         "D4"
+      ],
+      "strength": 4
+   },
+   "MS60056": {
+      "room": "NA",
+      "slots": [
+         "U4"
+      ],
+      "strength": "NA"
+   },
+   "MS60058": {
+      "room": "NA",
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "MS60066": {
+      "room": "NA",
+      "slots": [
+         "D4"
+      ],
+      "strength": "NA"
+   },
+   "MS67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MS68101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MS69002": {
+      "room": "NA",
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "MS69004": {
+      "room": "NA",
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "MS69008": {
+      "room": "NA",
+      "slots": [
+         "P"
+      ],
+      "strength": "NA"
+   },
+   "MT20006": {
+      "room": [
+         "NC334"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 59
+   },
+   "MT21008": {
+      "room": [
+         "NC231"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 54
+   },
+   "MT21010": {
+      "room": [
+         "NC232"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 53
+   },
+   "MT21104": {
+      "room": [
+         "NC231"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 95
+   },
+   "MT29006": {
+      "room": [
+         " METALLOGRAPHY LAB#POWDER METALLURGY LAB",
+         "MELTING & CASTING LAB"
+      ],
+      "slots": [
+         "X4",
+         " N"
+      ],
+      "strength": 58
+   },
+   "MT31012": {
+      "room": [
+         "NC231"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "MT31022": {
+      "room": [
+         "NC233"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 55
+   },
+   "MT32008": {
+      "room": [
+         "NC233"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 55
+   },
+   "MT39004": {
+      "room": [
+         "MECHANICAL CHARACTERIZATION LAB"
+      ],
+      "slots": [
+         "P",
+         " X4"
+      ],
+      "strength": 52
+   },
+   "MT39022": {
+      "room": [
+         "COMPUTER LAB#TEM LAB & TEM SAMPLE PREPARATION LAB#X RAY DIFFRACTION LAB"
+      ],
+      "slots": [
+         "P",
+         " X4"
+      ],
+      "strength": 52
+   },
+   "MT41007": {
+      "room": [
+         "NC443"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "MT41009": {
+      "room": [
+         "NC231"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 56
+   },
+   "MT41018": {
+      "room": [
+         "NC444"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": 31
+   },
+   "MT41025": {
+      "room": [
+         "NC443"
+      ],
+      "slots": [
+         "V3"
+      ],
+      "strength": 27
+   },
+   "MT41028": {
+      "room": [
+         "NC443"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "MT41031": {
+      "room": [
+         "NC442"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 0
+   },
+   "MT41034": {
+      "room": [
+         "NC334"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": 34
+   },
+   "MT41112": {
+      "room": [
+         "NC332"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": 0
+   },
+   "MT47002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MT48002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MT49009": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": 59
+   },
+   "MT57004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MT58002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MT60002": {
+      "room": [
+         "MT ANNEX-4"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 23
+   },
+   "MT60004": {
+      "room": [
+         "MT ANNEX-4"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 0
+   },
+   "MT60006": {
+      "room": [
+         "MT ANNEX-4"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "MT60024": {
+      "room": [
+         "MT ANNEX-4"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "MT60134": {
+      "room": [
+         "MT ANNEX-1"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 25
+   },
+   "MT60148": {
+      "room": [
+         "MT ANNEX-1"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 25
+   },
+   "MT60150": {
+      "room": [
+         "MT ANNEX-4"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 7
+   },
+   "MT61128": {
+      "room": [
+         "MT ANNEX-4"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": 0
+   },
+   "MT61136": {
+      "room": [
+         "MT ANNEX-1"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": 0
+   },
+   "MT61138": {
+      "room": [
+         "MT ANNEX-4"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 0
+   },
+   "MT61146": {
+      "room": [
+         "MT ANNEX-1"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 21
+   },
+   "MT67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MT68101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "MT69002": {
+      "room": [
+         "MT ANNEX-4"
+      ],
+      "slots": [
+         "J",
+         " X4"
+      ],
+      "strength": "NA"
+   },
+   "MT69006": {
+      "room": [
+         "MACHINE SHOP"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": 0
+   },
+   "MT69008": {
+      "room": [
+         "HEAT TREATMENT LAB"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": 0
+   },
+   "MT69014": {
+      "room": [
+         "POWDER METALLURGY LAB"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": 0
+   },
+   "NA21001": {
+      "room": [
+         "CL 6"
+      ],
+      "slots": [
+         "S3"
+      ],
+      "strength": 43
+   },
+   "NA21004": {
+      "room": [
+         "CL 6"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 44
+   },
+   "NA29002": {
+      "room": [
+         "DH 3"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "NA31002": {
+      "room": [
+         "SR"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 49
+   },
+   "NA31004": {
+      "room": [
+         "CL 6"
+      ],
+      "slots": [
+         "H3"
+      ],
+      "strength": 46
+   },
+   "NA31006": {
+      "room": [
+         "SR"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": 49
+   },
+   "NA39004": {
+      "room": [
+         "PC_Lab-IV"
+      ],
+      "slots": [
+         "K"
+      ],
+      "strength": "NA"
+   },
+   "NA39006": {
+      "room": [
+         "PC_Lab-IV"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "NA40010": {
+      "room": [
+         "NSR"
+      ],
+      "slots": [
+         "V3"
+      ],
+      "strength": 8
+   },
+   "NA40020": {
+      "room": [
+         "NSR"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 43
+   },
+   "NA40024": {
+      "room": [
+         "CL 6"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": 0
+   },
+   "NA47004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "NA48002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "NA57004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "NA58002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "NA60007": {
+      "room": [
+         "CL 5"
+      ],
+      "slots": [
+         "H3"
+      ],
+      "strength": 29
+   },
+   "NA60014": {
+      "room": [
+         "SR"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 22
+   },
+   "NA60022": {
+      "room": [
+         "CL3"
+      ],
+      "slots": [
+         "U3"
+      ],
+      "strength": 54
+   },
+   "NA60038": {
+      "room": [
+         "NSR"
+      ],
+      "slots": [
+         "V3"
+      ],
+      "strength": 34
+   },
+   "NA60048": {
+      "room": [
+         "CL3"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "NA60052": {
+      "room": [
+         "CL 5"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 2
+   },
+   "NA60054": {
+      "room": [
+         "CL 6"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "NA60056": {
+      "room": [
+         "CL3"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": "NA"
+   },
+   "NA60060": {
+      "room": [
+         "NSR"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "NA60064": {
+      "room": [
+         "SR"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "NA67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "NA68101": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "NA69002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "NA69004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "NT70002": {
+      "room": [
+         "NC241"
+      ],
+      "slots": [
+         "S3",
+         " X4"
+      ],
+      "strength": "NA"
+   },
+   "PE40002": {
+      "room": "NA",
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "PE57002": {
+      "room": "NA",
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "PE58002": {
+      "room": "NA",
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "PE60002": {
+      "room": "NA",
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "PE60004": {
+      "room": "NA",
+      "slots": [
+         "D3"
+      ],
+      "strength": "NA"
+   },
+   "PE60006": {
+      "room": "NA",
+      "slots": [
+         "C3"
+      ],
+      "strength": "NA"
+   },
+   "PE69002": {
+      "room": "NA",
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "PH00002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "PH09002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "PH11001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 1241
+   },
+   "PH19001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "PH20101": {
+      "room": [
+         "NC243"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 26
+   },
+   "PH21004": {
+      "room": [
+         "NC142"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 27
+   },
+   "PH29008": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J",
+         " N"
+      ],
+      "strength": 27
+   },
+   "PH39008": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P",
+         " L",
+         " X4",
+         " N"
+      ],
+      "strength": 22
+   },
+   "PH40008": {
+      "room": [
+         "NC331"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "PH41008": {
+      "room": [
+         "NC231"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 63
+   },
+   "PH41009": {
+      "room": [
+         "NC444"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": 24
+   },
+   "PH41010": {
+      "room": [
+         "NR123"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 61
+   },
+   "PH41012": {
+      "room": [
+         "NC142"
+      ],
+      "slots": [
+         "E2"
+      ],
+      "strength": 64
+   },
+   "PH41014": {
+      "room": [
+         "NC131"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": 62
+   },
+   "PH41016": {
+      "room": [
+         "NC431"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 62
+   },
+   "PH49006": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P",
+         " L",
+         " X4",
+         " N"
+      ],
+      "strength": 39
+   },
+   "PH49012": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": 62
+   },
+   "PH49014": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J",
+         " L",
+         " N"
+      ],
+      "strength": 29
+   },
+   "PH49016": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P",
+         " L",
+         " X4",
+         " N"
+      ],
+      "strength": 61
+   },
+   "PH49018": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "PH52002": {
+      "room": [
+         "NC142"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 66
+   },
+   "PH52005": {
+      "room": [
+         "NC444"
+      ],
+      "slots": [
+         "C3"
+      ],
+      "strength": 40
+   },
+   "PH58036": {
+      "room": [
+         "C226"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": "NA"
+   },
+   "PH59008": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "P",
+         " X4"
+      ],
+      "strength": 67
+   },
+   "PH59010": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J",
+         " L",
+         " N"
+      ],
+      "strength": "NA"
+   },
+   "PH60016": {
+      "room": [
+         "C230"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": "NA"
+   },
+   "PH60030": {
+      "room": [
+         "C230"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "PH60031": {
+      "room": [
+         "C226"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "PH60044": {
+      "room": [
+         "C226"
+      ],
+      "slots": [
+         "S3",
+         " B3"
+      ],
+      "strength": "NA"
+   },
+   "PH60046": {
+      "room": [
+         "C226"
+      ],
+      "slots": [
+         "S3",
+         " G3"
+      ],
+      "strength": "NA"
+   },
+   "PH60048": {
+      "room": [
+         "C231"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": "NA"
+   },
+   "PH60050": {
+      "room": [
+         "C230"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "PH60105": {
+      "room": [
+         "C230"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 0
+   },
+   "PH60203": {
+      "room": [
+         "C231"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 0
+   },
+   "PH60304": {
+      "room": [
+         "C226"
+      ],
+      "slots": [
+         "D3"
+      ],
+      "strength": 0
+   },
+   "PH60307": {
+      "room": [
+         "NC234"
+      ],
+      "slots": [
+         "E3"
+      ],
+      "strength": 0
+   },
+   "PH60308": {
+      "room": [
+         "C226"
+      ],
+      "slots": [
+         "F3"
+      ],
+      "strength": 23
+   },
+   "PH60402": {
+      "room": [
+         "C231"
+      ],
+      "slots": [
+         "G3"
+      ],
+      "strength": 6
+   },
+   "PH61008": {
+      "room": [
+         "C231"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "PH61010": {
+      "room": [
+         "C230"
+      ],
+      "slots": [
+         "S3",
+         " B3"
+      ],
+      "strength": "NA"
+   },
+   "PH61012": {
+      "room": [
+         "C226"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": "NA"
+   },
+   "PH61014": {
+      "room": [
+         "C226"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "PH62002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "C4",
+         " X4"
+      ],
+      "strength": "NA"
+   },
+   "PH69008": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J",
+         " L"
+      ],
+      "strength": "NA"
+   },
+   "QE47002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "QE48002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "QE57002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "QE58002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "QM47002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "QM48002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "QM57002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "QM58002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "RD30002": {
+      "room": [
+         "NC332"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": 210
+   },
+   "RD30005": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "U3"
+      ],
+      "strength": "NA"
+   },
+   "RD61001": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "V4"
+      ],
+      "strength": "NA"
+   },
+   "RE20001": {
+      "room": [
+         "Classroom 1"
+      ],
+      "slots": [
+         "C2"
+      ],
+      "strength": "NA"
+   },
+   "RE30003": {
+      "room": [
+         "Classroom 1"
+      ],
+      "slots": [
+         "B2"
+      ],
+      "strength": "NA"
+   },
+   "RE60002": {
+      "room": [
+         "Classroom 1"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 7
+   },
+   "RE60006": {
+      "room": [
+         "Classroom 1"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "RE60018": {
+      "room": [
+         "Classroom 1"
+      ],
+      "slots": [
+         "H3"
+      ],
+      "strength": 2
+   },
+   "RE60024": {
+      "room": [
+         "Classroom 1"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": 6
+   },
+   "RE61004": {
+      "room": [
+         "Classroom 1"
+      ],
+      "slots": [
+         "U4"
+      ],
+      "strength": "NA"
+   },
+   "RE61008": {
+      "room": [
+         "Classroom 1"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "RE67006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "RE67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "RE68002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "RE69002": {
+      "room": [
+         "Classroom 1"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": "NA"
+   },
+   "RE69004": {
+      "room": [
+         "Testing Laboratory"
+      ],
+      "slots": [
+         "P"
+      ],
+      "strength": 0
+   },
+   "RE69006": {
+      "room": [
+         "Testing Laboratory"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": 0
+   },
+   "RR61002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "RR67002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "RR68002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "RR69092": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "RR69094": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "RT60002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "RT60004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "RT60016": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "RT60020": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "RT60022": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 1
+   },
+   "RT67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "RT68002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "RT69002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "RT69004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": 0
+   },
+   "RX60011": {
+      "room": [
+         "NC432"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "RX60012": {
+      "room": [
+         "NC443"
+      ],
+      "slots": [
+         "C4"
+      ],
+      "strength": "NA"
+   },
+   "RX60018": {
+      "room": [
+         "NC432"
+      ],
+      "slots": [
+         "A3"
+      ],
+      "strength": "NA"
+   },
+   "RX60019": {
+      "room": [
+         "NC431"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "TE30002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "TE60004": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "TE60006": {
+      "room": [
+         "GSCLA1"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": "NA"
+   },
+   "TE61001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "TE61002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "TE61004": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "TE67001": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "TE67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "TE68102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "TE69002": {
+      "room": [
+         "GSMSPL"
+      ],
+      "slots": [
+         "L"
+      ],
+      "strength": "NA"
+   },
+   "TE69102": {
+      "room": [
+         "GSCLA1"
+      ],
+      "slots": [
+         "X"
+      ],
+      "strength": "NA"
+   },
+   "TS62002": {
+      "room": "NA",
+      "slots": [
+         "V4"
+      ],
+      "strength": "NA"
+   },
+   "TS70006": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "TS70009": {
+      "room": "NA",
+      "slots": [
+         "E4"
+      ],
+      "strength": "NA"
+   },
+   "WM60010": {
+      "room": [
+         "NC342"
+      ],
+      "slots": [
+         "B3"
+      ],
+      "strength": 0
+   },
+   "WM60014": {
+      "room": [
+         "NC433"
+      ],
+      "slots": [
+         "D4"
+      ],
+      "strength": 0
+   },
+   "WM60016": {
+      "room": [
+         "NC433"
+      ],
+      "slots": [
+         "F4"
+      ],
+      "strength": "NA"
+   },
+   "WM61002": {
+      "room": [
+         "NC433"
+      ],
+      "slots": [
+         "E4"
+      ],
+      "strength": 0
+   },
+   "WM67102": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "WM68002": {
+      "room": "NA",
+      "slots": "NA",
+      "strength": "NA"
+   },
+   "WM69002": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "J"
+      ],
+      "strength": "NA"
+   },
+   "WM69006": {
+      "room": [
+         "0"
+      ],
+      "slots": [
+         "N"
+      ],
+      "strength": 0
+   }
+}

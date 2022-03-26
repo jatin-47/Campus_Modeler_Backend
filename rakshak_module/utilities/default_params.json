@@ -1,0 +1,35 @@
+{
+   "General Input": {
+      "No of Days to Simulate": 60,
+      "Result Resolution by hours": 1
+   },
+   "Epidemic Parameter Input": {
+      "Virus R0": 1.5,
+      "City Prevalence Rate": 0.005,
+      "No of Initial Infected People": 10
+   },
+   "Policy Input": {
+      "Expected No of Visitors per Day (Other than Staff)": 15,
+      "Compliance Rate": 0.8,
+      "Quarantine Period": 14,
+      "Sector/Building to Lockdown": [
+         "No Lockdown"
+      ]
+   },
+   "Testing Strategy": {
+      "Testing Strategy": [
+         "Symptomatic First"
+      ],
+      "Testing Capacity Per Day": 30,
+      "Day(s) of Testing": [
+         "monday",
+         "tuesday",
+         "wednesday",
+         "thursday",
+         "friday",
+         "saturday"
+      ],
+      "Test Sensitivity": 0.95,
+      "Test Specificity": 1
+   }
+}

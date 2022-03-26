@@ -1,0 +1,728 @@
+{
+   "0": {
+      "courses": [
+         "EE313"
+      ],
+      "department": "EE"
+   },
+   "1": {
+      "courses": [
+         "EEL7340"
+      ],
+      "department": "EE"
+   },
+   "2": {
+      "courses": [
+         "MAL6020"
+      ],
+      "department": "MA"
+   },
+   "3": {
+      "courses": [
+         "MTL7320"
+      ],
+      "department": "MT"
+   },
+   "4": {
+      "courses": [
+         "EEL7060",
+         "EEL7061",
+         "EEL7062",
+         "EEL7063",
+         "EEP7030"
+      ],
+      "department": "EE"
+   },
+   "5": {
+      "courses": [
+         "PHL7360"
+      ],
+      "department": "PH"
+   },
+   "6": {
+      "courses": [
+         "BB620",
+         "BBL7340"
+      ],
+      "department": "BB"
+   },
+   "7": {
+      "courses": [
+         "MEL7030"
+      ],
+      "department": "ME"
+   },
+   "8": {
+      "courses": [
+         "ME211",
+         "#ME211"
+      ],
+      "department": "ME"
+   },
+   "9": {
+      "courses": [
+         "CS212"
+      ],
+      "department": "CS"
+   },
+   "10": {
+      "courses": [
+         "CYL7310"
+      ],
+      "department": "CY"
+   },
+   "11": {
+      "courses": [
+         "EEL1010"
+      ],
+      "department": "EE"
+   },
+   "12": {
+      "courses": [
+         "HS411",
+         "HS311",
+         "HS799"
+      ],
+      "department": "HS"
+   },
+   "13": {
+      "courses": [
+         "MEP1010"
+      ],
+      "department": "ME"
+   },
+   "14": {
+      "courses": [
+         "MTL7010",
+         "MT698",
+         "MT799"
+      ],
+      "department": "MT"
+   },
+   "15": {
+      "courses": [
+         "EE212"
+      ],
+      "department": "EE"
+   },
+   "16": {
+      "courses": [
+         "EEL7070",
+         "EE314"
+      ],
+      "department": "EE"
+   },
+   "17": {
+      "courses": [
+         "MEL7040"
+      ],
+      "department": "ME"
+   },
+   "18": {
+      "courses": [
+         "EEL7010",
+         "EEL7011",
+         "EEL7012",
+         "EEL7013",
+         "EEL7020",
+         "EEP7020"
+      ],
+      "department": "EE"
+   },
+   "19": {
+      "courses": [
+         "PHL0010",
+         "PHL7380"
+      ],
+      "department": "PH"
+   },
+   "20": {
+      "courses": [
+         "CYL1010",
+         "CY515",
+         "QCL6010"
+      ],
+      "department": "CY"
+   },
+   "21": {
+      "courses": [
+         "PHL7330"
+      ],
+      "department": "PH"
+   },
+   "22": {
+      "courses": [
+         "ME214",
+         "MEL7320"
+      ],
+      "department": "ME"
+   },
+   "23": {
+      "courses": [
+         "MTL7310"
+      ],
+      "department": "MT"
+   },
+   "24": {
+      "courses": [
+         "MEL7010"
+      ],
+      "department": "ME"
+   },
+   "25": {
+      "courses": [
+         "ME314"
+      ],
+      "department": "ME"
+   },
+   "26": {
+      "courses": [
+         "CS312",
+         "DHL7012"
+      ],
+      "department": "CS"
+   },
+   "27": {
+      "courses": [
+         "CSL7320"
+      ],
+      "department": "CS"
+   },
+   "28": {
+      "courses": [
+         "CS313",
+         "CSL7310"
+      ],
+      "department": "CS"
+   },
+   "29": {
+      "courses": [
+         "EEL7080",
+         "EEL7090",
+         "EEP7040"
+      ],
+      "department": "EE"
+   },
+   "30": {
+      "courses": [
+         "CSL7010"
+      ],
+      "department": "CS"
+   },
+   "31": {
+      "courses": [
+         "MAL6030"
+      ],
+      "department": "MA"
+   },
+   "32": {
+      "courses": [
+         "PHL7350",
+         "PHP6020"
+      ],
+      "department": "PH"
+   },
+   "33": {
+      "courses": [
+         "MAL1010",
+         "#MAL1010"
+      ],
+      "department": "MA"
+   },
+   "34": {
+      "courses": [
+         "CSL7020",
+         "CSL7021",
+         "CSL7022",
+         "CSL7023",
+         "CS497",
+         "BB498",
+         "CS799",
+         "CS398"
+      ],
+      "department": "CS"
+   },
+   "35": {
+      "courses": [
+         "HSL7320",
+         "HSL4020"
+      ],
+      "department": "HS"
+   },
+   "36": {
+      "courses": [
+         "MEL7060"
+      ],
+      "department": "ME"
+   },
+   "37": {
+      "courses": [
+         "HSL4010",
+         "HS421"
+      ],
+      "department": "HS"
+   },
+   "38": {
+      "courses": [
+         "HSN1010"
+      ],
+      "department": "HS"
+   },
+   "39": {
+      "courses": [
+         "EEL7050"
+      ],
+      "department": "EE"
+   },
+   "40": {
+      "courses": [
+         "MEL7020"
+      ],
+      "department": "ME"
+   },
+   "41": {
+      "courses": [
+         "MEL7310"
+      ],
+      "department": "ME"
+   },
+   "42": {
+      "courses": [
+         "MAL5020",
+         "MAL7011",
+         "MAL7012"
+      ],
+      "department": "MA"
+   },
+   "43": {
+      "courses": [
+         "ME698",
+         "ME799"
+      ],
+      "department": "ME"
+   },
+   "44": {
+      "courses": [
+         "EEL7040",
+         "EEL7041",
+         "EEL7042",
+         "EEL7043"
+      ],
+      "department": "EE"
+   },
+   "45": {
+      "courses": [
+         "CYL6030"
+      ],
+      "department": "CY"
+   },
+   "46": {
+      "courses": [
+         "EEL7030",
+         "EEP7010"
+      ],
+      "department": "EE"
+   },
+   "47": {
+      "courses": [
+         "DHL7010",
+         "DHL7011"
+      ],
+      "department": "DH"
+   },
+   "48": {
+      "courses": [
+         "BBL1010",
+         "BBL7350",
+         "BS799"
+      ],
+      "department": "BB"
+   },
+   "49": {
+      "courses": [
+         "HSL6020"
+      ],
+      "department": "HS"
+   },
+   "50": {
+      "courses": [
+         "MAL7310"
+      ],
+      "department": "MA"
+   },
+   "51": {
+      "courses": [
+         "PHL7340"
+      ],
+      "department": "PH"
+   },
+   "52": {
+      "courses": [
+         "CYL7350"
+      ],
+      "department": "CY"
+   },
+   "53": {
+      "courses": [
+         "MAL5010",
+         "MAL7021",
+         "MA221",
+         "MAL7030"
+      ],
+      "department": "MA"
+   },
+   "54": {
+      "courses": [
+         "MAL7020"
+      ],
+      "department": "MA"
+   },
+   "55": {
+      "courses": [
+         "CS211"
+      ],
+      "department": "CS"
+   },
+   "56": {
+      "courses": [
+         "DHL7013"
+      ],
+      "department": "DH"
+   },
+   "57": {
+      "courses": [
+         "PHL6010",
+         "PHP1010"
+      ],
+      "department": "PH"
+   },
+   "58": {
+      "courses": [
+         "HSL7310",
+         "HS211",
+         "HSL6010"
+      ],
+      "department": "HS"
+   },
+   "59": {
+      "courses": [
+         "BBL7020"
+      ],
+      "department": "BB"
+   },
+   "60": {
+      "courses": [
+         "BB622"
+      ],
+      "department": "BB"
+   },
+   "61": {
+      "courses": [
+         "MEL7050",
+         "MEL7051",
+         "MEL7052",
+         "MEL7053"
+      ],
+      "department": "ME"
+   },
+   "62": {
+      "courses": [
+         "MAL6010",
+         "MAL7022",
+         "MAL7023",
+         "MA698",
+         "MA799"
+      ],
+      "department": "MA"
+   },
+   "63": {
+      "courses": [
+         "ME315",
+         "ME497"
+      ],
+      "department": "ME"
+   },
+   "64": {
+      "courses": [
+         "EE213",
+         "#EE213"
+      ],
+      "department": "EE"
+   },
+   "65": {
+      "courses": [
+         "CYL7330"
+      ],
+      "department": "CY"
+   },
+   "66": {
+      "courses": [
+         "CY211"
+      ],
+      "department": "CY"
+   },
+   "67": {
+      "courses": [
+         "PHL7370"
+      ],
+      "department": "PH"
+   },
+   "68": {
+      "courses": [
+         "CYL6050"
+      ],
+      "department": "CY"
+   },
+   "69": {
+      "courses": [
+         "CY698",
+         "CY699",
+         "CY799"
+      ],
+      "department": "CY"
+   },
+   "70": {
+      "courses": [
+         "MTL7020"
+      ],
+      "department": "MT"
+   },
+   "71": {
+      "courses": [
+         "ME213",
+         "ME311"
+      ],
+      "department": "ME"
+   },
+   "72": {
+      "courses": [
+         "PHL6030"
+      ],
+      "department": "PH"
+   },
+   "73": {
+      "courses": [
+         "CYL0010",
+         "CYL7320",
+         "CYP6030"
+      ],
+      "department": "CY"
+   },
+   "74": {
+      "courses": [
+         "CYP1010"
+      ],
+      "department": "CY"
+   },
+   "75": {
+      "courses": [
+         "CYL6040",
+         "CYP6010"
+      ],
+      "department": "CY"
+   },
+   "76": {
+      "courses": [
+         "EEL7320"
+      ],
+      "department": "EE"
+   },
+   "77": {
+      "courses": [
+         "PHP6030"
+      ],
+      "department": "PH"
+   },
+   "78": {
+      "courses": [
+         "CY613",
+         "OSN1010",
+         "OSN1020",
+         "OSN1030"
+      ],
+      "department": "CY"
+   },
+   "79": {
+      "courses": [
+         "EE211",
+         "#EE211"
+      ],
+      "department": "EE"
+   },
+   "80": {
+      "courses": [
+         "CYL6010",
+         "CYL7340"
+      ],
+      "department": "CY"
+   },
+   "81": {
+      "courses": [
+         "PHL7310",
+         "PHL7311",
+         "PHL7312",
+         "PHL7313"
+      ],
+      "department": "PH"
+   },
+   "82": {
+      "courses": [
+         "PHL6040",
+         "PH698",
+         "PH799",
+         "PHP6010"
+      ],
+      "department": "PH"
+   },
+   "83": {
+      "courses": [
+         "EE311",
+         "EE497"
+      ],
+      "department": "EE"
+   },
+   "84": {
+      "courses": [
+         "BB211",
+         "BBL7010"
+      ],
+      "department": "BB"
+   },
+   "85": {
+      "courses": [
+         "EEL7330",
+         "EE698",
+         "EE799"
+      ],
+      "department": "EE"
+   },
+   "86": {
+      "courses": [
+         "MEL7070"
+      ],
+      "department": "ME"
+   },
+   "87": {
+      "courses": [
+         "PH111"
+      ],
+      "department": "PH"
+   },
+   "88": {
+      "courses": [
+         "EEL7310",
+         "EE312"
+      ],
+      "department": "EE"
+   },
+   "89": {
+      "courses": [
+         "PHL1010",
+         "PHL6020"
+      ],
+      "department": "PH"
+   },
+   "90": {
+      "courses": [
+         "PHL7320"
+      ],
+      "department": "PH"
+   },
+   "91": {
+      "courses": [
+         "CYL6020",
+         "CYP6020"
+      ],
+      "department": "CY"
+   },
+   "92": {
+      "courses": [
+         "ME312",
+         "MEP7010"
+      ],
+      "department": "ME"
+   },
+   "93": {
+      "courses": [
+         "CS314",
+         "CSL7030"
+      ],
+      "department": "CS"
+   },
+   "94": {
+      "courses": [
+         "CSL1010",
+         "CS311"
+      ],
+      "department": "CS"
+   },
+   "95": {
+      "courses": [
+         "BBL7040"
+      ],
+      "department": "BB"
+   },
+   "96": {
+      "courses": [
+         "MEL1010",
+         "#MEL1010",
+         "OA401",
+         "OAE1010"
+      ],
+      "department": "ME"
+   },
+   "97": {
+      "courses": [
+         "BS322",
+         "BBL7330",
+         "BB621",
+         "BB799"
+      ],
+      "department": "BS"
+   },
+   "98": {
+      "courses": [
+         "BB619"
+      ],
+      "department": "BB"
+   },
+   "99": {
+      "courses": [
+         "PHL6050"
+      ],
+      "department": "PH"
+   },
+   "100": {
+      "courses": [
+         "MAL7320",
+         "MAL0010"
+      ],
+      "department": "MA"
+   },
+   "101": {
+      "courses": [
+         "MA111"
+      ],
+      "department": "MA"
+   },
+   "102": {
+      "courses": [
+         "HSL0010",
+         "HSN7010"
+      ],
+      "department": "HS"
+   },
+   "103": {
+      "courses": [
+         "CSP7010"
+      ],
+      "department": "CS"
+   },
+   "104": {
+      "courses": [
+         "CS121",
+         "#CS121"
+      ],
+      "department": "CS"
+   }
+}

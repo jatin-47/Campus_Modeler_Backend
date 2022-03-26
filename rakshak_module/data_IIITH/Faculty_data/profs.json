@@ -1,0 +1,566 @@
+{
+   "0": {
+      "courses": [
+         "EC2.201"
+      ],
+      "department": "EC"
+   },
+   "1": {
+      "courses": [],
+      "department": null
+   },
+   "2": {
+      "courses": [
+         "ECE562"
+      ],
+      "department": "ECE"
+   },
+   "3": {
+      "courses": [
+         "HS3.301",
+         "HS0.302"
+      ],
+      "department": "HS"
+   },
+   "4": {
+      "courses": [
+         "CS7.303",
+         "ECE442"
+      ],
+      "department": "ECE"
+   },
+   "5": {
+      "courses": [
+         "CSE418"
+      ],
+      "department": "CSE"
+   },
+   "6": {
+      "courses": [
+         "CSE578"
+      ],
+      "department": "CSE"
+   },
+   "7": {
+      "courses": [],
+      "department": null
+   },
+   "8": {
+      "courses": [
+         "CSE538"
+      ],
+      "department": "CSE"
+   },
+   "9": {
+      "courses": [
+         "HSS318",
+         "HSS318"
+      ],
+      "department": "HSS"
+   },
+   "10": {
+      "courses": [
+         "CS7.302"
+      ],
+      "department": "CS"
+   },
+   "11": {
+      "courses": [
+         "EC2.201",
+         "EC2.203"
+      ],
+      "department": "EC"
+   },
+   "12": {
+      "courses": [
+         "CS9.311"
+      ],
+      "department": "CS"
+   },
+   "13": {
+      "courses": [
+         "SC2.202"
+      ],
+      "department": "SC"
+   },
+   "14": {
+      "courses": [
+         "ECE442"
+      ],
+      "department": "ECE"
+   },
+   "15": {
+      "courses": [
+         "CS3.302",
+         "CS2.201",
+         "EC6.202"
+      ],
+      "department": "EC"
+   },
+   "16": {
+      "courses": [
+         "SC2.316"
+      ],
+      "department": "SC"
+   },
+   "17": {
+      "courses": [
+         "CL1.204"
+      ],
+      "department": "CL"
+   },
+   "18": {
+      "courses": [
+         "HSS317"
+      ],
+      "department": "HSS"
+   },
+   "19": {
+      "courses": [
+         "SCI477"
+      ],
+      "department": "SCI"
+   },
+   "20": {
+      "courses": [
+         "EC4.402"
+      ],
+      "department": "EC"
+   },
+   "21": {
+      "courses": [
+         "SC1.204",
+         "SC1.205"
+      ],
+      "department": "SC"
+   },
+   "22": {
+      "courses": [
+         "CS9.312"
+      ],
+      "department": "CS"
+   },
+   "23": {
+      "courses": [
+         "CSE481"
+      ],
+      "department": "CSE"
+   },
+   "24": {
+      "courses": [
+         "EC5.405"
+      ],
+      "department": "EC"
+   },
+   "25": {
+      "courses": [
+         "EC4.403"
+      ],
+      "department": "EC"
+   },
+   "26": {
+      "courses": [
+         "CS4.403"
+      ],
+      "department": "CS"
+   },
+   "27": {
+      "courses": [
+         "CSE586",
+         "CS9.311"
+      ],
+      "department": "CS"
+   },
+   "28": {
+      "courses": [
+         "CS1.406"
+      ],
+      "department": "CS"
+   },
+   "29": {
+      "courses": [
+         "CS4.401"
+      ],
+      "department": "CS"
+   },
+   "30": {
+      "courses": [
+         "SC2.203",
+         "SC2.301",
+         "SC1.111"
+      ],
+      "department": "SC"
+   },
+   "31": {
+      "courses": [
+         "IMA303"
+      ],
+      "department": "IMA"
+   },
+   "32": {
+      "courses": [
+         "EC5.205"
+      ],
+      "department": "EC"
+   },
+   "33": {
+      "courses": [
+         "CSE431"
+      ],
+      "department": "CSE"
+   },
+   "34": {
+      "courses": [
+         "CS7.401"
+      ],
+      "department": "CS"
+   },
+   "35": {
+      "courses": [],
+      "department": null
+   },
+   "36": {
+      "courses": [],
+      "department": null
+   },
+   "37": {
+      "courses": [],
+      "department": null
+   },
+   "38": {
+      "courses": [
+         "CS7.601",
+         "SCI477"
+      ],
+      "department": "SCI"
+   },
+   "39": {
+      "courses": [
+         "HS1.203"
+      ],
+      "department": "HS"
+   },
+   "40": {
+      "courses": [
+         "HS8.102",
+         "CSE595"
+      ],
+      "department": "CSE"
+   },
+   "41": {
+      "courses": [
+         "SC3.303",
+         "SC1.111"
+      ],
+      "department": "SC"
+   },
+   "42": {
+      "courses": [
+         "CE1.603"
+      ],
+      "department": "CE"
+   },
+   "43": {
+      "courses": [
+         "CS1.501"
+      ],
+      "department": "CS"
+   },
+   "44": {
+      "courses": [
+         "SCI477",
+         "EC2.203"
+      ],
+      "department": "EC"
+   },
+   "45": {
+      "courses": [
+         "CES641"
+      ],
+      "department": "CES"
+   },
+   "46": {
+      "courses": [
+         "ECE431"
+      ],
+      "department": "ECE"
+   },
+   "47": {
+      "courses": [],
+      "department": null
+   },
+   "48": {
+      "courses": [
+         "ECE537"
+      ],
+      "department": "ECE"
+   },
+   "49": {
+      "courses": [
+         "CS7.301"
+      ],
+      "department": "CS"
+   },
+   "50": {
+      "courses": [
+         "CSE567"
+      ],
+      "department": "CSE"
+   },
+   "51": {
+      "courses": [
+         "HS7.301"
+      ],
+      "department": "HS"
+   },
+   "52": {
+      "courses": [
+         "OC3.102"
+      ],
+      "department": "OC"
+   },
+   "53": {
+      "courses": [
+         "CSE461"
+      ],
+      "department": "CSE"
+   },
+   "54": {
+      "courses": [],
+      "department": null
+   },
+   "55": {
+      "courses": [],
+      "department": null
+   },
+   "56": {
+      "courses": [
+         "HS2.302"
+      ],
+      "department": "HS"
+   },
+   "57": {
+      "courses": [
+         "CEG461"
+      ],
+      "department": "CEG"
+   },
+   "58": {
+      "courses": [],
+      "department": null
+   },
+   "59": {
+      "courses": [
+         "CS6.301",
+         "CSE563"
+      ],
+      "department": "CSE"
+   },
+   "60": {
+      "courses": [
+         "CEG462"
+      ],
+      "department": "CEG"
+   },
+   "61": {
+      "courses": [
+         "EC5.203"
+      ],
+      "department": "EC"
+   },
+   "62": {
+      "courses": [
+         "MA4.303"
+      ],
+      "department": "MA"
+   },
+   "63": {
+      "courses": [],
+      "department": null
+   },
+   "64": {
+      "courses": [],
+      "department": null
+   },
+   "65": {
+      "courses": [],
+      "department": null
+   },
+   "66": {
+      "courses": [
+         "CS3.305",
+         "CSE581"
+      ],
+      "department": "CSE"
+   },
+   "67": {
+      "courses": [
+         "ECE551"
+      ],
+      "department": "ECE"
+   },
+   "68": {
+      "courses": [
+         "CS1.302"
+      ],
+      "department": "CS"
+   },
+   "69": {
+      "courses": [
+         "SC1.420"
+      ],
+      "department": "SC"
+   },
+   "70": {
+      "courses": [
+         "CSE498"
+      ],
+      "department": "CSE"
+   },
+   "71": {
+      "courses": [
+         "CES442",
+         "CES617"
+      ],
+      "department": "CES"
+   },
+   "72": {
+      "courses": [
+         "HS1.202"
+      ],
+      "department": "HS"
+   },
+   "73": {
+      "courses": [
+         "SCI761"
+      ],
+      "department": "SCI"
+   },
+   "74": {
+      "courses": [],
+      "department": null
+   },
+   "75": {
+      "courses": [
+         "CS4.501"
+      ],
+      "department": "CS"
+   },
+   "76": {
+      "courses": [],
+      "department": null
+   },
+   "77": {
+      "courses": [],
+      "department": null
+   },
+   "78": {
+      "courses": [
+         "IMA409",
+         "CE1.603"
+      ],
+      "department": "CE"
+   },
+   "79": {
+      "courses": [
+         "CS0.302"
+      ],
+      "department": "CS"
+   },
+   "80": {
+      "courses": [
+         "CSE471"
+      ],
+      "department": "CSE"
+   },
+   "81": {
+      "courses": [
+         "SC1.315"
+      ],
+      "department": "SC"
+   },
+   "82": {
+      "courses": [
+         "CSE588"
+      ],
+      "department": "CSE"
+   },
+   "83": {
+      "courses": [],
+      "department": null
+   },
+   "84": {
+      "courses": [],
+      "department": null
+   },
+   "85": {
+      "courses": [],
+      "department": null
+   },
+   "86": {
+      "courses": [
+         "ECE463"
+      ],
+      "department": "ECE"
+   },
+   "87": {
+      "courses": [
+         "EC2.404"
+      ],
+      "department": "EC"
+   },
+   "88": {
+      "courses": [
+         "HSS337"
+      ],
+      "department": "HSS"
+   },
+   "89": {
+      "courses": [
+         "HS3.301"
+      ],
+      "department": "HS"
+   },
+   "90": {
+      "courses": [
+         "CLG452"
+      ],
+      "department": "CLG"
+   },
+   "91": {
+      "courses": [],
+      "department": null
+   },
+   "92": {
+      "courses": [],
+      "department": null
+   },
+   "93": {
+      "courses": [],
+      "department": null
+   },
+   "94": {
+      "courses": [],
+      "department": null
+   },
+   "95": {
+      "courses": [],
+      "department": null
+   },
+   "96": {
+      "courses": [],
+      "department": null
+   },
+   "97": {
+      "courses": [],
+      "department": null
+   },
+   "98": {
+      "courses": [],
+      "department": null
+   },
+   "99": {
+      "courses": [],
+      "department": null
+   }
+}

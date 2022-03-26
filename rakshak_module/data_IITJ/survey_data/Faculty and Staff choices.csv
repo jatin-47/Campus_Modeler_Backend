@@ -1,0 +1,93 @@
+Timestamp,Select your role,Select all your typical working hours on weekdays?,Select all your typical working hours on weekends?,What are your frequent places of visit outside of working hours?,How many times do you usually eat out (Canteen/Restaurants/Eateries) in a week? [-],What are the eateries that you frequently visit?
+4/13/2021 15:27:06,Faculty,"10am-1pm, 2pm-6pm",10am-1pm,Kendriya Bhandar,1,None
+4/13/2021 15:27:29,Faculty,"10am-1pm, 2pm-6pm, 6pm-8pm",10am-1pm,Kendriya Bhandar,2,Other
+4/13/2021 15:27:42,Faculty,"10am-1pm, 2pm-6pm",10am-1pm,"Kendriya Bhandar, Community Center",1,Meal on the wheels
+4/13/2021 15:29:51,Staff,10am-1pm,10am-1pm,"Kendriya Bhandar, Library, Computer center, Type C - park, Community Center",1,None
+4/13/2021 15:29:52,Faculty,"8am-10am, 10am-1pm, 2pm-6pm","8am-10am, 10am-1pm",Kendriya Bhandar,1,None
+4/13/2021 15:30:17,Faculty,"10am-1pm, 2pm-6pm, 6pm-8pm","2pm-6pm, 6pm-8pm",Type B- park,1,None
+4/13/2021 15:31:42,Staff,"10am-1pm, 2pm-6pm",10am-1pm,Type C - park,1,Mess
+4/13/2021 15:31:50,Faculty,"10am-1pm, 2pm-6pm, 8pm-10pm","10am-1pm, 8pm-10pm","Kendriya Bhandar, Type B- park",1,None
+4/13/2021 15:33:07,Faculty,"10am-1pm, 2pm-6pm",8am-10am,Kendriya Bhandar,1,"Meatloaf Shop, Canteen"
+4/13/2021 15:33:24,Faculty,8pm-10pm,8pm-10pm,"Type B- park, Cricket Ground",1,None
+4/13/2021 15:33:25,Faculty,"10am-1pm, 2pm-6pm",10am-1pm,"Type B- park, Outside Campus",3,Canteen
+4/13/2021 15:34:39,Faculty,"8am-10am, 10am-1pm, 2pm-6pm, 6pm-8pm, 8pm-10pm","10am-1pm, 2pm-6pm","Kendriya Bhandar, Library, Computer center",1,None
+4/13/2021 15:39:52,Faculty,"10am-1pm, 2pm-6pm, 6pm-8pm","10am-1pm, 2pm-6pm, 6pm-8pm",Type B- park,1,None
+4/13/2021 15:42:22,Faculty,"10am-1pm, 2pm-6pm, 8pm-10pm",10am-1pm,"Kendriya Bhandar, Tennis court, Outside Campus",1,Other
+4/13/2021 15:44:33,Faculty,"2pm-6pm, 6pm-8pm, 8pm-10pm","10am-1pm, 2pm-6pm, 6pm-8pm, 8pm-10pm",Outside Campus,0,None
+4/13/2021 15:44:39,Faculty,"10am-1pm, 2pm-6pm",10am-1pm,Type C - park,0,None
+4/13/2021 15:44:57,Faculty,2pm-6pm,8pm-10pm,Outside Campus,1,None
+4/13/2021 15:45:38,Faculty,"10am-1pm, 2pm-6pm, 6pm-8pm, 8pm-10pm",2pm-6pm,Kendriya Bhandar,0,None
+4/13/2021 15:45:47,Staff,"8am-10am, 10am-1pm, 2pm-6pm, 6pm-8pm","8am-10am, 10am-1pm, 2pm-6pm","Kendriya Bhandar, Library, Computer center, Outside Campus, Community Center",1,None
+4/13/2021 15:47:40,Faculty,8am-10am,10am-1pm,Type C - park,0,None
+4/13/2021 15:47:54,Staff,2pm-6pm,10am-1pm,"Kendriya Bhandar, Library",4,"Mess, Canteen"
+4/13/2021 15:47:55,Faculty,"8am-10am, 10am-1pm, 2pm-6pm, 6pm-8pm, 8pm-10pm","10am-1pm, 2pm-6pm, 6pm-8pm, 8pm-10pm","Kendriya Bhandar, Library, Type B- park, Community Center",1,None
+4/13/2021 15:48:20,Staff,"8am-10am, 10am-1pm, 2pm-6pm",2pm-6pm,"Kendriya Bhandar, Library",8,Mess
+4/13/2021 15:50:37,Faculty,"10am-1pm, 2pm-6pm",10am-1pm,"Type B- park, Outside Campus",1,"Meal on the wheels, Canteen"
+4/13/2021 15:52:06,Faculty,10am-1pm,10am-1pm,"Kendriya Bhandar, Type B- park, Outside Campus, Community Center",0,None
+4/13/2021 15:59:08,Faculty,"10am-1pm, 2pm-6pm",None,"Kendriya Bhandar, Community Center",0,None
+4/13/2021 15:59:53,Faculty,"10am-1pm, 2pm-6pm",2pm-6pm,"Kendriya Bhandar, Type C - park, Community Center",1,Meal on the wheels
+4/13/2021 16:07:06,Staff,"10am-1pm, 2pm-6pm, 6pm-8pm","10am-1pm, 2pm-6pm",Outside Campus,0,None
+4/13/2021 16:11:48,Faculty,"10am-1pm, 2pm-6pm",2pm-6pm,Kendriya Bhandar,0,None
+4/13/2021 16:18:44,Faculty,"10am-1pm, 2pm-6pm","10am-1pm, 2pm-6pm",Cricket Ground,0,None
+4/13/2021 16:32:40,Staff,6pm-8pm,2pm-6pm,None,0,None
+4/13/2021 16:51:05,Faculty,"10am-1pm, 2pm-6pm",None,None,0,Mess
+4/13/2021 17:00:19,Staff,"10am-1pm, 2pm-6pm, 8pm-10pm","6pm-8pm, 8pm-10pm","Kendriya Bhandar, Computer center, Cricket Ground",3,"Meal on the wheels, Mess, Canteen"
+4/13/2021 17:23:33,Staff,6pm-8pm,None,None,0,None
+4/13/2021 17:45:04,Faculty,"10am-1pm, 2pm-6pm","10am-1pm, 6pm-8pm","Type B- park, Outside Campus, Community Center",0,"Meatloaf Shop, Canteen"
+4/13/2021 17:59:59,Faculty,"8am-10am, 10am-1pm, 2pm-6pm",10am-1pm,None,0,None
+4/13/2021 18:26:00,Faculty,"10am-1pm, 2pm-6pm",2pm-6pm,"Kendriya Bhandar, Type C - park",0,None
+4/13/2021 18:30:15,Faculty,"10am-1pm, 2pm-6pm, 6pm-8pm, 8pm-10pm","10am-1pm, 8pm-10pm","Type B- park, Outside Campus",0,None
+4/13/2021 21:06:56,Faculty,"10am-1pm, 2pm-6pm",None,None,0,None
+4/13/2021 22:23:47,Faculty,"10am-1pm, 2pm-6pm","10am-1pm, 6pm-8pm",Site C,0,None
+4/14/2021 8:01:25,Staff,"10am-1pm, 2pm-6pm, 6pm-8pm",None,"Hockey court, Hostels n dining",3,Mess
+4/14/2021 11:13:12,Staff,"8am-10am, 10am-1pm, 2pm-6pm","10am-1pm, 2pm-6pm",Mess Hall,1,"Meal on the wheels, Mess"
+4/14/2021 12:09:44,Faculty,"8am-10am, 10am-1pm, 2pm-6pm, 6pm-8pm","8am-10am, 10am-1pm, 2pm-6pm, 6pm-8pm",Outside Campus,1,Meatloaf Shop
+4/14/2021 20:00:53,Faculty,"10am-1pm, 2pm-6pm, 6pm-8pm","2pm-6pm, 6pm-8pm",Jodhpur Club,0,None
+4/15/2021 9:33:17,Staff,"8am-10am, 10am-1pm, 2pm-6pm, 6pm-8pm",None,None,0,None
+4/15/2021 10:28:21,Faculty,"10am-1pm, 2pm-6pm",10am-1pm,"Kendriya Bhandar, Community Center",0,None
+4/15/2021 10:46:06,Staff,"8am-10am, 10am-1pm, 2pm-6pm","8am-10am, 10am-1pm, 2pm-6pm",None,0,None
+4/15/2021 13:22:08,Staff,"8am-10am, 10am-1pm","8am-10am, 10am-1pm","Kendriya Bhandar, Type B- park, Community Center",0,None
+4/15/2021 16:53:55,Staff,6pm-8pm,6pm-8pm,"Type C - park, Outside Campus, Community Center",0,None
+4/15/2021 16:55:26,Staff,"10am-1pm, 2pm-6pm","10am-1pm, 8pm-10pm",Computer center,0,Meal on the wheels
+4/15/2021 16:55:51,Faculty,"8am-10am, 10am-1pm, 2pm-6pm, 6pm-8pm","10am-1pm, 2pm-6pm",Kendriya Bhandar,0,None
+4/15/2021 16:55:53,Faculty,2pm-6pm,"10am-1pm, 6pm-8pm","Kendriya Bhandar, Type B- park",0,None
+4/15/2021 16:58:20,Faculty,"8am-10am, 10am-1pm, 2pm-6pm","2pm-6pm, 6pm-8pm",Kendriya Bhandar,0,None
+4/15/2021 16:59:07,Staff,"10am-1pm, 2pm-6pm",None,Type C - park,0,None
+4/15/2021 16:59:54,Staff,"10am-1pm, 2pm-6pm",2pm-6pm,"Kendriya Bhandar, Type C - park, Hockey court",3,"Mess, Canteen"
+4/15/2021 17:00:01,Staff,"8am-10am, 10am-1pm, 2pm-6pm",10am-1pm,"Kendriya Bhandar, Type C - park, Community Center",2,"Meal on the wheels, Canteen"
+4/15/2021 17:00:09,Staff,"8am-10am, 10am-1pm, 2pm-6pm",2pm-6pm,Type C - park,0,None
+4/15/2021 17:00:12,Faculty,"8am-10am, 10am-1pm, 2pm-6pm, 6pm-8pm","10am-1pm, 2pm-6pm, 6pm-8pm","Kendriya Bhandar, Outside Campus",0,None
+4/15/2021 17:00:54,Faculty,"10am-1pm, 2pm-6pm","10am-1pm, 2pm-6pm","Type C - park, Outside Campus",1,Meatloaf Shop
+4/15/2021 17:02:16,Faculty,10am-1pm,10am-1pm,None,0,None
+4/15/2021 17:02:35,Faculty,"10am-1pm, 2pm-6pm, 8pm-10pm","2pm-6pm, 6pm-8pm, 8pm-10pm","Kendriya Bhandar, Library, Cricket Ground, Running track",3,"Mess, Canteen"
+4/15/2021 17:02:46,Staff,"8am-10am, 10am-1pm, 2pm-6pm, 6pm-8pm","8am-10am, 10am-1pm",Hanuman Ji Temple at the Back of TPL Office,0,None
+4/15/2021 17:03:06,Staff,"10am-1pm, 2pm-6pm",2pm-6pm,Kendriya Bhandar,4,"Mess, Canteen"
+4/15/2021 17:04:15,Faculty,8am-10am,2pm-6pm,Forest behind B type quarters,1,None
+4/15/2021 17:07:41,Faculty,"10am-1pm, 2pm-6pm, 6pm-8pm, 8pm-10pm","10am-1pm, 8pm-10pm","Kendriya Bhandar, Type C - park, Community Center, Oyo Canteen, Student's Hostel",8,"Meatloaf Shop, Meal on the wheels, Mess, Canteen"
+4/15/2021 17:09:00,Staff,"8am-10am, 10am-1pm, 2pm-6pm, 6pm-8pm","10am-1pm, 6pm-8pm","Kendriya Bhandar, Type C - park",0,None
+4/15/2021 17:15:26,Staff,"10am-1pm, 2pm-6pm","10am-1pm, 6pm-8pm",Outside Campus,6,Meal on the wheels
+4/15/2021 17:21:49,Faculty,2pm-6pm,2pm-6pm,None,0,None
+4/15/2021 17:23:47,Faculty,"8am-10am, 10am-1pm, 2pm-6pm",10am-1pm,Outside Campus,0,None
+4/15/2021 17:24:11,Faculty,"10am-1pm, 2pm-6pm",2pm-6pm,Type B- park,0,None
+4/15/2021 17:25:13,Faculty,"10am-1pm, 2pm-6pm","10am-1pm, 2pm-6pm",None,4,Meal on the wheels
+4/15/2021 17:25:16,Staff,"10am-1pm, 2pm-6pm, 6pm-8pm","10am-1pm, 2pm-6pm, 6pm-8pm","Kendriya Bhandar, Type B- park",1,None
+4/15/2021 17:38:12,Faculty,"8am-10am, 10am-1pm, 2pm-6pm","10am-1pm, 2pm-6pm, 6pm-8pm",Cricket Ground,0,Meal on the wheels
+4/15/2021 17:46:58,Faculty,"10am-1pm, 2pm-6pm, 6pm-8pm",2pm-6pm,Admin Block,2,"Mess, Canteen"
+4/15/2021 18:02:11,Faculty,"8am-10am, 10am-1pm, 2pm-6pm","10am-1pm, 2pm-6pm",Kendriya Bhandar,1,"Meatloaf Shop, Meal on the wheels"
+4/15/2021 18:20:53,Faculty,8am-10am,10am-1pm,None,0,None
+4/15/2021 18:50:25,Staff,"10am-1pm, 2pm-6pm",6pm-8pm,Cricket Ground,3,"Mess, Canteen"
+4/15/2021 19:17:49,Faculty,"8am-10am, 10am-1pm","8am-10am, 10am-1pm",None,0,None
+4/15/2021 19:18:00,Faculty,"8am-10am, 10am-1pm, 2pm-6pm",4am-6am,None,0,None
+4/15/2021 19:38:44,Staff,"8am-10am, 10am-1pm, 2pm-6pm",10am-1pm,"Type C - park, Outside Campus",0,Meal on the wheels
+4/15/2021 20:42:59,Faculty,"10am-1pm, 6pm-8pm, 8pm-10pm",None,Kendriya Bhandar,0,Meatloaf Shop
+4/15/2021 20:53:48,Faculty,"10am-1pm, 2pm-6pm, 6pm-8pm",2pm-6pm,None,0,Meatloaf Shop
+4/15/2021 20:57:18,Staff,"10am-1pm, 2pm-6pm",2pm-6pm,"Kendriya Bhandar, Cricket Ground",2,"Mess, Canteen"
+4/15/2021 22:05:07,Faculty,"10am-1pm, 2pm-6pm",10am-1pm,Outside Campus,0,None
+4/15/2021 22:58:21,Staff,"10am-1pm, 2pm-6pm",None,None,0,Mess
+4/16/2021 8:42:03,Faculty,"8am-10am, 10am-1pm, 2pm-6pm",10am-1pm,"Kendriya Bhandar, Type B- park, Outside Campus",0,Canteen
+4/16/2021 11:51:44,Faculty,"8am-10am, 10am-1pm, 2pm-6pm, 8pm-10pm",None,"Library, Type B- park, sports ground",1,"Meatloaf Shop, Mess, Canteen"
+4/16/2021 12:24:31,Faculty,2pm-6pm,None,Kendriya Bhandar,0,None
+4/16/2021 13:36:08,Faculty,"8am-10am, 10am-1pm, 2pm-6pm","8am-10am, 10am-1pm","Kendriya Bhandar, Library, Type B- park, Cricket Ground, Basketball court",2,"Meatloaf Shop, Meal on the wheels, Canteen"
+4/16/2021 15:28:50,Faculty,2pm-6pm,2pm-6pm,"Kendriya Bhandar, Type B- park, Outside Campus",1,Canteen
+4/16/2021 17:43:32,Faculty,"10am-1pm, 2pm-6pm, 6pm-8pm, 8pm-10pm","10am-1pm, 2pm-6pm, 6pm-8pm",Kendriya Bhandar,0,None
+4/17/2021 10:02:39,Faculty,"10am-1pm, 2pm-6pm, 6pm-8pm",10am-1pm,"Computer center, Cricket Ground, Outside Campus, Community Center",1,"Meatloaf Shop, Meal on the wheels"
